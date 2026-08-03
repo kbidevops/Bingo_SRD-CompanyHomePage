@@ -5,21 +5,28 @@
     class="skip-link"
     href="#main"
     style="position: absolute; left: -9999px; top: auto"
-    >Skip to content</a
+    data-i18n="common.skipToContent"
+    >본문으로 건너뛰기</a
   >
   <div class="nav-brand">
-    <a href="/" aria-label="BingoCVM 홈">
+    <a href="/" aria-label="BingoCVM 홈" data-i18n-aria-label="nav.logoAria">
       <div class="nav-product">
         <img src="/images/bingoCVM-logo-bklong2.png" alt="BingoCVM" />
       </div>
     </a>
   </div>
-  <nav class="nav-menu" id="siteNav" aria-label="주요 메뉴">
-    <a href="/">홈</a>
-    <a href="/sub/product/">제품 소개</a>
-    <a href="/sub/about/">회사 소개</a>
-    <a href="/sub/news/">뉴스</a>
-    <a href="/sub/contact/">영업문의</a>
+  <nav
+    class="nav-menu"
+    id="siteNav"
+    aria-label="주요 메뉴"
+    data-i18n-aria-label="nav.mainMenuAria"
+  >
+    <a href="/" data-i18n="nav.home">홈</a>
+    <a href="/sub/product/" data-i18n="nav.product">제품 소개</a>
+    <a href="/sub/about/" data-i18n="nav.about">회사 소개</a>
+    <a href="/sub/news/" data-i18n="nav.news">뉴스</a>
+    <a href="/sub/contact/" data-i18n="nav.contact">영업문의</a>
+    <button type="button" class="nav-lang-toggle" data-lang-toggle>EN</button>
     <div class="nav-separator"></div>
     <div class="nav-buy-wrap" id="navBuyWrap">
       <button
@@ -31,7 +38,9 @@
         id="navBuyBtn"
       >
         <img src="/images/digitalMall.png" alt="조달청" />
-        <span class="nav-buy-label">조달청 디지털서비스몰 바로가기</span>
+        <span class="nav-buy-label" data-i18n="nav.buyLabel"
+          >조달청 디지털서비스몰 바로가기</span
+        >
         <span class="nav-buy-arrow">▾</span>
       </button>
       <div class="nav-buy-menu" id="navBuyMenu" role="menu">
@@ -58,7 +67,12 @@
       </div>
     </div>
   </nav>
-  <button class="nav-toggle" aria-expanded="false" aria-label="메뉴 열기">
+  <button
+    class="nav-toggle"
+    aria-expanded="false"
+    aria-label="메뉴 열기"
+    data-i18n-aria-label="nav.toggleOpen"
+  >
     <svg
       class="nav-hamburger"
       viewBox="0 0 24 24"

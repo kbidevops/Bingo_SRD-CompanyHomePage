@@ -2,13 +2,35 @@ function initNavToggle() {
   const toggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
   if (!toggle || !navMenu) return;
+
+  function t(key, fallback) {
+    try {
+      if (window.siteI18n && typeof window.siteI18n.t === "function") {
+        return window.siteI18n.t(key);
+      }
+    } catch (e) {
+      // ignore i18n lookup failures
+    }
+    return fallback;
+  }
+
+  function syncToggleAria() {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute(
+      "aria-label",
+      expanded
+        ? t("nav.toggleClose", "Close menu")
+        : t("nav.toggleOpen", "Open menu"),
+    );
+  }
+
   try {
   } catch (e) {}
 
   function openNav() {
     document.body.classList.add("nav-open");
     toggle.setAttribute("aria-expanded", "true");
-    toggle.setAttribute("aria-label", "메뉴 닫기");
+    syncToggleAria();
     const first = navMenu.querySelector("a");
     if (first) first.focus();
   }
@@ -16,7 +38,7 @@ function initNavToggle() {
   function closeNav() {
     document.body.classList.remove("nav-open");
     toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "메뉴 열기");
+    syncToggleAria();
     toggle.focus();
   }
 
@@ -40,8 +62,12 @@ function initNavToggle() {
       }
     });
 
+    document.addEventListener("languageChanged", syncToggleAria);
+
     toggle._navInit = true;
   }
+
+  syncToggleAria();
 }
 
 function initNavBuyDropdown() {

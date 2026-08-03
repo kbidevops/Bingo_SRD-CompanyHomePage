@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="/js/i18n.js" defer></script>
     <script src="../../js/nav-active.js" defer></script>
     <link
       rel="stylesheet"
@@ -47,7 +48,7 @@
             />
           </div>
         </div>
-        <p class="hero-desc">
+        <p class="hero-desc" data-i18n-html="about.hero.mainText">
           <strong
             >(주)케이비아이는 AI 빅데이터 분석 기반의 보안취약점 진단
             기술</strong
@@ -64,9 +65,13 @@
         <section id="history">
           <div class="section-header reveal">
             <div class="section-num">01</div>
-            <div class="section-eyebrow">주요 연혁</div>
-            <h2 class="section-title">연혁 및 주요 실적</h2>
-            <p class="section-desc">
+            <div class="section-eyebrow" data-i18n="about.history.eyebrow">
+              주요 연혁
+            </div>
+            <h2 class="section-title" data-i18n="about.history.title">
+              연혁 및 주요 실적
+            </h2>
+            <p class="section-desc" data-i18n="about.history.desc">
               ㈜케이비아이는
               <strong>AI 빅데이터 분석 기반의 보안취약점 진단 기술</strong>로
               기업 보안의 신뢰와 믿음을 만들었습니다.
@@ -84,12 +89,25 @@
                 </div>
                 <div class="timeline-period">2003–2008</div>
                 <div class="timeline-card">
-                  <div class="timeline-card-title">창업 · 핵심 기술 확보</div>
+                  <div
+                    class="timeline-card-title"
+                    data-i18n="about.history.tl1.title"
+                  >
+                    창업 · 핵심 기술 확보
+                  </div>
                   <ul>
-                    <li>주식회사 케이비아이 설립 (2003)</li>
-                    <li>NSR 사이버테러대응 시스템 개발 참여</li>
-                    <li>NSR 제어망·스마트그리드 취약점 분석 개발 참여</li>
-                    <li>취약점 분석 핵심 기반 기술 확보</li>
+                    <li data-i18n="about.history.tl1.li1">
+                      주식회사 케이비아이 설립 (2003)
+                    </li>
+                    <li data-i18n="about.history.tl1.li2">
+                      NSR 사이버테러대응 시스템 개발 참여
+                    </li>
+                    <li data-i18n="about.history.tl1.li3">
+                      NSR 제어망·스마트그리드 취약점 분석 개발 참여
+                    </li>
+                    <li data-i18n="about.history.tl1.li4">
+                      취약점 분석 핵심 기반 기술 확보
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -102,12 +120,25 @@
                   class="timeline-card"
                   style="border-top-color: var(--crimson)"
                 >
-                  <div class="timeline-card-title">제품화 · 인증 획득</div>
+                  <div
+                    class="timeline-card-title"
+                    data-i18n="about.history.tl2.title"
+                  >
+                    제품화 · 인증 획득
+                  </div>
                   <ul>
-                    <li>기업부설연구소 설립</li>
-                    <li>BingoCVM 솔루션 출시</li>
-                    <li>GS 1등급 인증 획득</li>
-                    <li>국세청 취약점진단 시스템 구축</li>
+                    <li data-i18n="about.history.tl2.li1">
+                      기업부설연구소 설립
+                    </li>
+                    <li data-i18n="about.history.tl2.li2">
+                      BingoCVM 솔루션 출시
+                    </li>
+                    <li data-i18n="about.history.tl2.li3">
+                      GS 1등급 인증 획득
+                    </li>
+                    <li data-i18n="about.history.tl2.li4">
+                      국세청 취약점진단 시스템 구축
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -120,12 +151,25 @@
                   class="timeline-card"
                   style="border-top-color: var(--muted)"
                 >
-                  <div class="timeline-card-title">레퍼런스 확대</div>
+                  <div
+                    class="timeline-card-title"
+                    data-i18n="about.history.tl3.title"
+                  >
+                    레퍼런스 확대
+                  </div>
                   <ul>
-                    <li>한국수자원공사 인텔리전스 진단 시스템 개발</li>
-                    <li>조달청 쇼핑몰 등록</li>
-                    <li>국방과학연구소 BingoCVM 구축 및 고도화</li>
-                    <li>서비스 장애 예측 시스템 개발</li>
+                    <li data-i18n="about.history.tl3.li1">
+                      한국수자원공사 인텔리전스 진단 시스템 개발
+                    </li>
+                    <li data-i18n="about.history.tl3.li2">
+                      조달청 쇼핑몰 등록
+                    </li>
+                    <li data-i18n="about.history.tl3.li3">
+                      국방과학연구소 BingoCVM 구축 및 고도화
+                    </li>
+                    <li data-i18n="about.history.tl3.li4">
+                      서비스 장애 예측 시스템 개발
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -138,12 +182,25 @@
                   class="timeline-card"
                   style="border-top-color: var(--ink2)"
                 >
-                  <div class="timeline-card-title">범정부 · 클라우드 확산</div>
+                  <div
+                    class="timeline-card-title"
+                    data-i18n="about.history.tl4.title"
+                  >
+                    범정부 · 클라우드 확산
+                  </div>
                   <ul>
-                    <li>대통령실·보건복지부·기상청 구축</li>
-                    <li>한전원자력연료·ETRI 소진공 구축</li>
-                    <li>KAIT CSAP 클라우드 인증 심사도구 고도화</li>
-                    <li>안랩 클라우드 보안 컨설팅 참여</li>
+                    <li data-i18n="about.history.tl4.li1">
+                      대통령실·보건복지부·기상청 구축
+                    </li>
+                    <li data-i18n="about.history.tl4.li2">
+                      한전원자력연료·ETRI 소진공 구축
+                    </li>
+                    <li data-i18n="about.history.tl4.li3">
+                      KAIT CSAP 클라우드 인증 심사도구 고도화
+                    </li>
+                    <li data-i18n="about.history.tl4.li4">
+                      안랩 클라우드 보안 컨설팅 참여
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -153,12 +210,25 @@
                 </div>
                 <div class="timeline-period">2025–2026</div>
                 <div class="timeline-card" style="border-top-color: var(--ink)">
-                  <div class="timeline-card-title">최신 성과 · 고도화</div>
+                  <div
+                    class="timeline-card-title"
+                    data-i18n="about.history.tl5.title"
+                  >
+                    최신 성과 · 고도화
+                  </div>
                   <ul>
-                    <li>KISTI 바이오망·수자원공사(OA/FA) 구축</li>
-                    <li>국방기술품질원 K-RMF 점검기법 고도화</li>
-                    <li>전국 경찰청 시스템 취약점 진단</li>
-                    <li>가비아 클라우드 CSAP 컨설팅</li>
+                    <li data-i18n="about.history.tl5.li1">
+                      KISTI 바이오망·수자원공사(OA/FA) 구축
+                    </li>
+                    <li data-i18n="about.history.tl5.li2">
+                      국방기술품질원 K-RMF 점검기법 고도화
+                    </li>
+                    <li data-i18n="about.history.tl5.li3">
+                      전국 경찰청 시스템 취약점 진단
+                    </li>
+                    <li data-i18n="about.history.tl5.li4">
+                      가비아 클라우드 CSAP 컨설팅
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -168,30 +238,54 @@
           <!-- Bottom era cards -->
           <div class="timeline-bottom reveal">
             <div class="timeline-bottom-card">
-              <div class="era">Era 01</div>
-              <div class="era-title">창업 및 기술 기반 구축기</div>
+              <div class="era" data-i18n="about.history.era1.label">Era 01</div>
+              <div class="era-title" data-i18n="about.history.era1.title">
+                창업 및 기술 기반 구축기
+              </div>
               <ul>
-                <li>사이버테러대응시스템 개발 참여 (NSR)</li>
-                <li>한전 제어망 취약점 분석 기술 확보</li>
-                <li>스마트그리드 보안 연구 기반 마련</li>
+                <li data-i18n="about.history.era1.li1">
+                  사이버테러대응시스템 개발 참여 (NSR)
+                </li>
+                <li data-i18n="about.history.era1.li2">
+                  한전 제어망 취약점 분석 기술 확보
+                </li>
+                <li data-i18n="about.history.era1.li3">
+                  스마트그리드 보안 연구 기반 마련
+                </li>
               </ul>
             </div>
             <div class="timeline-bottom-card">
-              <div class="era">Era 02</div>
-              <div class="era-title">제품 출시 및 레퍼런스 확대기</div>
+              <div class="era" data-i18n="about.history.era2.label">Era 02</div>
+              <div class="era-title" data-i18n="about.history.era2.title">
+                제품 출시 및 레퍼런스 확대기
+              </div>
               <ul>
-                <li>BingoCVM GS 1등급 인증 획득</li>
-                <li>국방과학연구소·국세청 납품</li>
-                <li>조달청 쇼핑몰 등록 완료</li>
+                <li data-i18n="about.history.era2.li1">
+                  BingoCVM GS 1등급 인증 획득
+                </li>
+                <li data-i18n="about.history.era2.li2">
+                  국방과학연구소·국세청 납품
+                </li>
+                <li data-i18n="about.history.era2.li3">
+                  조달청 쇼핑몰 등록 완료
+                </li>
               </ul>
             </div>
             <div class="timeline-bottom-card">
-              <div class="era">Era 03</div>
-              <div class="era-title">클라우드·국방 표준화 선도기</div>
+              <div class="era" data-i18n="about.history.era3.label">Era 03</div>
+              <div class="era-title" data-i18n="about.history.era3.title">
+                클라우드·국방 표준화 선도기
+              </div>
               <ul>
-                <li>CSAP 클라우드 보안 인증 심사 참여</li>
-                <li>K-RMF / K-STIG / K-SCAP 표준화</li>
-                <li>대통령실·전국 경찰청 납품</li>
+                <li data-i18n="about.history.era3.li1">
+                  CSAP 클라우드 보안 인증 심사 참여
+                </li>
+                <li data-i18n="about.history.era3.li2">
+                  K-RMF / K-STIG / K-SCAP 표준화
+                </li>
+                <li data-i18n="about.history.era3.li3">
+                  대통령실·전국 경찰청 납품
+                </li>
               </ul>
             </div>
           </div>
@@ -201,9 +295,13 @@
         <section id="partners">
           <div class="section-header reveal">
             <div class="section-num">02</div>
-            <div class="section-eyebrow">협력 기관</div>
-            <h2 class="section-title">주요 R&amp;D 분야 협력 기관</h2>
-            <p class="section-desc">
+            <div class="section-eyebrow" data-i18n="about.partners.eyebrow">
+              협력 기관
+            </div>
+            <h2 class="section-title" data-i18n="about.partners.title">
+              주요 R&amp;D 분야 협력 기관
+            </h2>
+            <p class="section-desc" data-i18n="about.partners.desc">
               ㈜케이비아이는
               <strong>국내 주요 기관들과 활발히 연구 개발</strong> 관련 사업을
               진행하고 있습니다.<br />
@@ -216,25 +314,41 @@
           <div class="partners-hub reveal">
             <div class="partners-left">
               <div class="partner-card">
-                <div class="partner-name">국가보안기술연구소 (NSR)</div>
-                <span class="partner-badge badge-blue">핵심 기술 협력</span>
+                <div class="partner-name" data-i18n="about.partners.left1.name">
+                  국가보안기술연구소 (NSR)
+                </div>
+                <span
+                  class="partner-badge badge-blue"
+                  data-i18n="about.partners.left1.tag"
+                  >핵심 기술 협력</span
+                >
                 <ul>
-                  <li>
+                  <li data-i18n="about.partners.left1.li1">
                     사이버테러대응시스템, 한전제어망 및 스마트그리드 취약점 분석
                     등 국가 핵심 보안 기술 공동 연구 및 개발 참여
                   </li>
                 </ul>
               </div>
               <div class="partner-card">
-                <div class="partner-name">ETRI / KAIT</div>
-                <span class="partner-badge badge-gray">ICT융합 연구</span>
+                <div class="partner-name" data-i18n="about.partners.left2.name">
+                  ETRI / KAIT
+                </div>
+                <span
+                  class="partner-badge badge-gray"
+                  data-i18n="about.partners.left2.tag"
+                  >ICT융합 연구</span
+                >
                 <ul>
-                  <li>
+                  <li data-i18n="about.partners.left2.li1">
                     K-RMF 자동화 도구 개발, CSAP 클라우드 보안인증 심사 도구
                     계약 및 연간 용역지원 수행
                   </li>
-                  <li>가비아, 안랩, KT 클라우드 CSAP 수행</li>
-                  <li>카카오 클라우드 CSAP 협력</li>
+                  <li data-i18n="about.partners.left2.li2">
+                    가비아, 안랩, KT 클라우드 CSAP 수행
+                  </li>
+                  <li data-i18n="about.partners.left2.li3">
+                    카카오 클라우드 CSAP 협력
+                  </li>
                 </ul>
               </div>
             </div>
@@ -244,28 +358,51 @@
                 <img
                   src="../../images/LogoWithoutBackgroundWhite(DarkBackground).png"
                   alt="KBI e-Security Consulting"
+                  data-i18n-alt="about.partners.center.logoAlt"
                 />
               </div>
-              <div class="hub-sub">e-Security<br />Consulting</div>
+              <div class="hub-sub" data-i18n-html="about.partners.center.sub">
+                e-Security<br />Consulting
+              </div>
             </div>
 
             <div class="partners-right">
               <div class="partner-card">
-                <div class="partner-name">국방과학연구소 / DTaQ</div>
-                <span class="partner-badge badge-gray">기술 표준화</span>
+                <div
+                  class="partner-name"
+                  data-i18n="about.partners.right1.name"
+                >
+                  국방과학연구소 / DTaQ
+                </div>
+                <span
+                  class="partner-badge badge-gray"
+                  data-i18n="about.partners.right1.tag"
+                  >기술 표준화</span
+                >
                 <ul>
-                  <li>
+                  <li data-i18n="about.partners.right1.li1">
                     K-RMF, K-STIG, K-SCAP 시험평가 도구 연구 및 국방 분야
                     보안통제항목 점검기법 고도화 협력
                   </li>
-                  <li>국내 최초 국방표준과 미국표준 적용 개발 완료</li>
+                  <li data-i18n="about.partners.right1.li2">
+                    국내 최초 국방표준과 미국표준 적용 개발 완료
+                  </li>
                 </ul>
               </div>
               <div class="partner-card">
-                <div class="partner-name">주요 기관 및 대학 등</div>
-                <span class="partner-badge badge-navy">산학연 협력</span>
+                <div
+                  class="partner-name"
+                  data-i18n="about.partners.right2.name"
+                >
+                  주요 기관 및 대학 등
+                </div>
+                <span
+                  class="partner-badge badge-navy"
+                  data-i18n="about.partners.right2.tag"
+                  >산학연 협력</span
+                >
                 <ul>
-                  <li>
+                  <li data-i18n="about.partners.right2.li1">
                     KISTI, KAIST, 한국수자원공사, 한밭대학교, 항공우주연구원
                     등과 다양한 보안 취약점 진단 및 솔루션 구축 협력
                   </li>
@@ -279,13 +416,15 @@
         <section id="services">
           <div class="section-header reveal">
             <div class="section-num">03</div>
-            <div class="section-eyebrow">주요 사업</div>
-            <h2 class="section-title">주요 사업 내용</h2>
-            <p class="section-desc">
+            <div class="section-eyebrow" data-i18n="about.services.eyebrow">
+              주요 사업
+            </div>
+            <h2 class="section-title" data-i18n="about.services.title">
+              주요 사업 내용
+            </h2>
+            <p class="section-desc" data-i18n="about.services.desc">
               보안 컨설팅부터 솔루션 개발 공급까지, 보안의 전 과정을
-              제공하겠습니다.<br />
-              케이비아이는 고객의 정보자산을 보호하기 위한
-              <strong>체계적인 서비스와 기술력</strong>을 보유하고 있습니다.
+              제공하겠습니다.
             </p>
           </div>
           <div class="services-grid reveal">
@@ -296,12 +435,22 @@
                   <path d="m21 21-4.35-4.35" />
                 </svg>
               </div>
-              <div class="service-title">보안 컨설팅</div>
+              <div class="service-title" data-i18n="about.services.card1.title">
+                보안 컨설팅
+              </div>
               <ul>
-                <li>시스템 취약점진단 용역 (온프레미스 + 클라우드 CSAP)</li>
-                <li>CCE / CVE / CWE 취약점 진단 용역</li>
-                <li>공공기관 실태평가 대응 취약점 진단 용역</li>
-                <li>최신 취약점 진단 연구 (예: BPFDoor 등)</li>
+                <li data-i18n="about.services.card1.li1">
+                  시스템 취약점진단 용역 (온프레미스 + 클라우드 CSAP)
+                </li>
+                <li data-i18n="about.services.card1.li2">
+                  CCE / CVE / CWE 취약점 진단 용역
+                </li>
+                <li data-i18n="about.services.card1.li3">
+                  공공기관 실태평가 대응 취약점 진단 용역
+                </li>
+                <li data-i18n="about.services.card1.li4">
+                  최신 취약점 진단 연구 (예: BPFDoor 등)
+                </li>
               </ul>
             </div>
             <div class="service-card">
@@ -311,15 +460,25 @@
                   <polyline points="8 6 2 12 8 18" />
                 </svg>
               </div>
-              <div class="service-title">소프트웨어 개발</div>
+              <div class="service-title" data-i18n="about.services.card2.title">
+                소프트웨어 개발
+              </div>
               <ul>
-                <li>AI 빅데이터 분석 및 모니터링 솔루션</li>
-                <li>컴플라이언스 준수 시험 평가 자동화 도구</li>
-                <li>K-RMF, K-STIG, K-SCAP, CMMC 구현 시험평가 도구</li>
-                <li>
+                <li data-i18n="about.services.card2.li1">
+                  AI 빅데이터 분석 및 모니터링 솔루션
+                </li>
+                <li data-i18n="about.services.card2.li2">
+                  컴플라이언스 준수 시험 평가 자동화 도구
+                </li>
+                <li data-i18n="about.services.card2.li3">
+                  K-RMF, K-STIG, K-SCAP, CMMC 구현 시험평가 도구
+                </li>
+                <li data-i18n="about.services.card2.li4">
                   시스템 취약점 진단 도구 개발 (온프레미스, 클라우드, CVE)
                 </li>
-                <li>AI, 양자, 블록체인 신기술 개발</li>
+                <li data-i18n="about.services.card2.li5">
+                  AI, 양자, 블록체인 신기술 개발
+                </li>
               </ul>
             </div>
             <div class="service-card">
@@ -332,20 +491,22 @@
                   <line x1="12" y1="22.08" x2="12" y2="12" />
                 </svg>
               </div>
-              <div class="service-title">솔루션</div>
+              <div class="service-title" data-i18n="about.services.card3.title">
+                솔루션
+              </div>
               <ul>
-                <li>
+                <li data-i18n-html="about.services.card3.li1">
                   <strong>BingoCVM:</strong> 시스템 취약점진단 자동화
                   (온프레미스 + 클라우드)
                 </li>
-                <li>
+                <li data-i18n-html="about.services.card3.li2">
                   <strong>BingoSRM:</strong> 정보시스템 장애 신청 접수 처리 관리
                 </li>
-                <li>
+                <li data-i18n-html="about.services.card3.li3">
                   <strong>BingoTasker:</strong> 정보화사업 산출물 관리 및 사업별
                   진행 단계 관리
                 </li>
-                <li>
+                <li data-i18n-html="about.services.card3.li4">
                   <strong>BingoNaru:</strong> DBMS to PostgreSQL 마이그레이션
                 </li>
               </ul>
@@ -357,13 +518,18 @@
         <section id="clients">
           <div class="section-header reveal">
             <div class="section-num">04</div>
-            <div class="section-eyebrow">주요 고객사</div>
-            <h2 class="section-title">신뢰받는 50개 이상 고객사</h2>
+            <div class="section-eyebrow" data-i18n="about.clients.eyebrow">
+              주요 고객사
+            </div>
+            <h2 class="section-title" data-i18n="about.clients.title">
+              신뢰받는 50개 이상 고객사
+            </h2>
           </div>
 
           <div class="clients-intro reveal">
             <div>
               <p
+                data-i18n-html="about.clients.desc1"
                 style="
                   font-size: 15px;
                   color: var(--muted);
@@ -376,7 +542,10 @@
                 신뢰받고 있습니다. 20년 이상 축적된 기술력으로 고객의 정보보안을
                 책임집니다.
               </p>
-              <p style="margin-top: 12px; font-size: 15px; color: var(--muted)">
+              <p
+                data-i18n="about.clients.desc2"
+                style="margin-top: 12px; font-size: 15px; color: var(--muted)"
+              >
                 다양한 고객 Needs에 대응하기 위한 충실한 R&amp;D 수행 ▶▶▶
                 국가주요기관 · 연구 및 교육 · 공기업/지자체 · 국방/민간/IT
               </p>
@@ -389,35 +558,41 @@
                   style="width: auto; height: 36px; border-radius: 0"
                 />
               </div>
-              <div class="product-sub">취약점진단 자동화 플랫폼</div>
+              <div class="product-sub" data-i18n="about.clients.badgeSub">
+                취약점진단 자동화 플랫폼
+              </div>
             </div>
           </div>
 
-          <div class="clients-cat-label reveal">정부기관</div>
+          <div class="clients-cat-label reveal" data-i18n="about.clients.cat1">
+            정부기관
+          </div>
           <div class="clients-logos reveal">
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/ceongwadae.png" alt="청와대" />
               </div>
-              <div class="logo-name">청와대</div>
+              <div class="logo-name" data-i18n="about.clients.g1">청와대</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/gugseceong.png" alt="국세청" />
               </div>
-              <div class="logo-name">국세청</div>
+              <div class="logo-name" data-i18n="about.clients.g2">국세청</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/bogeonbogjibu.svg" alt="보건복지부" />
               </div>
-              <div class="logo-name">보건복지부</div>
+              <div class="logo-name" data-i18n="about.clients.g3">
+                보건복지부
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/gisangceong.svg" alt="기상청" />
               </div>
-              <div class="logo-name">기상청</div>
+              <div class="logo-name" data-i18n="about.clients.g4">기상청</div>
             </div>
 
             <div class="client-logo">
@@ -427,7 +602,9 @@
                   alt="충청남도 경찰청"
                 />
               </div>
-              <div class="logo-name">충청남도 경찰청</div>
+              <div class="logo-name" data-i18n="about.clients.g5">
+                충청남도 경찰청
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -436,7 +613,9 @@
                   alt="충청북도 경찰청"
                 />
               </div>
-              <div class="logo-name">충청북도 경찰청</div>
+              <div class="logo-name" data-i18n="about.clients.g6">
+                충청북도 경찰청
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -445,7 +624,9 @@
                   alt="전라남도 경찰청"
                 />
               </div>
-              <div class="logo-name">전라남도 경찰청</div>
+              <div class="logo-name" data-i18n="about.clients.g7">
+                전라남도 경찰청
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -454,7 +635,9 @@
                   alt="전라북도 경찰청"
                 />
               </div>
-              <div class="logo-name">전라북도 경찰청</div>
+              <div class="logo-name" data-i18n="about.clients.g8">
+                전라북도 경찰청
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -463,11 +646,15 @@
                   alt="광주광역시 경찰청"
                 />
               </div>
-              <div class="logo-name">광주광역시 경찰청</div>
+              <div class="logo-name" data-i18n="about.clients.g9">
+                광주광역시 경찰청
+              </div>
             </div>
           </div>
 
-          <div class="clients-cat-label reveal">연구기관 · 교육기관</div>
+          <div class="clients-cat-label reveal" data-i18n="about.clients.cat2">
+            연구기관 · 교육기관
+          </div>
           <div class="clients-logos reveal">
             <div class="client-logo">
               <div class="logo-icon">
@@ -476,7 +663,9 @@
                   alt="중이온가속기연구소"
                 />
               </div>
-              <div class="logo-name">중이온가속기 연구소</div>
+              <div class="logo-name" data-i18n="about.clients.r1">
+                중이온가속기 연구소
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -485,13 +674,15 @@
                   alt="항공우주연구원"
                 />
               </div>
-              <div class="logo-name">항공우주 연구원</div>
+              <div class="logo-name" data-i18n="about.clients.r2">
+                항공우주 연구원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/refer_logo_ETRI.png" alt="ETRI" />
               </div>
-              <div class="logo-name">ETRI</div>
+              <div class="logo-name" data-i18n="about.clients.r3">ETRI</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -500,7 +691,9 @@
                   alt="한국한의학연구원"
                 />
               </div>
-              <div class="logo-name">한국한의학 연구원</div>
+              <div class="logo-name" data-i18n="about.clients.r4">
+                한국한의학 연구원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -509,7 +702,9 @@
                   alt="국립해양생물자원관"
                 />
               </div>
-              <div class="logo-name">국립해양생물자원관</div>
+              <div class="logo-name" data-i18n="about.clients.r5">
+                국립해양생물자원관
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -518,7 +713,9 @@
                   alt="한국과학기술원"
                 />
               </div>
-              <div class="logo-name">한국과학기술원</div>
+              <div class="logo-name" data-i18n="about.clients.r6">
+                한국과학기술원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -527,7 +724,9 @@
                   alt="기초과학연구원"
                 />
               </div>
-              <div class="logo-name">기초과학연구원</div>
+              <div class="logo-name" data-i18n="about.clients.r7">
+                기초과학연구원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -536,7 +735,9 @@
                   alt="한국지질자원연구원"
                 />
               </div>
-              <div class="logo-name">한국지질자원연구원</div>
+              <div class="logo-name" data-i18n="about.clients.r8">
+                한국지질자원연구원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -545,19 +746,25 @@
                   alt="한국조세재정연구원"
                 />
               </div>
-              <div class="logo-name">한국조세재정연구원(IBS)</div>
+              <div class="logo-name" data-i18n="about.clients.r9">
+                한국조세재정연구원(IBS)
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/cungnamdaehaggyo.svg" alt="충남대학교" />
               </div>
-              <div class="logo-name">충남대학교</div>
+              <div class="logo-name" data-i18n="about.clients.r10">
+                충남대학교
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/hanbatdaehaggyo.svg" alt="한밭대학교" />
               </div>
-              <div class="logo-name">한밭대학교</div>
+              <div class="logo-name" data-i18n="about.clients.r11">
+                한밭대학교
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -566,7 +773,9 @@
                   alt="원광대학교"
                 />
               </div>
-              <div class="logo-name">원광대학교</div>
+              <div class="logo-name" data-i18n="about.clients.r12">
+                원광대학교
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -575,7 +784,9 @@
                   alt="전주비전대학교"
                 />
               </div>
-              <div class="logo-name">전주비전대학교</div>
+              <div class="logo-name" data-i18n="about.clients.r13">
+                전주비전대학교
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -584,7 +795,9 @@
                   alt="충청북도 교육연구정보원"
                 />
               </div>
-              <div class="logo-name">충청북도 교육연구정보원</div>
+              <div class="logo-name" data-i18n="about.clients.r14">
+                충청북도 교육연구정보원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -594,7 +807,9 @@
                 />
               </div>
 
-              <div class="logo-name">충청북도 교육청</div>
+              <div class="logo-name" data-i18n="about.clients.r15">
+                충청북도 교육청
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -604,11 +819,15 @@
                 />
               </div>
 
-              <div class="logo-name">한국과학기술정보연구원</div>
+              <div class="logo-name" data-i18n="about.clients.r16">
+                한국과학기술정보연구원
+              </div>
             </div>
           </div>
 
-          <div class="clients-cat-label reveal">공공기관 · 지자체</div>
+          <div class="clients-cat-label reveal" data-i18n="about.clients.cat3">
+            공공기관 · 지자체
+          </div>
           <div class="clients-logos reveal">
             <div class="client-logo">
               <div class="logo-icon">
@@ -617,13 +836,15 @@
                   alt="한전원자력연료"
                 />
               </div>
-              <div class="logo-name">한전원자력연료</div>
+              <div class="logo-name" data-i18n="about.clients.p1">
+                한전원자력연료
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/hanjeonkdn.svg" alt="한전KDN" />
               </div>
-              <div class="logo-name">한전KDN</div>
+              <div class="logo-name" data-i18n="about.clients.p2">한전KDN</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -632,7 +853,9 @@
                   alt="소상공인시장진흥공단"
                 />
               </div>
-              <div class="logo-name">소상공인시장진흥공단</div>
+              <div class="logo-name" data-i18n="about.clients.p3">
+                소상공인시장진흥공단
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -641,7 +864,9 @@
                   alt="가축위생방역지원본부"
                 />
               </div>
-              <div class="logo-name">가축위생방역지원본부</div>
+              <div class="logo-name" data-i18n="about.clients.p4">
+                가축위생방역지원본부
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -650,7 +875,9 @@
                   alt="한국소비자원"
                 />
               </div>
-              <div class="logo-name">한국소비자원</div>
+              <div class="logo-name" data-i18n="about.clients.p5">
+                한국소비자원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -659,7 +886,9 @@
                   alt="신용보증재단중앙회"
                 />
               </div>
-              <div class="logo-name">신용보증재단중앙회</div>
+              <div class="logo-name" data-i18n="about.clients.p6">
+                신용보증재단중앙회
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -668,7 +897,9 @@
                   alt="한국산림복지진흥원"
                 />
               </div>
-              <div class="logo-name">한국산림복지진흥원</div>
+              <div class="logo-name" data-i18n="about.clients.p7">
+                한국산림복지진흥원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -677,7 +908,9 @@
                   alt="한국수자원공사"
                 />
               </div>
-              <div class="logo-name">한국수자원공사</div>
+              <div class="logo-name" data-i18n="about.clients.p8">
+                한국수자원공사
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -686,7 +919,9 @@
                   alt="한국전기공사협회"
                 />
               </div>
-              <div class="logo-name">한국전기공사협회</div>
+              <div class="logo-name" data-i18n="about.clients.p9">
+                한국전기공사협회
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -695,19 +930,23 @@
                   alt="한국지역정보개발원"
                 />
               </div>
-              <div class="logo-name">한국지역정보개발원</div>
+              <div class="logo-name" data-i18n="about.clients.p10">
+                한국지역정보개발원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/koreiltekeu.svg" alt="코레일테크" />
               </div>
-              <div class="logo-name">코레일테크</div>
+              <div class="logo-name" data-i18n="about.clients.p11">
+                코레일테크
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/ceongjusi.png" alt="청주시" />
               </div>
-              <div class="logo-name">청주시</div>
+              <div class="logo-name" data-i18n="about.clients.p12">청주시</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -716,14 +955,16 @@
                   alt="충주시설관리공단"
                 />
               </div>
-              <div class="logo-name">충주시설관리공단</div>
+              <div class="logo-name" data-i18n="about.clients.p13">
+                충주시설관리공단
+              </div>
             </div>
 
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/nonsansi.jpeg" alt="논산시" />
               </div>
-              <div class="logo-name">논산시</div>
+              <div class="logo-name" data-i18n="about.clients.p14">논산시</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -732,25 +973,27 @@
                   alt="대전광역시"
                 />
               </div>
-              <div class="logo-name">대전광역시</div>
+              <div class="logo-name" data-i18n="about.clients.p15">
+                대전광역시
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/yeongdonggun.svg" alt="영동군" />
               </div>
-              <div class="logo-name">영동군</div>
+              <div class="logo-name" data-i18n="about.clients.p16">영동군</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/gongjusi.jpg" alt="공주시" />
               </div>
-              <div class="logo-name">공주시</div>
+              <div class="logo-name" data-i18n="about.clients.p17">공주시</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/pohangsi.svg" alt="포항시" />
               </div>
-              <div class="logo-name">포항시</div>
+              <div class="logo-name" data-i18n="about.clients.p18">포항시</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -759,11 +1002,15 @@
                   alt="제주특별자치도"
                 />
               </div>
-              <div class="logo-name">제주특별자치도</div>
+              <div class="logo-name" data-i18n="about.clients.p19">
+                제주특별자치도
+              </div>
             </div>
           </div>
 
-          <div class="clients-cat-label reveal">국방</div>
+          <div class="clients-cat-label reveal" data-i18n="about.clients.cat4">
+            국방
+          </div>
           <div class="clients-logos reveal">
             <div class="client-logo">
               <div class="logo-icon">
@@ -772,7 +1019,9 @@
                   alt="국방과학연구소"
                 />
               </div>
-              <div class="logo-name">국방과학연구소</div>
+              <div class="logo-name" data-i18n="about.clients.d1">
+                국방과학연구소
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -781,7 +1030,9 @@
                   alt="국방기술품질원"
                 />
               </div>
-              <div class="logo-name">국방기술품질원</div>
+              <div class="logo-name" data-i18n="about.clients.d2">
+                국방기술품질원
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -790,22 +1041,30 @@
                   alt="사이버작전사령부"
                 />
               </div>
-              <div class="logo-name">사이버작전사령부</div>
+              <div class="logo-name" data-i18n="about.clients.d3">
+                사이버작전사령부
+              </div>
             </div>
           </div>
-          <div class="clients-cat-label reveal">민간 · IT 기업</div>
+          <div class="clients-cat-label reveal" data-i18n="about.clients.cat5">
+            민간 · IT 기업
+          </div>
           <div class="clients-logos reveal">
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/kt cloud.png" alt="KT Cloud" />
               </div>
-              <div class="logo-name">KT Cloud</div>
+              <div class="logo-name" data-i18n="about.clients.it1">
+                KT Cloud
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/gabia cloud.jpeg" alt="Gabia Cloud" />
               </div>
-              <div class="logo-name">Gabia Cloud</div>
+              <div class="logo-name" data-i18n="about.clients.it2">
+                Gabia Cloud
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
@@ -814,54 +1073,68 @@
                   alt="AhnLab CloudMate"
                 />
               </div>
-              <div class="logo-name">AhnLab CloudMate</div>
+              <div class="logo-name" data-i18n="about.clients.it3">
+                AhnLab CloudMate
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/sk hynix.png" alt="SK hynix" />
               </div>
-              <div class="logo-name">SK Hynix</div>
+              <div class="logo-name" data-i18n="about.clients.it4">
+                SK Hynix
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/dasangigong.jpg" alt="DASAN" />
               </div>
-              <div class="logo-name">DASAN</div>
+              <div class="logo-name" data-i18n="about.clients.it5">DASAN</div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/catenoid.jpg" alt="Catenoid" />
               </div>
-              <div class="logo-name">Catenoid</div>
+              <div class="logo-name" data-i18n="about.clients.it6">
+                Catenoid
+              </div>
             </div>
             <div class="client-logo">
               <div class="logo-icon">
                 <img src="../../images/kait.png" alt="한국정보통신진흥협회" />
               </div>
-              <div class="logo-name">한국정보통신진흥협회</div>
+              <div class="logo-name" data-i18n="about.clients.it7">
+                한국정보통신진흥협회
+              </div>
             </div>
           </div>
 
           <div class="clients-stats reveal">
             <div class="client-stat">
               <div class="num">9</div>
-              <div class="lbl">정부기관</div>
+              <div class="lbl" data-i18n="about.clients.stat1">정부기관</div>
             </div>
             <div class="client-stat">
               <div class="num">16</div>
-              <div class="lbl">연구기관·교육기관</div>
+              <div class="lbl" data-i18n="about.clients.stat2">
+                연구기관·교육기관
+              </div>
             </div>
             <div class="client-stat">
               <div class="num">19</div>
-              <div class="lbl">공공기관·지자체</div>
+              <div class="lbl" data-i18n="about.clients.stat3">
+                공공기관·지자체
+              </div>
             </div>
             <div class="client-stat">
               <div class="num">3</div>
-              <div class="lbl">국방</div>
+              <div class="lbl" data-i18n="about.clients.stat4">국방</div>
             </div>
             <div class="client-stat">
               <div class="num">7</div>
-              <div class="lbl">민간·IT 기업</div>
+              <div class="lbl" data-i18n="about.clients.stat5">
+                민간·IT 기업
+              </div>
             </div>
           </div>
         </section>
