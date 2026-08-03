@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BingoCVM</title>
+    <link rel="icon" href="../../images/fabi.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="../../css/scrollTop.css" />
+    <script src="../../js/nav-active.js" defer></script>
+    <link rel="stylesheet" href="../../css/news.css" />
+  </head>
+  <body>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <div id="scrollTop"></div>
+
+    <!-- NAV -->
+    <div id="header"></div>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="page-hero-inner">
+        <div class="page-eyebrow">소식 · 업데이트</div>
+        <div class="page-title">
+          <img
+            src="../../images/bingoCVM-logo-bklong2.png"
+            alt="KBI e-Security Consulting"
+            class="page-title-logo"
+          />
+        </div>
+
+        <p class="page-desc">
+          ㈜케이비아이의 최신 소식, 제품 업데이트, 영상 자료를 확인하세요.
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="news-layout">
+      <!-- LEFT: feed -->
+      <main>
+        <!-- Filter bar -->
+        <div class="filter-bar reveal">
+          <button class="filter-btn on" data-filter="all">전체</button>
+          <button class="filter-btn" data-filter="video">영상</button>
+          <button class="filter-btn" data-filter="update">업데이트</button>
+          <button class="filter-btn" data-filter="notice">공지사항</button>
+          <span class="filter-count" id="filterCount">3개 항목</span>
+        </div>
+
+        <!-- Featured video card -->
+        <div class="card-featured reveal" data-cat="video">
+          <div class="video-wrap">
+            <video
+              controls
+              playsinline
+              controlsList="nodownload"
+              disablePictureInPicture
+              oncontextmenu="return false;"
+              title="BingoCVM 소개 영상"
+              poster=""
+            >
+              <source
+                src="../../css/videos/KakaoTalk_20260202_161437440.mp4"
+                type="video/mp4"
+              />
+              브라우저가 비디오를 지원하지 않습니다.
+            </video>
+            <div class="video-overlay">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="tag tag-video">영상</span>
+              <span class="tag tag-new">NEW</span>
+              <span class="card-date">2026. 2. 2.</span>
+            </div>
+            <h2 class="card-title">BingoCVM 소개 영상</h2>
+            <p class="card-excerpt">
+              정보통신기반시설 및 클라우드 시스템 취약점진단 자동화 솔루션
+              BingoCVM을 영상으로 만나보세요. 온프레미스부터 클라우드까지 CCE +
+              CVE 통합 진단 기능을 확인하실 수 있습니다.
+            </p>
+            <div class="card-actions">
+              <a
+                class="card-link"
+                href="https://blog.naver.com/bingocvm/224171378499"
+                target="_blank"
+                rel="noopener"
+                >블로그에서 보기 →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- News list -->
+        <div class="news-list" id="newsList">
+          <!-- Article 1 -->
+          <div class="news-card reveal" data-cat="update">
+            <div class="nc-thumb">
+              <div class="nc-thumb-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  focusable="false"
+                >
+                  <rect
+                    x="6"
+                    y="3"
+                    width="12"
+                    height="18"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    fill="none"
+                  />
+                  <path
+                    d="M9 8h6M9 12h6M9 16h4"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <div class="nc-new-dot"></div>
+            </div>
+            <div class="nc-body">
+              <div class="nc-meta">
+                <span class="tag tag-update">업데이트</span>
+                <span class="card-date">2026. 1. 30.</span>
+              </div>
+              <h3 class="nc-title">
+                주요정보통신기반시설 기술적 취약점 분석·평가 방법 상세가이드
+                업데이트
+              </h3>
+              <p class="nc-excerpt">
+                2025년 12월 24일 KISA의 주요정보통신기반시설 기술적 취약점 분석
+                및 평가 방법 상세 가이드가 업데이트되었습니다.
+              </p>
+
+              <div class="nc-expand" id="expand1">
+                <div class="nc-expand-inner">
+                  <p>
+                    저희 BingoCVM은 새롭게 업데이트 된 KISA의 표준에 적합하게
+                    진단하기 위해 연구 및 고도화를 진행하고 있습니다.
+                  </p>
+                  <p>
+                    현재 BingoCVM은 주요 관공서 및 공공기관에 납품되어 많은
+                    고객사에서 사용하고 있습니다. 상세한 내용은 추후 게시글에서
+                    풀어 나가도록 하겠습니다.
+                  </p>
+                  <p>감사합니다.</p>
+                  <div class="nc-source">
+                    출처: KISA 한국인터넷진흥원 › 지식플랫폼 › 법령·가이드라인 ›
+                    가이드라인 › 보안취약점 및 침해사고 대응
+                  </div>
+                </div>
+              </div>
+
+              <div class="nc-actions">
+                <button
+                  class="btn-toggle"
+                  id="toggle1"
+                  onclick="toggleCard('expand1', 'toggle1')"
+                >
+                  더보기
+                  <svg viewBox="0 0 14 14">
+                    <polyline points="2,4 7,10 12,4" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Article 2 -->
+          <div class="news-card reveal" data-cat="notice">
+            <div class="nc-thumb">
+              <div class="nc-thumb-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  focusable="false"
+                >
+                  <path
+                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <div class="nc-new-dot"></div>
+            </div>
+            <div class="nc-body">
+              <div class="nc-meta">
+                <span class="tag tag-notice">공지사항</span>
+                <span class="tag tag-new">NEW</span>
+                <span class="card-date">2026. 6. 10.</span>
+              </div>
+              <h3 class="nc-title">
+                K-RMF 보안통제항목 점검목적의 SW자동화점검도구 개발 2년 연속
+                수주
+              </h3>
+              <p class="nc-excerpt">
+                ㈜케이비아이는 국방기술품질원에서 발주하는 K-RMF 보안통제항목
+                점검 목적의 SW자동화 점검 도구 개발 연구용역을 2025년·2026년
+                연이어 수주했습니다.
+              </p>
+
+              <div class="nc-expand" id="expand2">
+                <div class="nc-expand-inner">
+                  <p>
+                    K-RMF를 위한 SW자동화 점검도구 개발 연구용역을 통한
+                    기대효과는 다음과 같습니다.
+                  </p>
+                  <p>
+                    <strong>사이버 보안 공백 방어:</strong><br />
+                    기준선 적용만으로는 대응하기 어려운 기술적 방어 공백을
+                    자동화 도구를 통해 식별 및 보완
+                  </p>
+                  <p>
+                    <strong>획득 프로세스 연동:</strong><br />
+                    무기체계 획득 및 전력화 단계에서 요구되는 복잡한 보안 인증
+                    심사 절차를 체계적으로 지원
+                  </p>
+                  <p>
+                    <strong>美 RMF 자동화 도구 분석 수용:</strong><br />
+                    미국의 RMF(Risk Management Framework) 보안 자동화 도구
+                    사례를 분석하고 국내 국방 환경에 최적화된 도구 설계
+                  </p>
+                </div>
+              </div>
+
+              <div class="nc-actions">
+                <button
+                  class="btn-toggle"
+                  id="toggle2"
+                  onclick="toggleCard('expand2', 'toggle2')"
+                >
+                  더보기
+                  <svg viewBox="0 0 14 14">
+                    <polyline points="2,4 7,10 12,4" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /news-list -->
+      </main>
+
+      <!-- RIGHT: Sidebar -->
+      <aside class="sidebar">
+        <!-- Stats -->
+        <div class="sidebar-box reveal">
+          <div class="sb-head"><span class="sb-head-title">KBi 현황</span></div>
+          <div class="sb-stats">
+            <div class="sb-stat">
+              <div class="sb-stat-n">20<em>+</em></div>
+              <div class="sb-stat-l">Years</div>
+            </div>
+            <div class="sb-stat">
+              <div class="sb-stat-n">50<em>+</em></div>
+              <div class="sb-stat-l">Clients</div>
+            </div>
+            <div class="sb-stat">
+              <div class="sb-stat-n">GS<em>1</em></div>
+              <div class="sb-stat-l">등급 인증</div>
+            </div>
+            <div class="sb-stat">
+              <div class="sb-stat-n">4</div>
+              <div class="sb-stat-l">솔루션</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tags -->
+        <div class="sidebar-box reveal">
+          <div class="sb-head"><span class="sb-head-title">태그</span></div>
+          <div class="sb-tags">
+            <span
+              class="tag tag-update"
+              style="cursor: pointer"
+              data-filter="update"
+              onclick="filterBy('update')"
+              >업데이트</span
+            >
+            <span
+              class="tag tag-video"
+              style="cursor: pointer"
+              data-filter="video"
+              onclick="filterBy('video')"
+              >영상</span
+            >
+            <span
+              class="tag tag-notice"
+              style="cursor: pointer"
+              data-filter="notice"
+              onclick="filterBy('notice')"
+              >공지사항</span
+            >
+          </div>
+        </div>
+
+        <!-- Recent posts -->
+        <div class="sidebar-box reveal">
+          <div class="sb-head">
+            <span class="sb-head-title">최근 게시글</span>
+          </div>
+          <div class="sb-post">
+            <div class="sb-post-n">01</div>
+            <div>
+              <div class="sb-post-title">
+                K-RMF SW자동화점검도구 개발 2년 연속 수주
+              </div>
+              <div class="sb-post-date">2026. 6. 10.</div>
+            </div>
+          </div>
+          <a
+            class="sb-post"
+            href="https://blog.naver.com/bingocvm/224171378499"
+            target="_blank"
+          >
+            <div class="sb-post-n">02</div>
+            <div>
+              <div class="sb-post-title">BingoCVM 소개 영상</div>
+              <div class="sb-post-date">2026. 2. 2.</div>
+            </div>
+          </a>
+          <div class="sb-post">
+            <div class="sb-post-n">03</div>
+            <div>
+              <div class="sb-post-title">KISA 취약점 분석 가이드 업데이트</div>
+              <div class="sb-post-date">2026. 1. 30.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog -->
+        <div class="sidebar-box reveal">
+          <div class="sb-head">
+            <span class="sb-head-title">공식 블로그</span>
+          </div>
+          <div class="sb-blog">
+            <a
+              class="sb-blog-link"
+              href="https://blog.naver.com/bingocvm"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="sb-blog-icon"
+                src="../../images/NaverIcon.jpeg"
+                alt=""
+                aria-hidden="true"
+                style="
+                  width: 22px;
+                  height: 22px;
+                  object-fit: cover;
+                  border-radius: 3px;
+                "
+              />
+              <div class="sb-blog-txt">
+                <div class="sb-blog-name">BingoCVM 블로그</div>
+              </div>
+              <span class="sb-blog-arr">→</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- /news-layout -->
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <script>
+      Promise.all([
+        fetch("../../includes/header.html").then((r) => r.text()),
+        fetch("../../includes/footer.html").then((r) => r.text()),
+      ])
+        .then(([headerHtml, footerHtml]) => {
+          const h = document.getElementById("header");
+          if (h) h.innerHTML = headerHtml;
+          const f = document.getElementById("footer");
+          if (f) f.innerHTML = footerHtml;
+          document.dispatchEvent(new CustomEvent("includesLoaded"));
+          const s = document.createElement("script");
+          s.src = "/js/nav-toggle.js";
+          s.onload = () => {
+            if (window.initNavToggle) window.initNavToggle();
+          };
+          document.body.appendChild(s);
+        })
+        .catch(() => {
+          // ignore include loading errors
+        });
+      // ── EXPAND/COLLAPSE ──
+      function toggleCard(expandId, toggleId) {
+        const exp = document.getElementById(expandId);
+        const btn = document.getElementById(toggleId);
+        const isOpen = exp.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        const textNode = [...btn.childNodes].find((n) => n.nodeType === 3);
+        if (textNode) textNode.textContent = isOpen ? "접기 " : "더보기 ";
+      }
+
+      // ── FILTER ──
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const sbTagBtns = document.querySelectorAll(".sb-tags [data-filter]");
+      const allCards = document.querySelectorAll("[data-cat]");
+      const filterCount = document.getElementById("filterCount");
+
+      function filterBy(cat) {
+        filterBtns.forEach((b) =>
+          b.classList.toggle(
+            "on",
+            b.dataset.filter === cat ||
+              (cat === "all" && b.dataset.filter === "all"),
+          ),
+        );
+        sbTagBtns.forEach((t) =>
+          t.classList.toggle("on", t.dataset.filter === cat),
+        );
+        let count = 0;
+        allCards.forEach((card) => {
+          const show = cat === "all" || card.dataset.cat === cat;
+          card.style.display = show ? "" : "none";
+          if (show) count++;
+        });
+        filterCount.textContent = count + "개 항목";
+      }
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => filterBy(btn.dataset.filter));
+      });
+
+      // ── NAV SCROLL ──
+      const nav = document.getElementById("mainNav");
+      if (nav) {
+        window.addEventListener(
+          "scroll",
+          () => nav.classList.toggle("scrolled", scrollY > 30),
+          { passive: true },
+        );
+      }
+
+      // ── SCROLL TO TOP ──
+      fetch("/includes/scrollTop.html")
+        .then((r) => r.text())
+        .then((html) => {
+          const el = document.getElementById("scrollTop");
+          if (el) el.outerHTML = html;
+          const scrollBtn = document.querySelector(".scroll-top");
+          if (scrollBtn) {
+            window.addEventListener(
+              "scroll",
+              () => scrollBtn.classList.toggle("show", scrollY > 300),
+              { passive: true },
+            );
+          }
+        });
+
+      // ── CUSTOM CURSOR ──
+      const cursorDot = document.getElementById("cursorDot");
+      const cursorRing = document.getElementById("cursorRing");
+      if (cursorDot && cursorRing) {
+        let mx = 0,
+          my = 0,
+          rx = 0,
+          ry = 0;
+        document.addEventListener("mousemove", (e) => {
+          mx = e.clientX;
+          my = e.clientY;
+        });
+        (function tick() {
+          rx += (mx - rx) * 0.12;
+          ry += (my - ry) * 0.12;
+          cursorDot.style.left = mx + "px";
+          cursorDot.style.top = my + "px";
+          cursorRing.style.left = rx + "px";
+          cursorRing.style.top = ry + "px";
+          requestAnimationFrame(tick);
+        })();
+        document
+          .querySelectorAll(
+            "a, button, .sb-stat, .news-card, .card-featured, .filter-btn",
+          )
+          .forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+              cursorRing.style.width = "44px";
+              cursorRing.style.height = "44px";
+              cursorRing.style.borderColor = "rgba(200,0,30,0.5)";
+            });
+            el.addEventListener("mouseleave", () => {
+              cursorRing.style.width = "28px";
+              cursorRing.style.height = "28px";
+              cursorRing.style.borderColor = "rgba(200,0,30,0.35)";
+            });
+          });
+      }
+
+      // ── REVEAL ON SCROLL ──
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add("visible"), i * 70);
+              revealObs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.07 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => revealObs.observe(el));
+
+      // ── VIDEO OVERLAY: hide on play ──
+      document.querySelectorAll(".video-wrap video").forEach((video) => {
+        const overlay = video.parentElement.querySelector(".video-overlay");
+        if (overlay) {
+          video.addEventListener("play", () => (overlay.style.opacity = "0"));
+          video.addEventListener("pause", () => (overlay.style.opacity = "1"));
+        }
+      });
+    </script>
+  </body>
+</html>
