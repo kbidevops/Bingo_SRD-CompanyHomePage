@@ -409,15 +409,14 @@ body::before {
   position: relative;
   z-index: 1;
 }
-.arch-title {
-  text-align: center;
-  font-size: 26px;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 6px;
-  letter-spacing: -0.4px;
-  line-height: 1.2;
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+.arch-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
 /* Layers */
 .arch-layer {
