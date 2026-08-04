@@ -66,20 +66,20 @@
             </h1>
             <div class="zt-pills">
               <span class="zt-pill"
-                ><span class="pill-dot pill-dot--red"></span>Zero Trust</span
+                ><span class="pill-dot pill-dot--red"></span>CCE
+                시스템취약스캔</span
               >
               <span class="zt-pill"
-                ><span class="pill-dot pill-dot--blue"></span>CCE 진단</span
+                ><span class="pill-dot pill-dot--cyan"></span>CVE
+                소프트웨어취약스캔</span
               >
               <span class="zt-pill"
-                ><span class="pill-dot pill-dot--cyan"></span>CVE 진단</span
+                ><span class="pill-dot pill-dot--red"></span
+                >네이트워크스캔취약</span
               >
               <span class="zt-pill"
-                ><span class="pill-dot pill-dot--red"></span>STIG AI</span
-              >
-              <span class="zt-pill"
-                ><span class="pill-dot pill-dot--blue"></span>On-Prem &amp;
-                Cloud</span
+                ><span class="pill-dot pill-dot--cyan"></span
+                >위협인텔리전스</span
               >
             </div>
             <div class="hero-actions">
@@ -102,109 +102,123 @@
               <div class="arch-layer arch-layer--ctrl">
                 <div class="arch-layer-tag">제어층</div>
                 <div class="arch-layer-body">
-                  <svg class="arch-chip-icon" viewBox="0 0 40 40" fill="none">
-                    <rect
-                      x="6"
-                      y="6"
-                      width="28"
-                      height="28"
-                      rx="5"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      fill="rgba(59,162,242,0.12)"
-                    />
-                    <rect
-                      x="11"
-                      y="11"
-                      width="18"
-                      height="18"
-                      rx="2.5"
-                      stroke="currentColor"
-                      stroke-width="1"
-                      fill="rgba(59,162,242,0.06)"
-                      stroke-dasharray="3 2"
-                    />
-                    <text
-                      x="20"
-                      y="25"
-                      text-anchor="middle"
-                      fill="currentColor"
-                      font-size="11"
-                      font-weight="bold"
-                      font-family="sans-serif"
+                  <div class="arch-ctrl-main">
+                    <svg
+                      class="arch-chip-icon"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      aria-hidden="true"
                     >
-                      AI
-                    </text>
-                    <line
-                      x1="6"
-                      y1="15"
-                      x2="1"
-                      y2="15"
-                      stroke="currentColor"
-                      stroke-width="1.2"
-                    />
-                    <line
-                      x1="6"
-                      y1="25"
-                      x2="1"
-                      y2="25"
-                      stroke="currentColor"
-                      stroke-width="1.2"
-                    />
-                    <line
-                      x1="34"
-                      y1="15"
-                      x2="39"
-                      y2="15"
-                      stroke="currentColor"
-                      stroke-width="1.2"
-                    />
-                    <line
-                      x1="34"
-                      y1="25"
-                      x2="39"
-                      y2="25"
-                      stroke="currentColor"
-                      stroke-width="1.2"
-                    />
-                    <line
-                      x1="15"
-                      y1="6"
-                      x2="15"
-                      y2="1"
-                      stroke="currentColor"
-                      stroke-width="1.2"
-                    />
-                    <line
-                      x1="25"
-                      y1="6"
-                      x2="25"
-                      y2="1"
-                      stroke="currentColor"
-                      stroke-width="1.2"
-                    />
-                    <line
-                      x1="15"
-                      y1="34"
-                      x2="15"
-                      y2="39"
-                      stroke="currentColor"
-                      stroke-width="1.2"
-                    />
-                    <line
-                      x1="25"
-                      y1="34"
-                      x2="25"
-                      y2="39"
-                      stroke="currentColor"
-                      stroke-width="1.2"
-                    />
-                  </svg>
-                  <div class="arch-ctrl-info">
-                    <div class="arch-ctrl-name">BingoCVM AI 엔진</div>
-                    <div class="arch-ctrl-sub">제로 트러스트 정책 엔진</div>
+                      <defs>
+                        <linearGradient
+                          id="chipBg"
+                          x1="8"
+                          y1="8"
+                          x2="40"
+                          y2="40"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0" stop-color="#1f283a" />
+                          <stop offset="1" stop-color="#161e2f" />
+                        </linearGradient>
+                      </defs>
+                      <rect
+                        x="8"
+                        y="8"
+                        width="32"
+                        height="32"
+                        rx="6"
+                        fill="url(#chipBg)"
+                        stroke="#4fb6ff"
+                        stroke-width="1.6"
+                      />
+                      <rect
+                        x="14"
+                        y="14"
+                        width="20"
+                        height="20"
+                        rx="4"
+                        stroke="#62c3ff"
+                        stroke-width="1.2"
+                      />
+                      <rect
+                        x="19"
+                        y="19"
+                        width="10"
+                        height="10"
+                        rx="2"
+                        fill="#243046"
+                        stroke="#5cc0ff"
+                        stroke-width="1"
+                      />
+                      <path
+                        d="M16 24h4M28 24h4M24 16v4M24 28v4"
+                        stroke="#66c8ff"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                      />
+                      <g
+                        stroke="#58bbff"
+                        stroke-width="1.1"
+                        stroke-linecap="round"
+                      >
+                        <path d="M8 16H4" />
+                        <path d="M8 24H4" />
+                        <path d="M8 32H4" />
+                        <path d="M44 16h-4" />
+                        <path d="M44 24h-4" />
+                        <path d="M44 32h-4" />
+                        <path d="M16 8V4" />
+                        <path d="M24 8V4" />
+                        <path d="M32 8V4" />
+                        <path d="M16 44v-4" />
+                        <path d="M24 44v-4" />
+                        <path d="M32 44v-4" />
+                      </g>
+                      <rect
+                        x="2.5"
+                        y="2.5"
+                        width="13"
+                        height="11"
+                        rx="3"
+                        fill="#141c2a"
+                        stroke="#4fb6ff"
+                        stroke-width="1"
+                      />
+                      <text
+                        x="9"
+                        y="10.2"
+                        text-anchor="middle"
+                        fill="#63c9ff"
+                        font-size="6"
+                        font-weight="700"
+                        font-family="'IBM Plex Mono', monospace"
+                      >
+                        AI
+                      </text>
+                    </svg>
+                    <div class="arch-ctrl-info">
+                      <div class="arch-ctrl-name">BingoCVM</div>
+                      <div class="arch-ctrl-sub">
+                        제로트러스트
+                        <br />
+                        취약점 진단 엔진
+                      </div>
+                    </div>
                   </div>
-                  <div class="arch-stig-pill">STIG 가이드<br />학습 AI</div>
+                  <div
+                    class="arch-ctrl-brief"
+                    aria-label="위협 인텔리전스 핵심 요약"
+                  >
+                    <div class="arch-ctrl-brief-title">
+                      위협 인텔리전스 지표
+                    </div>
+                    <ul>
+                      <li><strong>CVSS</strong> 기술 심각도 정량화</li>
+                      <li><strong>EPSS</strong> 실제 악용 확률 예측</li>
+                      <li><strong>KEV</strong> 실제 악용 여부 확인</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
@@ -235,21 +249,26 @@
 
               <!-- Analysis Layer (분석층) -->
               <div class="arch-layer arch-layer--analysis">
-                <div class="arch-layer-tag arch-tag--analysis">
-                  분석층 | CCE + CVE 통합 모듈
-                </div>
+                <div class="arch-layer-tag arch-tag--analysis">분석층</div>
                 <div class="arch-dual">
                   <div class="arch-module arch-module--cce">
-                    <div class="arch-module-name">CCE (설정 취약점)</div>
+                    <div class="arch-module-name">CCE 시스템취약스캔</div>
                     <div class="arch-module-desc">
                       시스템 설정 오류, 컴플라이언스 미준수 진단
                     </div>
                   </div>
                   <div class="arch-dual-sep">&#8644;</div>
                   <div class="arch-module arch-module--cve">
-                    <div class="arch-module-name">CVE (알려진 취약점)</div>
+                    <div class="arch-module-name">CVE 소프트웨어취약스캔</div>
                     <div class="arch-module-desc">
                       글로벌 보안 약점, OS/SW 취약점 실시간 매핑
+                    </div>
+                  </div>
+                  <div class="arch-dual-sep">&#8644;</div>
+                  <div class="arch-module arch-module--nse">
+                    <div class="arch-module-name">네트워크스캔취약점</div>
+                    <div class="arch-module-desc">
+                      고성능 네트워크 스캐닝 엔진으로 실시간 취약 자산 탐지
                     </div>
                   </div>
                 </div>
@@ -398,12 +417,8 @@
               <span class="hero-rule-text">automated workflow</span>
               <div class="hero-rule-line"></div>
             </div>
-            <p
-              class="hero-desc"
-              style="margin-bottom: 20px"
-              data-i18n-html="home.slide2.desc"
-            >
-              <strong>독보적 ATC 자동화 엔진</strong>으로 자산 등록부터
+            <p class="hero-desc" style="margin-bottom: 20px">
+              <strong>제로트러스트 취약점 진단 엔진</strong>으로 자산 등록부터
               진단·분석·조치·보고서까지 원스톱으로 제공합니다.
             </p>
             <div class="process-list">
@@ -443,32 +458,71 @@
           >
             <div class="bingocvm-card">
               <div class="card-header">
+                <span class="bs-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 2 4 5v6c0 5 3.4 8.7 8 9 4.6-.3 8-4 8-9V5l-8-3Z"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9 12l2 2 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div class="bs-name">BingoCVM</div>
               </div>
-              <div class="card-grid">
-                <div class="card-grid-cell">
-                  <div class="cell-title" style="color: var(--brand-cyan)">
-                    CCE
-                  </div>
-                  <div class="cell-desc">설정 취약점</div>
-                </div>
-                <div class="card-grid-cell">
-                  <div class="cell-title" style="color: var(--brand-cyan)">
-                    CVE
-                  </div>
-                  <div class="cell-desc">소프트웨어 버그</div>
-                </div>
+
+              <div class="card-desc">
+                하나의 플랫폼으로 통합하는 Zero Trust 취약점 진단
               </div>
-              <div class="card-desc" data-i18n-html="home.slide2.cardDesc">
-                온프레미스 + 클라우드를 <strong>CCE</strong>와
-                <strong>CVE</strong> 취약점으로 통합 진단하는
-                <strong>하나의 플랫폼</strong>
-              </div>
-              <div class="bs-tags">
-                <span class="bs-tag">On-Premise</span>
-                <span class="bs-tag">AWS · Azure · GCP</span>
-                <span class="bs-tag">KT Cloud</span>
-                <span class="bs-tag">Naver Cloud</span>
+              <div class="zt-linkmap" aria-label="제로 트러스트 연계 역할 매핑">
+                <div class="zt-linkmap-head">
+                  <span>BingoCVM 기능</span>
+                  <span>제로 트러스트 연계</span>
+                  <span>역할</span>
+                </div>
+                <div class="zt-linkmap-row">
+                  <div>CCE 시스템취약스캔<br />CVE 소프트웨어취약스캔</div>
+                  <div>
+                    <strong>자산의 신뢰도 지속적 검증</strong><br />(Continuous
+                    Verification)
+                  </div>
+                  <div>자산의 무결성, 자산의 신뢰도, 보호 위험 상시 확인</div>
+                </div>
+                <div class="zt-linkmap-row">
+                  <div>온프레미스 · 클라우드</div>
+                  <div>
+                    <strong>자산의 경계 없는 보호</strong><br />(No Perimeter)
+                  </div>
+                  <div>모든 환경에 대한 동일 보호 수준 적용</div>
+                </div>
+                <div class="zt-linkmap-row">
+                  <div>Network Scanner<br />(White · Black List)</div>
+                  <div>
+                    <strong>자산의 가시성 및 통제</strong><br />(Visibility
+                    &amp; Control)
+                  </div>
+                  <div>
+                    미인가 자산 차단 및 허가된 서비스만 허용, 자산현행화
+                  </div>
+                </div>
+                <div class="zt-linkmap-row">
+                  <div>위협인텔리전스 +<br />자산 중요도 및 복구관리</div>
+                  <div>
+                    <strong>자산의 동적 신뢰 수준 산정</strong><br />(Endpoint
+                    Trust Score)
+                  </div>
+                  <div>
+                    정적 위험도 스코어, 동적 예측 위험도 스코어, 실제 악용 여부
+                    확인, 자산중요도관리 및 RTO, RPO, 복구 우선 순위 관리
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -744,12 +798,11 @@
           <div class="bingo-feat">
             <div class="feat-n">04</div>
             <div>
-              <div class="feat-title" data-i18n="home.bingo.feat4.title">
-                독보적 ATC 자동화 엔진
-              </div>
-              <div class="feat-desc" data-i18n="home.bingo.feat4.desc">
-                자산 등록부터 진단·수집·분석·조치까지 전 과정을 자동화하여
-                담당자 업무시간을 대폭 단축합니다.
+              <div class="feat-title">제로트러스트 취약점 진단 엔진</div>
+              <div class="feat-desc">
+                제로트러스트 취약점 진단 엔진으로 자산 등록부터
+                진단·수집·분석·조치까지 전 과정을 자동화하여 담당자 업무시간을
+                대폭 단축합니다.
               </div>
             </div>
           </div>
@@ -759,9 +812,10 @@
               <div class="feat-title" data-i18n="home.bingo.feat5.title">
                 온프레미스 + 클라우드 통합 진단
               </div>
-              <div class="feat-desc" data-i18n="home.bingo.feat5.desc">
-                온프레미스와 클라우드 자산을 하나의 플랫폼에서 CCE + CVE 취약점
-                진단이 가능합니다.
+              <div class="feat-desc">
+                온프레미스와 클라우드 자산을 하나의 플랫폼에서 CCE 시스템
+                취약점, CVE 소프트웨어취약점, 네트워크스캔 취약점, 위협
+                인텔리전스 지표까지 통합 진단이 가능합니다.
               </div>
             </div>
           </div>
@@ -776,15 +830,13 @@
             </div>
             <div class="bs-tags">
               <span class="bs-tag-light">온프레미스/클라우드</span>
-              <span class="bs-tag-light">CCE/CVE</span>
-              <span class="bs-tag-light">STIG AI</span>
             </div>
             <div class="bs-desc" data-i18n="home.bingo.sideDesc">
               Unix/Linux · Windows · PC · Web · DBMS · Network · 가상화 ·
               클라우드 플랫폼의 취약점 항목을 자동 스케줄 진단합니다.
             </div>
-            <a href="./sub/product/" class="bs-cta">
-              제품 자세히 보기
+            <a href="./sub/product/#platforms" class="bs-cta">
+              지원 플랫폼 보기
               <svg viewBox="0 0 16 16">
                 <polyline points="6 4 10 8 6 12" />
               </svg>
@@ -795,7 +847,7 @@
             <div class="bs-sol">
               <div class="bs-sol-name">BingoCVM</div>
               <div class="bs-sol-desc" data-i18n="home.bingo.sol1.desc">
-                시스템 취약점진단 자동화 (온프레미스 + 클라우드)
+                제로트러스트 취약점진단 자동화 (온프레미스 + 클라우드)
               </div>
             </div>
             <div class="bs-sol">

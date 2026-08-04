@@ -1,30 +1,30 @@
-(function () {
+﻿(function () {
   const STORAGE_KEY = "siteLanguage";
   const SUPPORTED = new Set(["ko", "en"]);
   const TEXT_ATTRS = ["aria-label", "title", "placeholder"];
 
   const RUNTIME_REPLACEMENTS = [
-    ["통합 취약점 진단 솔루션", "Integrated Vulnerability Assessment Solution"],
-    ["CCE 진단", "CCE Assessment"],
-    ["CVE 진단", "CVE Assessment"],
+    ["통합 취약점 진단 솔루션", "Integrated Vulnerability Scan Solution"],
+    ["CCE 진단", "CCE Scan"],
+    ["CVE 진단", "CVE Scan"],
     ["BingoCVM 알아보기 →", "Explore BingoCVM ->"],
     ["회사 소개", "Company Overview"],
     [
       "BingoCVM 제로트러스트 통합 진단 아키텍처",
-      "BingoCVM Zero Trust Integrated Assessment Architecture",
+      "BingoCVM Zero Trust Integrated Scan Architecture",
     ],
     ["제어층", "Control Layer"],
     ["BingoCVM AI 엔진", "BingoCVM AI Engine"],
     ["제로 트러스트 정책 엔진", "Zero Trust Policy Engine"],
     ["STIG 가이드", "STIG Guide"],
     ["학습 AI", "Learning AI"],
-    ["진단 명령 및 정책 적용", "Assessment Commands & Policy Application"],
+    ["진단 명령 및 정책 적용", "Scan Commands & Policy Application"],
     [
       "분석층 | CCE + CVE 통합 모듈",
       "Analysis Layer | CCE + CVE Integrated Module",
     ],
-    ["CCE (설정 취약점)", "CCE (Configuration Vulnerabilities)"],
-    ["CVE (알려진 취약점)", "CVE (Known Vulnerabilities)"],
+    ["CCE 시스템취약스캔", "CCE System Vulnerabilities Scan"],
+    ["CVE 소프트웨어취약스캔", "CVE Software Vulnerabilities Scan"],
     [
       "시스템 설정 오류, 컴플라이언스 미준수 진단",
       "Diagnoses system configuration errors and compliance non-conformities",
@@ -50,19 +50,16 @@
     ["비용 절감", "Cost Reduction"],
     ["컴플라이언스 달성", "Compliance Achievement"],
     ["자사 대표 솔루션", "Flagship Solution"],
-    [
-      "취약점진단 자동화 플랫폼",
-      "Vulnerability Assessment Automation Platform",
-    ],
+    ["취약점진단 자동화 플랫폼", "Vulnerability Scan Automation Platform"],
     ["5단계 프로세스", "5-Step Process"],
-    ["독보적 ATC 자동화 엔진", "Unique ATC Automation Engine"],
+
     ["으로 자산 등록부터", " for end-to-end asset onboarding through"],
     [
       "진단·분석·조치·보고서까지 원스톱으로 제공합니다.",
-      "assessment, analysis, remediation, and reporting in one workflow.",
+      "Scan, analysis, remediation, and reporting in one workflow.",
     ],
     ["자산등록", "Register Assets"],
-    ["취약점 진단", "Vulnerability Assessment"],
+    ["취약점 진단", "Vulnerability Scan"],
 
     ["취약점 분석", "Vulnerability Analysis"],
     ["AI 분석", "AI Analysis"],
@@ -99,7 +96,7 @@
     ["BingoCVM 구축", "BingoCVM Implementation"],
     ["한국수자원공사", "K-water (Korea Water Resources Corp.)"],
     ["SK하이닉스", "SK Hynix"],
-    ["인텔리전스 진단", "Intelligence Assessment"],
+    ["인텔리전스 진단", "Intelligence Scan"],
     ["전체 고객사 보기", "View All Clients"],
     ["이전 슬라이드", "Previous slide"],
     ["다음 슬라이드", "Next slide"],
@@ -112,7 +109,7 @@
     ],
     [
       "(주)케이비아이는 AI 빅데이터 분석 기반의 보안취약점 진단 기술로 기업 보안의 신뢰와 믿음을 만들었습니다.",
-      "KBI Co., Ltd. has built trust and confidence in corporate security through AI Big Data Analysis-based Security Vulnerability Assessment Technology.",
+      "KBI Co., Ltd. has built trust and confidence in corporate security through AI Big Data Analysis-based Security Vulnerability Scan Technology.",
     ],
     [
       "국가주요기관, 공공, 국방, 연구·교육, IT 분야에 걸친 50개 이상 주요 고객사",
@@ -127,11 +124,11 @@
     ["자사 대표 제품", "Flagship Product"],
     [
       "BingoCVM — 취약점진단 자동화 플랫폼",
-      "BingoCVM - Automated Vulnerability Assessment Platform",
+      "BingoCVM - Automated Vulnerability Scan Platform",
     ],
     [
       "정보통신기반시설 및 클라우드 시스템 취약점진단 자동화",
-      "Automation for vulnerability assessments across critical ICT infrastructure and cloud systems",
+      "Automation for vulnerability Scans across critical ICT infrastructure and cloud systems",
     ],
     [
       "를 제공하는 (주) 케이비아이의 대표 보안 솔루션입니다. 진단 / 평가 / 분류 / 조치 / 이력 / 보고서까지 원스톱으로 제공합니다.",
@@ -149,34 +146,28 @@
     ],
     [
       "공공기관 사이버보안 실태평가 대응",
-      "Support for Public Sector Cybersecurity Assessments",
+      "Support for Public Sector Cybersecurity Scans",
     ],
     [
       "정부·공공기관의 사이버보안 실태평가 요구사항에 맞춤 대응합니다.",
-      "Tailored response to cybersecurity assessment requirements for government and public institutions.",
+      "Tailored response to cybersecurity Scan requirements for government and public institutions.",
     ],
     [
       "자산 등록부터 진단·수집·분석·조치까지 전 과정을 자동화하여 담당자 업무시간을 대폭 단축합니다.",
       "Automates the full workflow from asset registration to diagnostics, collection, analysis, and remediation to significantly reduce operational workload.",
     ],
-    [
-      "온프레미스 + 클라우드 통합 진단",
-      "Integrated On-Prem + Cloud Assessment",
-    ],
-    [
-      "온프레미스와 클라우드 자산을 하나의 플랫폼에서 CCE + CVE 취약점 진단이 가능합니다.",
-      "Enables CCE + CVE vulnerability assessments for on-premises and cloud assets in one platform.",
-    ],
+    ["온프레미스 + 클라우드 통합 진단", "Integrated On-Prem + Cloud Scan"],
+
     ["온프레미스/클라우드", "On-Prem/Cloud"],
     [
       "Unix/Linux · Windows · PC · Web · DBMS · Network · 가상화 · 클라우드 플랫폼의 취약점 항목을 자동 스케줄 진단합니다.",
-      "Automatically runs scheduled vulnerability assessments for Unix/Linux, Windows, PC, Web, DBMS, Network, virtualization, and cloud platforms.",
+      "Automatically runs scheduled vulnerability Scans for Unix/Linux, Windows, PC, Web, DBMS, Network, virtualization, and cloud platforms.",
     ],
-    ["제품 자세히 보기", "Learn More About Product"],
+
     ["관련 솔루션", "Related Solutions"],
     [
       "시스템 취약점진단 자동화 (온프레미스 + 클라우드)",
-      "System vulnerability assessment automation (On-Premise + Cloud)",
+      "System vulnerability Scan automation (On-Premise + Cloud)",
     ],
     [
       "정보시스템 장애 접수·처리 관리",
@@ -295,17 +286,17 @@
     ],
     [
       "정보통신기반시설 및 클라우드 시스템 취약점진단 자동화 솔루션 BingoCVM을 영상으로 만나보세요. 온프레미스부터 클라우드까지 CCE + CVE 통합 진단 기능을 확인하실 수 있습니다.",
-      "Watch BingoCVM, an automated vulnerability assessment solution for critical ICT infrastructure and cloud systems. See integrated CCE + CVE assessment capabilities from on-premises to cloud.",
+      "Watch BingoCVM, an automated vulnerability Scan solution for critical ICT infrastructure and cloud systems. See integrated CCE + CVE Scan capabilities from on-premises to cloud.",
     ],
     ["블로그에서 보기 →", "View on Blog ->"],
     ["소개", "Introduction"],
     [
       "주요정보통신기반시설 기술적 취약점 분석·평가 방법 상세가이드 업데이트",
-      "Updated Technical Vulnerability Analysis & Assessment Guide for Major Information Infrastructure",
+      "Updated Technical Vulnerability Analysis & Scan Guide for Major Information Infrastructure",
     ],
     [
       "2025년 12월 24일 KISA의 주요정보통신기반시설 기술적 취약점 분석 및 평가 방법 상세 가이드가 업데이트되었습니다.",
-      "On Dec 24, 2025, KISA updated the detailed guide for technical vulnerability analysis and assessment of major information infrastructure.",
+      "On Dec 24, 2025, KISA updated the detailed guide for technical vulnerability analysis and Scan of major information infrastructure.",
     ],
     [
       "저희 BingoCVM은 새롭게 업데이트 된 KISA의 표준에 적합하게 진단하기 위해 연구 및 고도화를 진행하고 있습니다.",
@@ -386,20 +377,20 @@
     ],
     [
       "온프레미스 및 클라우드 시스템 취약점 진단",
-      "On-Premises and Cloud Vulnerability Assessment",
+      "On-Premises and Cloud Vulnerability Scan",
     ],
     [
       "온프레미스에서 클라우드 시스템까지 모두 하나의 플랫폼 BingoCVM에서 취약점진단이 가능합니다.",
-      "From on-premises to cloud systems, vulnerability assessments are available in one BingoCVM platform.",
+      "From on-premises to cloud systems, vulnerability Scans are available in one BingoCVM platform.",
     ],
     [
       "진단 대상: Unix/Linux 서버, Windows 서버, PC, 웹, DBMS, Network, 가상화, 클라우드 플랫폼의 취약점 항목을 자동 스케줄 진단할 수 있습니다.",
-      "Assessment targets include Unix/Linux servers, Windows servers, PCs, web, DBMS, network, virtualization, and cloud platform vulnerabilities via automatic scheduled scans.",
+      "Scan targets include Unix/Linux servers, Windows servers, PCs, web, DBMS, network, virtualization, and cloud platform vulnerabilities via automatic scheduled scans.",
     ],
-    ["취약점 진단 프로세스", "Assessment Process"],
+    ["취약점 진단 프로세스", "Scan Process"],
     [
       "5단계 체계적 취약점 진단 프로세스",
-      "Structured 5-Step Vulnerability Assessment Process",
+      "Structured 5-Step Vulnerability Scan Process",
     ],
     [
       "BingoCVM의 취약점 진단 프로세스는 체계적이고 단계적인 접근으로 빠짐없는 취약점관리를 실현합니다.",
@@ -407,7 +398,7 @@
     ],
     [
       "취약점 진단 주요단계는 자산등록, 취약점진단, 취약점분석, 취약점조치, 이행점검으로 이루어집니다.",
-      "The core steps are asset registration, vulnerability assessment, analysis, remediation, and verification.",
+      "The core steps are asset registration, vulnerability Scan, analysis, remediation, and verification.",
     ],
     [
       "모든 IT 자산을 Agent 또는 Non‑Agent 방식으로 식별하여 등록",
@@ -447,7 +438,7 @@
     ],
     [
       "최종 진단 보고서 및 비교 보고서 제공 (다운로드 가능)",
-      "Provide final and comparative assessment reports (download available)",
+      "Provide final and comparative Scan reports (download available)",
     ],
     ["취약점 유형 소개", "Vulnerability Types"],
     ["CCE 취약점과 CVE 취약점", "CCE and CVE Vulnerabilities"],
@@ -463,7 +454,7 @@
     ["KISA의 취약점 표준 체계", "KISA Vulnerability Standard Framework"],
     [
       "대한민국에서는 한국인터넷진흥원(KISA)이 주요 정보보호 취약점 기준을 관리·보급합니다. 다음과 같은 국내 표준 취약점 점검 기준을 제공합니다.",
-      "In Korea, KISA manages and distributes major information security vulnerability criteria and provides domestic standard assessment baselines.",
+      "In Korea, KISA manages and distributes major information security vulnerability criteria and provides domestic standard Scan baselines.",
     ],
     [
       "① 주요정보통신기반시설 기술적 취약점 분석·평가 기준",
@@ -512,10 +503,7 @@
     ],
     ["형식: CVE-연도-번호", "Format: CVE-Year-ID"],
     ["예: CVE-2024-12345", "e.g., CVE-2024-12345"],
-    [
-      "CVSS 점수와 연계 (위험도 평가)",
-      "Linked with CVSS scoring (risk assessment)",
-    ],
+    ["CVSS 점수와 연계 (위험도 평가)", "Linked with CVSS scoring (risk Scan)"],
     ["CVE 예시", "CVE Examples"],
     [
       "Apache Log4j의 Log4Shell 원격 코드 실행 취약점",
@@ -532,7 +520,7 @@
     ],
     ["프로세스 진행절차", "Process workflow"],
     ["설치", "Install"],
-    ["Manager 구축", "Manager setp"],
+    ["Manager 구축", "Manager setup"],
 
     ["대상 호스트 등록", "Register target hosts"],
     ["진단 실행", "Run scan"],
@@ -554,16 +542,16 @@
     ["Cloud Platform:", "Cloud Platform:"],
     ["WEB/WAS & Network", "WEB/WAS & Network"],
     ["스위치/라우터", "switches/routers"],
-    ["매뉴얼 진단 지원", "manual assessment supported"],
+    ["매뉴얼 진단 지원", "manual Scan supported"],
     ["주요 기능 및 특장점", "Key Features and Strengths"],
     ["기능 및 특장점", "Features and Strengths"],
     [
       "BingoCVM은 정보통신기반시설 및 클라우드 시스템 취약점진단 자동화를 제공합니다.",
-      "BingoCVM provides automated vulnerability assessments for critical ICT infrastructure and cloud systems.",
+      "BingoCVM provides automated vulnerability Scans for critical ICT infrastructure and cloud systems.",
     ],
     [
       "시스템 취약점 진단/평가/분류/조치/이력/보고서까지 편리한 서비스를 제공합니다.",
-      "It offers convenient end-to-end services from assessment/evaluation/classification/remediation/history to reporting.",
+      "It offers convenient end-to-end services from Scan/evaluation/classification/remediation/history to reporting.",
     ],
     [
       "BingoCVM은 독보적인 ATC 자동화 엔진과 유연한 관리 기능으로 최상의 보안 관리 효율성을 제공합니다.",
@@ -583,7 +571,7 @@
     ],
     [
       "국내 최초로 Agent 및 Non-Agent 혼합 스케줄 진단을 지원하여 다양한 환경에 최적화된 진단이 가능합니다.",
-      "Supports Korea's first mixed agent/non-agent scheduled diagnostics for optimized assessment across diverse environments.",
+      "Supports Korea's first mixed agent/non-agent scheduled diagnostics for optimized Scan across diverse environments.",
     ],
     [
       "On-Premise + Cloud 자산을 하나의 플랫폼에서 취약점 진단합니다.",
@@ -602,11 +590,15 @@
     ["03 사업내용", "03 Services"],
     ["04 고객사", "04 Clients"],
     ["01 도입효과", "01 Benefits"],
-    ["02 진단 프로세스", "02 Assessment Process"],
+    ["02 진단 프로세스", "02 Scan Process"],
     ["04 시스템 구성", "04 System Architecture"],
     ["05 지원 플랫폼", "05 Supported Platforms"],
     ["06 기능·특장점", "06 Features & Strengths"],
   ];
+
+  const ORDERED_RUNTIME_REPLACEMENTS = [...RUNTIME_REPLACEMENTS].sort(
+    (a, b) => String(b[0] || "").length - String(a[0] || "").length,
+  );
 
   const DICT = {
     ko: {
@@ -791,8 +783,10 @@
       "about.clients.stat5": "민간·IT 기업",
       "news.featuredVideoDesc":
         "정보통신기반시설 및 클라우드 시스템 취약점진단 자동화 솔루션 BingoCVM을 Video으로 만나보세요. On-Premises부터 Cloud까지 CCE + CVE 통합 진단 기능을 확인하실 수 있습니다.",
-      "home.slide2.desc":
-        "<strong>독보적 ATC 자동화 엔진</strong>으로 자산 등록부터 진단·분석·조치·보고서까지 원스톱으로 제공합니다.",
+
+      "home.slide3.desc":
+        "국가 주요 정보통신기반시설을 비롯해 공공기관, 국방, 연구기관, IT 기업 등 다양한 분야에서 <strong>20년 이상</strong> 신뢰를 받아왔습니다.",
+
       "home.slide3.viewAll": "전체 고객사 보기",
       "home.bingo.desc":
         "<strong>정보통신기반시설 및 클라우드 시스템 취약점진단 자동화</strong>를 제공하는 (주) 케이비아이의 대표 보안 솔루션입니다. 진단 / 평가 / 분류 / 조치 / 이력 / 보고서까지 원스톱으로 제공합니다.",
@@ -805,16 +799,15 @@
       "home.bingo.feat3.title": "공공기관 사이버보안 실태평가 대응",
       "home.bingo.feat3.desc":
         "정부·공공기관의 사이버보안 실태평가 요구사항에 맞춤 대응합니다.",
-      "home.bingo.feat4.title": "독보적 ATC 자동화 엔진",
+
       "home.bingo.feat4.desc":
         "자산 등록부터 진단·수집·분석·조치까지 전 과정을 자동화하여 담당자 업무시간을 대폭 단축합니다.",
       "home.bingo.feat5.title": "온프레미스 + 클라우드 통합 진단",
-      "home.bingo.feat5.desc":
-        "온프레미스와 클라우드 자산을 하나의 플랫폼에서 CCE + CVE 취약점 진단이 가능합니다.",
+
       "home.bingo.sideDesc":
         "Unix/Linux · Windows · PC · Web · DBMS · Network · 가상화 · 클라우드 플랫폼의 취약점 항목을 자동 스케줄 진단합니다.",
       "home.bingo.sol1.desc":
-        "시스템 취약점진단 자동화 (온프레미스 + 클라우드)",
+        "제로트러스트 취약점진단 자동화 (온프레미스 + 클라우드)",
       "home.strip1.label": "Years",
       "home.strip1.desc":
         "2003년 설립 이래 20년 이상 대한민국 정보보안을 책임져온 전문 기업",
@@ -830,8 +823,7 @@
         "<strong>정보통신기반시설 및 클라우드 시스템 취약점진단 자동화</strong>를 제공합니다.",
       "product.intro.eyebrow": "도입 효과",
       "product.intro.title": "도입효과 및 핵심 기능",
-      "product.intro.desc":
-        "BingoCVM은 <strong>독보적인 ATC 자동화 엔진</strong>과 유연한 관리 기능으로 최상의 보안 관리 효율성을 제공합니다.",
+
       "product.intro.effect1.title": "국내 컴플라이언스 규정 준수",
       "product.intro.effect1.desc":
         "KISA 취약점점검 가이드 기준에 따른 체계적인 점검으로 법적 요건을 충족합니다.",
@@ -890,7 +882,7 @@
       "product.process.step5.li2":
         "최종 진단 보고서 및 비교 보고서 제공 (다운로드 가능)",
       "product.cceCve.eyebrow": "취약점 유형 소개",
-      "product.cceCve.title": "CCE 취약점과 CVE 취약점",
+
       "product.cceCve.desc":
         "BingoCVM은 <strong>CCE(설정 기반 취약점)</strong>와 <strong>CVE(소프트웨어 취약점)</strong> 두 가지 유형을 통합 진단합니다. <br />설정 오류부터 알려진 버그까지, 하나의 플랫폼에서 모두 관리합니다.",
       "product.cceCve.left.badge": "Common Configuration Enumeration",
@@ -946,22 +938,20 @@
       "product.features.title": "기능 및 특장점",
       "product.features.desc":
         "BingoCVM은 정보통신기반시설 및 클라우드 시스템 취약점진단 자동화를 제공합니다. 시스템 취약점 진단/평가/분류/조치/이력/보고서까지 편리한 서비스를 제공합니다.",
-      "product.features.caption":
-        "BingoCVM은 독보적인 ATC 자동화 엔진과 유연한 관리 기능으로 최상의 보안 관리 효율성을 제공합니다.",
+
       "product.features.left.title": "기능",
       "product.features.left.li1":
         "자동/수동/스케줄 진단을 지원하며, 진단 결과 및 로그 분석, 조치/중점 이력까지 원스톱 관리가 가능합니다.",
       "product.features.left.li2":
         "자산별·그룹별 보고서 생성 및 진단 가이드/스크립트의 유연한 커스터마이징 기능을 제공합니다.",
       "product.features.right.title": "특장점",
-      "product.features.right.li1":
-        "ATC 자동화 엔진을 적용하여 자산 등록부터 진단, 수집, 분석까지 전 과정을 자동화합니다.",
+
       "product.features.right.li2":
         "국내 최초로 Agent 및 Non-Agent 혼합 스케줄 진단을 지원하여 다양한 환경에 최적화된 진단이 가능합니다.",
       "product.features.right.li3":
         "On-Premise + Cloud 자산을 하나의 플랫폼에서 취약점 진단합니다.",
       "product.features.right.li4":
-        "CCE + CVE 취약점을 하나의 플랫폼에서 진단합니다.",
+        "CCE 시스템취약점, CVE 소프트웨어취약점을 하나의 플랫폼에서 진단합니다.",
       "product.features.right.li5":
         "Network Scanner 기능을 통해 IP, Port, Service 정보를 효율적으로 스캔합니다. 또한 Blacklist·Whitelist 정책 기반 탐지를 지원하여, 불필요하거나 비인가된 IP·Port를 주기적으로 점검하고 관리할 수 있습니다.",
       "contact.channels.eyebrow": "연락처 안내",
@@ -1034,6 +1024,13 @@
       "news.showMore": "더보기",
       "news.collapse": "접기",
       "news.itemsSuffix": "개 항목",
+      "footer.sitemap": "사이트맵",
+      "footer.contact": "문의",
+      "footer.addressLabel": "주소",
+      "footer.addressValue": "대전광역시 서구 둔산대로117번길 44, 415호",
+      "footer.emailLabel": "이메일",
+      "footer.salesLabel": "영업문의",
+      "footer.copyright": "© 2026 케이비아이(주) All rights reserved.",
     },
     en: {
       "common.skipToContent": "Skip to content",
@@ -1049,7 +1046,7 @@
       "nav.toggleClose": "Close menu",
       "lang.switchToEnglish": "Switch to English",
       "lang.switchToKorean": "Switch to Korean",
-      "footer.platformSub": "Automated Vulnerability Assessment Platform",
+      "footer.platformSub": "Automated Vulnerability Scan Platform",
       "footer.sitemap": "Sitemap",
       "footer.contact": "Contact",
       "footer.addressLabel": "Address",
@@ -1060,11 +1057,11 @@
       "footer.copyright":
         "© 2026 KBI e-Security Consulting Co., Ltd. All rights reserved.",
       "about.hero.mainText":
-        "<strong>KBI Co., Ltd.</strong> has built <strong>trust and confidence</strong> in corporate security through <strong>AI Big Data Analysis-based Security Vulnerability Assessment Technology</strong>.",
+        "<strong>KBI Co., Ltd.</strong> has built <strong>trust and confidence</strong> in corporate security through <strong>AI Big Data Analysis-based Security Vulnerability Scan Technology</strong>.",
       "about.history.eyebrow": "MAJOR HISTORY",
       "about.history.title": "Company History & Major Achievements",
       "about.history.desc":
-        "KBI Co., Ltd. builds trust and confidence in corporate security through AI Big Data Analysis-based Security Vulnerability Assessment Technology.",
+        "KBI Co., Ltd. builds trust and confidence in corporate security through AI Big Data Analysis-based Security Vulnerability Scan Technology.",
       "about.history.tl1.title": "Founding·Core Technology",
       "about.history.tl1.li1": "Established KBI Co., Ltd. (2003)",
       "about.history.tl1.li2": "NSR cyber-terror response system development",
@@ -1116,7 +1113,7 @@
       "about.history.era3.label": "ERA 03",
       "about.history.era3.title": "Cloud & Defense Standardization Leadership",
       "about.history.era3.li1":
-        "Participated in CSAP Cloud security certification assessments",
+        "Participated in CSAP Cloud security certification Scans",
       "about.history.era3.li2": "Standardized K-RMF / K-STIG / K-SCAP",
       "about.history.era3.li3":
         "Delivered to Office of the President & National Police Agency (Nationwide)",
@@ -1131,7 +1128,7 @@
       "about.partners.left2.name": "ETRI / KAIT",
       "about.partners.left2.tag": "ICT Convergence Research",
       "about.partners.left2.li1":
-        "Development of K-RMF automation tools, execution of CSAP cloud security certification assessment tool contracts, and annual technical support services.",
+        "Development of K-RMF automation tools, execution of CSAP cloud security certification Scan tool contracts, and annual technical support services.",
       "about.partners.left2.li2":
         "CSAP execution for Gabia, AhnLab, and KT Cloud.",
       "about.partners.left2.li3": "CSAP cooperation with Kakao Cloud.",
@@ -1147,20 +1144,19 @@
       "about.partners.right2.name": "Major Institutions & Universities",
       "about.partners.right2.tag": "Industry-Academia-Research Cooperation",
       "about.partners.right2.li1":
-        "Security vulnerability assessment and solution implementation collaboration with various organizations including KISTI, KAIST, Korea Water Resources Corporation (K-water), Hanbat National University, and Korea Aerospace Research Institute (KARI).",
+        "Security vulnerability Scan and solution implementation collaboration with various organizations including KISTI, KAIST, Korea Water Resources Corporation (K-water), Hanbat National University, and Korea Aerospace Research Institute (KARI).",
       "about.services.eyebrow": "Core Business",
       "about.services.title": "Core Business Areas",
       "about.services.desc":
         "We provide the entire security process, from security consulting to solution development and supply. KBI Co., Ltd. possesses systematic services and technological capabilities to protect client information assets.",
       "about.services.card1.title": "01 | Security Consulting",
       "about.services.card1.li1":
-        "System vulnerability assessment services (On-Premise + Cloud CSAP)",
-      "about.services.card1.li2":
-        "CCE / CVE / CWE vulnerability assessment services",
+        "System vulnerability Scan services (On-Premise + Cloud CSAP)",
+      "about.services.card1.li2": "CCE / CVE / CWE vulnerability Scan services",
       "about.services.card1.li3":
-        "Vulnerability assessment services for public sector cybersecurity evaluation compliance",
+        "Vulnerability Scan services for public sector cybersecurity evaluation compliance",
       "about.services.card1.li4":
-        "Latest vulnerability research and assessment (e.g., BPFDoor, etc.)",
+        "Latest vulnerability research and Scan (e.g., BPFDoor, etc.)",
       "about.services.card2.title": "02 | Software Development",
       "about.services.card2.li1":
         "AI Big Data analysis and monitoring solutions",
@@ -1169,12 +1165,12 @@
       "about.services.card2.li3":
         "Test and evaluation tools implementing K-RMF, K-STIG, K-SCAP, and CMMC",
       "about.services.card2.li4":
-        "System vulnerability assessment tool development (On-Premise, Cloud, CVE)",
+        "System vulnerability Scan tool development (On-Premise, Cloud, CVE)",
       "about.services.card2.li5":
         "Emerging technology development in AI, Quantum, and Blockchain",
       "about.services.card3.title": "03 | Solutions",
       "about.services.card3.li1":
-        "<strong>BingoCVM:</strong> System vulnerability assessment automation (On-Premise + Cloud)",
+        "<strong>BingoCVM:</strong> System vulnerability Scan automation (On-Premise + Cloud)",
       "about.services.card3.li2":
         "<strong>BingoSRM:</strong> Information system incident receipt and handling management",
       "about.services.card3.li3":
@@ -1187,7 +1183,7 @@
         "BingoCVM is trusted across various sectors, ranging from national critical information infrastructure to public agencies, defense, research institutes, and government offices. With over 20 years of accumulated technological expertise, we take full responsibility for securing customer information.",
       "about.clients.desc2":
         "Faithful R&D execution to meet diverse customer needs ▶▶▶ Government Agencies / Research & Educational Institutions / Public Enterprise & Local Government / Defense / Private & IT",
-      "about.clients.badgeSub": "Vulnerability Assessment Automation Platform",
+      "about.clients.badgeSub": "Vulnerability Scan Automation Platform",
       "about.clients.cat1": "Government Agencies (9)",
       "about.clients.cat2": "Research & Educational Institutions (16)",
       "about.clients.cat3": "Public Institutions & Local Governments (19)",
@@ -1260,19 +1256,18 @@
       "about.clients.stat4": "Defense",
       "about.clients.stat5": "Private Sector & IT Companies",
       "news.featuredVideoDesc":
-        "Watch the video introduction for BingoCVM, the automated vulnerability assessment solution for critical information infrastructure and cloud systems. You can check out its integrated CCE + CVE assessment features across on-premise and cloud environments",
+        "Watch the video introduction for BingoCVM, the automated vulnerability Scan solution for critical information infrastructure and cloud systems. You can check out its integrated CCE + CVE Scan features across on-premise and cloud environments",
       "home.slide2.desc":
-        "Delivers a seamless one-stop experience from asset registration to assessment, analysis, remediation, and reporting using our proprietary <strong>ATC Automation Engine</strong>.",
-      "home.slide2.cardDesc":
-        "Integrates assessment of <strong>CCE</strong> and <strong>CVE</strong> vulnerabilities across both on-premise and cloud environments in <strong>a single platform</strong>",
+        "Delivers a seamless one-stop experience from asset registration to Scan, analysis, remediation, and reporting using our proprietary <strong>ATC Automation Engine</strong>.",
+
       "home.slide3.desc":
         "Trusted for <strong>over 20 years</strong> across various sectors including critical national information infrastructure, public institutions, defense, research institutes, and IT companies.",
       "home.slide3.viewAll": "View All Clients",
       "home.bingo.desc":
-        "KBI Co., Ltd.'s flagship security solution providing <strong>vulnerability assessment automation for critical information infrastructure and cloud systems</strong>. It delivers a one-stop workflow covering assessment, evaluation, classification, remediation, history tracking, and reporting.",
+        "KBI Co., Ltd.'s flagship security solution providing <strong>vulnerability Scan automation for critical information infrastructure and cloud systems</strong>. It delivers a one-stop workflow covering Scan, evaluation, classification, remediation, history tracking, and reporting.",
       "home.bingo.feat1.title": "Domestic Compliance Standards Compliance",
       "home.bingo.feat1.desc":
-        "Meets legal requirements through systematic inspections based on KISA vulnerability assessment guidelines.",
+        "Meets legal requirements through systematic inspections based on KISA vulnerability Scan guidelines.",
       "home.bingo.feat2.title":
         "ISMS-P & CSAP Certification Compliance Management",
       "home.bingo.feat2.desc":
@@ -1280,17 +1275,17 @@
       "home.bingo.feat3.title":
         "Response to Public Institution Cybersecurity Evaluations",
       "home.bingo.feat3.desc":
-        "Addresses requirements for government and public sector cybersecurity assessment evaluations.",
+        "Addresses requirements for government and public sector cybersecurity Scan evaluations.",
       "home.bingo.feat4.title": "Proprietary ATC Automation Engine",
       "home.bingo.feat4.desc":
-        "Automates the entire workflow from asset registration to assessment, collection, analysis, and remediation, significantly reducing administrative workload.",
-      "home.bingo.feat5.title": "Integrated On-Premise + Cloud Assessment",
+        "Automates the entire workflow from asset registration to Scan, collection, analysis, and remediation, significantly reducing administrative workload.",
+      "home.bingo.feat5.title": "Integrated On-Premise + Cloud Scan",
       "home.bingo.feat5.desc":
-        "Enables combined CCE + CVE vulnerability assessment for both on-premise and cloud assets within a single platform.",
+        "Enables combined CCE + CVE vulnerability Scan for both on-premise and cloud assets within a single platform.",
       "home.bingo.sideDesc":
         "Automatically schedules and diagnoses vulnerability items across Unix/Linux, Windows, PC, Web, DBMS, Network, Virtualization, and Cloud platforms.",
       "home.bingo.sol1.desc":
-        "System vulnerability assessment automation (On-Premise + Cloud)",
+        "Zero Trust vulnerability Scan automation (On-Premise + Cloud)",
       "home.strip1.label": "Years",
       "home.strip1.desc":
         "A specialized company that has taken full responsibility for South Korea's information security for over 20 years since its founding in 2003.",
@@ -1303,15 +1298,14 @@
       "home.strip4.label": "Solutions",
       "home.strip4.desc": "BingoCVM · BingoSRM · BingoTasker · BingoNaru",
       "product.hero.desc":
-        "Provides <strong>vulnerability assessment automation for critical information infrastructure and cloud systems</strong>.",
+        "Provides <strong>vulnerability Scan automation for critical information infrastructure and cloud systems</strong>.",
       "product.intro.eyebrow": "Adoption Effects",
       "product.intro.title": "Adoption Effects & Key Features",
-      "product.intro.desc":
-        "BingoCVM provides optimal security management efficiency through its proprietary <strong>ATC Automation Engine</strong> and flexible management capabilities.",
+
       "product.intro.effect1.title":
         "Domestic Compliance Guidelines Compliance",
       "product.intro.effect1.desc":
-        "Meets legal requirements through systematic assessments based on KISA vulnerability assessment guidelines.",
+        "Meets legal requirements through systematic Scans based on KISA vulnerability Scan guidelines.",
       "product.intro.effect2.title":
         "ISMS-P & CSAP Certification Acquisition and Compliance Management",
       "product.intro.effect2.desc":
@@ -1325,38 +1319,37 @@
       "product.intro.effect4.desc":
         "Increases reliability by systematically managing security vulnerabilities across all organizational systems.",
       "product.intro.card1.title":
-        "Easy Automation of System Vulnerability Assessment Management",
+        "Easy Automation of System Vulnerability Scan Management",
       "product.intro.card1.li1":
-        "BingoCVM automates system vulnerability assessments (schedule management) to reduce administrative workload.",
+        "BingoCVM automates system vulnerability Scans (schedule management) to reduce administrative workload.",
       "product.intro.card1.li2":
         "Through action/remediation management, you can track who took action, when, and how, as well as upload and manage supporting evidence.",
       "product.intro.card1.li3":
-        "Allows downloading comparative reports that contrast initial assessments with post-remediation results.",
+        "Allows downloading comparative reports that contrast initial Scans with post-remediation results.",
       "product.intro.card1.li4":
         "Provides a custom automated remediation feature to automatically remediate common organizational vulnerabilities.",
       "product.intro.card2.title":
-        "On-Premise & Cloud System Vulnerability Assessment",
+        "On-Premise & Cloud System Vulnerability Scan",
       "product.intro.card2.li1":
-        "Vulnerability assessment is possible across all systems, from on-premise to cloud, within a single platform (BingoCVM).",
+        "Vulnerability Scan is possible across all systems, from on-premise to cloud, within a single platform (BingoCVM).",
       "product.intro.card2.li2":
-        "Assessment Targets: Automatically schedules and diagnoses vulnerability items across Unix/Linux servers, Windows servers, PCs, Web, DBMS, Network, Virtualization, and Cloud platforms.",
-      "product.process.eyebrow": "Vulnerability Assessment Process",
-      "product.process.title":
-        "5-Step Systematic Vulnerability Assessment Process",
+        "Scan Targets: Automatically schedules and diagnoses vulnerability items across Unix/Linux servers, Windows servers, PCs, Web, DBMS, Network, Virtualization, and Cloud platforms.",
+      "product.process.eyebrow": "Vulnerability Scan Process",
+      "product.process.title": "5-Step Systematic Vulnerability Scan Process",
       "product.process.desc":
-        "BingoCVM's vulnerability assessment process delivers thorough vulnerability management through a systematic, step-by-step approach. The main stages consist of Asset Registration, Vulnerability Assessment, Vulnerability Analysis, Vulnerability Remediation, and Implementation Inspection.",
+        "BingoCVM's vulnerability Scan process delivers thorough vulnerability management through a systematic, step-by-step approach. The main stages consist of Asset Registration, Vulnerability Scan, Vulnerability Analysis, Vulnerability Remediation, and Implementation Inspection.",
       "product.process.step1.name": "Asset Registration",
       "product.process.step1.li1":
         "Identifies and registers all IT assets using Agent or Non-Agent methods.",
-      "product.process.step2.name": "Vulnerability Assessment",
+      "product.process.step2.name": "Vulnerability Scan",
       "product.process.step2.li1":
-        "Automatically deploys and executes CCE assessment scripts, then collects result files.",
+        "Automatically deploys and executes CCE Scan scripts, then collects result files.",
       "product.process.step2.li2":
         "Consolidates scan results through CVE-based asset mapping (Applied in 2026).",
       "product.process.step2.badge": "[Automated]",
       "product.process.step3.name": "Vulnerability Analysis",
       "product.process.step3.li1":
-        "Analyzes collected CCE assessment results to classify items into Vulnerable / Good / Exception.",
+        "Analyzes collected CCE Scan results to classify items into Vulnerable / Good / Exception.",
       "product.process.step3.li2":
         "Performs in-depth analysis on vulnerabilities using CVE-based AI analysis (Applied in 2026).",
       "product.process.step3.badge": "[AI Analysis]",
@@ -1370,13 +1363,13 @@
       "product.process.step4.badge": "[AI Remediation]",
       "product.process.step5.name": "Implementation Inspection",
       "product.process.step5.li1":
-        "Performs re-assessment after remediation to verify compliance.",
+        "Performs re-Scan after remediation to verify compliance.",
       "product.process.step5.li2":
-        "Provides final assessment reports and comparison reports (Available for download).",
+        "Provides final Scan reports and comparison reports (Available for download).",
       "product.cceCve.eyebrow": "Vulnerability Types Overview",
-      "product.cceCve.title": "CCE Vulnerabilities and CVE Vulnerabilities",
+
       "product.cceCve.desc":
-        "BingoCVM provides integrated assessment for both <strong>CCE (configuration-based vulnerabilities)</strong> and <strong>CVE (software vulnerabilities)</strong>. Manage everything from configuration errors to known bugs in a single platform.",
+        "BingoCVM provides integrated Scan for both <strong>CCE (configuration-based vulnerabilities)</strong> and <strong>CVE (software vulnerabilities)</strong>. Manage everything from configuration errors to known bugs in a single platform.",
       "product.cceCve.left.badge": "Common Configuration Enumeration",
       "product.cceCve.left.title": "CCE Overview",
       "product.cceCve.left.overview":
@@ -1384,7 +1377,7 @@
       "product.cceCve.left.kisaTitle":
         "KISA's Standard Vulnerability Framework",
       "product.cceCve.left.kisaDesc":
-        "In South Korea, the Korea Internet & Security Agency (KISA) manages and distributes key cybersecurity vulnerability standards. It provides the following domestic standard vulnerability assessment guidelines:",
+        "In South Korea, the Korea Internet & Security Agency (KISA) manages and distributes key cybersecurity vulnerability standards. It provides the following domestic standard vulnerability Scan guidelines:",
       "product.cceCve.left.std1":
         "① Technical Vulnerability Analysis & Evaluation Standards for Critical Information Infrastructure",
       "product.cceCve.left.std1.li1":
@@ -1417,8 +1410,7 @@
         "Vulnerabilities with code capable of actual attacks",
       "product.cceCve.right.char.li2":
         "<strong>Format</strong>: CVE-Year-Number<br />e.g., CVE-2024-12345",
-      "product.cceCve.right.char.li3":
-        "Linked with CVSS scores (risk assessment)",
+      "product.cceCve.right.char.li3": "Linked with CVSS scores (risk Scan)",
       "product.cceCve.right.examples": "CVE Examples",
       "product.cceCve.right.example1":
         "<code>CVE-2021-44228</code>: Remote Code Execution vulnerability in Apache Log4j (Log4Shell)",
@@ -1433,19 +1425,17 @@
       "product.features.eyebrow": "Key Features & Highlights",
       "product.features.title": "Features & Key Highlights",
       "product.features.desc":
-        "BingoCVM provides vulnerability assessment automation for critical information infrastructure and cloud systems. It delivers convenient, one-stop services covering system vulnerability assessment, evaluation, classification, remediation, history tracking, and reporting.",
-      "product.features.caption":
-        "BingoCVM delivers optimal security management efficiency through its proprietary ATC Automation Engine and flexible management features.",
+        "BingoCVM provides vulnerability Scan automation for critical information infrastructure and cloud systems. It delivers convenient, one-stop services covering system vulnerability Scan, evaluation, classification, remediation, history tracking, and reporting.",
+
       "product.features.left.title": "Features",
       "product.features.left.li1":
-        "Supports automatic, manual, and scheduled assessments, enabling seamless one-stop management from assessment results and log analysis to remediation and evidence history.",
+        "Supports automatic, manual, and scheduled Scans, enabling seamless one-stop management from Scan results and log analysis to remediation and evidence history.",
       "product.features.left.li2":
-        "Provides asset-specific and group-specific report generation, along with flexible customization of assessment guides and scripts.",
+        "Provides asset-specific and group-specific report generation, along with flexible customization of Scan guides and scripts.",
       "product.features.right.title": "Key Highlights",
-      "product.features.right.li1":
-        "Applies the ATC Automation Engine to automate the entire process from asset registration to assessment, collection, and analysis.",
+
       "product.features.right.li2":
-        "Korea's first solution to support hybrid scheduled assessments combining Agent and Non-Agent modes, enabling optimized diagnosis across diverse environments.",
+        "Korea's first solution to support hybrid scheduled Scans combining Agent and Non-Agent modes, enabling optimized diagnosis across diverse environments.",
       "product.features.right.li3":
         "Assesses both On-Premise and Cloud assets within a single platform.",
       "product.features.right.li4":
@@ -1491,17 +1481,17 @@
       "contact.faq.a2":
         'You can purchase it on the Public Procurement Service Digital Service Mall (<strong><a href="https://digitalmall.g2b.go.kr/" target="_blank" rel="noopener">digitalmall.g2b.go.kr</a></strong>) by searching for <strong>"케이비아이"</strong> (KBI) or <strong>"BingoCVM"</strong>.',
       "contact.faq.a3":
-        "BingoCVM supports both on-premise and cloud environments. It can also be utilized as a CSAP (Cloud Security Assurance Program) assessment tool.",
+        "BingoCVM supports both on-premise and cloud environments. It can also be utilized as a CSAP (Cloud Security Assurance Program) Scan tool.",
       "contact.faq.a4":
         "Yes. KBI Co., Ltd. has developed test and evaluation tools for K-RMF, K-STIG, and K-SCAP in collaboration with the Agency for Defense Development (ADD) and the Defense Agency for Technology and Quality (DTaQ). We hold Korea's first track record of developing and delivering tools that simultaneously apply both domestic defense standards and US standards.",
       "contact.faq.a5":
-        "KBI Co., Ltd. provides separate information security technical training and hands-on practice services following adoption. In addition to product usage training, we operate customized training programs for clients, including CCE/CVE vulnerability assessment methodologies and practical security consulting.",
+        "KBI Co., Ltd. provides separate information security technical training and hands-on practice services following adoption. In addition to product usage training, we operate customized training programs for clients, including CCE/CVE vulnerability Scan methodologies and practical security consulting.",
       "news.kisaGuide.title":
         "Detailed Guide Update on Technical Vulnerability Analysis and Evaluation Methods for Critical Information Infrastructure",
       "news.kisaGuide.excerpt":
         "On December 24, 2025, KISA updated the detailed guide for analyzing and evaluating technical vulnerabilities in critical information infrastructure.",
       "news.kisaGuide.body1":
-        "Our BingoCVM team is actively conducting research and system enhancements to ensure accurate assessments in compliance with KISA's newly updated standards.",
+        "Our BingoCVM team is actively conducting research and system enhancements to ensure accurate Scans in compliance with KISA's newly updated standards.",
       "news.kisaGuide.body2":
         "Currently, BingoCVM has been delivered to major public and government agencies and is actively utilized by numerous clients. We will share further details in upcoming posts.",
       "news.kisaGuide.body3": "Thank you.",
@@ -1562,7 +1552,7 @@
   function translateRuntimeText(text) {
     if (!text || currentLang !== "en") return text;
     let next = text;
-    RUNTIME_REPLACEMENTS.forEach(([ko, en]) => {
+    ORDERED_RUNTIME_REPLACEMENTS.forEach(([ko, en]) => {
       const regex = createFlexibleRegex(ko);
       if (!regex) return;
       next = next.replace(regex, en);
@@ -1727,8 +1717,8 @@
     } catch (e) {
       // ignore storage failures
     }
-    const browser = (navigator.language || "ko").toLowerCase();
-    return browser.startsWith("en") ? "en" : "ko";
+    // Default to Korean unless a user preference was explicitly saved.
+    return "ko";
   }
 
   document.addEventListener("DOMContentLoaded", () => {

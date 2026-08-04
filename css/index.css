@@ -175,6 +175,7 @@ body::before {
 .zt-pill .pill-dot {
   width: 7px;
   height: 7px;
+  display: inline-block;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -186,6 +187,8 @@ body::before {
 }
 .pill-dot--cyan {
   background: var(--brand-cyan);
+  border: 1px solid rgba(26, 29, 38, 0.24);
+  box-shadow: 0 0 0 2px rgba(59, 162, 242, 0.18);
 }
 @keyframes ztPillIn {
   to {
@@ -455,18 +458,26 @@ body::before {
 }
 /* Control layer */
 .arch-layer-body {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
   gap: 10px;
+}
+.arch-ctrl-main {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: end;
+  column-gap: 10px;
 }
 .arch-chip-icon {
   width: 52px;
   height: 52px;
   flex-shrink: 0;
   color: #7ac4f5;
+  margin-bottom: 4px;
 }
 .arch-ctrl-info {
-  flex: 1;
   min-width: 0;
 }
 .arch-ctrl-name {
@@ -481,6 +492,39 @@ body::before {
   color: rgba(255, 255, 255, 0.82);
   font-family: "IBM Plex Mono", monospace;
   margin-top: 3px;
+}
+.arch-ctrl-brief {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(59, 162, 242, 0.1);
+  border: 1px solid rgba(59, 162, 242, 0.28);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.arch-ctrl-brief-title {
+  font-weight: 700;
+  color: #7ac4f5;
+  margin-bottom: 4px;
+}
+.arch-ctrl-brief ul {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.arch-ctrl-brief li {
+  margin: 0;
+}
+.arch-ctrl-brief strong {
+  color: #ffffff;
+}
+.arch-ctrl-brief p {
+  margin: 0;
+  color: #7ac4f5;
+  font-weight: 600;
 }
 .arch-stig-pill {
   flex-shrink: 0;
@@ -525,7 +569,7 @@ body::before {
 /* Analysis layer */
 .arch-dual {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
   align-items: center;
   gap: 6px;
 }
@@ -547,6 +591,10 @@ body::before {
   background: rgba(59, 162, 242, 0.1);
   border: 1px solid rgba(59, 162, 242, 0.28);
 }
+.arch-module--nse {
+  background: rgba(59, 162, 242, 0.1);
+  border: 1px solid rgba(59, 162, 242, 0.28);
+}
 .arch-module-name {
   font-size: 15px;
   font-weight: 700;
@@ -559,10 +607,37 @@ body::before {
 .arch-module--cve .arch-module-name {
   color: #7ac4f5;
 }
+.arch-module--nse .arch-module-name {
+  color: #7ac4f5;
+}
 .arch-module-desc {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.5;
+}
+
+@media (max-width: 820px) {
+  .arch-dual {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .arch-layer-body {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-ctrl-main {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .arch-stig-pill {
+    display: none;
+  }
+
+  .arch-dual-sep {
+    display: none;
+  }
 }
 /* Infra layer */
 .arch-infra-row {
@@ -1382,19 +1457,48 @@ body::before {
 
 /* BingoCVM card (slide 2 right) */
 .bingocvm-card {
+  position: relative;
   background: linear-gradient(160deg, var(--navy2) 0%, var(--ink) 100%);
   color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
-  padding: 24px; /* increased padding for better spacing */
-  box-shadow: 0 12px 36px rgba(3, 24, 56, 0.22);
+  padding: 26px;
+  box-shadow: 0 16px 40px rgba(3, 24, 56, 0.28);
   display: flex;
   flex-direction: column;
-  gap: 18px; /* increased vertical rhythm */
+  gap: 18px;
+  overflow: hidden;
+}
+.bingocvm-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-cyan), var(--crimson));
 }
 .bingocvm-card .card-header {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+.bs-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 162, 242, 0.14);
+  color: var(--brand-cyan);
+}
+.bs-icon svg {
+  width: 20px;
+  height: 20px;
 }
 .mini-cube {
   width: 20px;
@@ -1411,47 +1515,71 @@ body::before {
 .bs-name {
   font-weight: 900;
   color: var(--white);
-  font-size: 20px; /* slightly larger for hierarchy */
-  letter-spacing: 0.5px;
+  font-size: 21px;
+  letter-spacing: 0.6px;
 }
 .bs-name span {
   color: var(--brand-cyan);
 }
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px; /* more breathing room between cells */
-}
-.card-grid-cell {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 14px 12px; /* larger tappable area */
-  transition:
-    background 0.18s,
-    transform 0.18s;
-}
-.card-grid-cell:hover {
-  background: rgba(255, 255, 255, 0.09);
-  transform: translateX(4px);
-}
-.cell-title {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 22px;
-  color: var(--white);
-  line-height: 1;
-}
-.cell-desc {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-top: 3px;
-}
 .card-desc {
+  position: relative;
+  z-index: 1;
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.85); /* improved contrast */
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.65;
 }
+.zt-linkmap {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+.zt-linkmap-head,
+.zt-linkmap-row {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr 1.5fr;
+}
+.zt-linkmap-head {
+  background: rgba(255, 255, 255, 0.06);
+}
+.zt-linkmap-head span {
+  padding: 10px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+.zt-linkmap-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.15s;
+}
+.zt-linkmap-row:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+.zt-linkmap-row > div {
+  padding: 11px 12px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+.zt-linkmap-row > div:first-child {
+  border-left: none;
+  color: rgba(255, 255, 255, 0.68);
+}
+.zt-linkmap-row > div:nth-child(2) {
+  color: rgba(122, 196, 245, 0.98);
+}
+.zt-linkmap-row strong {
+  color: var(--brand-cyan);
+  font-weight: 800;
+}
 .bs-tags {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -1496,13 +1624,9 @@ body::before {
 
 /* Responsive tweaks for BingoCVM card */
 @media (max-width: 700px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
   .bingocvm-card {
     padding: 22px;
-    gap: 12px;
+    gap: 14px;
   }
   .bs-name {
     font-size: 20px;
@@ -1510,6 +1634,27 @@ body::before {
   .bs-g2b-link {
     padding: 10px 14px;
     font-size: 15px;
+  }
+  .zt-linkmap-head,
+  .zt-linkmap-row {
+    grid-template-columns: 1fr;
+  }
+  .zt-linkmap-head span,
+  .zt-linkmap-row > div {
+    padding: 9px 10px;
+    border-left: none;
+  }
+  .zt-linkmap-head span {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .zt-linkmap-head span:last-child {
+    border-bottom: 0;
+  }
+  .zt-linkmap-row > div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .zt-linkmap-row > div:last-child {
+    border-bottom: none;
   }
 }
 
