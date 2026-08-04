@@ -409,16 +409,16 @@
       "Automatically deploy and run CCE scripts, then collect result files",
     ],
     [
-      "CVE 기반 자산 자동 매핑으로 스캔 결과를 통합 수집 (2026년 적용)",
-      "Collect integrated scan results via CVE-based automatic asset mapping (applied in 2026)",
+      "CVE 소프트웨어 취약점 기반 자산 자동 매핑으로 스캔 결과를 통합 수집 (2026년 적용)",
+      "Collect integrated scan results via CVE software vulnerability-based automatic asset mapping (applied in 2026)",
     ],
     [
-      "수집된 CCE 진단 결과를 분석하여 항목을 취약 / 양호 / 예외로 분류",
-      "Analyze collected CCE results and classify items as vulnerable / good / exception",
+      "수집된 CCE 시스템취약점진단 결과를 분석하여 항목을 취약 / 양호 / 예외로 분류",
+      "Analyze collected CCE system vulnerability check results and classify items as vulnerable / good / exception",
     ],
     [
-      "CVE 기반 AI 분석으로 취약점에 대한 정밀 분석 수행 (2026년 적용)",
-      "Perform in-depth vulnerability analysis with CVE-based AI analysis (applied in 2026)",
+      "CVE 소프트웨어 취약점 기반 AI 분석으로 취약점에 대한 정밀 분석 수행 (2026년 적용)",
+      "Perform in-depth vulnerability analysis with CVE software vulnerability-based AI analysis (applied in 2026)",
     ],
     [
       "발견된 취약점에 대해 수동 또는 자동으로 조치 수행",
@@ -443,14 +443,14 @@
     ["취약점 유형 소개", "Vulnerability Types"],
     ["CCE 취약점과 CVE 취약점", "CCE and CVE Vulnerabilities"],
     [
-      "BingoCVM은 CCE(설정 기반 취약점)와 CVE(소프트웨어 취약점) 두 가지 유형을 통합 진단합니다.",
-      "BingoCVM integrates two vulnerability types: CCE (configuration-based) and CVE (software vulnerabilities).",
+      "BingoCVM은 CCE(시스템취약 취약점)와 CVE(소프트웨어 취약점) 두 가지 유형을 통합 진단합니다.",
+      "BingoCVM integrates two vulnerability types: CCE (system vulnerabilities) and CVE (software vulnerabilities).",
     ],
     [
       "설정 오류부터 알려진 버그까지, 하나의 플랫폼에서 모두 관리합니다.",
       "From configuration errors to known bugs, everything is managed in a single platform.",
     ],
-    ["CCE 개요", "CCE Overview"],
+    ["CCE 시스템취약 개요", "CCE System Vulnerability Overview"],
     ["KISA의 취약점 표준 체계", "KISA Vulnerability Standard Framework"],
     [
       "대한민국에서는 한국인터넷진흥원(KISA)이 주요 정보보호 취약점 기준을 관리·보급합니다. 다음과 같은 국내 표준 취약점 점검 기준을 제공합니다.",
@@ -477,7 +477,7 @@
     ["접근통제", "Access Control"],
     ["로그관리", "Log Management"],
     ["암호정책", "Password Policy"],
-    ["CVE 개요", "CVE Overview"],
+    ["CVE 소프트웨어취약 개요", "CVE Software Vulnerability Overview"],
     [
       "소프트웨어나 하드웨어 제품에 존재하는 보안 취약점(버그)에 부여되는 고유 식별번호입니다.",
       "A unique identifier assigned to security vulnerabilities (bugs) in software or hardware products.",
@@ -865,9 +865,9 @@
       "product.process.step2.badge": "자동화",
       "product.process.step3.name": "취약점 분석",
       "product.process.step3.li1":
-        "수집된 CCE 진단 결과를 분석하여 항목을 취약 / 양호 / 예외로 분류",
+        "수집된 CCE 시스템취약점진단 결과를 분석하여 항목을 취약 / 양호 / 예외로 분류",
       "product.process.step3.li2":
-        "CVE 기반 AI 분석으로 취약점에 대한 정밀 분석 수행 (2026년 적용)",
+        "CVE 소프트웨어 취약점 기반 AI 분석으로 취약점에 대한 정밀 분석 수행 (2026년 적용)",
       "product.process.step3.badge": "AI 분석",
       "product.process.step4.name": "취약점 조치",
       "product.process.step4.li1":
@@ -884,9 +884,9 @@
       "product.cceCve.eyebrow": "취약점 유형 소개",
 
       "product.cceCve.desc":
-        "BingoCVM은 <strong>CCE(설정 기반 취약점)</strong>와 <strong>CVE(소프트웨어 취약점)</strong> 두 가지 유형을 통합 진단합니다. <br />설정 오류부터 알려진 버그까지, 하나의 플랫폼에서 모두 관리합니다.",
+        "BingoCVM은 <strong>CCE(시스템 취약)</strong>와 <strong>CVE(소프트웨어 취약)</strong> 두 가지 유형을 통합 진단합니다. <br />설정 오류부터 알려진 버그까지, 하나의 플랫폼에서 모두 관리합니다.",
       "product.cceCve.left.badge": "Common Configuration Enumeration",
-      "product.cceCve.left.title": "CCE 개요",
+      "product.cceCve.left.title": "CCE 시스템취약 개요",
       "product.cceCve.left.overview":
         "CCE는 시스템과 소프트웨어의 보안 설정 오류(Configuration Weakness)를 표준 식별번호로 관리하는 체계입니다.",
       "product.cceCve.left.kisaTitle": "KISA의 취약점 표준 체계",
@@ -906,7 +906,7 @@
       "product.cceCve.left.std2.li3": "로그관리",
       "product.cceCve.left.std2.li4": "암호정책",
       "product.cceCve.right.badge": "Common Vulnerabilities and Exposures",
-      "product.cceCve.right.title": "CVE 개요",
+      "product.cceCve.right.title": "CVE 소프트웨어취약 개요",
       "product.cceCve.right.overview":
         "소프트웨어나 하드웨어 제품에 존재하는 보안 취약점(버그)에 부여되는 고유 식별번호입니다.",
       "product.cceCve.right.keyDetails": "CVE 취약점의 주요 내용",
@@ -931,7 +931,7 @@
       "product.architecture.desc":
         "BingoCVM의 시스템은 <strong>Manager Server(App + Core)</strong>와 <strong>Device/Agent(Client License)</strong>로 구성됩니다. 온프레미스/클라우드 모두 자동진단 방식을 Agent + Non-Agent(기본) 모두 지원합니다.",
       "product.architecture.imageSrc":
-        "../../images/BingocvmSystemComponent.png",
+        "../../images/BingoCVMArchitectureKR.png",
       "product.platforms.desc":
         "BingoCVM은 KISA 취약점점검 가이드 기준으로 고객사의 다양한 시스템 환경에 맞춰 최적화된 진단 서비스를 제공합니다. 온프레미스부터 클라우드까지 폭넓은 지원 범위를 자랑합니다.",
       "product.features.eyebrow": "주요 기능 및 특장점",
@@ -1349,9 +1349,9 @@
       "product.process.step2.badge": "[Automated]",
       "product.process.step3.name": "Vulnerability Analysis",
       "product.process.step3.li1":
-        "Analyzes collected CCE Scan results to classify items into Vulnerable / Good / Exception.",
+        "Analyzes collected CCE system vulnerability check results to classify items into Vulnerable / Good / Exception.",
       "product.process.step3.li2":
-        "Performs in-depth analysis on vulnerabilities using CVE-based AI analysis (Applied in 2026).",
+        "Performs in-depth analysis on vulnerabilities using CVE software vulnerability-based AI analysis (Applied in 2026).",
       "product.process.step3.badge": "[AI Analysis]",
       "product.process.step4.name": "Vulnerability Remediation",
       "product.process.step4.li1":
@@ -1369,9 +1369,9 @@
       "product.cceCve.eyebrow": "Vulnerability Types Overview",
 
       "product.cceCve.desc":
-        "BingoCVM provides integrated Scan for both <strong>CCE (configuration-based vulnerabilities)</strong> and <strong>CVE (software vulnerabilities)</strong>. Manage everything from configuration errors to known bugs in a single platform.",
+        "BingoCVM provides integrated Scan for both <strong>CCE (system vulnerabilities)</strong> and <strong>CVE (software vulnerabilities)</strong>. Manage everything from configuration errors to known bugs in a single platform.",
       "product.cceCve.left.badge": "Common Configuration Enumeration",
-      "product.cceCve.left.title": "CCE Overview",
+      "product.cceCve.left.title": "CCE System Vulnerability Overview",
       "product.cceCve.left.overview":
         "CCE is a system for managing security configuration errors (Configuration Weaknesses) in systems and software using standardized identification numbers.",
       "product.cceCve.left.kisaTitle":
@@ -1393,7 +1393,7 @@
       "product.cceCve.left.std2.li3": "Log Management",
       "product.cceCve.left.std2.li4": "Encryption Policy",
       "product.cceCve.right.badge": "Common Vulnerabilities and Exposures",
-      "product.cceCve.right.title": "CVE Overview",
+      "product.cceCve.right.title": "CVE Software Vulnerability Overview",
       "product.cceCve.right.overview":
         "Unique identification numbers assigned to security vulnerabilities (bugs) present in software or hardware products.",
       "product.cceCve.right.keyDetails": "Key Details of CVE Vulnerabilities",
