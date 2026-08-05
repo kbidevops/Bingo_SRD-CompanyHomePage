@@ -371,10 +371,7 @@
       "초기 진단과 조치 이후 진단 내역을 비교하는 비교 보고서 다운로드가 가능합니다.",
       "Comparative reports are available to compare initial diagnostics with post-remediation results.",
     ],
-    [
-      "커스텀 조치 자동화 기능을 통해서 기관 공통 취약 항목을 자동 조치하는 기능을 제공합니다.",
-      "Custom remediation automation supports auto-handling of common organizational vulnerability items.",
-    ],
+
     [
       "온프레미스 및 클라우드 시스템 취약점 진단",
       "On-Premises and Cloud Vulnerability Scan",
@@ -479,7 +476,7 @@
     ["암호정책", "Password Policy"],
     ["CVE 소프트웨어취약 개요", "CVE Software Vulnerability Overview"],
     [
-      "소프트웨어나 하드웨어 제품에 존재하는 보안 취약점(버그)에 부여되는 고유 식별번호입니다.",
+      "CVE는 소프트웨어나 하드웨어 제품에 존재하는 보안 취약점(버그)에 부여되는 고유 식별번호입니다.",
       "A unique identifier assigned to security vulnerabilities (bugs) in software or hardware products.",
     ],
     ["CVE 취약점의 주요 내용", "Core Aspects of CVE Vulnerabilities"],
@@ -806,8 +803,7 @@
 
       "home.bingo.sideDesc":
         "Unix/Linux · Windows · PC · Web · DBMS · Network · 가상화 · 클라우드 플랫폼의 취약점 항목을 자동 스케줄 진단합니다.",
-      "home.bingo.sol1.desc":
-        "제로트러스트 취약점진단 자동화 (온프레미스 + 클라우드)",
+      "home.bingo.sol1.desc": "제로트러스트 취약점진단 자동화",
       "home.strip1.label": "Years",
       "home.strip1.desc":
         "2003년 설립 이래 20년 이상 대한민국 정보보안을 책임져온 전문 기업",
@@ -843,8 +839,7 @@
         "조치 관리를 통해서 누가 언제 조치를 어떻게 했고 조치 관련 증빙 자료를 업로드해서 관리할 수 있습니다.",
       "product.intro.card1.li3":
         "초기 진단과 조치 이후 진단 내역을 비교하는 비교 보고서 다운로드가 가능합니다.",
-      "product.intro.card1.li4":
-        "커스텀 조치 자동화 기능을 통해서 기관 공통 취약 항목을 자동 조치하는 기능을 제공합니다.",
+
       "product.intro.card2.title": "온프레미스 및 클라우드 시스템 취약점 진단",
       "product.intro.card2.li1":
         "온프레미스에서 클라우드 시스템까지 모두 하나의 플랫폼 BingoCVM에서 취약점진단이 가능합니다.",
@@ -884,9 +879,9 @@
       "product.cceCve.eyebrow": "취약점 유형 소개",
 
       "product.cceCve.desc":
-        "BingoCVM은 <strong>CCE(시스템 취약)</strong>와 <strong>CVE(소프트웨어 취약)</strong> 두 가지 유형을 통합 진단합니다. <br />설정 오류부터 알려진 버그까지, 하나의 플랫폼에서 모두 관리합니다.",
+        "BingoCVM은 <strong>CCE(시스템 취약점)</strong>와 <strong>CVE(소프트웨어 취약점)</strong> 두 가지 유형을 통합 진단합니다. <br />설정 오류부터 알려진 버그까지, 하나의 플랫폼에서 모두 관리합니다.",
       "product.cceCve.left.badge": "Common Configuration Enumeration",
-      "product.cceCve.left.title": "CCE 시스템취약 개요",
+      "product.cceCve.left.title": "CCE 시스템취약점 개요",
       "product.cceCve.left.overview":
         "CCE는 시스템과 소프트웨어의 보안 설정 오류(Configuration Weakness)를 표준 식별번호로 관리하는 체계입니다.",
       "product.cceCve.left.kisaTitle": "KISA의 취약점 표준 체계",
@@ -906,9 +901,9 @@
       "product.cceCve.left.std2.li3": "로그관리",
       "product.cceCve.left.std2.li4": "암호정책",
       "product.cceCve.right.badge": "Common Vulnerabilities and Exposures",
-      "product.cceCve.right.title": "CVE 소프트웨어취약 개요",
+      "product.cceCve.right.title": "CVE 소프트웨어취약점 개요",
       "product.cceCve.right.overview":
-        "소프트웨어나 하드웨어 제품에 존재하는 보안 취약점(버그)에 부여되는 고유 식별번호입니다.",
+        "CVE는 소프트웨어나 하드웨어 제품에 존재하는 보안 취약점(버그)에 부여되는 고유 식별번호입니다.",
       "product.cceCve.right.keyDetails": "CVE 취약점의 주요 내용",
       "product.cceCve.right.key.li1":
         "<strong>CVE 의미</strong>: 소프트웨어 결함",
@@ -1284,8 +1279,7 @@
         "Enables combined CCE + CVE vulnerability Scan for both on-premise and cloud assets within a single platform.",
       "home.bingo.sideDesc":
         "Automatically schedules and diagnoses vulnerability items across Unix/Linux, Windows, PC, Web, DBMS, Network, Virtualization, and Cloud platforms.",
-      "home.bingo.sol1.desc":
-        "Zero Trust vulnerability Scan automation (On-Premise + Cloud)",
+      "home.bingo.sol1.desc": "Zero Trust vulnerability Scan automation",
       "home.strip1.label": "Years",
       "home.strip1.desc":
         "A specialized company that has taken full responsibility for South Korea's information security for over 20 years since its founding in 2003.",
@@ -1326,8 +1320,7 @@
         "Through action/remediation management, you can track who took action, when, and how, as well as upload and manage supporting evidence.",
       "product.intro.card1.li3":
         "Allows downloading comparative reports that contrast initial Scans with post-remediation results.",
-      "product.intro.card1.li4":
-        "Provides a custom automated remediation feature to automatically remediate common organizational vulnerabilities.",
+
       "product.intro.card2.title":
         "On-Premise & Cloud System Vulnerability Scan",
       "product.intro.card2.li1":
@@ -1395,7 +1388,7 @@
       "product.cceCve.right.badge": "Common Vulnerabilities and Exposures",
       "product.cceCve.right.title": "CVE Software Vulnerability Overview",
       "product.cceCve.right.overview":
-        "Unique identification numbers assigned to security vulnerabilities (bugs) present in software or hardware products.",
+        "CVE is a unique identification number assigned to security vulnerabilities (bugs) present in software or hardware products.",
       "product.cceCve.right.keyDetails": "Key Details of CVE Vulnerabilities",
       "product.cceCve.right.key.li1":
         "<strong>CVE Meaning</strong>: Software defect",
