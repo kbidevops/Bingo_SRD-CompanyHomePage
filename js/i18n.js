@@ -1713,13 +1713,13 @@
     // Default to Korean unless a user preference was explicitly saved.
     return "ko";
   }
-
+  //DOMContentLoaded is a browser event that fires when the HTML document has been completely parsed and the DOM (Document Object Model) has been built.
   document.addEventListener("DOMContentLoaded", () => {
     captureOriginalContent(document.body || document);
     setLanguage(detectInitialLang(), { persist: false });
     bindLanguageToggle(document);
   });
-
+  //includesLoaded is not a standard browser event.
   document.addEventListener("includesLoaded", () => {
     captureOriginalContent(document.body || document);
     applyTranslations(document);

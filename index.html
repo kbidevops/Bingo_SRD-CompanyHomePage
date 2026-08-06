@@ -879,6 +879,7 @@
           if (f) f.innerHTML = footerHtml;
           const scrollTopEl = document.getElementById("scrollTop");
           if (scrollTopEl) scrollTopEl.outerHTML = scrollTopHtml;
+          //Create a custom event named includesLoaded and send (dispatch) it to the document so that any code listening for it will run.
           document.dispatchEvent(new CustomEvent("includesLoaded"));
           // Load nav-toggle.js (innerHTML doesn't execute <script> tags)
           const s = document.createElement("script");
