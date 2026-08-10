@@ -21,994 +21,1106 @@
     <script src="/js/i18n.js" defer></script>
     <script src="js/nav-active.js" defer></script>
   </head>
-  <body>
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
+  <div id="scrollTop"></div>
 
-    <div id="scrollTop"></div>
+  <!-- =========================================================
+     NAV
+========================================================= -->
+  <div id="header"></div>
 
-    <!-- NAV -->
-    <div id="header"></div>
+  <!-- =========================================================
+     HERO CAROUSEL
+========================================================= -->
+  <div
+    class="hero-carousel"
+    id="hero"
+    role="region"
+    aria-label="Hero carousel"
+    aria-roledescription="carousel"
+    tabindex="0"
+  >
+    <div class="hero-dots"></div>
+    <div class="hero-bg-glow"></div>
 
-    <!-- HERO CAROUSEL -->
-    <div
-      class="hero-carousel"
-      id="hero"
-      role="region"
-      aria-label="Hero carousel"
-      aria-roledescription="carousel"
-      tabindex="0"
-    >
-      <div class="hero-dots"></div>
-      <div class="hero-bg-glow"></div>
+    <div class="hero-slides" id="heroSlides">
+      <!-- =====================================================
+         SLIDE 1
+    ====================================================== -->
+      <section class="bingo-hero-section">
+        <div class="bingo-hero-bg"></div>
 
-      <div class="hero-slides" id="heroSlides">
-        <!-- SLIDE 1 -->
-        <div
-          class="hero-slide"
-          role="group"
-          aria-roledescription="slide"
-          aria-label="1 of 3"
-        >
+        <div class="bingo-hero">
+          <!-- =====================================================
+         HERO LEFT
+    ====================================================== -->
           <div class="hero-left">
-            <div class="hero-eyebrow">Zero Trust Vulnerability Platform</div>
-            <div class="hero-product" style="margin-bottom: 10px">
-              <div class="hero-prod-name">
-                <img
-                  src="./images/bingoCVM-logo-bklong2.png"
-                  alt="BingoCVM"
-                  loading="lazy"
-                />
+            <!-- Eyebrow -->
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot"></span>
+              Zero Trust Vulnerability Platform
+            </div>
+
+            <!-- Product -->
+            <div class="hero-product">
+              <div class="hero-product-logo">
+                <img src="./images/bingoCVM-logo-bklong2.png" alt="BingoCVM" />
+              </div>
+
+              <div class="hero-product-status">
+                <span class="status-dot"></span>
+                CONTINUOUS SECURITY ASSESSMENT
               </div>
             </div>
+
+            <!-- Headline -->
             <h1 class="zt-headline">
-              <em>Zero Trust</em> 기반<br />통합 취약점 진단 솔루션
+              발견하는 진단을 넘어
+              <br />
+              <strong>위험을 판단하고</strong>
+              <br />
+              <em>대응 우선순위</em>를 결정합니다.
             </h1>
+
+            <!-- Description -->
+            <p class="hero-description">
+              BingoCVM은
+              <strong>CCE·CVE·네트워크 취약점 진단</strong>과
+              <strong>CVSS·EPSS·KEV 기반 위협 인텔리전스</strong>를 결합하여
+              자산의 실제 위험도를 분석하고 대응 우선순위를 결정하는
+              <strong>제로트러스트 통합 취약점 진단 플랫폼</strong>입니다.
+            </p>
+
+            <!-- Capabilities -->
             <div class="zt-pills">
-              <span class="zt-pill"
-                ><span class="pill-dot pill-dot--red"></span>CCE
-                시스템취약스캔</span
-              >
-              <span class="zt-pill"
-                ><span class="pill-dot pill-dot--cyan"></span>CVE
-                소프트웨어취약스캔</span
-              >
-              <span class="zt-pill"
-                ><span class="pill-dot pill-dot--red"></span
-                >네이트워크스캔취약</span
-              >
-              <span class="zt-pill"
-                ><span class="pill-dot pill-dot--cyan"></span
-                >위협인텔리전스</span
-              >
+              <div class="zt-pill zt-pill--red">
+                <div class="pill-icon">
+                  <span class="pill-dot"></span>
+                </div>
+
+                <div class="zt-pill-content">
+                  <strong>CCE 시스템취약점</strong>
+                  <small>시스템 설정 및 보안 기준 진단</small>
+                </div>
+              </div>
+
+              <div class="zt-pill zt-pill--cyan">
+                <div class="pill-icon">
+                  <span class="pill-dot"></span>
+                </div>
+
+                <div class="zt-pill-content">
+                  <strong>CVE 프트웨어취약점</strong>
+                  <small>OS·SW 취약점 식별 및 CVE 매핑</small>
+                </div>
+              </div>
+
+              <div class="zt-pill zt-pill--cyan">
+                <div class="pill-icon">
+                  <span class="pill-dot"></span>
+                </div>
+
+                <div class="zt-pill-content">
+                  <strong>네트워크스캔 취약점</strong>
+                  <small>네트워크 자산·서비스 취약점 분석</small>
+                </div>
+              </div>
+
+              <div class="zt-pill zt-pill--red">
+                <div class="pill-icon">
+                  <span class="pill-dot"></span>
+                </div>
+
+                <div class="zt-pill-content">
+                  <strong>위협 인텔리전스</strong>
+                  <small>CVSS·EPSS·KEV 기반 위험도 분석</small>
+                </div>
+              </div>
             </div>
+
+            <!-- CTA -->
             <div class="hero-actions">
-              <a class="btn-primary" href="./sub/product/"
-                >BingoCVM 알아보기 →</a
-              >
-              <a class="btn-secondary" href="./sub/about/">회사 소개</a>
+              <a href="#architecture" class="btn-primary">
+                통합 진단 아키텍처
+                <span class="btn-arrow">→</span>
+              </a>
+
+              <a href="#capabilities" class="btn-secondary">
+                주요 기능 살펴보기
+              </a>
             </div>
-          </div>
-          <div
-            class="hero-right"
-            style="padding: 0; background: none; border: none; box-shadow: none"
-          >
-            <div class="arch-diagram">
-              <div class="arch-head">
-                <div class="bs-name">
-                  BingoCVM 제로트러스트 통합 진단 아키텍처
-                </div>
-              </div>
 
-              <!-- Control Layer (제어층) -->
-              <div class="arch-layer arch-layer--ctrl">
-                <div class="arch-layer-tag">제어층</div>
-                <div class="arch-layer-body">
-                  <div class="arch-ctrl-main">
-                    <svg
-                      class="arch-chip-icon"
-                      viewBox="0 0 48 48"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <defs>
-                        <linearGradient
-                          id="chipBg"
-                          x1="8"
-                          y1="8"
-                          x2="40"
-                          y2="40"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop offset="0" stop-color="#1f283a" />
-                          <stop offset="1" stop-color="#161e2f" />
-                        </linearGradient>
-                      </defs>
-                      <rect
-                        x="8"
-                        y="8"
-                        width="32"
-                        height="32"
-                        rx="6"
-                        fill="url(#chipBg)"
-                        stroke="#4fb6ff"
-                        stroke-width="1.6"
-                      />
-                      <rect
-                        x="14"
-                        y="14"
-                        width="20"
-                        height="20"
-                        rx="4"
-                        stroke="#62c3ff"
-                        stroke-width="1.2"
-                      />
-                      <rect
-                        x="19"
-                        y="19"
-                        width="10"
-                        height="10"
-                        rx="2"
-                        fill="#243046"
-                        stroke="#5cc0ff"
-                        stroke-width="1"
-                      />
-                      <path
-                        d="M16 24h4M28 24h4M24 16v4M24 28v4"
-                        stroke="#66c8ff"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                      />
-                      <g
-                        stroke="#58bbff"
-                        stroke-width="1.1"
-                        stroke-linecap="round"
-                      >
-                        <path d="M8 16H4" />
-                        <path d="M8 24H4" />
-                        <path d="M8 32H4" />
-                        <path d="M44 16h-4" />
-                        <path d="M44 24h-4" />
-                        <path d="M44 32h-4" />
-                        <path d="M16 8V4" />
-                        <path d="M24 8V4" />
-                        <path d="M32 8V4" />
-                        <path d="M16 44v-4" />
-                        <path d="M24 44v-4" />
-                        <path d="M32 44v-4" />
-                      </g>
-                      <rect
-                        x="2.5"
-                        y="2.5"
-                        width="13"
-                        height="11"
-                        rx="3"
-                        fill="#141c2a"
-                        stroke="#4fb6ff"
-                        stroke-width="1"
-                      />
-                      <text
-                        x="9"
-                        y="10.2"
-                        text-anchor="middle"
-                        fill="#63c9ff"
-                        font-size="6"
-                        font-weight="700"
-                        font-family="'IBM Plex Mono', monospace"
-                      >
-                        AI
-                      </text>
-                    </svg>
-                    <div class="arch-ctrl-info">
-                      <div class="arch-ctrl-name">BingoCVM</div>
-                      <div class="arch-ctrl-sub">
-                        제로트러스트
-                        <br />
-                        취약점 진단 엔진
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="arch-ctrl-brief"
-                    aria-label="위협 인텔리전스 핵심 요약"
-                  >
-                    <div class="arch-ctrl-brief-title">
-                      위협 인텔리전스 지표
-                    </div>
-                    <ul>
-                      <li><strong>CVSS</strong> 기술 심각도 정량화</li>
-                      <li><strong>EPSS</strong> 실제 악용 확률 예측</li>
-                      <li><strong>KEV</strong> 실제 악용 여부 확인</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <!-- Trust Principles -->
+            <div class="hero-trust">
+              <span class="hero-trust-line"></span>
 
-              <!-- Connector: ctrl ↔ analysis -->
-              <div class="arch-conn">
-                <div class="arch-conn-arrows">
-                  <svg viewBox="0 0 10 20" fill="none">
-                    <path
-                      d="M5 0v16M2 13l3 4 3-4"
-                      stroke="rgba(255,255,255,0.35)"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span class="arch-conn-text">진단 명령 및 정책 적용</span>
-                  <svg viewBox="0 0 10 20" fill="none">
-                    <path
-                      d="M5 20V4M2 7l3-4 3 4"
-                      stroke="rgba(255,255,255,0.35)"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
+              <span>CONTINUOUS VERIFICATION</span>
 
-              <!-- Analysis Layer (분석층) -->
-              <div class="arch-layer arch-layer--analysis">
-                <div class="arch-layer-tag arch-tag--analysis">분석층</div>
-                <div class="arch-dual">
-                  <div class="arch-module arch-module--cce">
-                    <div class="arch-module-name">CCE 시스템취약스캔</div>
-                    <div class="arch-module-desc">
-                      시스템 설정 오류, 컴플라이언스 미준수 진단
-                    </div>
-                  </div>
-                  <div class="arch-dual-sep">&#8644;</div>
-                  <div class="arch-module arch-module--cve">
-                    <div class="arch-module-name">CVE 소프트웨어취약스캔</div>
-                    <div class="arch-module-desc">
-                      글로벌 보안 약점, OS/SW 취약점 실시간 매핑
-                    </div>
-                  </div>
-                  <div class="arch-dual-sep">&#8644;</div>
-                  <div class="arch-module arch-module--nse">
-                    <div class="arch-module-name">네트워크스캔취약점</div>
-                    <div class="arch-module-desc">
-                      고성능 네트워크 스캐닝 엔진으로 실시간 취약 자산 탐지
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <span class="hero-trust-separator">•</span>
 
-              <!-- Connector: infra → analysis -->
-              <div class="arch-conn arch-conn--up">
-                <div class="arch-conn-arrows">
-                  <svg viewBox="0 0 10 20" fill="none">
-                    <path
-                      d="M5 20V4M2 7l3-4 3 4"
-                      stroke="rgba(255,255,255,0.35)"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <svg viewBox="0 0 10 20" fill="none">
-                    <path
-                      d="M5 20V4M2 7l3-4 3 4"
-                      stroke="rgba(255,255,255,0.35)"
-                      stroke-width="1.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
+              <span>RISK-BASED DECISION</span>
 
-              <!-- Target Layer (대상층) -->
-              <div class="arch-layer arch-layer--infra">
-                <div class="arch-layer-tag arch-tag--infra">
-                  대상층 | 하이브리드 인프라
-                </div>
-                <div class="arch-infra-row">
-                  <div class="arch-infra-col">
-                    <div class="arch-infra-icons">
-                      <svg viewBox="0 0 20 20" fill="none">
-                        <rect
-                          x="1"
-                          y="2"
-                          width="18"
-                          height="10"
-                          rx="1.5"
-                          stroke="#7a90b0"
-                          stroke-width="1.2"
-                        />
-                        <rect
-                          x="1"
-                          y="14"
-                          width="18"
-                          height="5"
-                          rx="1.5"
-                          stroke="#7a90b0"
-                          stroke-width="1.2"
-                        />
-                        <circle cx="15" cy="16.5" r="1" fill="#7a90b0" />
-                      </svg>
-                      <svg viewBox="0 0 20 20" fill="none">
-                        <rect
-                          x="2"
-                          y="3"
-                          width="16"
-                          height="14"
-                          rx="1.5"
-                          stroke="#7a90b0"
-                          stroke-width="1.2"
-                        />
-                        <line
-                          x1="6"
-                          y1="9"
-                          x2="14"
-                          y2="9"
-                          stroke="#7a90b0"
-                          stroke-width="1"
-                        />
-                        <line
-                          x1="6"
-                          y1="12"
-                          x2="14"
-                          y2="12"
-                          stroke="#7a90b0"
-                          stroke-width="1"
-                        />
-                      </svg>
-                    </div>
-                    <div class="arch-infra-name">온프레미스</div>
-                    <div class="arch-infra-desc">
-                      Legacy 서버 · 네트워크 · 데이터센터
-                    </div>
-                  </div>
-                  <div class="arch-infra-divider"></div>
-                  <div class="arch-infra-col">
-                    <div class="arch-cloud-tags">
-                      <span>AWS</span><span>Azure</span><span>GCP</span>
-                    </div>
-                    <div class="arch-infra-name">클라우드</div>
-                    <div class="arch-infra-desc">
-                      AWS, Azure, GCP 등 가상화 환경
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <span class="hero-trust-separator">•</span>
 
-              <!-- Key Effects -->
-              <div class="arch-effects">
-                <div class="arch-effects-title">주요 효과</div>
-                <div class="arch-effect-items">
-                  <div class="arch-effect">
-                    <span class="arch-effect-dot"></span>보안 강화
-                  </div>
-                  <div class="arch-effect">
-                    <span class="arch-effect-dot"></span>비용 절감
-                  </div>
-                  <div class="arch-effect">
-                    <span class="arch-effect-dot"></span>컴플라이언스 달성
-                  </div>
-                </div>
-              </div>
+              <span>LEAST TRUST</span>
             </div>
           </div>
         </div>
-
-        <!-- SLIDE 2 -->
-        <div
-          class="hero-slide"
-          role="group"
-          aria-roledescription="slide"
-          aria-label="2 of 3"
-          aria-hidden="true"
-        >
-          <div class="hero-left">
-            <div class="hero-eyebrow">자사 대표 솔루션</div>
-            <div class="hero-kbi hero-kbi--wordmark">
-              <img
-                src="./images/bingoCVM-logo-bklong2.png"
-                alt="BingoCVM"
-                loading="lazy"
-              />
-            </div>
-            <div class="hero-kbi-sub">
-              취약점진단 자동화 플랫폼 — 5단계 프로세스
-            </div>
-            <div class="hero-rule">
-              <div class="hero-rule-line"></div>
-              <span class="hero-rule-text">automated workflow</span>
-              <div class="hero-rule-line"></div>
-            </div>
-            <p class="hero-desc" style="margin-bottom: 20px">
-              <strong>제로트러스트 취약점 진단 엔진</strong>으로 자산 등록부터
-              진단·분석·조치·보고서까지 원스톱으로 제공합니다.
-            </p>
-            <div class="process-list">
-              <div class="process-step">
-                <span class="step-num">01</span
-                ><span class="step-title">자산등록</span
-                ><span class="step-badge">Agent / Non-Agent</span>
-              </div>
-              <div class="process-step">
-                <span class="step-num">02</span
-                ><span class="step-title">취약점 진단</span
-                ><span class="step-badge">자동화</span>
-              </div>
-              <div class="process-step">
-                <span class="step-num">03</span
-                ><span class="step-title">취약점 분석</span
-                ><span class="step-badge">AI 분석</span>
-              </div>
-              <div class="process-step">
-                <span class="step-num">04</span
-                ><span class="step-title">조치 이력과 증적 자료</span>
-                <span class="step-badge">체계적으로 저장</span>
-              </div>
-              <div class="process-step">
-                <span class="step-num">05</span
-                ><span class="step-title">이행 점검</span
-                ><span class="step-badge">비교 보고서 다운로드</span>
-              </div>
-            </div>
-            <div class="hero-actions" style="margin-top: 20px">
-              <a class="btn-primary" href="./sub/product/">제품 상세보기 →</a>
-            </div>
-          </div>
-          <div
-            class="hero-right"
-            style="padding: 0; background: none; border: none; box-shadow: none"
-          >
-            <div class="bingocvm-card">
-              <div class="card-header">
-                <span class="bs-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 2 4 5v6c0 5 3.4 8.7 8 9 4.6-.3 8-4 8-9V5l-8-3Z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M9 12l2 2 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <div class="bs-name">BingoCVM</div>
-              </div>
-
-              <div class="card-desc">
-                하나의 플랫폼으로 통합하는 Zero Trust 취약점 진단
-              </div>
-              <div class="card-layer card-layer--ctrl">
-                <div class="card-ctrl-name">
-                  CCE 시스템취약진단, CVE 소프트웨어취약진단
-                </div>
-                <div class="card-layer-tag">자산의 신뢰도 지속적 검증</div>
-
-                <div class="card-module-desc">
-                  자산의 무결성, 자산의 신뢰도, 보호 위험 상시 확인
-                </div>
-              </div>
-              <div class="card-layer card-layer--ctrl">
-                <div class="card-ctrl-name">온프레미스 · 클라우드</div>
-                <div class="card-layer-tag">자산의 경계 없는 보호</div>
-
-                <div class="card-module-desc">
-                  모든 환경에 대한 동일 보호 수준 적용
-                </div>
-              </div>
-              <div class="card-layer card-layer--ctrl">
-                <div class="card-ctrl-name">Network Scanner</div>
-                <div class="card-layer-tag">자산의 가시성 및 통제</div>
-
-                <div class="card-module-desc">
-                  미인가 자산 차단 및 허가된 서비스만 허용, 자산현행화
-                </div>
-              </div>
-              <div class="card-layer card-layer--ctrl">
-                <div class="card-ctrl-name">
-                  위협인텔리전스 + 자산 중요도 및 복구관리
-                </div>
-                <div class="card-layer-tag">자산의 동적 신뢰 수준 산정</div>
-
-                <div class="card-module-desc">
-                  정적 위험도 스코어, 동적 예측 위험도 스코어, 실제 악용 여부
-                  확인, 자산중요도관리 및 RTO, RPO, 복구 우선 순위 관리
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SLIDE 3 -->
-        <div
-          class="hero-slide"
-          role="group"
-          aria-roledescription="slide"
-          aria-label="3 of 3"
-          aria-hidden="true"
-        >
-          <div class="hero-left">
-            <div class="hero-eyebrow">검증된 신뢰</div>
-            <div class="hero-kbi hero-kbi--wordmark">
-              주요 <em style="color: var(--crimson)">고객사</em>
-            </div>
-            <div class="hero-kbi-sub">
-              Government · Defense · Research · Enterprise
-            </div>
-            <div class="hero-rule">
-              <div class="hero-rule-line"></div>
-              <span class="hero-rule-text">trusted nationwide</span>
-              <div class="hero-rule-line"></div>
-            </div>
-            <p
-              class="hero-desc"
-              style="margin-bottom: 20px"
-              data-i18n-html="home.slide3.desc"
-            >
-              국가 주요 정보통신기반시설을 비롯해 공공기관, 국방, 연구기관, IT
-              기업 등 다양한 분야에서 <strong>20년 이상</strong> 신뢰를
-              받아왔습니다.
-            </p>
-            <div class="client-grid">
-              <div class="client-mini cm-navy">
-                <div class="cm-num">9</div>
-                <div class="cm-lbl">정부기관</div>
-              </div>
-              <div class="client-mini cm-blue">
-                <div class="cm-num">16</div>
-                <div class="cm-lbl">연구기관·교육기관</div>
-              </div>
-              <div class="client-mini cm-mid">
-                <div class="cm-num">19</div>
-                <div class="cm-lbl">공공기관·지자체</div>
-              </div>
-              <div class="client-mini cm-muted">
-                <div class="cm-num">3</div>
-                <div class="cm-lbl">국방</div>
-              </div>
-              <div class="client-mini cm-muted">
-                <div class="cm-num">7</div>
-                <div class="cm-lbl">민간·IT 기업</div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="hero-right"
-            style="
-              background: var(--surface);
-              border: 1px solid var(--border);
-              border-radius: 8px;
-              padding: 20px;
-              box-shadow: 0 12px 36px rgba(26, 29, 38, 0.08);
-            "
-          >
-            <div
-              style="
-                font-family: &quot;IBM Plex Sans KR&quot;, sans-serif;
-                font-size: 14px;
-                color: var(--crimson);
-                letter-spacing: 2.5px;
-                text-transform: uppercase;
-                margin-bottom: 14px;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-              "
-            >
-              <span
-                style="
-                  display: inline-block;
-                  width: 14px;
-                  height: 2px;
-                  background: var(--crimson);
-                "
-              ></span
-              >주요 레퍼런스
-            </div>
-            <div class="ref-list">
-              <div class="ref-item" style="border-left-color: var(--navy)">
-                <span class="ref-org">대통령실</span
-                ><span class="ref-line"></span
-                ><span class="ref-tag">BingoCVM 구축</span>
-              </div>
-              <div class="ref-item" style="border-left-color: var(--blue)">
-                <span class="ref-org">국방과학연구소</span
-                ><span class="ref-line"></span
-                ><span class="ref-tag">구축 · 고도화</span>
-              </div>
-              <div class="ref-item" style="border-left-color: var(--ink2)">
-                <span class="ref-org">전국 경찰청</span
-                ><span class="ref-line"></span
-                ><span class="ref-tag">취약점 진단</span>
-              </div>
-              <div
-                class="ref-item"
-                style="border-left-color: var(--brand-cyan)"
-              >
-                <span class="ref-org">KISTI</span><span class="ref-line"></span
-                ><span class="ref-tag">바이오망 구축</span>
-              </div>
-              <div class="ref-item" style="border-left-color: var(--muted)">
-                <span class="ref-org">KT Cloud</span
-                ><span class="ref-line"></span
-                ><span class="ref-tag">CSAP 컨설팅</span>
-              </div>
-              <div class="ref-item" style="border-left-color: var(--crimson)">
-                <span class="ref-org">한국수자원공사</span
-                ><span class="ref-line"></span
-                ><span class="ref-tag">인텔리전스 진단</span>
-              </div>
-              <div class="ref-item" style="border-left-color: var(--ink)">
-                <span class="ref-org">SK하이닉스</span
-                ><span class="ref-line"></span
-                ><span class="ref-tag">취약점 진단</span>
-              </div>
-            </div>
-            <a href="./sub/about/#clients" class="ref-all">
-              <span data-i18n="home.slide3.viewAll">전체 고객사 보기</span>
-              <span
-                style="
-                  font-family: &quot;IBM Plex Sans KR&quot;, sans-serif;
-                  font-size: 15px;
-                  color: var(--blue);
-                "
-                >→</span
-              >
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- /hero-slides -->
-
-      <div
-        id="heroLive"
-        class="sr-only"
-        aria-live="polite"
-        aria-atomic="true"
-      ></div>
-
-      <button
-        class="hero-arrow hero-arrow-prev"
-        id="heroPrev"
-        aria-label="이전 슬라이드"
-      >
-        <svg viewBox="0 0 16 16"><polyline points="10,3 5,8 10,13" /></svg>
-      </button>
-      <button
-        class="hero-arrow hero-arrow-next"
-        id="heroNext"
-        aria-label="다음 슬라이드"
-      >
-        <svg viewBox="0 0 16 16"><polyline points="6,3 11,8 6,13" /></svg>
-      </button>
-
-      <div class="hero-pagination">
-        <button
-          class="hero-dot active"
-          data-slide="0"
-          aria-label="슬라이드 1"
-        ></button>
-        <button
-          class="hero-dot"
-          data-slide="1"
-          aria-label="슬라이드 2"
-        ></button>
-        <button
-          class="hero-dot"
-          data-slide="2"
-          aria-label="슬라이드 3"
-        ></button>
-      </div>
-
-      <div class="hero-counter" id="heroCounter"><em>01</em> / 03</div>
-      <div class="hero-progress" id="heroProgress"></div>
+      </section>
     </div>
+    <!-- /hero-slides -->
+  </div>
 
-    <!-- ABOUT STRIP -->
-    <div class="about-strip">
-      <div class="about-cell">
-        <div class="about-num">20<em>+</em></div>
-        <div class="about-lbl" data-i18n="home.strip1.label">Years</div>
-        <div class="about-desc" data-i18n="home.strip1.desc">
-          2003년 설립 이래 20년 이상 대한민국 정보보안을 책임져온 전문 기업
-        </div>
-      </div>
-      <div class="about-cell">
-        <div class="about-num">50<em>+</em></div>
-        <div class="about-lbl" data-i18n="home.strip2.label">Clients</div>
-        <div class="about-desc" data-i18n="home.strip2.desc">
-          국가주요기관, 공공, 국방, 연구·교육, IT 분야에 걸친 50개 이상 주요
-          고객사
-        </div>
-      </div>
-      <div class="about-cell">
-        <div class="about-num">GS<em>1</em></div>
-        <div class="about-lbl" data-i18n="home.strip3.label">등급 인증</div>
-        <div class="about-desc" data-i18n="home.strip3.desc">
-          BingoCVM GS 1등급 인증 취득 — 국내 최고 수준의 품질 보증
-        </div>
-      </div>
-      <div class="about-cell">
-        <div class="about-num">4</div>
-        <div class="about-lbl" data-i18n="home.strip4.label">솔루션</div>
-        <div class="about-desc" data-i18n="home.strip4.desc">
-          BingoCVM · BingoSRM · BingoTasker · BingoNaru
-        </div>
+  <!-- =========================================================
+     ABOUT STRIP
+========================================================= -->
+  <div class="about-strip">
+    <div class="about-cell">
+      <div class="about-num">20<em>+</em></div>
+
+      <div class="about-lbl" data-i18n="home.strip1.label">Years</div>
+
+      <div class="about-desc" data-i18n="home.strip1.desc">
+        2003년 설립 이래 20년 이상 대한민국 정보보안을 책임져온 전문 기업
       </div>
     </div>
 
-    <!-- BINGO SECTION -->
-    <section id="bingo">
-      <div class="section-header reveal">
-        <div class="section-num">KBI</div>
-        <div class="section-eyebrow">자사 대표 제품</div>
-        <h2 class="section-title">BingoCVM — 취약점진단 자동화 플랫폼</h2>
-        <p class="section-desc" data-i18n-html="home.bingo.desc">
-          <strong>정보통신기반시설 및 클라우드 시스템 취약점진단 자동화</strong
-          >를 제공하는 (주) 케이비아이의 대표 보안 솔루션입니다. 진단 / 평가 /
-          분류 / 조치 / 이력 / 보고서까지 원스톱으로 제공합니다.
+    <div class="about-cell">
+      <div class="about-num">50<em>+</em></div>
+
+      <div class="about-lbl" data-i18n="home.strip2.label">Clients</div>
+
+      <div class="about-desc" data-i18n="home.strip2.desc">
+        국가주요기관, 공공, 국방, 연구·교육, IT 분야에 걸친 50개 이상 주요
+        고객사
+      </div>
+    </div>
+
+    <div class="about-cell">
+      <div class="about-num">GS<em>1</em></div>
+
+      <div class="about-lbl" data-i18n="home.strip3.label">등급 인증</div>
+
+      <div class="about-desc" data-i18n="home.strip3.desc">
+        BingoCVM GS 1등급 인증 취득 — 국내 최고 수준의 품질 보증
+      </div>
+    </div>
+
+    <div class="about-cell">
+      <div class="about-num">4</div>
+
+      <div class="about-lbl" data-i18n="home.strip4.label">솔루션</div>
+
+      <div class="about-desc" data-i18n="home.strip4.desc">
+        BingoCVM · BingoSRM · BingoTasker · BingoNaru
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+     BINGO SECTION
+========================================================= -->
+  <section id="bingo">
+    <div class="section-header reveal">
+      <div class="section-num">KBI</div>
+
+      <div class="section-eyebrow">자사 대표 제품</div>
+
+      <h2 class="section-title">BingoCVM — 지능형 취약점 위험 분석</h2>
+
+      <p class="section-desc">
+        <strong> 취약점 진단부터 위협 기반 위험 분석까지 </strong>
+        CVSS, EPSS, KEV 데이터를 활용하여 자산의 현재 보안 위험을 지속적으로
+        분석하고 Zero Trust 기반의 대응 우선순위를 제공합니다.
+      </p>
+    </div>
+
+    <!-- =======================================================
+       RISK ANALYSIS CARDS
+  ======================================================== -->
+    <div class="bingo-risk-layout">
+      <!-- CVSS -->
+      <article class="risk-analysis-card risk-card-cvss reveal-l">
+        <div class="risk-card-top">
+          <div class="risk-card-number">01</div>
+
+          <div class="risk-card-status">SEVERITY</div>
+        </div>
+
+        <div class="risk-card-icon">
+          <span>CVSS</span>
+        </div>
+
+        <h3 class="risk-card-title">CVSS</h3>
+
+        <div class="risk-card-subtitle">
+          Common Vulnerability Scoring System
+        </div>
+
+        <p class="risk-card-desc">
+          취약점의 기술적 심각도를 정량적으로 평가하여 보안 위험 수준과 대응
+          우선순위를 판단합니다.
         </p>
-      </div>
-      <div class="bingo-layout">
-        <div class="bingo-feats reveal-l">
-          <div class="bingo-feat">
-            <div class="feat-n">01</div>
-            <div>
-              <div class="feat-title" data-i18n="home.bingo.feat1.title">
-                국내 컴플라이언스 규정 준수
-              </div>
-              <div class="feat-desc" data-i18n="home.bingo.feat1.desc">
-                KISA 취약점점검 가이드 기준에 따른 체계적인 점검으로 법적 요건을
-                충족합니다.
-              </div>
-            </div>
+
+        <div class="risk-meter">
+          <div class="risk-meter-header">
+            <span> Vulnerability Severity </span>
+
+            <strong> HIGH </strong>
           </div>
-          <div class="bingo-feat">
-            <div class="feat-n">02</div>
-            <div>
-              <div class="feat-title" data-i18n="home.bingo.feat2.title">
-                ISMS-P · CSAP 인증 준수 관리
-              </div>
-              <div class="feat-desc" data-i18n="home.bingo.feat2.desc">
-                정보보호관리체계 인증과 클라우드 보안 인증 준수를 위한 체계적
-                지원을 제공합니다.
-              </div>
-            </div>
-          </div>
-          <div class="bingo-feat">
-            <div class="feat-n">03</div>
-            <div>
-              <div class="feat-title" data-i18n="home.bingo.feat3.title">
-                공공기관 사이버보안 실태평가 대응
-              </div>
-              <div class="feat-desc" data-i18n="home.bingo.feat3.desc">
-                정부·공공기관의 사이버보안 실태평가 요구사항에 맞춤 대응합니다.
-              </div>
-            </div>
-          </div>
-          <div class="bingo-feat">
-            <div class="feat-n">04</div>
-            <div>
-              <div class="feat-title">제로트러스트 취약점 진단 엔진</div>
-              <div class="feat-desc">
-                제로트러스트 취약점 진단 엔진으로 자산 등록부터
-                진단·수집·분석·조치까지 전 과정을 자동화하여 담당자 업무시간을
-                대폭 단축합니다.
-              </div>
-            </div>
-          </div>
-          <div class="bingo-feat">
-            <div class="feat-n">05</div>
-            <div>
-              <div class="feat-title" data-i18n="home.bingo.feat5.title">
-                온프레미스 + 클라우드 통합 진단
-              </div>
-              <div class="feat-desc">
-                온프레미스와 클라우드 자산을 하나의 플랫폼에서 CCE 시스템
-                취약점, CVE 소프트웨어취약점, 네트워크스캔 취약점, 위협
-                인텔리전스 지표까지 통합 진단이 가능합니다.
-              </div>
-            </div>
+
+          <div class="risk-meter-track">
+            <div class="risk-meter-fill cvss-fill"></div>
           </div>
         </div>
-        <div class="bingo-side reveal-r">
-          <div class="bs-head">
-            <div class="bs-brand">
-              <img
-                src="./images/BingoCVM-logo-noline-one-whlong.png"
-                alt="BingoCVM"
+
+        <div class="risk-card-footer">
+          <span> 기술적 심각도 평가 </span>
+
+          <span> 위험도 산정 </span>
+        </div>
+      </article>
+
+      <!-- EPSS -->
+      <article class="risk-analysis-card risk-card-epss reveal-l">
+        <div class="risk-card-top">
+          <div class="risk-card-number">02</div>
+
+          <div class="risk-card-status">PREDICTION</div>
+        </div>
+
+        <div class="risk-card-icon">
+          <span>EPSS</span>
+        </div>
+
+        <h3 class="risk-card-title">EPSS</h3>
+
+        <div class="risk-card-subtitle">Exploit Prediction Scoring System</div>
+
+        <p class="risk-card-desc">
+          AI/ML 기반 분석을 통해 취약점이 실제 공격에 악용될 가능성을 분석하고
+          대응 우선순위를 결정합니다.
+        </p>
+
+        <div class="risk-meter">
+          <div class="risk-meter-header">
+            <span> Exploit Probability </span>
+
+            <strong> HIGH </strong>
+          </div>
+
+          <div class="risk-meter-track">
+            <div class="risk-meter-fill epss-fill"></div>
+          </div>
+        </div>
+
+        <div class="risk-card-footer">
+          <span> AI/ML 기반 분석 </span>
+
+          <span> 악용 가능성 예측 </span>
+        </div>
+      </article>
+
+      <!-- KEV -->
+      <article class="risk-analysis-card risk-card-kev reveal-l">
+        <div class="risk-card-top">
+          <div class="risk-card-number">03</div>
+
+          <div class="risk-card-status">ACTIVE THREAT</div>
+        </div>
+
+        <div class="risk-card-icon">
+          <span>KEV</span>
+        </div>
+
+        <h3 class="risk-card-title">KEV</h3>
+
+        <div class="risk-card-subtitle">Known Exploited Vulnerabilities</div>
+
+        <p class="risk-card-desc">
+          실제 사이버 공격에서 악용된 것으로 확인된 취약점을 식별하여 현재 활동
+          중인 위협에 신속하게 대응합니다.
+        </p>
+
+        <div class="risk-meter">
+          <div class="risk-meter-header">
+            <span> Active Exploitation </span>
+
+            <strong> CRITICAL </strong>
+          </div>
+
+          <div class="risk-meter-track">
+            <div class="risk-meter-fill kev-fill"></div>
+          </div>
+        </div>
+
+        <div class="risk-card-footer">
+          <span> 실제 공격 악용 여부 </span>
+
+          <span> 긴급 대응 </span>
+        </div>
+      </article>
+
+      <!-- Zero Trust Result -->
+      <div class="risk-decision reveal-r">
+        <div class="risk-decision-line"></div>
+
+        <div class="risk-decision-content">
+          <div class="risk-decision-label">ZERO TRUST RISK DECISION</div>
+
+          <h3>지속적인 검증과 위험 기반 대응</h3>
+
+          <p>
+            자산의 취약점 심각도, 실제 악용 가능성 및 현재 공격 위협 정보를 종합
+            분석하여 자산별 보안 위험 수준과 대응 우선순위를 결정합니다.
+          </p>
+
+          <div class="risk-decision-tags">
+            <span> Continuous Verification </span>
+
+            <span> Risk-Based Response </span>
+
+            <span> Threat Intelligence </span>
+          </div>
+        </div>
+
+        <div class="risk-decision-arrow">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="5 12 19 12"></polyline>
+            <polyline points="13 6 19 12 13 18"></polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     BINGOCVM ZERO TRUST ARCHITECTURE
+     
+     IMPORTANT:
+     This is intentionally OUTSIDE #hero and #bingo.
+     It appears directly underneath the BingoCVM section.
+========================================================= -->
+  <!-- =========================================================
+     BINGOCVM HERO + ZERO TRUST ARCHITECTURE
+========================================================= -->
+
+  <!-- =========================================================
+     ZERO TRUST ARCHITECTURE
+========================================================= -->
+
+  <section id="architecture" class="bingo-architecture-section">
+    <div class="bingo-architecture">
+      <!-- =====================================================
+         ARCHITECTURE HEADER
+    ====================================================== -->
+
+      <header class="arch-title">
+        <div class="arch-title-line"></div>
+
+        <div class="arch-title-kicker">BINGOCVM SECURITY ARCHITECTURE</div>
+
+        <h2>BingoCVM 제로트러스트 통합 진단 아키텍처</h2>
+
+        <p>
+          자산을 지속적으로 검증하고 취약점 진단 결과와 위협 인텔리전스를
+          결합하여 실제 위험도를 분석합니다. 분석된 위험을 기반으로 보안 대응의
+          우선순위를 결정합니다.
+        </p>
+      </header>
+
+      <!-- =====================================================
+         01. RISK INTELLIGENCE
+    ====================================================== -->
+
+      <div class="arch-layer arch-layer--ctrl reveal">
+        <div class="arch-layer-tag">
+          <span class="arch-tag-dot"></span>
+          위협·위험 인텔리전스
+        </div>
+
+        <div class="arch-layer-body">
+          <!-- BingoCVM -->
+          <div class="arch-ctrl-main">
+            <svg
+              class="arch-chip-icon"
+              viewBox="0 0 48 48"
+              fill="none"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient
+                  id="chipBg"
+                  x1="8"
+                  y1="8"
+                  x2="40"
+                  y2="40"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#1f283a" />
+                  <stop offset="1" stop-color="#161e2f" />
+                </linearGradient>
+              </defs>
+
+              <rect
+                x="8"
+                y="8"
+                width="32"
+                height="32"
+                rx="6"
+                fill="url(#chipBg)"
+                stroke="#4fb6ff"
+                stroke-width="1.6"
               />
-            </div>
-            <div class="bs-tags">
-              <span class="bs-tag-light">온프레미스/클라우드</span>
-            </div>
-            <div class="bs-desc" data-i18n="home.bingo.sideDesc">
-              Unix/Linux · Windows · PC · Web · DBMS · Network · 가상화 ·
-              클라우드 플랫폼의 취약점 항목을 자동 스케줄 진단합니다.
-            </div>
-            <a href="./sub/product/#platforms" class="bs-cta">
-              지원 플랫폼 보기
-              <svg viewBox="0 0 16 16">
-                <polyline points="6 4 10 8 6 12" />
-              </svg>
-            </a>
-          </div>
-          <div class="bs-solutions">
-            <div class="bs-sol-label">관련 솔루션</div>
-            <div class="bs-sol">
-              <div class="bs-sol-name">BingoCVM</div>
-              <div class="bs-sol-desc" data-i18n="home.bingo.sol1.desc">
-                제로트러스트 취약점진단 자동화
+
+              <rect
+                x="14"
+                y="14"
+                width="20"
+                height="20"
+                rx="4"
+                stroke="#62c3ff"
+                stroke-width="1.2"
+              />
+
+              <rect
+                x="19"
+                y="19"
+                width="10"
+                height="10"
+                rx="2"
+                fill="#243046"
+                stroke="#5cc0ff"
+                stroke-width="1"
+              />
+
+              <path
+                d="M16 24h4M28 24h4M24 16v4M24 28v4"
+                stroke="#66c8ff"
+                stroke-width="1"
+                stroke-linecap="round"
+              />
+
+              <g stroke="#58bbff" stroke-width="1.1" stroke-linecap="round">
+                <path d="M8 16H4" />
+                <path d="M8 24H4" />
+                <path d="M8 32H4" />
+
+                <path d="M44 16h-4" />
+                <path d="M44 24h-4" />
+                <path d="M44 32h-4" />
+
+                <path d="M16 8V4" />
+                <path d="M24 8V4" />
+                <path d="M32 8V4" />
+
+                <path d="M16 44v-4" />
+                <path d="M24 44v-4" />
+                <path d="M32 44v-4" />
+              </g>
+
+              <rect
+                x="2.5"
+                y="2.5"
+                width="13"
+                height="11"
+                rx="3"
+                fill="#141c2a"
+                stroke="#4fb6ff"
+                stroke-width="1"
+              />
+
+              <text
+                x="9"
+                y="10.2"
+                text-anchor="middle"
+                fill="#63c9ff"
+                font-size="6"
+                font-weight="700"
+                font-family="'IBM Plex Mono', monospace"
+              >
+                AI
+              </text>
+            </svg>
+
+            <div class="arch-ctrl-info">
+              <div class="arch-ctrl-name">BingoCVM</div>
+
+              <div class="arch-ctrl-sub">
+                제로트러스트 기반
+                <br />
+                취약점 진단 · 위험 분석
               </div>
             </div>
-            <div class="bs-sol">
-              <div class="bs-sol-name">BingoSRM</div>
-              <div class="bs-sol-desc">정보시스템 장애 접수·처리 관리</div>
+          </div>
+
+          <!-- Risk Intelligence -->
+          <div class="arch-ctrl-brief" aria-label="위험 인텔리전스">
+            <div class="arch-ctrl-brief-title">위험 인텔리전스</div>
+
+            <ul>
+              <li>
+                <strong class="risk-cvss">CVSS</strong>
+                <span>취약점 심각도 정량화</span>
+              </li>
+
+              <li>
+                <strong class="risk-epss">EPSS</strong>
+                <span>실제 악용 가능성 예측</span>
+              </li>
+
+              <li>
+                <strong class="risk-kev">KEV</strong>
+                <span>실제 악용 여부 확인</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         CONNECTOR
+    ====================================================== -->
+
+      <div class="arch-conn">
+        <div class="arch-conn-arrows">
+          <svg viewBox="0 0 10 20" fill="none">
+            <path
+              d="M5 0v16M2 13l3 4 3-4"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <span class="arch-conn-text"> 위험 기반 진단 정책 </span>
+
+          <svg viewBox="0 0 10 20" fill="none">
+            <path
+              d="M5 20V4M2 7l3-4 3 4"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         02. RISK ANALYSIS
+    ====================================================== -->
+
+      <div class="arch-risk-summary reveal">
+        <div class="arch-risk-header">
+          <div class="arch-risk-label">RISK ANALYSIS</div>
+
+          <div class="arch-risk-title">
+            취약점 탐지 결과와 위협 정보를 결합한 위험도 분석
+          </div>
+        </div>
+
+        <div class="arch-risk-flow">
+          <div class="arch-risk-item arch-risk-vulnerability">
+            <span class="arch-risk-item-label"> VULNERABILITY </span>
+
+            <strong> 취약점 발견 </strong>
+          </div>
+
+          <span class="arch-risk-symbol">+</span>
+
+          <div class="arch-risk-item arch-risk-cvss">
+            <span class="arch-risk-item-label"> CVSS </span>
+
+            <strong> 심각도 </strong>
+          </div>
+
+          <span class="arch-risk-symbol">+</span>
+
+          <div class="arch-risk-item arch-risk-epss">
+            <span class="arch-risk-item-label"> EPSS </span>
+
+            <strong> 악용 가능성 </strong>
+          </div>
+
+          <span class="arch-risk-symbol">+</span>
+
+          <div class="arch-risk-item arch-risk-kev">
+            <span class="arch-risk-item-label"> KEV </span>
+
+            <strong> 실제 악용 </strong>
+          </div>
+
+          <span class="arch-risk-arrow"> → </span>
+
+          <div class="arch-risk-result">
+            <span> RISK PRIORITY </span>
+
+            <strong> 대응 우선순위 결정 </strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         CONNECTOR
+    ====================================================== -->
+
+      <div class="arch-conn arch-conn--single">
+        <div class="arch-conn-arrows">
+          <svg viewBox="0 0 10 20" fill="none">
+            <path
+              d="M5 0v16M2 13l3 4 3-4"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         03. DETECTION ENGINE
+    ====================================================== -->
+
+      <div class="arch-layer arch-layer--analysis reveal">
+        <div class="arch-layer-tag arch-tag--analysis">
+          <span class="arch-tag-dot"></span>
+          통합 진단 엔진
+        </div>
+
+        <div class="arch-dual">
+          <!-- CCE -->
+          <div class="arch-module arch-module--cce">
+            <div class="arch-module-index">01 / SYSTEM</div>
+
+            <div class="arch-module-name">CCE 시스템 취약점 진단</div>
+
+            <div class="arch-module-desc">
+              시스템 설정 오류 및
+              <br />
+              보안 기준·컴플라이언스 미준수 진단
             </div>
-            <div class="bs-sol">
-              <div class="bs-sol-name">BingoTasker</div>
-              <div class="bs-sol-desc">정보화사업 산출물·진행단계 관리</div>
+          </div>
+
+          <div class="arch-dual-sep">↔</div>
+
+          <!-- CVE -->
+          <div class="arch-module arch-module--cve">
+            <div class="arch-module-index">02 / SOFTWARE</div>
+
+            <div class="arch-module-name">CVE 소프트웨어 취약점 진단</div>
+
+            <div class="arch-module-desc">
+              OS·SW 취약점 식별 및
+              <br />
+              CVE 기반 취약점 매핑
             </div>
-            <div class="bs-sol">
-              <div class="bs-sol-name">BingoNaru</div>
-              <div class="bs-sol-desc">DBMS to PostgreSQL 마이그레이션</div>
+          </div>
+
+          <div class="arch-dual-sep">↔</div>
+
+          <!-- Network -->
+          <div class="arch-module arch-module--nse">
+            <div class="arch-module-index">03 / NETWORK</div>
+
+            <div class="arch-module-name">네트워크 취약점 진단</div>
+
+            <div class="arch-module-desc">
+              네트워크 자산 탐지 및
+              <br />
+              서비스·취약점 분석
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- FOOTER -->
-    <div id="footer"></div>
+      <!-- =====================================================
+         CONNECTOR
+    ====================================================== -->
 
-    <script>
-      Promise.all([
-        fetch("/includes/header.html").then((r) => r.text()),
-        fetch("/includes/footer.html").then((r) => r.text()),
-        fetch("/includes/scrollTop.html").then((r) => r.text()),
-      ])
-        .then(([headerHtml, footerHtml, scrollTopHtml]) => {
-          const h = document.getElementById("header");
-          if (h) h.innerHTML = headerHtml;
-          const f = document.getElementById("footer");
-          if (f) f.innerHTML = footerHtml;
-          const scrollTopEl = document.getElementById("scrollTop");
-          if (scrollTopEl) scrollTopEl.outerHTML = scrollTopHtml;
-          //Create a custom event named includesLoaded and send (dispatch) it to the document so that any code listening for it will run.
-          document.dispatchEvent(new CustomEvent("includesLoaded"));
-          // Load nav-toggle.js (innerHTML doesn't execute <script> tags)
-          const s = document.createElement("script");
-          s.src = "/js/nav-toggle.js";
-          s.onload = () => {
-            if (window.initNavToggle) window.initNavToggle();
-          };
-          document.body.appendChild(s);
-        })
-        .catch(() => {
-          // ignore include loading errors
-        });
-      // ── HERO CAROUSEL ──
-      const hero = document.getElementById("hero");
-      const slidesEl = document.getElementById("heroSlides");
-      const slides = slidesEl ? Array.from(slidesEl.children) : [];
-      const dots = Array.from(document.querySelectorAll(".hero-dot"));
-      const counter = document.getElementById("heroCounter");
-      const progress = document.getElementById("heroProgress");
-      const live = document.getElementById("heroLive");
-      const TOTAL = slides.length;
-      // Slide duration in milliseconds (30 seconds)
-      const DURATION = 30000;
-      let current = 0,
-        autoTimer,
-        slideWidth = 0,
-        paused = false;
+      <div class="arch-conn arch-conn--up">
+        <div class="arch-conn-arrows">
+          <svg viewBox="0 0 10 20" fill="none">
+            <path
+              d="M5 20V4M2 7l3-4 3 4"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
 
-      function sizeSlides() {
-        const cs = window.getComputedStyle(hero);
-        const padL = parseFloat(cs.paddingLeft) || 0;
-        const padR = parseFloat(cs.paddingRight) || 0;
-        const rect = hero.getBoundingClientRect();
-        const w = Math.max(0, Math.round(rect.width));
-        slides.forEach((s) => {
-          s.style.width = w + "px";
-          s.style.minWidth = w + "px";
-          s.style.maxWidth = w + "px";
-          s.style.boxSizing = "border-box";
-        });
-        slidesEl.style.width = w * TOTAL + "px";
-        slideWidth = w;
-        return w;
-      }
+          <span class="arch-conn-text"> 지속적 자산 검증 </span>
 
-      function goTo(n) {
-        current = ((n % TOTAL) + TOTAL) % TOTAL;
-        slidesEl.style.transform = `translate3d(-${slideWidth * current}px, 0, 0)`;
-        dots.forEach((d, i) => d.classList.toggle("active", i === current));
-        slides.forEach((s, i) =>
-          s.setAttribute("aria-hidden", i === current ? "false" : "true"),
-        );
-        if (counter) {
-          const em = counter.querySelector("em");
-          if (em) em.textContent = String(current + 1).padStart(2, "0");
+          <svg viewBox="0 0 10 20" fill="none">
+            <path
+              d="M5 20V4M2 7l3-4 3 4"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         04. HYBRID INFRASTRUCTURE
+    ====================================================== -->
+
+      <div class="arch-layer arch-layer--infra reveal">
+        <div class="arch-layer-tag arch-tag--infra">
+          <span class="arch-tag-dot"></span>
+          대상 자산 · 하이브리드 인프라
+        </div>
+
+        <div class="arch-infra-row">
+          <!-- On-Premise -->
+          <div class="arch-infra-col">
+            <div class="arch-infra-icons">
+              <!-- Server -->
+              <svg viewBox="0 0 20 20" fill="none">
+                <rect
+                  x="1"
+                  y="2"
+                  width="18"
+                  height="10"
+                  rx="1.5"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                />
+
+                <rect
+                  x="1"
+                  y="14"
+                  width="18"
+                  height="5"
+                  rx="1.5"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                />
+
+                <circle cx="15" cy="16.5" r="1" fill="currentColor" />
+              </svg>
+
+              <!-- Network -->
+              <svg viewBox="0 0 20 20" fill="none">
+                <rect
+                  x="2"
+                  y="3"
+                  width="16"
+                  height="14"
+                  rx="1.5"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                />
+
+                <line
+                  x1="6"
+                  y1="9"
+                  x2="14"
+                  y2="9"
+                  stroke="currentColor"
+                  stroke-width="1"
+                />
+
+                <line
+                  x1="6"
+                  y1="12"
+                  x2="14"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+
+            <div class="arch-infra-name">온프레미스</div>
+
+            <div class="arch-infra-desc">
+              Legacy 서버 · 네트워크 · 데이터센터
+            </div>
+          </div>
+
+          <div class="arch-infra-divider"></div>
+
+          <!-- Cloud -->
+          <div class="arch-infra-col">
+            <div class="arch-cloud-tags">
+              <span>AWS</span>
+              <span>Azure</span>
+              <span>GCP</span>
+            </div>
+
+            <div class="arch-infra-name">클라우드</div>
+
+            <div class="arch-infra-desc">
+              AWS · Azure · GCP 등
+              <br />
+              가상화 및 클라우드 환경
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         05. SECURITY OUTCOMES
+    ====================================================== -->
+
+      <div class="arch-effects reveal">
+        <div class="arch-effects-title">SECURITY OUTCOMES</div>
+
+        <div class="arch-effect-items">
+          <div class="arch-effect">
+            <span class="arch-effect-dot"></span>
+            지속적 자산 검증
+          </div>
+
+          <div class="arch-effect">
+            <span class="arch-effect-dot"></span>
+            위험 기반 대응
+          </div>
+
+          <div class="arch-effect">
+            <span class="arch-effect-dot"></span>
+            취약점 대응 우선순위화
+          </div>
+
+          <div class="arch-effect">
+            <span class="arch-effect-dot"></span>
+            컴플라이언스 관리
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     FOOTER
+========================================================= -->
+  <div id="footer"></div>
+
+  <!-- =========================================================
+     SCRIPTS
+========================================================= -->
+  <script>
+    /* =========================================================
+     LOAD COMMON INCLUDES
+  ========================================================= */
+
+    Promise.all([
+      fetch("/includes/header.html").then((r) => r.text()),
+      fetch("/includes/footer.html").then((r) => r.text()),
+      fetch("/includes/scrollTop.html").then((r) => r.text()),
+    ])
+      .then(([headerHtml, footerHtml, scrollTopHtml]) => {
+        const h = document.getElementById("header");
+
+        if (h) {
+          h.innerHTML = headerHtml;
         }
-        if (live) {
-          const title =
-            slides[current].querySelector(".hero-eyebrow, .hero-kbi")
-              ?.innerText || `Slide ${current + 1}`;
-          live.textContent = title;
+
+        const f = document.getElementById("footer");
+
+        if (f) {
+          f.innerHTML = footerHtml;
         }
-        resetProgress();
+
+        const scrollTopEl = document.getElementById("scrollTop");
+
+        if (scrollTopEl) {
+          scrollTopEl.outerHTML = scrollTopHtml;
+        }
+
+        document.dispatchEvent(new CustomEvent("includesLoaded"));
+
+        /* Load nav-toggle.js */
+        const s = document.createElement("script");
+
+        s.src = "/js/nav-toggle.js";
+
+        s.onload = () => {
+          if (window.initNavToggle) {
+            window.initNavToggle();
+          }
+        };
+
+        document.body.appendChild(s);
+      })
+      .catch(() => {
+        /* Ignore include loading errors */
+      });
+
+    /* =========================================================
+     HERO CAROUSEL
+  ========================================================= */
+
+    const hero = document.getElementById("hero");
+
+    const slidesEl = document.getElementById("heroSlides");
+
+    const slides = slidesEl ? Array.from(slidesEl.children) : [];
+
+    const dots = Array.from(document.querySelectorAll(".hero-dot"));
+
+    const counter = document.getElementById("heroCounter");
+
+    const progress = document.getElementById("heroProgress");
+
+    const live = document.getElementById("heroLive");
+
+    const TOTAL = slides.length;
+
+    const DURATION = 30000;
+
+    let current = 0;
+    let autoTimer;
+    let slideWidth = 0;
+    let paused = false;
+
+    function sizeSlides() {
+      if (!hero || !slidesEl) {
+        return 0;
       }
 
-      function resetProgress() {
-        if (!progress) return;
-        progress.style.transition = "none";
-        progress.style.width = "0%";
-        requestAnimationFrame(() =>
-          requestAnimationFrame(() => {
-            progress.style.transition = `width ${DURATION}ms linear`;
-            progress.style.width = "100%";
-          }),
-        );
+      const rect = hero.getBoundingClientRect();
+
+      const w = Math.max(0, Math.round(rect.width));
+
+      slides.forEach((s) => {
+        s.style.width = w + "px";
+        s.style.minWidth = w + "px";
+        s.style.maxWidth = w + "px";
+        s.style.boxSizing = "border-box";
+      });
+
+      slidesEl.style.width = w * TOTAL + "px";
+
+      slideWidth = w;
+
+      return w;
+    }
+
+    function goTo(n) {
+      if (!TOTAL || !slidesEl) {
+        return;
       }
 
-      function startAuto() {
-        clearInterval(autoTimer);
-        if (!paused) autoTimer = setInterval(() => goTo(current + 1), DURATION);
+      current = ((n % TOTAL) + TOTAL) % TOTAL;
+
+      slidesEl.style.transform = `translate3d(-${
+        slideWidth * current
+      }px, 0, 0)`;
+
+      dots.forEach((d, i) => {
+        d.classList.toggle("active", i === current);
+      });
+
+      slides.forEach((s, i) => {
+        s.setAttribute("aria-hidden", i === current ? "false" : "true");
+      });
+
+      if (counter) {
+        const em = counter.querySelector("em");
+
+        if (em) {
+          em.textContent = String(current + 1).padStart(2, "0");
+        }
       }
 
-      function stopAuto() {
-        clearInterval(autoTimer);
+      if (live) {
+        const title =
+          slides[current]?.querySelector(".hero-eyebrow, .hero-kbi")
+            ?.innerText || `Slide ${current + 1}`;
+
+        live.textContent = title;
       }
 
-      document.getElementById("heroPrev").addEventListener("click", () => {
+      resetProgress();
+    }
+
+    function resetProgress() {
+      if (!progress) {
+        return;
+      }
+
+      progress.style.transition = "none";
+
+      progress.style.width = "0%";
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          progress.style.transition = `width ${DURATION}ms linear`;
+
+          progress.style.width = "100%";
+        });
+      });
+    }
+
+    function startAuto() {
+      clearInterval(autoTimer);
+
+      if (!paused && TOTAL > 1) {
+        autoTimer = setInterval(() => goTo(current + 1), DURATION);
+      }
+    }
+
+    function stopAuto() {
+      clearInterval(autoTimer);
+    }
+
+    dots.forEach((d) => {
+      d.addEventListener("click", () => {
         stopAuto();
-        goTo(current - 1);
+
+        goTo(+d.dataset.slide);
+
         startAuto();
       });
-      document.getElementById("heroNext").addEventListener("click", () => {
-        stopAuto();
-        goTo(current + 1);
-        startAuto();
-      });
-      dots.forEach((d) =>
-        d.addEventListener("click", () => {
-          stopAuto();
-          goTo(+d.dataset.slide);
-          startAuto();
-        }),
-      );
+    });
 
+    if (hero) {
       hero.addEventListener("mouseenter", () => {
         paused = true;
         stopAuto();
       });
+
       hero.addEventListener("mouseleave", () => {
         paused = false;
         startAuto();
       });
+
       hero.addEventListener("keydown", (e) => {
         if (e.key === "ArrowLeft") {
           e.preventDefault();
+
           stopAuto();
+
           goTo(current - 1);
+
           startAuto();
         }
+
         if (e.key === "ArrowRight") {
           e.preventDefault();
+
           stopAuto();
+
           goTo(current + 1);
+
           startAuto();
         }
       });
+    }
 
-      // Touch/swipe
-      let touchX = 0;
+    /* =========================================================
+     TOUCH / SWIPE
+  ========================================================= */
+
+    let touchX = 0;
+
+    if (slidesEl) {
       slidesEl.addEventListener(
         "touchstart",
         (e) => {
@@ -1016,145 +1128,245 @@
         },
         { passive: true },
       );
+
       slidesEl.addEventListener(
         "touchend",
         (e) => {
           const dx = e.changedTouches[0].clientX - touchX;
+
           if (Math.abs(dx) > 40) {
             stopAuto();
+
             goTo(dx < 0 ? current + 1 : current - 1);
+
             startAuto();
           }
         },
         { passive: true },
       );
+    }
 
-      // Resize
-      let resizeTimer;
-      window.addEventListener("resize", () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-          slideWidth = sizeSlides();
-          goTo(current);
-        }, 120);
-      });
+    /* =========================================================
+     RESIZE
+  ========================================================= */
 
-      // Init
-      slideWidth = sizeSlides();
-      goTo(0);
-      startAuto();
+    let resizeTimer;
 
-      // IntersectionObserver for auto-pause when offscreen
-      try {
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+
+      resizeTimer = setTimeout(() => {
+        slideWidth = sizeSlides();
+
+        goTo(current);
+      }, 120);
+    });
+
+    /* =========================================================
+     INIT
+  ========================================================= */
+
+    slideWidth = sizeSlides();
+
+    goTo(0);
+
+    startAuto();
+
+    /* =========================================================
+     INTERSECTION OBSERVER
+  ========================================================= */
+
+    try {
+      if (hero) {
         new IntersectionObserver(
           (entries) => {
             entries.forEach((e) => {
               paused = !e.isIntersecting;
-              e.isIntersecting ? startAuto() : stopAuto();
+
+              if (e.isIntersecting) {
+                startAuto();
+              } else {
+                stopAuto();
+              }
             });
           },
-          { threshold: 0.3 },
+          {
+            threshold: 0.3,
+          },
         ).observe(hero);
-      } catch (e) {}
+      }
+    } catch (e) {}
 
-      // ── NAV SCROLL ──
-      const nav = document.getElementById("mainNav");
-      if (nav) {
+    /* =========================================================
+     NAV SCROLL
+  ========================================================= */
+
+    const nav = document.getElementById("mainNav");
+
+    if (nav) {
+      window.addEventListener(
+        "scroll",
+        () => {
+          nav.classList.toggle("scrolled", scrollY > 30);
+        },
+        { passive: true },
+      );
+    }
+
+    /* =========================================================
+     SCROLL TO TOP
+  ========================================================= */
+
+    document.addEventListener("includesLoaded", () => {
+      const scrollBtn = document.querySelector(".scroll-top");
+
+      if (scrollBtn) {
         window.addEventListener(
           "scroll",
-          () => nav.classList.toggle("scrolled", scrollY > 30),
+          () => {
+            scrollBtn.classList.toggle("show", scrollY > 400);
+          },
           { passive: true },
         );
       }
+    });
 
-      // ── SCROLL TO TOP ──
-      document.addEventListener("includesLoaded", () => {
-        const scrollBtn = document.querySelector(".scroll-top");
-        if (scrollBtn) {
-          window.addEventListener(
-            "scroll",
-            () => scrollBtn.classList.toggle("show", scrollY > 400),
-            { passive: true },
-          );
-        }
+    /* =========================================================
+     CUSTOM CURSOR
+  ========================================================= */
+
+    const cursorDot = document.getElementById("cursorDot");
+
+    const cursorRing = document.getElementById("cursorRing");
+
+    if (cursorDot && cursorRing) {
+      let mx = 0;
+      let my = 0;
+
+      let rx = 0;
+      let ry = 0;
+
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
       });
 
-      // ── CUSTOM CURSOR ──
-      const cursorDot = document.getElementById("cursorDot");
-      const cursorRing = document.getElementById("cursorRing");
-      if (cursorDot && cursorRing) {
-        let mx = 0,
-          my = 0,
-          rx = 0,
-          ry = 0;
-        document.addEventListener("mousemove", (e) => {
-          mx = e.clientX;
-          my = e.clientY;
-        });
-        (function tick() {
-          rx += (mx - rx) * 0.12;
-          ry += (my - ry) * 0.12;
-          cursorDot.style.left = mx + "px";
-          cursorDot.style.top = my + "px";
-          cursorRing.style.left = rx + "px";
-          cursorRing.style.top = ry + "px";
-          requestAnimationFrame(tick);
-        })();
-        // Hide cursor inside hero (already has arrows)
+      (function tick() {
+        rx += (mx - rx) * 0.12;
+
+        ry += (my - ry) * 0.12;
+
+        cursorDot.style.left = mx + "px";
+
+        cursorDot.style.top = my + "px";
+
+        cursorRing.style.left = rx + "px";
+
+        cursorRing.style.top = ry + "px";
+
+        requestAnimationFrame(tick);
+      })();
+
+      if (hero) {
         hero.addEventListener("mouseenter", () => {
           cursorRing.style.opacity = "0";
+
           cursorDot.style.opacity = "0";
         });
+
         hero.addEventListener("mouseleave", () => {
           cursorRing.style.opacity = "1";
+
           cursorDot.style.opacity = "1";
         });
-        document
-          .querySelectorAll(
-            "a,button,.partner-card,.client-logo,.stat-cell,.timeline-card,.service-card,.about-cell,.bingo-feat,.bs-sol,.process-step",
-          )
-          .forEach((el) => {
-            el.addEventListener("mouseenter", () => {
-              cursorRing.style.width = "44px";
-              cursorRing.style.height = "44px";
-              cursorRing.style.borderColor = "rgba(200,0,30,0.5)";
-            });
-            el.addEventListener("mouseleave", () => {
-              cursorRing.style.width = "28px";
-              cursorRing.style.height = "28px";
-              cursorRing.style.borderColor = "rgba(200,0,30,0.35)";
-            });
-          });
       }
 
-      // ── REVEAL ──
-      const revealObs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              setTimeout(() => entry.target.classList.add("visible"), i * 60);
-              revealObs.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.07 },
-      );
       document
-        .querySelectorAll(".reveal,.reveal-l,.reveal-r")
-        .forEach((el) => revealObs.observe(el));
+        .querySelectorAll(
+          `
+        a,
+        button,
+        .partner-card,
+        .client-logo,
+        .stat-cell,
+        .timeline-card,
+        .service-card,
+        .about-cell,
+        .bingo-feat,
+        .bs-sol,
+        .process-step,
+        .risk-analysis-card,
+        .risk-decision,
+        .arch-module,
+        .arch-infra-col
+        `,
+        )
+        .forEach((el) => {
+          el.addEventListener("mouseenter", () => {
+            cursorRing.style.width = "44px";
 
-      // ── NAV ACTIVE (ensure current top-level link is highlighted) ──
-      (function () {
-        const navLinks = document.querySelectorAll(".nav-menu a:not(.nav-buy)");
-        const current =
-          window.location.pathname.split("/").pop() || "index.html";
-        navLinks.forEach((a) => {
-          const href = a.getAttribute("href");
-          if (!href || href.startsWith("#")) return;
-          const name = href.split("/").pop();
-          if (name === current) a.classList.add("active");
+            cursorRing.style.height = "44px";
+
+            cursorRing.style.borderColor = "rgba(200,0,30,0.5)";
+          });
+
+          el.addEventListener("mouseleave", () => {
+            cursorRing.style.width = "28px";
+
+            cursorRing.style.height = "28px";
+
+            cursorRing.style.borderColor = "rgba(200,0,30,0.35)";
+          });
         });
-      })();
-    </script>
-  </body>
+    }
+
+    /* =========================================================
+     REVEAL
+  ========================================================= */
+
+    const revealObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add("visible");
+            }, i * 60);
+
+            revealObs.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.07,
+      },
+    );
+
+    document
+      .querySelectorAll(".reveal,.reveal-l,.reveal-r")
+      .forEach((el) => revealObs.observe(el));
+
+    /* =========================================================
+     NAV ACTIVE
+  ========================================================= */
+
+    (function () {
+      const navLinks = document.querySelectorAll(".nav-menu a:not(.nav-buy)");
+
+      const current = window.location.pathname.split("/").pop() || "index.html";
+
+      navLinks.forEach((a) => {
+        const href = a.getAttribute("href");
+
+        if (!href || href.startsWith("#")) {
+          return;
+        }
+
+        const name = href.split("/").pop();
+
+        if (name === current) {
+          a.classList.add("active");
+        }
+      });
+    })();
+  </script>
 </html>

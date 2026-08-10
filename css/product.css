@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-/* ── OPTION D: GRAPHITE WHITE PALETTE (product page only) ── */
+/* ── UPDATED THEME PALETTE (product page only) ── */
 :root {
   --bg: #f4f2ee;
   --bg2: #eceae5;
@@ -18,21 +18,23 @@
   --rule2: rgba(26, 29, 38, 0.06);
   --crimson: #c8001e;
   --crimson2: #a0001a;
-  --cyan: #3ba2f2;
-  --pink: #e0106a;
   --surface: #ffffff;
+  --navy: #1a1d26;
+  --navy2: #3a3d4a;
+  --blue: #1554b0;
+  --brand-cyan: #3ba2f2;
+  --white: #ffffff;
+  --border: rgba(26, 29, 38, 0.1);
 
-  /* Legacy aliases used throughout — mapped to Option D */
-  --navy: var(--ink);
-  --navy2: var(--ink2);
-  --blue: var(--crimson);
-  --midblue: var(--crimson2);
+  /* Legacy aliases used throughout the rest of the page — kept so
+     sections outside 01–03 keep rendering exactly as before. */
+  --cyan: var(--brand-cyan);
+  --pink: #e0106a;
+  --midblue: #103d82;
   --sky: var(--muted);
   --red: var(--crimson);
   --offwhite: var(--bg);
   --light: var(--bg2);
-  --border: var(--rule);
-  --white: var(--surface);
   --gray: var(--muted);
   --darktext: var(--ink);
 }
@@ -1775,5 +1777,1431 @@ section {
   }
   .intro-grid {
     gap: 36px;
+  }
+}
+
+/* =========================================================
+   ZERO-TRUST PRESENTATION CONTENT
+   Slides 7–9 integrated into the BingoCVM product page
+   ========================================================= */
+
+:root {
+  --zt-accent: var(--blue);
+  --zt-accent-ink: #123f82;
+  --zt-accent-tint: rgba(21, 84, 176, 0.08);
+  --zt-accent-tint-strong: rgba(21, 84, 176, 0.14);
+}
+
+.zt-slide-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(62, 132, 235, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(224, 16, 106, 0.035),
+      transparent 30%
+    ),
+    #ffffff;
+  border-top: 1px solid rgba(26, 29, 38, 0.07);
+}
+
+.zt-slide-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.48;
+  background:
+    linear-gradient(
+        135deg,
+        transparent 0 49%,
+        rgba(68, 145, 231, 0.06) 50%,
+        transparent 51%
+      )
+      0 0 / 180px 180px,
+    linear-gradient(
+        35deg,
+        transparent 0 49%,
+        rgba(173, 104, 221, 0.045) 50%,
+        transparent 51%
+      )
+      90px 20px / 230px 230px;
+}
+
+.zt-slide-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* These three sections carry the page's numbered section-header pattern
+   (see .section-header/.section-num/.section-eyebrow above) so the page
+   reads as one continuous story, while their body content keeps its own
+   lighter blue accent to stay visually distinct from the legacy dark blocks. */
+.zt-slide-section .section-header {
+  margin-bottom: 44px;
+}
+
+/* Slide 7 ------------------------------------------------ */
+.zt-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.92fr) minmax(0, 1.08fr);
+  gap: 54px;
+  align-items: start;
+}
+
+.zt-overview-left {
+  min-width: 0;
+  position: sticky;
+  top: 100px;
+}
+
+.zt-quote-mark {
+  color: var(--zt-accent-tint-strong);
+  font-family: Georgia, serif;
+  font-size: 78px;
+  line-height: 0.55;
+  height: 34px;
+}
+
+.zt-overview-quote {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 700;
+  color: #171a22;
+  line-height: 1.45;
+  margin: 10px 0 14px;
+  letter-spacing: -0.9px;
+}
+
+.zt-overview-sub {
+  font-size: 15px;
+  color: #5b606c;
+  line-height: 1.65;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+.zt-product-card {
+  position: relative;
+  width: min(100%, 480px);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(215, 220, 232, 0.72);
+  box-shadow: 0 14px 38px rgba(36, 57, 89, 0.08);
+  padding: 10px;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.zt-product-card:hover {
+  box-shadow: 0 20px 46px rgba(36, 57, 89, 0.12);
+  transform: translateY(-2px);
+}
+
+.zt-product-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.zt-overview-right {
+  min-width: 0;
+}
+
+.zt-info-group {
+  margin-bottom: 26px;
+}
+
+.zt-info-group-last {
+  margin-bottom: 0;
+}
+
+.zt-info-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--zt-accent-ink);
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #d8dce4;
+  position: relative;
+  margin-bottom: 11px;
+  letter-spacing: -0.2px;
+}
+
+.zt-info-heading::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--zt-accent);
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
+.zt-info-icon {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  color: var(--zt-accent);
+}
+
+.zt-info-group ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.zt-info-group li {
+  color: #30343c;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 3px 0;
+}
+
+.zt-info-group li::marker {
+  color: var(--zt-accent);
+}
+
+.zt-info-group li span {
+  color: #4f545e;
+}
+
+/* Feature grid — replaces the long "핵심 기능" bullet list with scannable chips */
+.zt-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.zt-feature-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid #dfe3ea;
+  border-radius: 10px;
+  background: rgba(250, 251, 253, 0.9);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.zt-feature-chip:hover {
+  border-color: rgba(21, 84, 176, 0.4);
+  background: var(--zt-accent-tint);
+  transform: translateY(-1px);
+}
+
+.zt-feature-chip strong {
+  color: #181b22;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.zt-feature-chip span {
+  color: #5b606c;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* Slide 8 ------------------------------------------------ */
+.zt-intelligence-section {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(70, 131, 230, 0.075),
+      transparent 38%
+    ),
+    #ffffff;
+}
+
+.zt-intelligence-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.zt-intelligence-card,
+.zt-recovery-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d8dce4;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(29, 39, 58, 0.1);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.zt-intelligence-card:hover,
+.zt-recovery-card:hover {
+  box-shadow: 0 14px 30px rgba(29, 39, 58, 0.14);
+  border-color: rgba(21, 84, 176, 0.35);
+  transform: translateY(-2px);
+}
+
+.zt-intelligence-card {
+  padding: 24px 26px 22px;
+  min-height: 286px;
+}
+
+.zt-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 17px;
+}
+
+.zt-card-heading h3 {
+  color: #191c24;
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 0;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.zt-card-heading p {
+  color: var(--zt-accent);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 3px 0 0;
+  letter-spacing: 0.2px;
+}
+
+.zt-icon-badge {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--zt-accent-tint);
+  color: var(--zt-accent);
+}
+
+.zt-icon-badge svg {
+  width: 24px;
+  height: 24px;
+}
+
+.zt-ai-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffb31c, #f56b16);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  vertical-align: middle;
+  letter-spacing: -1px;
+}
+
+.zt-intelligence-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 15px;
+}
+
+.zt-intelligence-card li {
+  color: #34373f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.zt-code-pill {
+  display: inline-block;
+  font-family: "IBM Plex Mono", "Barlow", monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--zt-accent-ink);
+  background: var(--zt-accent-tint);
+  border: 1px solid rgba(21, 84, 176, 0.2);
+  border-radius: 5px;
+  padding: 2px 7px;
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+
+.zt-intelligence-card strong {
+  color: #17191f;
+  font-weight: 800;
+}
+
+.zt-intelligence-card em {
+  color: #3f82ee;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.zt-recovery-card {
+  margin-top: 18px;
+  padding: 22px 26px;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.33fr) 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.zt-recovery-card .zt-card-heading {
+  margin-bottom: 0;
+}
+
+.zt-recovery-list {
+  display: grid;
+  gap: 10px;
+}
+
+.zt-recovery-list > div {
+  color: #353840;
+  font-size: 14px;
+  line-height: 1.55;
+  padding-left: 19px;
+  position: relative;
+}
+
+.zt-recovery-list > div::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 900;
+}
+
+.zt-recovery-list strong {
+  color: #181a20;
+  font-weight: 800;
+}
+
+/* Slide 9 ------------------------------------------------ */
+.zt-architecture-section {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(56, 125, 231, 0.07),
+      transparent 32%
+    ),
+    #ffffff;
+}
+
+.zt-table-wrap {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  border: 1px solid #d7dfea;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(248, 250, 253, 0.96);
+  box-shadow: 0 10px 26px rgba(33, 60, 100, 0.06);
+}
+
+.zt-table-title {
+  background: #3c82ee;
+  color: #ffffff;
+  text-align: center;
+  padding: 13px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.zt-table {
+  display: grid;
+}
+
+.zt-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr 1fr;
+  min-height: 76px;
+  border-top: 1px solid #dce2eb;
+  transition: background 0.2s ease;
+}
+
+.zt-table-row:not(.zt-table-head):hover {
+  background: var(--zt-accent-tint);
+}
+
+.zt-table-row > div {
+  padding: 15px 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #3c414b;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.zt-table-row > div + div {
+  border-left: 1px solid #dce2eb;
+}
+
+.zt-table-head {
+  min-height: 62px;
+  border-top: 0;
+}
+
+.zt-table-head > div {
+  color: #353b45;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.zt-table-head > div:nth-child(2) {
+  text-align: left;
+}
+
+.zt-table-row:not(.zt-table-head) > div:nth-child(2) {
+  color: #3d80ec;
+}
+
+.zt-table-row:not(.zt-table-head) > div:nth-child(2) strong {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.zt-table-row:not(.zt-table-head) > div:nth-child(2) span {
+  color: #526b8f;
+  font-size: 13px;
+}
+
+.zt-closing-note {
+  text-align: center;
+  color: #4a4f5a;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 26px auto 0;
+  letter-spacing: -0.2px;
+}
+
+/* Keep the new sections visually lighter than the legacy dark product blocks. */
+#zero-trust-overview,
+#advanced-intelligence,
+#zero-trust-architecture {
+  color: #22252c;
+}
+
+#zero-trust-overview a,
+#advanced-intelligence a,
+#zero-trust-architecture a {
+  color: inherit;
+}
+
+@media (max-width: 1100px) {
+  .zt-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .zt-overview-left {
+    position: static;
+  }
+
+  .zt-product-card {
+    margin-inline: auto;
+  }
+
+  .zt-overview-right {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  .zt-recovery-card {
+    grid-template-columns: 1fr;
+  }
+
+  .zt-recovery-card .zt-card-heading {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .zt-intelligence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zt-intelligence-card {
+    min-height: auto;
+  }
+
+  .zt-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zt-table-wrap {
+    overflow-x: auto;
+  }
+
+  .zt-table {
+    min-width: 760px;
+  }
+
+  .zt-product-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .zt-overview-quote {
+    font-size: 21px;
+  }
+
+  .zt-overview-sub {
+    max-width: none;
+  }
+
+  .zt-info-group li,
+  .zt-intelligence-card li,
+  .zt-recovery-list > div {
+    font-size: 13px;
+  }
+
+  .zt-icon-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .zt-icon-badge svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* =========================================================
+   BINGOCVM
+   SECTIONS 01 ~ 03
+   Main-section visual system
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Common section frame
+   --------------------------------------------------------- */
+
+#integrated-diagnosis,
+#advanced-intelligence,
+#zero-trust-architecture {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 100px 0;
+}
+
+#integrated-diagnosis::before,
+#advanced-intelligence::before,
+#zero-trust-architecture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(54, 126, 235, 0.045),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(235, 54, 125, 0.025),
+      transparent 32%
+    );
+  z-index: 0;
+}
+
+#integrated-diagnosis > *,
+#advanced-intelligence > *,
+#zero-trust-architecture > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------
+   Section header
+   Same visual language as main sections
+   --------------------------------------------------------- */
+
+#integrated-diagnosis .section-header,
+#advanced-intelligence .section-header,
+#zero-trust-architecture .section-header {
+  max-width: 1180px;
+  margin: 0 auto 48px;
+  padding: 0 30px;
+}
+
+#integrated-diagnosis .section-num,
+#advanced-intelligence .section-num,
+#zero-trust-architecture .section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 16px;
+
+  border-radius: 50%;
+
+  background: #eef5ff;
+  border: 1px solid #d6e6ff;
+
+  color: #2878df;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+#integrated-diagnosis .section-eyebrow,
+#advanced-intelligence .section-eyebrow,
+#zero-trust-architecture .section-eyebrow {
+  margin-bottom: 8px;
+
+  color: #2878df;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#integrated-diagnosis .section-title,
+#advanced-intelligence .section-title,
+#zero-trust-architecture .section-title {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+#integrated-diagnosis .section-desc,
+#advanced-intelligence .section-desc,
+#zero-trust-architecture .section-desc {
+  max-width: 850px;
+
+  margin: 16px 0 0;
+
+  color: #5f6877;
+
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: -0.02em;
+}
+
+#integrated-diagnosis .section-desc strong,
+#advanced-intelligence .section-desc strong,
+#zero-trust-architecture .section-desc strong {
+  color: #2878df;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   Content container
+   --------------------------------------------------------- */
+
+#integrated-diagnosis .section-inner,
+#advanced-intelligence .section-inner,
+#zero-trust-architecture .section-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* =========================================================
+   01. 통합 취약점 진단
+   ========================================================= */
+
+#integrated-diagnosis .diagnosis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Feature card */
+
+#integrated-diagnosis .diagnosis-card {
+  position: relative;
+
+  min-height: 280px;
+
+  padding: 30px 28px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid #e3e8ef;
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 24px rgba(25, 50, 90, 0.06),
+    0 2px 5px rgba(25, 50, 90, 0.035);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+#integrated-diagnosis .diagnosis-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c9dcf7;
+
+  box-shadow:
+    0 16px 35px rgba(25, 70, 130, 0.11),
+    0 3px 8px rgba(25, 70, 130, 0.05);
+}
+
+/* Top accent */
+
+#integrated-diagnosis .diagnosis-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+  right: 28px;
+
+  height: 3px;
+
+  border-radius: 0 0 3px 3px;
+
+  background: linear-gradient(90deg, #2878df, #52a5f5);
+}
+
+/* Card number */
+
+#integrated-diagnosis .diagnosis-number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  margin-bottom: 18px;
+
+  border-radius: 9px;
+
+  background: #eef5ff;
+
+  color: #2878df;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Card icon */
+
+#integrated-diagnosis .diagnosis-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 12px;
+
+  background: #f3f7fc;
+
+  color: #2878df;
+}
+
+#integrated-diagnosis .diagnosis-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* Card title */
+
+#integrated-diagnosis .diagnosis-title {
+  margin-bottom: 10px;
+
+  color: #172033;
+
+  font-size: 19px;
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+/* Card description */
+
+#integrated-diagnosis .diagnosis-desc {
+  color: #626d7d;
+
+  font-size: 14px;
+  line-height: 1.75;
+  letter-spacing: -0.02em;
+}
+
+/* Bullet */
+
+#integrated-diagnosis .diagnosis-list {
+  margin: 16px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+#integrated-diagnosis .diagnosis-list li {
+  position: relative;
+
+  padding-left: 18px;
+  margin-bottom: 8px;
+
+  color: #596474;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+#integrated-diagnosis .diagnosis-list li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 2px;
+  top: 0.72em;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #2878df;
+}
+
+/* Full-width emphasis card */
+
+#integrated-diagnosis .diagnosis-wide {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 35px;
+
+  align-items: center;
+
+  padding: 30px;
+
+  background: #f8fbff;
+
+  border: 1px solid #dce9f8;
+  border-radius: 16px;
+}
+
+#integrated-diagnosis .diagnosis-wide-title {
+  color: #2878df;
+
+  font-size: 20px;
+  font-weight: 750;
+}
+
+#integrated-diagnosis .diagnosis-wide-desc {
+  color: #596474;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   02. Advanced Intelligence
+   ========================================================= */
+
+#advanced-intelligence .intelligence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* Intelligence card */
+
+#advanced-intelligence .intelligence-card {
+  position: relative;
+
+  padding: 32px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid #e3e8ef;
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 24px rgba(25, 50, 90, 0.06),
+    0 2px 5px rgba(25, 50, 90, 0.035);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+#advanced-intelligence .intelligence-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c9dcf7;
+
+  box-shadow: 0 16px 35px rgba(25, 70, 130, 0.11);
+}
+
+/* AI accent */
+
+#advanced-intelligence .intelligence-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+  right: 28px;
+
+  height: 3px;
+
+  border-radius: 0 0 3px 3px;
+
+  background: linear-gradient(90deg, #2878df, #7c5cff);
+}
+
+/* Header */
+
+#advanced-intelligence .intelligence-head {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+#advanced-intelligence .intelligence-icon {
+  flex: 0 0 auto;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #eef5ff;
+
+  color: #2878df;
+}
+
+#advanced-intelligence .intelligence-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+#advanced-intelligence .intelligence-title {
+  color: #172033;
+
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+#advanced-intelligence .intelligence-subtitle {
+  margin-top: 3px;
+
+  color: #2878df;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Intelligence items */
+
+#advanced-intelligence .intelligence-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+#advanced-intelligence .intelligence-item {
+  position: relative;
+
+  padding: 15px 0 15px 22px;
+
+  border-top: 1px solid #edf0f4;
+
+  color: #596474;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+#advanced-intelligence .intelligence-item:first-child {
+  border-top: 0;
+}
+
+#advanced-intelligence .intelligence-item::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+  top: 17px;
+
+  color: #2878df;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+#advanced-intelligence .intelligence-item strong {
+  color: #202938;
+  font-weight: 750;
+}
+
+/* AI badge */
+
+#advanced-intelligence .ai-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 36px;
+  height: 36px;
+
+  margin-left: auto;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #2878df, #7c5cff);
+
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Wide intelligence block */
+
+#advanced-intelligence .intelligence-wide {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns: 280px 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+
+  padding: 30px;
+
+  background: #f8fbff;
+
+  border: 1px solid #dce9f8;
+  border-radius: 16px;
+}
+
+#advanced-intelligence .intelligence-wide-title {
+  color: #2878df;
+
+  font-size: 20px;
+  font-weight: 750;
+}
+
+#advanced-intelligence .intelligence-wide-subtitle {
+  margin-top: 5px;
+
+  color: #687486;
+
+  font-size: 13px;
+}
+
+#advanced-intelligence .intelligence-wide-list {
+  margin: 0;
+  padding-left: 20px;
+
+  color: #596474;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   03. 제로트러스트 아키텍처
+   ========================================================= */
+
+#zero-trust-architecture .zero-trust-table-wrap {
+  overflow: hidden;
+
+  border: 1px solid #dce4ee;
+  border-radius: 16px;
+
+  background: #fff;
+
+  box-shadow:
+    0 8px 24px rgba(25, 50, 90, 0.055),
+    0 2px 5px rgba(25, 50, 90, 0.025);
+}
+
+/* Table title */
+
+#zero-trust-architecture .zero-trust-table-title {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+
+  padding: 14px 20px;
+
+  background: #2878df;
+
+  color: #fff;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+/* Table */
+
+#zero-trust-architecture .zero-trust-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+#zero-trust-architecture .zero-trust-table th,
+#zero-trust-architecture .zero-trust-table td {
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #e5eaf0;
+
+  text-align: left;
+
+  vertical-align: middle;
+
+  color: #596474;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+#zero-trust-architecture .zero-trust-table th {
+  background: #f7f9fc;
+
+  color: #303b4c;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#zero-trust-architecture .zero-trust-table tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Zero Trust connection */
+
+#zero-trust-architecture .zt-link {
+  color: #2878df;
+
+  font-weight: 750;
+}
+
+#zero-trust-architecture .zt-link-sub {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #7a8594;
+
+  font-size: 12px;
+}
+
+/* Feature labels */
+
+#zero-trust-architecture .zt-feature {
+  color: #303b4c;
+
+  font-weight: 600;
+}
+
+/* Role */
+
+#zero-trust-architecture .zt-role {
+  color: #596474;
+}
+
+/* ---------------------------------------------------------
+   Zero Trust architecture summary cards
+   --------------------------------------------------------- */
+
+#zero-trust-architecture .zt-summary {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 22px;
+}
+
+#zero-trust-architecture .zt-summary-card {
+  padding: 23px 24px;
+
+  background: #f8fbff;
+
+  border: 1px solid #dce9f8;
+  border-radius: 14px;
+}
+
+#zero-trust-architecture .zt-summary-number {
+  margin-bottom: 7px;
+
+  color: #2878df;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+#zero-trust-architecture .zt-summary-title {
+  margin-bottom: 7px;
+
+  color: #202938;
+
+  font-size: 16px;
+  font-weight: 750;
+}
+
+#zero-trust-architecture .zt-summary-desc {
+  color: #657082;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   Existing reveal animation compatibility
+   ========================================================= */
+
+#integrated-diagnosis .reveal,
+#advanced-intelligence .reveal,
+#zero-trust-architecture .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+#integrated-diagnosis .reveal.visible,
+#advanced-intelligence .reveal.visible,
+#zero-trust-architecture .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  #integrated-diagnosis,
+  #advanced-intelligence,
+  #zero-trust-architecture {
+    padding: 80px 0;
+  }
+
+  #integrated-diagnosis .diagnosis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #advanced-intelligence .intelligence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #integrated-diagnosis .diagnosis-wide,
+  #advanced-intelligence .intelligence-wide {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  #zero-trust-architecture .zt-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  #integrated-diagnosis,
+  #advanced-intelligence,
+  #zero-trust-architecture {
+    padding: 65px 0;
+  }
+
+  #integrated-diagnosis .section-header,
+  #advanced-intelligence .section-header,
+  #zero-trust-architecture .section-header {
+    padding: 0 20px;
+    margin-bottom: 35px;
+  }
+
+  #integrated-diagnosis .section-inner,
+  #advanced-intelligence .section-inner,
+  #zero-trust-architecture .section-inner {
+    padding: 0 20px;
+  }
+
+  #integrated-diagnosis .diagnosis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #integrated-diagnosis .diagnosis-card,
+  #advanced-intelligence .intelligence-card {
+    padding: 25px;
+  }
+
+  #zero-trust-architecture .zero-trust-table-wrap {
+    overflow-x: auto;
+  }
+
+  #zero-trust-architecture .zero-trust-table {
+    min-width: 700px;
   }
 }
