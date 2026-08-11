@@ -26,6 +26,8 @@
   --brand-cyan: #3ba2f2;
   --white: #ffffff;
   --border: rgba(26, 29, 38, 0.1);
+  --zt-blue: #2467d9;
+  --zt-red: #ed3c5b;
 }
 
 html {
@@ -2060,80 +2062,185 @@ body::before {
   width: 0;
 }
 
-/* ── ABOUT STRIP ── */
-.about-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* ── REFERENCE / CLIENT LOGOS STRIP ── */
+.refs-strip {
   background: linear-gradient(180deg, var(--navy2) 0%, var(--navy) 100%);
-  color: var(--white);
   border-top: 1px solid rgba(255, 255, 255, 0.04);
-  counter-reset: about-cell;
-}
-.about-cell {
-  padding: 32px 32px;
-  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 64px 80px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  align-items: center;
+  gap: 56px;
   position: relative;
   overflow: hidden;
-  transition: background 0.25s;
-  counter-increment: about-cell;
 }
-.about-cell:first-child {
-  border-left: none;
-}
-.about-cell:hover {
-  background: rgba(200, 0, 30, 0.06);
-}
-.about-cell::before {
-  content: "0" counter(about-cell);
+.refs-glow {
   position: absolute;
-  top: 12px;
-  right: 16px;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.08);
-  letter-spacing: 1px;
+  top: 50%;
+  left: 26%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle,
+    rgba(200, 0, 30, 0.1) 0%,
+    rgba(200, 0, 30, 0) 70%
+  );
+  transform: translate(-50%, -50%);
   pointer-events: none;
 }
-.about-cell::after {
+.refs-head {
+  position: relative;
+  padding-right: 44px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.refs-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: rgba(200, 0, 30, 0.85);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.refs-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--crimson);
+  box-shadow: 0 0 0 4px rgba(200, 0, 30, 0.18);
+}
+.refs-title {
+  font-family: "Pretendard", "IBM Plex Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+.refs-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.2px;
+}
+.refs-meta-item em {
+  color: var(--crimson);
+  font-style: normal;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.refs-meta-sep {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.refs-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  position: relative;
+}
+.ref-logo {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  counter-increment: ref-logo;
+  transition:
+    transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.28s,
+    border-color 0.28s,
+    box-shadow 0.28s;
+}
+.refs-logos {
+  counter-reset: ref-logo;
+}
+.ref-logo::before {
+  content: "0" counter(ref-logo);
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+.ref-logo::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--crimson), rgba(200, 0, 30, 0.3));
+  height: 2px;
+  background: linear-gradient(90deg, var(--crimson), rgba(200, 0, 30, 0.15));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.about-cell:hover::after {
+.ref-logo:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(200, 0, 30, 0.32);
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(200, 0, 30, 0.08) inset;
+}
+.ref-logo:hover::after {
   transform: scaleX(1);
 }
-.about-num {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 52px;
-  color: var(--white);
-  letter-spacing: 1px;
-  line-height: 1;
-  margin-bottom: 4px;
+.ref-logo-mark {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 9px;
+  transition:
+    background 0.28s,
+    box-shadow 0.28s;
 }
-.about-num em {
-  color: var(--crimson);
-  font-style: normal;
-  margin-left: 4px;
+.ref-logo:hover .ref-logo-mark {
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
 }
-.about-lbl {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.35);
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+.ref-logo-mark img {
+  max-width: 100%;
+  max-height: 32px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.ref-logo-name {
   font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  line-height: 1.3;
+  transition: color 0.28s;
 }
-.about-desc {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.7;
+.ref-logo:hover .ref-logo-name {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* ── SECTIONS ── */
@@ -3770,8 +3877,19 @@ section {
   .hero-right {
     margin-top: 28px;
   }
-  .about-strip {
-    grid-template-columns: 1fr 1fr;
+  .refs-strip {
+    grid-template-columns: 1fr;
+    padding: 40px 40px;
+    gap: 28px;
+  }
+  .refs-head {
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .refs-glow {
+    left: 50%;
   }
   .bingo-layout {
     grid-template-columns: 1fr;
@@ -3810,19 +3928,21 @@ section {
     padding: 100px 20px 60px;
     gap: 24px;
   }
-  .about-strip {
-    grid-template-columns: 1fr;
+  .refs-strip {
+    padding: 32px 20px;
   }
-  .about-cell {
-    padding: 20px 24px;
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  .refs-logos {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .about-cell:first-child {
-    border-top: none;
+  .refs-title {
+    font-size: 17px;
   }
-  .about-num {
-    font-size: 40px;
+  .refs-meta {
+    font-size: 12px;
+    gap: 8px;
+  }
+  .ref-logo {
+    padding: 18px 16px 14px;
   }
   .section-title {
     font-size: 32px;
@@ -5985,7 +6105,7 @@ section {
 
   font-family: "IBM Plex Mono", monospace;
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 
   letter-spacing: 0.13em;
@@ -6050,10 +6170,10 @@ section {
 
   font-family: "IBM Plex Mono", monospace;
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 600;
 
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
 }
 
 .status-dot {
@@ -6152,23 +6272,23 @@ section {
 .zt-pills {
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(190px, 1fr));
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
 
-  gap: 8px;
+  gap: 10px;
 
   width: 100%;
-  max-width: 560px;
+  max-width: 620px;
 
   margin-bottom: 27px;
 }
 
 .zt-pill {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
-  min-height: 48px;
+  min-height: 54px;
 
-  padding: 8px 12px;
+  padding: 10px 14px;
 
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
@@ -6216,6 +6336,7 @@ section {
   height: 25px;
 
   margin-right: 10px;
+  margin-top: 3px;
 
   flex: 0 0 auto;
 
@@ -6258,10 +6379,10 @@ section {
 .zt-pill-content strong {
   font-family: "IBM Plex Mono", monospace;
 
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
 
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .zt-pill--red .zt-pill-content strong {
@@ -6275,10 +6396,10 @@ section {
 .zt-pill-content small {
   color: var(--ink);
 
-  font-size: 11px;
-  line-height: 1.3;
+  font-size: 13px;
+  line-height: 1.35;
 
-  white-space: nowrap;
+  white-space: normal;
 }
 
 /* =========================================================
@@ -6372,9 +6493,9 @@ section {
 
   font-family: "IBM Plex Mono", monospace;
 
-  font-size: 8px;
+  font-size: 11px;
 
-  letter-spacing: 0.035em;
+  letter-spacing: 0.03em;
 }
 
 .hero-trust-line {
@@ -6422,7 +6543,7 @@ section {
   .hero-eyebrow {
     margin-bottom: 15px;
 
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .hero-product {
@@ -6456,7 +6577,7 @@ section {
   }
 
   .zt-pill {
-    min-height: 46px;
+    min-height: 50px;
   }
 
   .hero-actions {
@@ -6474,7 +6595,7 @@ section {
   .hero-trust {
     margin-top: 18px;
 
-    font-size: 7px;
+    font-size: 9px;
   }
 }
 
@@ -6500,4 +6621,1879 @@ section {
 .ref-org,
 .timeline-period {
   text-shadow: none !important;
+}
+
+/* ========================================================================== 
+   BingoCVM — Visual Redesign
+   Inspired by the supplied white hero + dark security architecture references.
+   Load this file AFTER index.css.
+   ========================================================================== */
+
+:root {
+  --zt-white: #ffffff;
+  --zt-paper: #f7f9fc;
+  --zt-paper-2: #eef3f9;
+  --zt-ink: #0e1a2f;
+  --zt-ink-2: #243451;
+  --zt-muted: #61708a;
+  --zt-blue: #2467d9;
+  --zt-blue-2: #3c8cff;
+  --zt-cyan: #38b9f5;
+  --zt-red: #ed3c5b;
+  --zt-red-dark: #cc2344;
+  --zt-purple: #8064e9;
+  --zt-amber: #e8a83c;
+  --zt-navy: #07101c;
+  --zt-navy-2: #0d1725;
+  --zt-panel: #0e1928;
+  --zt-panel-2: #111e30;
+  --zt-border-dark: rgba(122, 170, 221, 0.32);
+  --zt-shadow: 0 24px 70px rgba(22, 49, 88, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   HERO — white editorial / product landing style
+   -------------------------------------------------------------------------- */
+
+#hero.zt-hero-carousel {
+  position: relative;
+  min-height: 780px;
+  height: min(860px, 100vh);
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 76% 48%,
+      rgba(69, 130, 255, 0.1),
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at 90% 68%,
+      rgba(237, 60, 91, 0.08),
+      transparent 20%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  color: var(--zt-ink);
+}
+
+#hero.zt-hero-carousel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(38, 103, 217, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(38, 103, 217, 0.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(to right, black 0%, black 65%, transparent 100%);
+  z-index: 0;
+}
+
+#hero.zt-hero-carousel .hero-dots,
+#hero.zt-hero-carousel .hero-bg-glow {
+  display: none;
+}
+
+#hero.zt-hero-carousel .zt-hero-slides {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100% !important;
+  height: 100%;
+  transform: none !important;
+}
+
+#hero.zt-hero-carousel .zt-hero-v2 {
+  position: relative;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: none !important;
+  min-height: 780px;
+  height: min(860px, 100vh);
+  padding: 76px 5.5vw 64px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: transparent;
+}
+
+.zt-hero-inner {
+  position: relative;
+  z-index: 3;
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(520px, 0.95fr) minmax(520px, 1.05fr);
+  gap: clamp(35px, 5vw, 92px);
+  align-items: center;
+}
+
+.zt-hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.45;
+  pointer-events: none;
+  background-image: radial-gradient(
+    rgba(36, 103, 217, 0.09) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+  mask-image: radial-gradient(
+    ellipse 48% 70% at 75% 50%,
+    black 0%,
+    transparent 78%
+  );
+}
+
+.zt-hero-orb {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  filter: blur(3px);
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.zt-hero-orb--blue {
+  right: 8%;
+  top: 8%;
+  background: radial-gradient(
+    circle,
+    rgba(67, 129, 255, 0.13),
+    transparent 68%
+  );
+}
+
+.zt-hero-orb--red {
+  right: 1%;
+  bottom: -8%;
+  background: radial-gradient(circle, rgba(237, 60, 91, 0.09), transparent 67%);
+}
+
+.zt-hero-copy {
+  min-width: 0;
+  max-width: 700px;
+  padding-top: 10px;
+}
+
+.zt-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 23px;
+  color: #2274db;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.zt-eyebrow .hero-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4db8f7;
+  box-shadow: 0 0 0 5px rgba(77, 184, 247, 0.13);
+}
+
+.zt-product-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 31px;
+}
+
+.zt-product-logo {
+  display: block;
+  width: 214px;
+  max-width: 48%;
+  height: auto;
+  object-fit: contain;
+}
+
+.zt-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #263d64, #344a70);
+  box-shadow: 0 8px 20px rgba(34, 55, 91, 0.15);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.zt-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4dc1ff;
+  box-shadow: 0 0 0 4px rgba(77, 193, 255, 0.14);
+}
+
+.zt-hero-title {
+  margin: 0;
+  color: var(--zt-ink);
+  font-size: clamp(45px, 4.5vw, 72px);
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+  word-break: keep-all;
+}
+
+.zt-hero-title span {
+  position: relative;
+  color: var(--zt-red);
+}
+
+.zt-hero-title span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 8%;
+  bottom: -7px;
+  height: 3px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, rgba(237, 60, 91, 0.85), transparent);
+}
+
+.zt-hero-description {
+  max-width: 650px;
+  margin: 25px 0 26px;
+  color: #53637d;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+
+.zt-hero-description strong {
+  color: #1e3152;
+  font-weight: 750;
+}
+
+.zt-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 680px;
+}
+
+.zt-feature-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 82px;
+  padding: 14px 16px;
+  overflow: hidden;
+  border: 1px solid rgba(31, 61, 105, 0.09);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 28px rgba(39, 72, 116, 0.07);
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.zt-feature-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(36, 103, 217, 0.18);
+  box-shadow: 0 16px 32px rgba(39, 72, 116, 0.11);
+}
+
+.zt-feature-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: #2775dc;
+}
+
+.zt-feature-card--red::before {
+  background: var(--zt-red);
+}
+.zt-feature-card--blue::before {
+  background: var(--zt-blue-2);
+}
+
+.zt-feature-icon {
+  flex: 0 0 43px;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: #eef5ff;
+  color: var(--zt-blue);
+}
+
+.zt-feature-card--red .zt-feature-icon {
+  color: var(--zt-red);
+  background: #fff0f3;
+}
+
+.zt-feature-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.zt-feature-card strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #172744;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.zt-feature-card small {
+  display: block;
+  color: #6c7890;
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.zt-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.zt-primary-btn,
+.zt-secondary-btn {
+  min-height: 48px;
+  border-radius: 11px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.zt-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  color: #fff !important;
+  background: linear-gradient(135deg, #e52d4e, #c9143b) !important;
+  border: 0 !important;
+  box-shadow: 0 12px 26px rgba(213, 31, 66, 0.22);
+}
+
+.zt-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(213, 31, 66, 0.27);
+}
+
+.zt-primary-btn .btn-arrow {
+  font-size: 20px;
+}
+
+.zt-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 17px;
+  color: #2b4a78 !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  border: 1px solid rgba(45, 81, 132, 0.15) !important;
+}
+
+.zt-secondary-btn:hover {
+  border-color: rgba(36, 103, 217, 0.32) !important;
+  background: #fff !important;
+}
+
+.zt-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  color: #3c4d68;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+
+.zt-trust-strip::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: #7ca8e6;
+}
+
+.zt-trust-strip i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #e5526a;
+}
+
+/* ==========================================================================
+   HERO VISUAL — BingoCVM Zero Trust Core
+   ========================================================================== */
+
+.zt-hero-visual {
+  position: relative;
+  width: min(660px, 100%);
+  height: 600px;
+  justify-self: end;
+
+  display: grid;
+  place-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   Network / Grid
+   -------------------------------------------------------------------------- */
+
+.zt-visual-network {
+  position: absolute;
+  inset: 8% 4%;
+
+  border-radius: 50%;
+
+  opacity: 0.55;
+
+  background-image:
+    linear-gradient(rgba(48, 114, 221, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(48, 114, 221, 0.07) 1px, transparent 1px);
+
+  background-size: 35px 35px;
+
+  mask-image: radial-gradient(
+    circle at center,
+    black 0%,
+    black 42%,
+    transparent 74%
+  );
+
+  transform: perspective(700px) rotateX(55deg) rotateZ(-8deg) scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   Security Rings
+   -------------------------------------------------------------------------- */
+
+.zt-visual-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 52%;
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%) rotateX(58deg);
+
+  border: 1px solid rgba(56, 123, 235, 0.22);
+
+  pointer-events: none;
+}
+
+.zt-visual-ring--outer {
+  width: 470px;
+  height: 225px;
+
+  border-color: rgba(64, 135, 238, 0.13);
+
+  box-shadow:
+    0 0 0 24px rgba(56, 123, 235, 0.018),
+    0 0 0 48px rgba(56, 123, 235, 0.014),
+    0 0 55px rgba(56, 123, 235, 0.08);
+}
+
+.zt-visual-ring--middle {
+  width: 385px;
+  height: 184px;
+
+  border-color: rgba(56, 123, 235, 0.22);
+}
+
+.zt-visual-ring--inner {
+  width: 285px;
+  height: 136px;
+
+  border-color: rgba(56, 123, 235, 0.36);
+
+  box-shadow: 0 0 25px rgba(56, 123, 235, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   Core
+   -------------------------------------------------------------------------- */
+
+.zt-hero-core {
+  position: relative;
+
+  z-index: 4;
+
+  width: 340px;
+  height: 390px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-5px);
+}
+
+/* --------------------------------------------------------------------------
+   Glow
+   -------------------------------------------------------------------------- */
+
+.zt-core-glow {
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(50, 119, 241, 0.22) 0%,
+    rgba(50, 119, 241, 0.1) 30%,
+    rgba(50, 119, 241, 0.035) 52%,
+    transparent 72%
+  );
+
+  filter: blur(12px);
+
+  animation: zt-core-pulse 5s ease-in-out infinite;
+}
+
+@keyframes zt-core-pulse {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Platform
+   -------------------------------------------------------------------------- */
+
+.zt-core-platform {
+  position: relative;
+
+  width: 330px;
+  height: 168px;
+
+  margin-top: 105px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 48%,
+      rgba(255, 255, 255, 0.98) 0 10%,
+      rgba(255, 255, 255, 0.08) 11%,
+      transparent 25%
+    ),
+    linear-gradient(180deg, #5d9aff 0%, #3478e5 38%, #205dc7 72%, #164aa9 100%);
+
+  border: 1px solid rgba(124, 179, 255, 0.75);
+
+  box-shadow:
+    0 30px 40px rgba(32, 82, 164, 0.22),
+    0 10px 0 rgba(21, 66, 151, 0.28),
+    0 0 55px rgba(48, 120, 235, 0.16),
+    inset 0 5px 14px rgba(255, 255, 255, 0.48),
+    inset 0 -18px 25px rgba(10, 49, 125, 0.22);
+
+  transform: rotateX(58deg);
+}
+
+/* Platform rings */
+
+.zt-core-platform::before,
+.zt-core-platform::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 2px solid rgba(255, 255, 255, 0.68);
+}
+
+.zt-core-platform::before {
+  width: 235px;
+  height: 116px;
+}
+
+.zt-core-platform::after {
+  width: 155px;
+  height: 76px;
+}
+
+/* --------------------------------------------------------------------------
+   BingoCVM Logo
+   -------------------------------------------------------------------------- */
+
+.zt-core-brand {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 50%;
+  top: 50%;
+
+  width: 175px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%) rotateX(-58deg);
+
+  pointer-events: none;
+}
+
+.zt-core-brand img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 4px 5px rgba(12, 53, 125, 0.25));
+}
+
+/* --------------------------------------------------------------------------
+   Caption
+   -------------------------------------------------------------------------- */
+
+.zt-core-caption {
+  position: absolute;
+
+  z-index: 6;
+
+  bottom: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+
+  text-align: center;
+
+  pointer-events: none;
+}
+
+.zt-core-caption span {
+  color: #2877df;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.zt-core-caption strong {
+  color: #203b67;
+
+  font-size: 15px;
+  font-weight: 850;
+
+  letter-spacing: -0.035em;
+
+  white-space: nowrap;
+}
+
+.zt-hero-core {
+  position: relative;
+  z-index: 4;
+  width: 340px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-5px);
+}
+
+.zt-core-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(49, 112, 238, 0.18),
+    transparent 66%
+  );
+  filter: blur(10px);
+}
+
+.zt-core-platform {
+  position: relative;
+  width: 330px;
+  height: 168px;
+  margin-top: 105px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.95) 0 17%,
+      rgba(255, 255, 255, 0) 18%
+    ),
+    linear-gradient(180deg, rgba(73, 133, 245, 0.95), rgba(25, 80, 188, 0.96));
+  box-shadow:
+    0 28px 35px rgba(38, 94, 191, 0.18),
+    0 9px 0 rgba(25, 67, 151, 0.22),
+    inset 0 5px 12px rgba(255, 255, 255, 0.55),
+    inset 0 -15px 20px rgba(13, 53, 139, 0.2);
+  transform: rotateX(58deg);
+}
+
+.zt-core-platform::before,
+.zt-core-platform::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.zt-core-platform::before {
+  width: 235px;
+  height: 116px;
+}
+.zt-core-platform::after {
+  width: 155px;
+  height: 76px;
+}
+
+.zt-core-shield {
+  position: absolute;
+  left: 50%;
+  top: 18px;
+
+  width: 230px;
+
+  transform: translateX(-50%);
+
+  z-index: 8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: ztShieldFloat 5s ease-in-out infinite;
+}
+@keyframes ztShieldFloat {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-7px);
+  }
+}
+.zt-core-shield img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 18px 18px rgba(32, 83, 171, 0.18))
+    drop-shadow(0 3px 5px rgba(37, 99, 235, 0.12));
+}
+.zt-core-caption {
+  position: absolute;
+  z-index: 6;
+  bottom: -12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #31517d;
+  text-align: center;
+}
+
+.zt-core-caption span {
+  color: #3478dc;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.zt-core-caption strong {
+  color: #223c67;
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.zt-visual-card {
+  position: absolute;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 190px;
+  min-height: 82px;
+  padding: 12px 14px;
+  border: 1px solid rgba(50, 94, 160, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 35px rgba(33, 68, 115, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.zt-visual-card--detect {
+  left: 0;
+  top: 100px;
+}
+.zt-visual-card--judge {
+  right: 0;
+  top: 95px;
+}
+.zt-visual-card--respond {
+  left: 50%;
+  bottom: 17px;
+  transform: translateX(-50%);
+}
+
+.zt-visual-card-icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--zt-blue);
+  background: #edf5ff;
+}
+
+.zt-visual-card--judge .zt-visual-card-icon,
+.zt-visual-card--respond .zt-visual-card-icon {
+  color: var(--zt-red);
+  background: #fff0f3;
+}
+
+.zt-visual-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.zt-visual-card small,
+.zt-visual-card strong,
+.zt-visual-card em {
+  display: block;
+}
+
+.zt-visual-card small {
+  color: #5d78a3;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.zt-visual-card strong {
+  margin-top: 2px;
+  color: #20385f;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.zt-visual-card em {
+  color: #71809a;
+  font-size: 10px;
+  font-style: normal;
+  margin-top: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   ARCHITECTURE — dark technical system diagram
+   -------------------------------------------------------------------------- */
+
+.zt-architecture-v2 {
+  position: relative;
+  padding: 95px 24px 105px;
+  overflow: hidden;
+  color: #eef6ff;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(44, 122, 226, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 100% 70%,
+      rgba(126, 86, 231, 0.07),
+      transparent 22%
+    ),
+    #050c15;
+}
+
+.zt-architecture-v2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image:
+    linear-gradient(rgba(90, 150, 221, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 150, 221, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 94%);
+}
+
+.zt-arch-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 42px 42px 46px;
+  border: 1px solid rgba(102, 157, 214, 0.27);
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 18, 31, 0.98),
+    rgba(6, 15, 26, 0.98)
+  );
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.35);
+}
+
+.zt-arch-shell::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(
+    90deg,
+    transparent 4%,
+    #3aa8ff 25%,
+    #8368f4 50%,
+    #ef4663 75%,
+    transparent 96%
+  );
+}
+
+.zt-arch-header {
+  max-width: 850px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.zt-arch-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  color: #45b9ff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.3px;
+}
+
+.zt-arch-kicker span {
+  width: 34px;
+  height: 1px;
+  background: #45b9ff;
+}
+
+.zt-arch-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  line-height: 1.18;
+}
+
+.zt-arch-header h2 em {
+  color: #61b9ff;
+  font-style: normal;
+}
+
+.zt-arch-header p {
+  max-width: 790px;
+  margin: 17px auto 0;
+  color: rgba(222, 235, 249, 0.72);
+  font-size: 14px;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+.zt-arch-flow {
+  display: grid;
+  gap: 0;
+}
+
+.zt-arch-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(87, 153, 218, 0.32);
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(17, 31, 49, 0.94),
+    rgba(10, 21, 35, 0.94)
+  );
+}
+
+.zt-arch-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    rgba(96, 158, 226, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
+  opacity: 0.35;
+}
+
+.zt-arch-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.zt-arch-panel--intel {
+  padding: 24px 26px 27px;
+  border-color: rgba(239, 62, 94, 0.64);
+  background: linear-gradient(
+    135deg,
+    rgba(43, 19, 34, 0.94),
+    rgba(14, 23, 38, 0.96) 68%
+  );
+  box-shadow: inset 0 0 40px rgba(239, 62, 94, 0.035);
+}
+
+.zt-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+}
+
+.zt-panel-heading--split {
+  justify-content: space-between;
+  align-items: end;
+}
+
+.zt-panel-index {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 9px;
+  color: #ff6680;
+  background: rgba(239, 62, 94, 0.1);
+  border: 1px solid rgba(239, 62, 94, 0.35);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.zt-panel-heading small {
+  display: block;
+  margin-bottom: 4px;
+  color: #53b8f7;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.zt-panel-heading h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.zt-arch-panel--intel .zt-panel-heading h3 {
+  color: #ff6680;
+}
+
+.zt-intel-body {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.zt-intel-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 130px;
+}
+
+.zt-intel-icon {
+  flex: 0 0 88px;
+  width: 88px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  color: #4db8ff;
+  border: 1px solid rgba(74, 183, 255, 0.28);
+  background: linear-gradient(
+    145deg,
+    rgba(35, 74, 112, 0.45),
+    rgba(11, 28, 48, 0.6)
+  );
+  box-shadow: 0 0 35px rgba(52, 164, 245, 0.08);
+}
+
+.zt-intel-icon svg {
+  width: 58px;
+  height: 58px;
+}
+
+.zt-intel-brand strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.zt-intel-brand span {
+  display: block;
+  color: rgba(235, 242, 252, 0.73);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.zt-intel-metrics {
+  padding: 15px;
+  border: 1px solid rgba(239, 62, 94, 0.45);
+  border-radius: 12px;
+  background: rgba(5, 13, 24, 0.46);
+}
+
+.zt-metric-head {
+  margin-bottom: 10px;
+  color: #ff667f;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.zt-metric {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  min-height: 35px;
+  align-items: center;
+  border: 1px solid rgba(94, 145, 198, 0.16);
+  border-radius: 7px;
+  overflow: hidden;
+  background: rgba(12, 26, 42, 0.62);
+}
+
+.zt-metric + .zt-metric {
+  margin-top: 7px;
+}
+
+.zt-metric b {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #ff9caf;
+  background: rgba(239, 62, 94, 0.11);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+}
+
+.zt-metric span {
+  padding: 0 12px;
+  color: rgba(235, 242, 252, 0.82);
+  font-size: 11px;
+}
+
+.zt-arch-connector {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: rgba(220, 233, 248, 0.65);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+
+.zt-arch-connector > span:not(.zt-connector-arrow) {
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(89, 169, 234, 0.55));
+}
+
+.zt-arch-connector > span:last-child:not(.zt-connector-arrow) {
+  background: linear-gradient(90deg, rgba(89, 169, 234, 0.55), transparent);
+}
+
+.zt-connector-arrow {
+  color: #6bbcff;
+  font-size: 17px;
+}
+
+.zt-arch-panel--analysis {
+  padding: 22px 20px 23px;
+  border-color: rgba(66, 160, 238, 0.34);
+}
+
+.zt-analysis-note {
+  padding: 6px 9px;
+  border: 1px solid rgba(72, 181, 255, 0.24);
+  border-radius: 6px;
+  color: #65c2ff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+}
+
+.zt-risk-flow {
+  display: grid;
+  grid-template-columns:
+    minmax(125px, 1.15fr) 24px minmax(105px, 0.8fr)
+    24px minmax(105px, 0.8fr) 24px minmax(105px, 0.8fr) 32px minmax(
+      190px,
+      1.4fr
+    );
+  gap: 6px;
+  align-items: center;
+}
+
+.zt-risk-box,
+.zt-risk-result {
+  min-height: 102px;
+  border-radius: 10px;
+}
+
+.zt-risk-box {
+  padding: 12px 13px;
+  border: 1px solid rgba(72, 160, 232, 0.34);
+  background: rgba(10, 27, 45, 0.72);
+}
+
+.zt-risk-box--red {
+  border-color: rgba(239, 62, 94, 0.5);
+}
+.zt-risk-box--amber {
+  border-color: rgba(231, 168, 60, 0.5);
+}
+
+.zt-risk-icon {
+  display: block;
+  margin-bottom: 7px;
+  color: #59baff;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.zt-risk-box--red .zt-risk-icon {
+  color: #ff5d7a;
+}
+.zt-risk-box--amber .zt-risk-icon {
+  color: #f4b84e;
+}
+
+.zt-risk-box small,
+.zt-risk-result small {
+  display: block;
+  color: #65baf0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+}
+
+.zt-risk-box--red small {
+  color: #ff718a;
+}
+.zt-risk-box--amber small {
+  color: #f1b54c;
+}
+
+.zt-risk-box strong {
+  display: block;
+  margin-top: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.zt-flow-plus {
+  color: rgba(231, 239, 248, 0.72);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.zt-flow-arrow {
+  color: #6fc4ff;
+  text-align: center;
+  font-size: 28px;
+}
+
+.zt-risk-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(239, 62, 94, 0.56);
+  background: linear-gradient(
+    135deg,
+    rgba(72, 19, 39, 0.42),
+    rgba(22, 27, 45, 0.88)
+  );
+}
+
+.zt-result-icon {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #ff4e70;
+  background: rgba(239, 62, 94, 0.12);
+  font-size: 27px;
+}
+
+.zt-risk-result small {
+  color: #ff6c85;
+}
+.zt-risk-result strong {
+  display: block;
+  margin-top: 5px;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.zt-arch-panel--detect {
+  padding: 23px 20px 24px;
+}
+
+.zt-detection-grid {
+  display: grid;
+  grid-template-columns: 1fr 28px 1fr 28px 1fr;
+  align-items: center;
+  gap: 7px;
+}
+
+.zt-detection-card {
+  min-height: 154px;
+  padding: 17px;
+  border: 1px solid rgba(73, 161, 231, 0.35);
+  border-radius: 10px;
+  background: rgba(11, 27, 45, 0.75);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.zt-detection-card:hover {
+  transform: translateY(-3px);
+  background: rgba(17, 35, 57, 0.88);
+}
+
+.zt-detection-card--red {
+  border-color: rgba(239, 62, 94, 0.54);
+}
+.zt-detection-card--purple {
+  border-color: rgba(128, 100, 233, 0.55);
+}
+
+.zt-detection-number {
+  color: #6a8aaa;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+}
+
+.zt-detection-icon {
+  margin-top: 8px;
+  color: #4db9ff;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.zt-detection-card--red .zt-detection-icon,
+.zt-detection-card--red h4 {
+  color: #ff5f79;
+}
+.zt-detection-card--purple .zt-detection-icon,
+.zt-detection-card--purple h4 {
+  color: #9b7cff;
+}
+
+.zt-detection-card h4 {
+  margin: 7px 0 7px;
+  color: #58bfff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.zt-detection-card p {
+  margin: 0;
+  color: rgba(232, 240, 250, 0.67);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.zt-detection-link {
+  color: rgba(211, 232, 250, 0.68);
+  text-align: center;
+  font-size: 20px;
+}
+
+.zt-arch-connector--bidirectional {
+  gap: 20px;
+  min-height: 58px;
+  color: #b8cae0;
+  font-size: 11px;
+}
+
+.zt-arch-connector--bidirectional span {
+  color: #64baff;
+  font-size: 18px;
+}
+
+.zt-arch-panel--infra {
+  padding: 23px 26px 27px;
+  border-color: rgba(65, 153, 223, 0.4);
+}
+
+.zt-infra-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 35px;
+  align-items: stretch;
+}
+
+.zt-infra-divider {
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(99, 155, 211, 0.3),
+    transparent
+  );
+}
+
+.zt-infra-card {
+  min-height: 118px;
+}
+
+.zt-infra-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 9px;
+  color: #63bcff;
+  font-size: 24px;
+}
+
+.zt-infra-card small {
+  display: block;
+  color: #5f9ed2;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.zt-infra-card h4 {
+  margin: 5px 0 4px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.zt-infra-card p {
+  margin: 0;
+  color: rgba(226, 237, 249, 0.68);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.zt-cloud-tags {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 9px;
+}
+
+.zt-cloud-tags span {
+  padding: 6px 9px;
+  border: 1px solid rgba(60, 167, 236, 0.38);
+  border-radius: 6px;
+  color: #8dd0ff;
+  background: rgba(39, 113, 172, 0.13);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.zt-security-outcomes {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(4, 1fr);
+  align-items: center;
+  margin-top: 24px;
+  min-height: 68px;
+  border: 1px solid rgba(239, 62, 94, 0.48);
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(70, 19, 39, 0.42),
+    rgba(16, 28, 44, 0.7)
+  );
+}
+
+.zt-outcome-title,
+.zt-outcome-item {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 15px;
+}
+
+.zt-outcome-title {
+  color: #ff617c;
+}
+.zt-outcome-title span {
+  font-size: 20px;
+}
+.zt-outcome-title strong {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+}
+
+.zt-outcome-item {
+  border-left: 1px solid rgba(150, 173, 198, 0.17);
+  color: rgba(237, 243, 250, 0.79);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.zt-outcome-item span {
+  color: #53bcff;
+  font-size: 18px;
+}
+
+.zt-outcome-item:nth-child(3) span {
+  color: #ff5574;
+}
+.zt-outcome-item:nth-child(4) span {
+  color: #ff7088;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1180px) {
+  #hero.zt-hero-carousel,
+  #hero.zt-hero-carousel .zt-hero-v2 {
+    min-height: 760px;
+    height: auto;
+  }
+
+  .zt-hero-inner {
+    grid-template-columns: minmax(470px, 0.92fr) minmax(420px, 1fr);
+    gap: 20px;
+  }
+
+  .zt-hero-title {
+    font-size: clamp(42px, 4.6vw, 60px);
+  }
+  .zt-hero-visual {
+    transform: scale(0.9);
+    transform-origin: right center;
+  }
+  .zt-arch-shell {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .zt-risk-flow {
+    grid-template-columns:
+      minmax(110px, 1.1fr) 18px repeat(3, minmax(82px, 0.75fr))
+      22px minmax(170px, 1.3fr);
+  }
+}
+
+@media (max-width: 960px) {
+  #hero.zt-hero-carousel,
+  #hero.zt-hero-carousel .zt-hero-v2 {
+    min-height: 0;
+    height: auto;
+  }
+
+  #hero.zt-hero-carousel .zt-hero-v2 {
+    padding: 72px 28px 55px;
+  }
+
+  .zt-hero-inner {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+  }
+
+  .zt-hero-copy {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .zt-hero-visual {
+    justify-self: center;
+    transform: scale(0.88);
+    margin-top: -10px;
+  }
+
+  .zt-risk-flow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .zt-flow-plus {
+    display: none;
+  }
+  .zt-risk-box {
+    min-height: 92px;
+  }
+  .zt-flow-arrow {
+    grid-column: 1 / -1;
+    transform: rotate(90deg);
+  }
+  .zt-risk-result {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .zt-security-outcomes {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8px 0;
+  }
+  .zt-outcome-title {
+    grid-column: 1 / -1;
+  }
+  .zt-outcome-item:nth-child(2n) {
+    border-left: 0;
+  }
+  .zt-outcome-item {
+    border-top: 1px solid rgba(150, 173, 198, 0.12);
+  }
+}
+
+@media (max-width: 720px) {
+  .zt-hero-product,
+  .zt-product-row {
+    flex-wrap: wrap;
+  }
+  .zt-product-logo {
+    width: 190px;
+    max-width: 100%;
+  }
+  .zt-status-pill {
+    width: max-content;
+    max-width: 100%;
+  }
+
+  .zt-hero-title {
+    font-size: clamp(37px, 10vw, 52px);
+  }
+  .zt-hero-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .zt-feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .zt-hero-actions {
+    flex-wrap: wrap;
+  }
+  .zt-trust-strip {
+    flex-wrap: wrap;
+    row-gap: 7px;
+  }
+
+  .zt-hero-visual {
+    width: 100%;
+    height: 480px;
+    transform: scale(0.76);
+    margin-top: -55px;
+    margin-bottom: -45px;
+  }
+
+  .zt-visual-card {
+    width: 165px;
+  }
+  .zt-visual-card--detect {
+    left: -5px;
+    top: 95px;
+  }
+  .zt-visual-card--judge {
+    right: -5px;
+    top: 95px;
+  }
+
+  .zt-arch-shell {
+    padding: 32px 16px 28px;
+    border-radius: 14px;
+  }
+  .zt-architecture-v2 {
+    padding: 55px 10px 65px;
+  }
+  .zt-arch-header h2 {
+    font-size: 31px;
+  }
+  .zt-arch-header p {
+    font-size: 12px;
+  }
+  .zt-arch-kicker {
+    font-size: 8px;
+    gap: 8px;
+    letter-spacing: 1.3px;
+  }
+  .zt-arch-kicker span {
+    width: 20px;
+  }
+
+  .zt-intel-body,
+  .zt-infra-grid {
+    grid-template-columns: 1fr;
+  }
+  .zt-infra-divider {
+    width: 100%;
+    height: 1px;
+  }
+  .zt-intel-brand {
+    min-height: 0;
+  }
+
+  .zt-panel-heading--split {
+    display: block;
+  }
+  .zt-analysis-note {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .zt-risk-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .zt-flow-arrow {
+    grid-column: 1 / -1;
+  }
+  .zt-risk-result {
+    grid-column: 1 / -1;
+  }
+
+  .zt-detection-grid {
+    grid-template-columns: 1fr;
+  }
+  .zt-detection-link {
+    transform: rotate(90deg);
+  }
+
+  .zt-security-outcomes {
+    grid-template-columns: 1fr;
+  }
+  .zt-outcome-title {
+    grid-column: auto;
+  }
+  .zt-outcome-item {
+    border-left: 0;
+    border-top: 1px solid rgba(150, 173, 198, 0.12);
+  }
+}
+
+@media (max-width: 480px) {
+  #hero.zt-hero-carousel .zt-hero-v2 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .zt-hero-title {
+    font-size: 36px;
+  }
+  .zt-product-row {
+    gap: 11px;
+  }
+  .zt-status-pill {
+    font-size: 8px;
+    min-height: 34px;
+    padding: 0 12px;
+  }
+  .zt-hero-visual {
+    transform: scale(0.62);
+    margin-top: -95px;
+    margin-bottom: -100px;
+  }
+  .zt-intel-brand {
+    gap: 13px;
+  }
+  .zt-intel-icon {
+    flex-basis: 70px;
+    width: 70px;
+    height: 70px;
+  }
+  .zt-intel-icon svg {
+    width: 45px;
+    height: 45px;
+  }
+  .zt-intel-brand strong {
+    font-size: 20px;
+  }
+  .zt-metric span {
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zt-feature-card,
+  .zt-detection-card,
+  .zt-primary-btn,
+  .zt-secondary-btn {
+    transition: none;
+  }
 }

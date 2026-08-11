@@ -1051,8 +1051,7 @@
       "footer.salesLabel": "Sales",
       "footer.copyright":
         "© 2026 KBI e-Security Consulting Co., Ltd. All rights reserved.",
-      "about.hero.mainText":
-        "<strong>KBI Co., Ltd.</strong> has built <strong>trust and confidence</strong> in corporate security through <strong>AI Big Data Analysis-based Security Vulnerability Scan Technology</strong>.",
+
       "about.history.eyebrow": "MAJOR HISTORY",
       "about.history.title": "Company History & Major Achievements",
       "about.history.desc":
