@@ -4,7 +4,7 @@
 
 .simple-arch-section {
   --arch-muted: rgba(233, 241, 250, 0.68);
-  padding: 80px 40px;
+  padding: 88px 40px;
   background: var(--navy);
   color: var(--white);
   border-radius: 24px;
@@ -16,7 +16,7 @@
 .arch-header {
   text-align: center;
   max-width: 680px;
-  margin: 0 auto 56px;
+  margin: 0 auto 64px;
 }
 
 .arch-eyebrow {
@@ -34,98 +34,215 @@
   margin: 10px 0 14px;
   color: var(--white);
   letter-spacing: -0.5px;
+  word-break: keep-all;
 }
 
 .arch-subtitle {
   font-size: 15px;
   color: var(--arch-muted);
   line-height: 1.6;
+  word-break: keep-all;
 }
 
-/* Horizontal Flow Layout */
+/* =========================================================
+   FLOW WRAPPER
+   ========================================================= */
+
 .arch-flow-container {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Individual Step Card */
+.arch-flow-label {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.arch-flow-label span {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(233, 241, 250, 0.4);
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   CONTINUOUS STEPPER TRACK
+   ========================================================= */
+
+.arch-stepper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  height: 20px;
+  margin-bottom: 22px;
+}
+
+.arch-stepper::before {
+  content: "";
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    90deg,
+    var(--zt-blue) 0%,
+    var(--brand-cyan) 34%,
+    #d97706 66%,
+    var(--zt-red) 100%
+  );
+  background-size: 220% 100%;
+  opacity: 0.55;
+  animation: archFlowShift 7s linear infinite;
+}
+
+@keyframes archFlowShift {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.arch-node {
+  justify-self: center;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+}
+
+.node-asset {
+  background: var(--zt-blue);
+  box-shadow: 0 0 0 4px rgba(21, 84, 176, 0.22);
+}
+
+.node-diagnosis {
+  background: var(--brand-cyan);
+  box-shadow: 0 0 0 4px rgba(59, 162, 242, 0.22);
+}
+
+.node-risk {
+  background: #d97706;
+  box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.22);
+}
+
+.node-action {
+  background: var(--zt-red);
+  box-shadow: 0 0 0 4px rgba(200, 0, 30, 0.22);
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.arch-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
 .arch-flow-card {
-  flex: 1;
+  --step-color: var(--brand-cyan);
+  --step-tint: rgba(59, 162, 242, 0.16);
   background: var(--navy2);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  padding: 24px 20px;
+  padding: 22px 20px 20px;
   position: relative;
+  overflow: hidden;
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  min-height: 260px;
+  min-height: 250px;
+}
+
+.arch-flow-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 22px;
+  right: 22px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--step-color);
+  opacity: 0.65;
 }
 
 .arch-flow-card:hover {
   transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(59, 162, 242, 0.3);
+  border-color: rgba(255, 255, 255, 0.18);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Final Highlight Outcome Card */
-.arch-flow-card.card-highlight {
-  background: linear-gradient(
-    160deg,
-    rgba(200, 0, 30, 0.15) 0%,
-    var(--navy2) 100%
-  );
-  border: 1px solid var(--crimson);
-  box-shadow: 0 10px 30px rgba(200, 0, 30, 0.2);
+.card-asset {
+  --step-color: var(--zt-blue);
+  --step-tint: rgba(21, 84, 176, 0.16);
 }
 
-/* Step Badges */
-.arch-step-badge {
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: var(--arch-muted);
-  margin-bottom: 16px;
+.card-diagnosis {
+  --step-color: var(--brand-cyan);
+  --step-tint: rgba(59, 162, 242, 0.16);
 }
 
-.badge-accent {
-  color: var(--zt-red);
+.card-risk {
+  --step-color: #d97706;
+  --step-tint: rgba(217, 119, 6, 0.16);
 }
 
-/* Icons */
+.card-action {
+  --step-color: var(--zt-red);
+  --step-tint: rgba(200, 0, 30, 0.16);
+}
+
+/* Icon */
 .card-icon-wrap {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  background: var(--step-tint);
+  color: var(--step-color);
 }
 
-.icon-cyan {
-  background: rgba(59, 162, 242, 0.15);
-  color: var(--brand-cyan);
+/* Step head: number + tag, tight to the title beneath it */
+.arch-step-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
-.icon-blue {
-  background: rgba(21, 84, 176, 0.2);
-  color: var(--zt-blue);
+.arch-step-num {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--step-color);
 }
 
-.icon-amber {
-  background: rgba(217, 119, 6, 0.18);
-  color: #d97706;
-}
-
-.icon-crimson {
-  background: rgba(200, 0, 30, 0.25);
-  color: var(--zt-red);
+.arch-step-tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: var(--arch-muted);
+  text-transform: uppercase;
 }
 
 /* Text Content */
@@ -134,54 +251,76 @@
   font-weight: 700;
   color: var(--white);
   margin-bottom: 8px;
+  word-break: keep-all;
 }
 
 .card-desc {
   font-size: 13px;
   color: var(--arch-muted);
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  word-break: keep-all;
 }
 
-/* Tags */
-.card-tags {
+/* =========================================================
+   STEP 4 — RESULT / ACTION
+   ========================================================= */
+
+.arch-result-metric {
   margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  align-items: center;
+  gap: 8px;
 }
 
-.card-tags span {
+.metric-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--zt-red);
+  box-shadow: 0 0 0 3px rgba(200, 0, 30, 0.25);
+  flex-shrink: 0;
+}
+
+.metric-label {
+  font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--zt-red);
+  text-transform: uppercase;
 }
 
-/* Connecting Arrow */
-.flow-arrow {
-  align-self: center;
-  color: var(--arch-muted);
+.metric-value {
+  margin-left: auto;
   font-size: 18px;
-  font-weight: 300;
-  user-select: none;
+  font-weight: 800;
+  color: var(--white);
 }
 
-/* Responsive Behavior */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
 @media (max-width: 992px) {
-  .arch-flow-container {
-    flex-direction: column;
+  .arch-stepper,
+  .arch-flow-label {
+    display: none;
   }
 
-  .flow-arrow {
-    transform: rotate(90deg);
-    margin: 4px 0;
+  .arch-cards-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .arch-flow-card {
-    width: 100%;
     min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arch-stepper::before {
+    animation: none;
   }
 }

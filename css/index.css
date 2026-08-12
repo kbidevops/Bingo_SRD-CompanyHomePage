@@ -2096,21 +2096,21 @@ body::before {
 .refs-eyebrow {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 2.5px;
-  color: rgba(200, 0, 30, 0.85);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ff6b81;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .refs-eyebrow-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--crimson);
-  box-shadow: 0 0 0 4px rgba(200, 0, 30, 0.18);
+  background: #ff3355;
+  box-shadow: 0 0 0 4px rgba(255, 51, 85, 0.22);
 }
 .refs-title {
   font-family: "Pretendard", "IBM Plex Sans KR", sans-serif;
@@ -2128,11 +2128,11 @@ body::before {
   margin-top: 20px;
   font-family: "IBM Plex Sans KR", sans-serif;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.2px;
 }
 .refs-meta-item em {
-  color: var(--crimson);
+  color: #ff6b81;
   font-style: normal;
   font-weight: 700;
   margin-right: 5px;
@@ -2141,7 +2141,7 @@ body::before {
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.28);
 }
 .refs-logos {
   display: grid;
@@ -3271,10 +3271,39 @@ section {
 
 .bingo-risk-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr) 34px minmax(0, 1fr);
   gap: 18px;
   align-items: stretch;
   width: 100%;
+}
+
+/* =========================================================
+   FLOW ARROWS — connect CVSS → EPSS → KEV
+   ========================================================= */
+
+.risk-flow-arrow {
+  align-self: center;
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--surface);
+  border: 1px solid var(--rule);
+
+  color: var(--muted);
+}
+
+.risk-flow-arrow svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* =========================================================
@@ -3348,7 +3377,7 @@ section {
 /* KEV */
 
 .risk-card-kev::before {
-  background: #d97706;
+  background: var(--crimson);
 }
 
 /* =========================================================
@@ -3358,7 +3387,6 @@ section {
 .risk-card-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   gap: 10px;
 
@@ -3366,13 +3394,28 @@ section {
 }
 
 .risk-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 22px;
-  line-height: 1;
+  border-radius: 8px;
 
-  color: var(--crimson);
+  background: var(--crimson);
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.3px;
+
+  color: #ffffff;
+}
+
+.risk-card-epss .risk-card-number {
+  background: var(--brand-cyan);
 }
 
 .risk-card-status {
@@ -3398,58 +3441,53 @@ section {
 }
 
 /* =========================================================
-   ICON
+   RISK SCORE — tangible per-signal value
    ========================================================= */
 
-.risk-card-icon {
-  width: 58px;
-  height: 58px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.risk-score {
   flex-shrink: 0;
+  text-align: right;
+}
 
-  margin-bottom: 18px;
-
-  border-radius: 13px;
+.risk-score-value {
+  display: block;
 
   font-family: "IBM Plex Mono", monospace;
-  font-size: 13px;
+  font-size: 26px;
   font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.3px;
 
-  letter-spacing: 0.4px;
+  color: var(--ink);
 }
 
-/* CVSS */
+.risk-score-unit {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-left: 1px;
+}
 
-.risk-card-cvss .risk-card-icon {
+.risk-score-source {
+  display: block;
+  margin-top: 6px;
+
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.risk-card-cvss .risk-score-value,
+.risk-card-kev .risk-score-value {
   color: var(--crimson);
-
-  background: rgba(200, 0, 30, 0.07);
-
-  border: 1px solid rgba(200, 0, 30, 0.14);
 }
 
-/* EPSS */
-
-.risk-card-epss .risk-card-icon {
+.risk-card-epss .risk-score-value {
   color: var(--brand-cyan);
-
-  background: rgba(59, 162, 242, 0.08);
-
-  border: 1px solid rgba(59, 162, 242, 0.16);
-}
-
-/* KEV */
-
-.risk-card-kev .risk-card-icon {
-  color: #b45309;
-
-  background: rgba(217, 119, 6, 0.08);
-
-  border: 1px solid rgba(217, 119, 6, 0.16);
 }
 
 /* =========================================================
@@ -3466,6 +3504,15 @@ section {
   line-height: 1.2;
 
   letter-spacing: -0.5px;
+}
+
+.risk-card-cvss .risk-card-title,
+.risk-card-kev .risk-card-title {
+  color: var(--crimson);
+}
+
+.risk-card-epss .risk-card-title {
+  color: var(--brand-cyan);
 }
 
 .risk-card-subtitle {
@@ -3498,23 +3545,25 @@ section {
    ========================================================= */
 
 .risk-meter {
-  margin-top: auto;
-  padding-top: 20px;
-}
-
-.risk-meter-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  gap: 10px;
+  gap: 12px;
 
-  margin-bottom: 8px;
+  margin-top: auto;
+  padding-top: 20px;
 }
 
-.risk-meter-header span {
-  min-width: 0;
+.risk-meter-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
+  min-width: 0;
+}
+
+.risk-meter-text span {
   color: var(--muted);
 
   font-family: "IBM Plex Sans KR", sans-serif;
@@ -3527,80 +3576,22 @@ section {
   letter-spacing: 0.6px;
 }
 
-.risk-meter-header strong {
-  flex-shrink: 0;
-
+.risk-meter-text strong {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
+  font-size: 21px;
   font-weight: 800;
+  letter-spacing: -0.2px;
 }
 
 /* Status colors */
 
-.risk-card-cvss .risk-meter-header strong {
+.risk-card-cvss .risk-meter-text strong,
+.risk-card-kev .risk-meter-text strong {
   color: var(--crimson);
 }
 
-.risk-card-epss .risk-meter-header strong {
+.risk-card-epss .risk-meter-text strong {
   color: var(--brand-cyan);
-}
-
-.risk-card-kev .risk-meter-header strong {
-  color: #b45309;
-}
-
-/* Meter track */
-
-.risk-meter-track {
-  position: relative;
-
-  width: 100%;
-  height: 5px;
-
-  overflow: hidden;
-
-  border-radius: 99px;
-
-  background: rgba(26, 29, 38, 0.08);
-}
-
-/* Meter fill */
-
-.risk-meter-fill {
-  display: block;
-
-  height: 100%;
-
-  border-radius: inherit;
-
-  transform-origin: left center;
-
-  animation: riskMeterIn 0.9s ease both;
-}
-
-.cvss-fill {
-  width: 82%;
-  background: var(--crimson);
-}
-
-.epss-fill {
-  width: 67%;
-  background: var(--brand-cyan);
-}
-
-.kev-fill {
-  width: 94%;
-  background: #d97706;
-}
-
-@keyframes riskMeterIn {
-  from {
-    transform: scaleX(0);
-  }
-
-  to {
-    transform: scaleX(1);
-  }
 }
 
 /* =========================================================
@@ -3620,20 +3611,68 @@ section {
 }
 
 .risk-card-footer span {
-  padding: 5px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 
-  border-radius: 5px;
+  padding: 6px 11px;
+
+  border-radius: 999px;
 
   background: var(--bg);
 
   border: 1px solid var(--rule);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 
   color: var(--muted);
 
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
 
   line-height: 1.3;
+}
+
+.risk-card-footer svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.risk-card-cvss .risk-card-footer span,
+.risk-card-kev .risk-card-footer span {
+  background: rgba(200, 0, 30, 0.05);
+  border-color: rgba(200, 0, 30, 0.15);
+}
+
+.risk-card-cvss .risk-card-footer svg,
+.risk-card-kev .risk-card-footer svg {
+  color: var(--crimson);
+}
+
+.risk-card-epss .risk-card-footer span {
+  background: rgba(59, 162, 242, 0.06);
+  border-color: rgba(59, 162, 242, 0.18);
+}
+
+.risk-card-epss .risk-card-footer svg {
+  color: var(--brand-cyan);
+}
+
+.risk-analysis-card:hover .risk-card-footer span {
+  transform: translateY(-1px);
+}
+
+.risk-card-cvss:hover .risk-card-footer span,
+.risk-card-kev:hover .risk-card-footer span {
+  background: rgba(200, 0, 30, 0.09);
+}
+
+.risk-card-epss:hover .risk-card-footer span {
+  background: rgba(59, 162, 242, 0.11);
 }
 
 /* =========================================================
@@ -3725,7 +3764,7 @@ section {
 .risk-decision p {
   max-width: 760px;
 
-  margin: 0;
+  margin: 0 0 14px;
 
   color: rgba(255, 255, 255, 0.68);
 
@@ -3734,30 +3773,99 @@ section {
 }
 
 /* =========================================================
-   DECISION TAGS
+   VERDICT — the climax of the section
    ========================================================= */
 
-.risk-decision-tags {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 6px;
-
-  margin-top: 13px;
+.risk-decision-verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.risk-decision-tags span {
-  padding: 5px 9px;
+.verdict-badge {
+  padding: 5px 11px;
 
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
 
-  color: rgba(255, 255, 255, 0.68);
+  background: rgba(200, 0, 30, 0.16);
+  border: 1px solid rgba(200, 0, 30, 0.4);
 
   font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
 
-  line-height: 1.3;
+  color: #ff7a8c;
+}
+
+.verdict-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff7a8c;
+  flex-shrink: 0;
+}
+
+.verdict-action {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* =========================================================
+   DECISION FEATURES
+   ========================================================= */
+
+.risk-decision-features {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  flex-shrink: 0;
+}
+
+.risk-decision-feature {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.risk-decision-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: rgba(59, 162, 242, 0.12);
+  border: 1px solid rgba(59, 162, 242, 0.22);
+
+  color: var(--brand-cyan);
+}
+
+.risk-decision-feature-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.risk-decision-feature span:last-child {
+  color: rgba(255, 255, 255, 0.85);
+
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
 }
 
 /* =========================================================
@@ -3801,11 +3909,22 @@ section {
 
 @media (max-width: 1100px) {
   .bingo-risk-layout {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+  }
+
+  .risk-flow-arrow {
+    transform: rotate(90deg);
+    margin: -2px auto;
   }
 
   .risk-decision {
     grid-column: 1 / -1;
+    grid-template-columns: 4px minmax(0, 1fr);
+  }
+
+  .risk-decision-features {
+    grid-column: 2;
+    margin-top: 16px;
   }
 }
 
@@ -3817,6 +3936,11 @@ section {
   .bingo-risk-layout {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .risk-flow-arrow {
+    width: 28px;
+    height: 28px;
   }
 
   .risk-analysis-card {
@@ -3838,6 +3962,10 @@ section {
   .risk-decision-arrow {
     display: none;
   }
+
+  .risk-decision-features {
+    gap: 14px;
+  }
 }
 
 /* =========================================================
@@ -3847,11 +3975,6 @@ section {
 @media (prefers-reduced-motion: reduce) {
   .risk-analysis-card {
     transition: none;
-  }
-
-  .risk-meter-fill {
-    animation: none;
-    transform: none;
   }
 }
 
@@ -7045,113 +7168,20 @@ section {
 }
 
 /* ==========================================================================
-   HERO VISUAL — flat dark flow cards (matches the architecture section)
+   HERO VISUAL — BingoCVM risk-process illustration (transparent cutout PNG)
    ========================================================================== */
 
 .zt-hero-visual {
   position: relative;
-  width: min(400px, 100%);
+  width: 100%;
   justify-self: end;
 }
 
-.zt-hero-flow {
-  --hero-flow-muted: rgba(233, 241, 250, 0.68);
-  display: flex;
-  flex-direction: column;
-}
-
-.zt-hero-flow-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 20px;
-  background: var(--navy2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.18);
-}
-
-.zt-hero-flow-card--result {
-  background: linear-gradient(
-    160deg,
-    rgba(200, 0, 30, 0.18) 0%,
-    var(--navy2) 100%
-  );
-  border-color: var(--crimson);
-  box-shadow: 0 18px 40px rgba(200, 0, 30, 0.22);
-}
-
-.zt-hero-flow-arrow {
-  align-self: center;
-  padding: 6px 0;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1;
-}
-
-.zt-hero-flow-icon {
-  flex: 0 0 44px;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-}
-
-.zt-hero-flow-icon svg {
-  width: 22px;
-  height: 22px;
-}
-
-.zt-hero-flow-icon--cyan {
-  background: rgba(59, 162, 242, 0.15);
-  color: var(--brand-cyan);
-}
-
-.zt-hero-flow-icon--blue {
-  background: rgba(21, 84, 176, 0.2);
-  color: var(--zt-blue);
-}
-
-.zt-hero-flow-icon--amber {
-  background: rgba(217, 119, 6, 0.18);
-  color: #d97706;
-}
-
-.zt-hero-flow-icon--crimson {
-  background: rgba(200, 0, 30, 0.25);
-  color: var(--zt-red);
-}
-
-.zt-hero-flow-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.zt-hero-flow-label {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: var(--hero-flow-muted);
-  margin-bottom: 4px;
-}
-
-.zt-hero-flow-label--accent {
-  color: var(--zt-red);
-}
-
-.zt-hero-flow-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--white);
-}
-
-.zt-hero-flow-desc {
-  margin-top: 2px;
-  font-size: 12px;
-  color: var(--hero-flow-muted);
+.hero-visual-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 34px rgba(21, 84, 176, 0.16));
 }
 
 /* --------------------------------------------------------------------------
@@ -7895,7 +7925,7 @@ section {
   }
   .zt-hero-visual {
     justify-self: center;
-    width: min(400px, 100%);
+    width: min(460px, 100%);
   }
 
   .zt-risk-flow {

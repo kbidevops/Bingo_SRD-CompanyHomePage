@@ -695,12 +695,11 @@
       "about.services.card2.li2": "컴플라이언스 준수 시험·평가 자동화 도구",
       "about.services.card2.li3":
         "K-RMF, K-STIG, K-SCAP, CMMC 구현 시험·평가 도구",
-      "about.services.card2.li4":
-        "시스템 취약점 진단 도구 개발 (온프레미스, 클라우드, CVE)",
+
       "about.services.card2.li5": "AI, 양자, 블록체인 신기술 개발",
       "about.services.card3.title": "03 | 솔루션",
       "about.services.card3.li1":
-        "<strong>BingoCVM:</strong> 시스템 취약점 진단 자동화 (온프레미스 + 클라우드)",
+        "<strong>BingoCVM:</strong> 통합 취약점 진단 → 위험 기반 대응",
       "about.services.card3.li2":
         "<strong>BingoSRM:</strong> 정보시스템 사고 접수 및 처리 관리",
       "about.services.card3.li3":
@@ -714,11 +713,11 @@
       "about.clients.desc2":
         "다양한 고객 Needs에 대응하기 위한 충실한 R&D 수행 ▶▶▶ 국가주요기관 / 연구·교육기관 / 공공기관·지자체 / 국방 / 민간·IT 기업",
       "about.clients.badgeSub": "취약점진단 자동화 플랫폼",
-      "about.clients.cat1": "정부기관 (9)",
-      "about.clients.cat2": "연구기관 · 교육기관 (16)",
-      "about.clients.cat3": "공공기관 · 지자체 (19)",
-      "about.clients.cat4": "국방 (3)",
-      "about.clients.cat5": "민간 · IT 기업 (7)",
+      "about.clients.cat1": "정부기관",
+      "about.clients.cat2": "연구기관 · 교육기관",
+      "about.clients.cat3": "공공기관 · 지자체 ",
+      "about.clients.cat4": "국방 ",
+      "about.clients.cat5": "민간 · IT 기업",
       "about.clients.g1": "대통령실",
       "about.clients.g2": "국세청",
       "about.clients.g3": "보건복지부",
@@ -730,7 +729,7 @@
       "about.clients.g9": "광주광역시 경찰청",
       "about.clients.r1": "중이온가속기연구소 (IRIS)",
       "about.clients.r2": "한국항공우주연구원",
-      "about.clients.r3": "전자통신연구원 (ETRI)",
+      "about.clients.r3": "한국전자통신연구원 (ETRI)",
       "about.clients.r4": "한국한의학연구원",
       "about.clients.r5": "국립해양생물자원관",
       "about.clients.r6": "한국과학기술원 (KAIST)",
@@ -738,7 +737,7 @@
       "about.clients.r8": "한국지질자원연구원 (KIGAM)",
       "about.clients.r9": "한국조세재정연구원 (KIPF)",
       "about.clients.r10": "충남대학교",
-      "about.clients.r11": "전남대학교",
+      "about.clients.r11": "한밭대학교",
       "about.clients.r12": "원광대학교",
       "about.clients.r13": "전주비전대학교",
       "about.clients.r14": "충청북도 교육연구정보원",
@@ -747,7 +746,7 @@
       "about.clients.p1": "한전원자력연료",
       "about.clients.p2": "한전KDN",
       "about.clients.p3": "소상공인시장진흥공단",
-      "about.clients.p4": "여성과학기술인육성재단 (WISET)",
+      "about.clients.p4": "가축위생방역지원본부",
       "about.clients.p5": "한국소비자원",
       "about.clients.p6": "신용보증재단중앙회",
       "about.clients.p7": "한국산림복지진흥원",
@@ -770,7 +769,7 @@
       "about.clients.it2": "Gabia Cloud",
       "about.clients.it3": "AhnLab CloudMate",
       "about.clients.it4": "SK Hynix",
-      "about.clients.it5": "DASAN",
+      "about.clients.it5": "다산기공(DASAN)",
       "about.clients.it6": "Catenoid",
       "about.clients.it7": "한국정보통신진흥협회 (KAIT)",
       "about.clients.stat1": "정부기관",
@@ -876,10 +875,7 @@
         "조치 완료 후 재진단을 수행하여 이행 여부를 검증",
       "product.process.step5.li2":
         "최종 진단 보고서 및 비교 보고서 제공 (다운로드 가능)",
-      "product.cceCve.eyebrow": "취약점 유형 소개",
 
-      "product.cceCve.desc":
-        "BingoCVM은 <strong>CCE(시스템 취약점)</strong>와 <strong>CVE(소프트웨어 취약점)</strong> 두 가지 유형을 통합 진단합니다. <br />설정 오류부터 알려진 버그까지, 하나의 플랫폼에서 모두 관리합니다.",
       "product.cceCve.left.badge": "Common Configuration Enumeration",
       "product.cceCve.left.title": "CCE 시스템취약점 개요",
       "product.cceCve.left.overview":
@@ -1158,13 +1154,12 @@
         "Compliance testing and evaluation automation tools",
       "about.services.card2.li3":
         "Test and evaluation tools implementing K-RMF, K-STIG, K-SCAP, and CMMC",
-      "about.services.card2.li4":
-        "System vulnerability Scan tool development (On-Premise, Cloud, CVE)",
+
       "about.services.card2.li5":
         "Emerging technology development in AI, Quantum, and Blockchain",
       "about.services.card3.title": "03 | Solutions",
       "about.services.card3.li1":
-        "<strong>BingoCVM:</strong> System vulnerability Scan automation (On-Premise + Cloud)",
+        "<strong>BingoCVM:</strong> Integrated vulnerability scanning → risk-based response",
       "about.services.card3.li2":
         "<strong>BingoSRM:</strong> Information system incident receipt and handling management",
       "about.services.card3.li3":
@@ -1178,11 +1173,11 @@
       "about.clients.desc2":
         "Faithful R&D execution to meet diverse customer needs ▶▶▶ Government Agencies / Research & Educational Institutions / Public Enterprise & Local Government / Defense / Private & IT",
       "about.clients.badgeSub": "Vulnerability Scan Automation Platform",
-      "about.clients.cat1": "Government Agencies (9)",
-      "about.clients.cat2": "Research & Educational Institutions (16)",
-      "about.clients.cat3": "Public Institutions & Local Governments (19)",
-      "about.clients.cat4": "Defense (3)",
-      "about.clients.cat5": "Private Sector & IT Companies (7)",
+      "about.clients.cat1": "Government Agencies",
+      "about.clients.cat2": "Research & Educational Institutions",
+      "about.clients.cat3": "Public Institutions & Local Governments",
+      "about.clients.cat4": "Defense",
+      "about.clients.cat5": "Private Sector & IT Companies",
       "about.clients.g1": "Office of the President",
       "about.clients.g2": "National Tax Service",
       "about.clients.g3": "Ministry of Health and Welfare",
@@ -1195,7 +1190,7 @@
       "about.clients.r1": "Rare Isotope Science Project (IRIS)",
       "about.clients.r2": "Korea Aerospace Research Institute (KARI)",
       "about.clients.r3":
-        "Electronics and Telecommunications Research Institute (ETRI)",
+        "Korea Electronics and Telecommunications Research Institute (ETRI)",
       "about.clients.r4": "Korea Institute of Oriental Medicine (KIOM)",
       "about.clients.r5": "National Institute of Marine Biodiversity (MABIK)",
       "about.clients.r6":
@@ -1205,7 +1200,7 @@
         "Korea Institute of Geoscience and Mineral Resources (KIGAM)",
       "about.clients.r9": "Korea Institute of Public Finance (KIPF)",
       "about.clients.r10": "Chungnam National University",
-      "about.clients.r11": "Chonnam National University",
+      "about.clients.r11": "Hanbat National University",
       "about.clients.r12": "Wonkwang University",
       "about.clients.r13": "Jeonju Vision University",
       "about.clients.r14":
@@ -1216,8 +1211,7 @@
       "about.clients.p1": "KEPCO Nuclear Fuel",
       "about.clients.p2": "KDN",
       "about.clients.p3": "Small Enterprise and Market Service (SEMAS)",
-      "about.clients.p4":
-        "Center for Women in Science, Engineering and Technology (WISET)",
+      "about.clients.p4": "Sanitation and Disease Control Support Headquarters",
       "about.clients.p5": "Korea Consumer Agency",
       "about.clients.p6": "National Credit Union Federation of Korea",
       "about.clients.p7": "Korea Forest Welfare Institute",
@@ -1358,10 +1352,7 @@
         "Performs re-Scan after remediation to verify compliance.",
       "product.process.step5.li2":
         "Provides final Scan reports and comparison reports (Available for download).",
-      "product.cceCve.eyebrow": "Vulnerability Types Overview",
 
-      "product.cceCve.desc":
-        "BingoCVM provides integrated Scan for both <strong>CCE (system vulnerabilities)</strong> and <strong>CVE (software vulnerabilities)</strong>. Manage everything from configuration errors to known bugs in a single platform.",
       "product.cceCve.left.badge": "Common Configuration Enumeration",
       "product.cceCve.left.title": "CCE System Vulnerability Overview",
       "product.cceCve.left.overview":
