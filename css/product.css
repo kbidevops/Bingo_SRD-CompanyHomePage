@@ -119,6 +119,10 @@ section,
   margin: 40px 80px;
 }
 
+.page-content {
+  min-width: 0;
+}
+
 /* ── HERO SECTION ── */
 .hero {
   display: grid;
@@ -341,6 +345,7 @@ section {
 .zt-overview-left {
   position: sticky;
   top: 110px;
+  min-width: 0;
 }
 
 .zt-quote-mark {
@@ -1344,6 +1349,11 @@ section {
 
   .arch-process-steps {
     flex-direction: column;
+  }
+
+  .zt-feature-grid,
+  .cve-cols {
+    grid-template-columns: 1fr;
   }
 
   .zt-table-wrap {

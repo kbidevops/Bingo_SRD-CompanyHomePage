@@ -1,0 +1,187 @@
+/* =========================================================
+   SIMPLIFIED MAIN PAGE ARCHITECTURE SECTION (REFACTORED)
+   ========================================================= */
+
+.simple-arch-section {
+  --arch-muted: rgba(233, 241, 250, 0.68);
+  padding: 80px 40px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Header */
+.arch-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+
+.arch-eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--brand-cyan);
+  text-transform: uppercase;
+}
+
+.arch-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 10px 0 14px;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+
+.arch-subtitle {
+  font-size: 15px;
+  color: var(--arch-muted);
+  line-height: 1.6;
+}
+
+/* Horizontal Flow Layout */
+.arch-flow-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Step Card */
+.arch-flow-card {
+  flex: 1;
+  background: var(--navy2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px 20px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+
+.arch-flow-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(59, 162, 242, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Final Highlight Outcome Card */
+.arch-flow-card.card-highlight {
+  background: linear-gradient(
+    160deg,
+    rgba(200, 0, 30, 0.15) 0%,
+    var(--navy2) 100%
+  );
+  border: 1px solid var(--crimson);
+  box-shadow: 0 10px 30px rgba(200, 0, 30, 0.2);
+}
+
+/* Step Badges */
+.arch-step-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--arch-muted);
+  margin-bottom: 16px;
+}
+
+.badge-accent {
+  color: var(--zt-red);
+}
+
+/* Icons */
+.card-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+
+.icon-cyan {
+  background: rgba(59, 162, 242, 0.15);
+  color: var(--brand-cyan);
+}
+
+.icon-blue {
+  background: rgba(21, 84, 176, 0.2);
+  color: var(--zt-blue);
+}
+
+.icon-amber {
+  background: rgba(217, 119, 6, 0.18);
+  color: #d97706;
+}
+
+.icon-crimson {
+  background: rgba(200, 0, 30, 0.25);
+  color: var(--zt-red);
+}
+
+/* Text Content */
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: var(--arch-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Tags */
+.card-tags {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.card-tags span {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Connecting Arrow */
+.flow-arrow {
+  align-self: center;
+  color: var(--arch-muted);
+  font-size: 18px;
+  font-weight: 300;
+  user-select: none;
+}
+
+/* Responsive Behavior */
+@media (max-width: 992px) {
+  .arch-flow-container {
+    flex-direction: column;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+    margin: 4px 0;
+  }
+
+  .arch-flow-card {
+    width: 100%;
+    min-height: auto;
+  }
+}

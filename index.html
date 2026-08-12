@@ -18,22 +18,30 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/scrollTop.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/system-architecture.css" />
 
     <script src="/js/i18n.js" defer></script>
     <script src="js/nav-active.js" defer></script>
   </head>
+  <body>
   <div id="scrollTop"></div>
+
+  <!-- Custom cursor elements -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
   <!-- =========================================================
      NAV
 ========================================================= -->
   <div id="header"></div>
 
+  <main id="main">
+
   <!-- =========================================================
      HERO CAROUSEL
 ========================================================= -->
   <div
-    class="hero-carousel"
+    class="hero-carousel zt-hero-carousel"
     id="hero"
     role="region"
     aria-label="Hero carousel"
@@ -77,108 +85,7 @@
               <span>대응 우선순위</span>를 결정합니다.
             </h1>
 
-            <!-- <p class="zt-hero-description">
-              BingoCVM은 <strong>CCE·CVE·네트워크 취약점 진단</strong>과
-              <strong>CVSS·EPSS·KEV 기반 위협 인텔리전스</strong>를 결합해
-              자산의 실제 위험도를 분석하고, Zero Trust 기반의
-              <strong>대응 우선순위</strong>를 결정하는 통합 취약점 진단
-              플랫폼입니다.
-            </p> -->
-
-            <!-- <div class="zt-feature-grid">
-              <article class="zt-feature-card zt-feature-card--red">
-                <div class="zt-feature-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 3 20 6v5c0 5.1-3.4 8.2-8 10-4.6-1.8-8-4.9-8-10V6l8-3Z"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    />
-                    <path
-                      d="m9 12 2 2 4-4"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <strong>CCE 시스템 취약점</strong>
-                  <small>시스템 설정 및 보안 기준 진단</small>
-                </div>
-              </article>
-
-              <article class="zt-feature-card zt-feature-card--blue">
-                <div class="zt-feature-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <circle
-                      cx="11"
-                      cy="11"
-                      r="6.5"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    />
-                    <path
-                      d="m16 16 5 5"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <strong>CVE · 소프트웨어 취약점</strong>
-                  <small>OS·SW 취약점 식별 및 CVE 매핑</small>
-                </div>
-              </article>
-
-              <article class="zt-feature-card zt-feature-card--blue">
-                <div class="zt-feature-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M4 17V7M4 17h16"
-                      stroke="currentColor"
-                      stroke-width="1.7"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="m7 14 4-4 3 2 5-6"
-                      stroke="currentColor"
-                      stroke-width="1.7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <strong>네트워크 취약점</strong>
-                  <small>네트워크 자산·서비스 취약점 분석</small>
-                </div>
-              </article>
-
-              <article class="zt-feature-card zt-feature-card--red">
-                <div class="zt-feature-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 3 21 7.5v5.7c0 4.1-2.7 6.8-9 8.8-6.3-2-9-4.7-9-8.8V7.5L12 3Z"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    />
-                    <path
-                      d="M12 8v5M12 16.5h.01"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <strong>위협 인텔리전스</strong>
-                  <small>CVSS·EPSS·KEV 기반 위험도 분석</small>
-                </div>
-              </article>
-            </div> -->
+           
 
             <div class="hero-actions zt-hero-actions">
               <a href="#architecture" class="btn-primary zt-primary-btn">
@@ -201,98 +108,110 @@
           </div>
 
           <div class="zt-hero-visual" aria-label="BingoCVM 위험 판단 프로세스">
-            <div class="zt-visual-network" aria-hidden="true"></div>
-            <div class="zt-visual-ring zt-visual-ring--outer"></div>
-            <div class="zt-visual-ring zt-visual-ring--middle"></div>
-            <div class="zt-visual-ring zt-visual-ring--inner"></div>
-
-            <div class="zt-visual-card zt-visual-card--detect">
-              <span class="zt-visual-card-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <circle
-                    cx="10.5"
-                    cy="10.5"
-                    r="6.5"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                  />
-                  <path
-                    d="m16 16 4.5 4.5"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </span>
-              <span>
-                <small>DISCOVER</small>
-                <strong>발견</strong>
-                <em>취약점 탐지</em>
-              </span>
-            </div>
-
-            <div class="zt-visual-card zt-visual-card--judge">
-              <span class="zt-visual-card-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 3 20 6v5c0 5-3.2 8.1-8 10-4.8-1.9-8-5-8-10V6l8-3Z"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                  />
-                  <path
-                    d="m9 12 2 2 4-4"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-              <span>
-                <small>DECIDE</small>
-                <strong>판단</strong>
-                <em>위험 분석·평가</em>
-              </span>
-            </div>
-
-            <div class="zt-visual-card zt-visual-card--respond">
-              <span class="zt-visual-card-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M5 18V7M5 18h14"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="m8 15 4-4 3 2 4-5"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-              <span>
-                <small>RESPOND</small>
-                <strong>우선순위 결정</strong>
-                <em>효과적인 대응</em>
-              </span>
-            </div>
-
-            <div class="zt-hero-core">
-              <div class="zt-core-glow"></div>
-              <div class="zt-core-platform">
-                <div class="zt-core-shield">
-                  <img
-                    src="./images/bingoCVM-logo-bklong2.png"
-                    alt="BingoCVM"
-                  />
-                </div>
+            <div class="zt-hero-flow">
+              <div class="zt-hero-flow-card">
+                <span class="zt-hero-flow-icon zt-hero-flow-icon--cyan">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="10.5"
+                      cy="10.5"
+                      r="6.5"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="m16 16 4.5 4.5"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <span class="zt-hero-flow-body">
+                  <span class="zt-hero-flow-label">DISCOVER</span>
+                  <span class="zt-hero-flow-title">발견</span>
+                  <span class="zt-hero-flow-desc">취약점 탐지</span>
+                </span>
               </div>
-              <div class="zt-core-caption">
-                <span>ZERO TRUST</span>
-                <strong>위험 기반 보안 의사결정</strong>
+
+              <div class="zt-hero-flow-arrow" aria-hidden="true">↓</div>
+
+              <div class="zt-hero-flow-card">
+                <span class="zt-hero-flow-icon zt-hero-flow-icon--blue">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 3 20 6v5c0 5-3.2 8.1-8 10-4.8-1.9-8-5-8-10V6l8-3Z"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="m9 12 2 2 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="zt-hero-flow-body">
+                  <span class="zt-hero-flow-label">DECIDE</span>
+                  <span class="zt-hero-flow-title">판단</span>
+                  <span class="zt-hero-flow-desc">위험 분석·평가</span>
+                </span>
+              </div>
+
+              <div class="zt-hero-flow-arrow" aria-hidden="true">↓</div>
+
+              <div class="zt-hero-flow-card">
+                <span class="zt-hero-flow-icon zt-hero-flow-icon--amber">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M5 18V7M5 18h14"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="m8 15 4-4 3 2 4-5"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="zt-hero-flow-body">
+                  <span class="zt-hero-flow-label">RESPOND</span>
+                  <span class="zt-hero-flow-title">우선순위 결정</span>
+                  <span class="zt-hero-flow-desc">효과적인 대응</span>
+                </span>
+              </div>
+
+              <div class="zt-hero-flow-arrow" aria-hidden="true">↓</div>
+
+              <div class="zt-hero-flow-card zt-hero-flow-card--result">
+                <span class="zt-hero-flow-icon zt-hero-flow-icon--crimson">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="m9 12 2 2 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="zt-hero-flow-body">
+                  <span class="zt-hero-flow-label zt-hero-flow-label--accent"
+                    >ZERO TRUST</span
+                  >
+                  <span class="zt-hero-flow-title">위험 기반 보안 의사결정</span>
+                </span>
               </div>
             </div>
           </div>
@@ -522,13 +441,6 @@
             <span> Threat Intelligence </span>
           </div>
         </div>
-
-        <div class="risk-decision-arrow">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="5 12 19 12"></polyline>
-            <polyline points="13 6 19 12 13 18"></polyline>
-          </svg>
-        </div>
       </div>
     </div>
   </section>
@@ -548,232 +460,126 @@
      ZERO TRUST ARCHITECTURE
 ========================================================= -->
 
-  <section id="architecture" class="zt-architecture-v2">
-    <div class="zt-arch-shell">
-      <header class="zt-arch-header">
-        <div class="zt-arch-kicker">
-          <span></span>
-          BINGOCVM SECURITY ARCHITECTURE
-          <span></span>
+  <section id="architecture" class="simple-arch-section">
+    <!-- Header -->
+    <div class="arch-header">
+      <span class="arch-eyebrow">BINGOCVM SECURITY ARCHITECTURE</span>
+      <h2 class="arch-title">제로트러스트 통합 진단 아키텍처</h2>
+      <p class="arch-subtitle">
+        하이브리드 자산 진단부터 위협 인텔리전스 결합까지, 최우선 대응 과제를
+        한눈에 도출합니다.
+      </p>
+    </div>
+
+    <!-- Streamlined 4-Step Architecture Flow -->
+    <div class="arch-flow-container">
+      <!-- STEP 1 -->
+      <div class="arch-flow-card">
+        <div class="arch-step-badge">STEP 01</div>
+        <div class="card-icon-wrap icon-cyan">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M22 12H2M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+            ></path>
+            <line x1="6" y1="16" x2="6.01" y2="16"></line>
+            <line x1="10" y1="16" x2="10.01" y2="16"></line>
+          </svg>
         </div>
-        <h2>BingoCVM 제로트러스트 <em>통합 진단 아키텍처</em></h2>
-        <p>
-          자산을 지속적으로 검증하고 취약점 진단 결과와 위협 인텔리전스를
-          결합하여 실제 위험도를 분석합니다. 분석된 위험을 기반으로 보안 대응의
-          우선순위를 결정합니다.
+        <h3 class="card-title">대상 자산 수집</h3>
+        <p class="card-desc">온프레미스 & 하이브리드 클라우드 인프라 연동</p>
+        <div class="card-tags">
+          <span>On-Premise</span>
+          <span>AWS / Azure / GCP</span>
+        </div>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <!-- STEP 2 -->
+      <div class="arch-flow-card">
+        <div class="arch-step-badge">STEP 02</div>
+        <div class="card-icon-wrap icon-blue">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+        <h3 class="card-title">통합 진단 탐지</h3>
+        <p class="card-desc">
+          시스템, 소프트웨어, 네트워크 취약점 자동 정밀 진단
         </p>
-      </header>
-
-      <div class="zt-arch-flow">
-        <section class="zt-arch-panel zt-arch-panel--intel">
-          <div class="zt-panel-heading">
-            <span class="zt-panel-index">01</span>
-            <div>
-              <small>RISK INTELLIGENCE</small>
-              <h3>위협·위험 인텔리전스</h3>
-            </div>
-          </div>
-
-          <div class="zt-intel-body">
-            <div class="zt-intel-brand">
-              <div class="zt-intel-icon">
-                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                  <rect
-                    x="14"
-                    y="14"
-                    width="36"
-                    height="36"
-                    rx="8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <rect
-                    x="22"
-                    y="22"
-                    width="20"
-                    height="20"
-                    rx="5"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M26 32h12M32 26v12"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M14 21H7M14 32H5M14 43H7M50 21h7M50 32h9M50 43h7M21 14V7M32 14V5M43 14V7M21 50v7M32 50v9M43 50v-7"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-              <div>
-                <strong>BingoCVM</strong>
-                <span>제로트러스트 기반<br />취약점 진단 · 위험 분석</span>
-              </div>
-            </div>
-
-            <div class="zt-intel-metrics">
-              <div class="zt-metric-head">위험 인텔리전스</div>
-              <div class="zt-metric">
-                <b>CVSS</b><span>취약점 심각도 정량화</span>
-              </div>
-              <div class="zt-metric">
-                <b>EPSS</b><span>실제 악용 가능성 예측</span>
-              </div>
-              <div class="zt-metric">
-                <b>KEV</b><span>실제 악용 여부 확인</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="zt-arch-connector">
-          <span></span>
-          위험 기반 진단 정책
-          <span></span>
+        <div class="card-tags">
+          <span>CCE 시스템설정취약점</span>
+          <span>CVE 소프트웨어취약점 </span>
+          <span>NSE 네트워크스캔취약점</span>
         </div>
+      </div>
 
-        <section class="zt-arch-panel zt-arch-panel--analysis">
-          <div class="zt-panel-heading zt-panel-heading--split">
-            <div>
-              <small>RISK ANALYSIS</small>
-              <h3>취약점 탐지 결과와 위협 정보를 결합한 위험도 분석</h3>
-            </div>
-            <span class="zt-analysis-note">Risk-based Decision</span>
-          </div>
+      <div class="flow-arrow">→</div>
 
-          <div class="zt-risk-flow">
-            <div class="zt-risk-box zt-risk-box--blue">
-              <span class="zt-risk-icon">⌕</span>
-              <small>VULNERABILITY</small>
-              <strong>취약점 탐지</strong>
-            </div>
-            <b class="zt-flow-plus">+</b>
-            <div class="zt-risk-box zt-risk-box--red">
-              <span class="zt-risk-icon">◔</span>
-              <small>CVSS</small>
-              <strong>심각도</strong>
-            </div>
-            <b class="zt-flow-plus">+</b>
-            <div class="zt-risk-box zt-risk-box--blue">
-              <span class="zt-risk-icon">⌁</span>
-              <small>EPSS</small>
-              <strong>악용 가능성</strong>
-            </div>
-            <b class="zt-flow-plus">+</b>
-            <div class="zt-risk-box zt-risk-box--amber">
-              <span class="zt-risk-icon">!</span>
-              <small>KEV</small>
-              <strong>실제 악용</strong>
-            </div>
-            <span class="zt-flow-arrow">→</span>
-            <div class="zt-risk-result">
-              <span class="zt-result-icon">◎</span>
-              <div>
-                <small>RISK PRIORITY</small>
-                <strong>대응 우선순위 결정</strong>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="zt-arch-connector">
-          <span class="zt-connector-arrow">↓</span>
+      <!-- STEP 3 -->
+      <div class="arch-flow-card">
+        <div class="arch-step-badge">STEP 03</div>
+        <div class="card-icon-wrap icon-amber">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+            ></path>
+          </svg>
         </div>
-
-        <section class="zt-arch-panel zt-arch-panel--detect">
-          <div class="zt-panel-heading">
-            <span class="zt-panel-index">02</span>
-            <div>
-              <small>DETECTION ENGINE</small>
-              <h3>통합 탐지 영역</h3>
-            </div>
-          </div>
-
-          <div class="zt-detection-grid">
-            <article class="zt-detection-card zt-detection-card--red">
-              <div class="zt-detection-number">01 / SYSTEM</div>
-              <div class="zt-detection-icon">▤</div>
-              <h4>CCE 시스템 취약점 진단</h4>
-              <p>
-                시스템 설정 통합 진단<br />보안 기준·컴플라이언스 미준수 진단
-              </p>
-            </article>
-
-            <div class="zt-detection-link">↔</div>
-
-            <article class="zt-detection-card zt-detection-card--blue">
-              <div class="zt-detection-number">02 / SOFTWARE</div>
-              <div class="zt-detection-icon">⚙</div>
-              <h4>CVE 소프트웨어 취약점 진단</h4>
-              <p>OS·SW 취약점 식별 및 진단<br />CVE 기반 취약점 매핑</p>
-            </article>
-
-            <div class="zt-detection-link">↔</div>
-
-            <article class="zt-detection-card zt-detection-card--purple">
-              <div class="zt-detection-number">03 / NETWORK</div>
-              <div class="zt-detection-icon">◎</div>
-              <h4>NSE 네트워크 취약점 진단</h4>
-              <p>네트워크 자산 탐지 및 진단<br />서비스 취약점 분석</p>
-            </article>
-          </div>
-        </section>
-
-        <div class="zt-arch-connector zt-arch-connector--bidirectional">
-          <span>↑</span>
-          지속적 자산 검증
-          <span>↓</span>
+        <h3 class="card-title">위협·위험 분석</h3>
+        <p class="card-desc">글로벌 위협 인텔리전스 기반의 취약도 평가</p>
+        <div class="card-tags">
+          <span>CVSS 소프트웨어취약점 스코어</span>
+          <span>EPSS AI예측분석취약점 스코어</span>
+          <span>KEV 실제공격에사용된취약점</span>
         </div>
+      </div>
 
-        <section class="zt-arch-panel zt-arch-panel--infra">
-          <div class="zt-panel-heading">
-            <span class="zt-panel-index">03</span>
-            <div>
-              <small>ASSET & INFRASTRUCTURE</small>
-              <h3>대상 자산 · 하이브리드 인프라</h3>
-            </div>
-          </div>
+      <div class="flow-arrow">→</div>
 
-          <div class="zt-infra-grid">
-            <article class="zt-infra-card">
-              <div class="zt-infra-icons">
-                <span>▣</span><span>▤</span><span>◉</span>
-              </div>
-              <small>ON-PREMISE</small>
-              <h4>온프레미스</h4>
-              <p>Legacy 서버 · 네트워크 · 데이터센터</p>
-            </article>
-
-            <div class="zt-infra-divider"></div>
-
-            <article class="zt-infra-card">
-              <div class="zt-cloud-tags">
-                <span>AWS</span><span>Azure</span><span>GCP</span>
-              </div>
-              <small>CLOUD</small>
-              <h4>클라우드</h4>
-              <p>AWS · Azure · GCP 등<br />다양한 클라우드 환경 지원</p>
-            </article>
-          </div>
-        </section>
-
-        <footer class="zt-security-outcomes">
-          <div class="zt-outcome-title">
-            <span>◈</span>
-            <strong>SECURITY OUTCOMES</strong>
-          </div>
-          <div class="zt-outcome-item"><span>↗</span>지속적 자산 검증</div>
-          <div class="zt-outcome-item"><span>◎</span>위험 기반 대응</div>
-          <div class="zt-outcome-item">
-            <span>⚑</span>취약점 대응 우선순위화
-          </div>
-          <div class="zt-outcome-item"><span>▤</span>컴플라이언스 관리</div>
-        </footer>
+      <!-- STEP 4 (Highlighted Result) -->
+      <div class="arch-flow-card card-highlight">
+        <div class="arch-step-badge badge-accent">RESULT</div>
+        <div class="card-icon-wrap icon-crimson">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </div>
+        <h3 class="card-title">대응 우선순위 결정</h3>
+        <p class="card-desc">실제 위협에 기반한 즉각적인 보안 대응 조치</p>
+        <div class="card-tags">
+          <span>위협 기반 조치</span>
+          <span>보안 의사결정</span>
+        </div>
       </div>
     </div>
   </section>
