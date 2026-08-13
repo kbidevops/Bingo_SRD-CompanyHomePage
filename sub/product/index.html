@@ -147,7 +147,7 @@
         >
           <div class="section-header reveal">
             <div class="section-num">01</div>
-            <div class="section-eyebrow">고급 인텔리전스 아키텍처</div>
+            <div class="section-eyebrow">인텔리전스 아키텍처</div>
             <h2 class="section-title">
               탐지부터 대응 우선순위까지, 하나의 지능형 흐름으로 연결합니다
             </h2>
@@ -173,17 +173,30 @@
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">CONFIGURATION</span>
                   <span class="pipeline-item-term">CCE</span>
-                  <span class="pipeline-item-label">설정 취약점</span>
+                  <span class="pipeline-item-label">시스템 설정 취약점</span>
+                  <p class="pipeline-item-desc">
+                    운영 시스템 및 인프라의 보호 설정 오류와 컴플아이언스 위반
+                    사항을 정밀 분석하고 진단합니다. (국내공공기관 기술적 취약점
+                    점검 항목)
+                  </p>
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">SOFTWARE</span>
                   <span class="pipeline-item-term">CVE</span>
                   <span class="pipeline-item-label">소프트웨어 취약점</span>
+                  <p class="pipeline-item-desc">
+                    서버, 운영체제, 애플리케이션 및 오픈소스 등 알려진 시스템의
+                    다양한 소프트웨어 취약점을 탐지합니다.
+                  </p>
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">NETWORK</span>
-                  <span class="pipeline-item-term">NSE / VULNERS</span>
-                  <span class="pipeline-item-label">네트워크 취약점</span>
+                  <span class="pipeline-item-term">NSE VULNERS</span>
+                  <span class="pipeline-item-label">네트워크 스캔 취약점</span>
+                  <p class="pipeline-item-desc">
+                    고성능 네트워크 스캐닝 엔진을 통해 실시간 대역별 취약 자산을
+                    스캔하고 잠재적 위협을 탐지합니다.
+                  </p>
                 </div>
               </div>
             </article>
@@ -218,17 +231,37 @@
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">SEVERITY</span>
                   <span class="pipeline-item-term">CVSS</span>
-                  <span class="pipeline-item-label">기술적 심각도</span>
+                  <span class="pipeline-item-label"
+                    >소프트웨어취약점 스코어</span
+                  >
+                  <p class="pipeline-item-desc">
+                    취약점의 기술적 심각도를 정량화한 글로벌 표준 점수 체게를
+                    제공하여 객관적인 위험도 파악이 가능합니다. Severity,
+                    Exploit, Impact Score
+                  </p>
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">EXPLOITABILITY</span>
                   <span class="pipeline-item-term">EPSS</span>
-                  <span class="pipeline-item-label">취약점 악용 가능성</span>
+                  <span class="pipeline-item-label"
+                    >AI예측분석취약점 스코어</span
+                  >
+                  <p class="pipeline-item-desc">
+                    실제 취약점이 공격에 이용될 확률을 예측하는 AI 기반 분석
+                    모델로 데이터 기반의 의사 결정을 지원합니다.
+                  </p>
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">ACTIVE THREAT</span>
                   <span class="pipeline-item-term">KEV</span>
-                  <span class="pipeline-item-label">실제 악용 여부</span>
+                  <span class="pipeline-item-label"
+                    >실제공격에사용된취약점</span
+                  >
+                  <p class="pipeline-item-desc">
+                    실제 야생(In-the-Wild)에서 활발하게 악용 중인 위협 및
+                    해킹사례 취약점 목록을 연동하여 실제 악용 여부 확인 최우선
+                    대응 지표를 제공합니다.
+                  </p>
                 </div>
               </div>
             </article>
@@ -262,16 +295,28 @@
                   <span class="pipeline-item-tag">CRITICALITY</span>
                   <span class="pipeline-item-term">자산 중요도</span>
                   <span class="pipeline-item-label">상 · 중 · 하</span>
+                  <p class="pipeline-item-desc">
+                    모든 자산을 동일한 수준으로 복구하는 것이 아니라, 자산의
+                    중요도(Criticality)를 평가하여 제한된 인력과 자원을 가장
+                    중요한 자산에 먼저 투입하는 복구 전략입니다.
+                  </p>
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">BUSINESS IMPACT</span>
                   <span class="pipeline-item-term">RTO · RPO</span>
                   <span class="pipeline-item-label">업무 영향도</span>
+                  <p class="pipeline-item-desc">
+                    재해복구(DR)와 업무연속성계획(BCP)의 핵심 지표를 자산별로
+                    관리합니다.
+                  </p>
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">RECOVERY</span>
                   <span class="pipeline-item-term">복구 우선순위</span>
                   <span class="pipeline-item-label">Recovery Priority</span>
+                  <p class="pipeline-item-desc">
+                    위험도와 중요도를 결합해 가장 시급한 복구 대상을 결정합니다.
+                  </p>
                 </div>
               </div>
 
@@ -398,7 +443,7 @@
         <section id="cce-cve-nse">
           <div class="section-header reveal">
             <div class="section-num">03</div>
-            <div class="section-eyebrow">다각도 통합 탐지 엔진</div>
+            <div class="section-eyebrow">취약점 진단</div>
             <h2 class="section-title">CCE · CVE · NSE 기반 통합 취약점 진단</h2>
             <p class="section-desc">
               시스템 설정부터 소프트웨어와 네트워크까지, 서로 다른 취약점 신호를
@@ -509,7 +554,7 @@
                 <span class="detect-role">NETWORK</span>
               </div>
 
-              <h3 class="detect-title">NSE / VULNERS</h3>
+              <h3 class="detect-title">NSE VULNERS</h3>
               <div class="detect-subtitle">네트워크 취약점</div>
 
               <p class="detect-desc">
@@ -771,7 +816,7 @@
           >02 제로트러스트 아키텍처</a
         >
 
-        <a class="toc-link" href="#cce-cve-nse">03 다각도 통합 탐지 엔진</a>
+        <a class="toc-link" href="#cce-cve-nse">03 취약점 진단</a>
         <a class="toc-link" href="#architecture">04 시스템 구성</a>
         <a class="toc-link" href="#platforms">05 지원 플랫폼</a>
       </aside>
@@ -983,7 +1028,7 @@
         }
       });
     </script>
-    <script src="../js/cursor.js"></script>
+    <script src="../../js/cursor.js"></script>
     <script>
       /* Scroll to top + nav scroll toggle for product page */
       (function () {
