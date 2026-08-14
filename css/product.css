@@ -310,16 +310,15 @@ section,
   box-shadow: 0 8px 24px rgba(200, 0, 30, 0.35);
 }
 
-/* ── ADOPTION EFFECTS STRIP ── */
-.effects-strip {
+/* ── BINGOCVM 도입효과 (BRIDGE SECTION: WHAT DOES THE CUSTOMER GAIN) ── */
+.impact-section {
   background: linear-gradient(180deg, var(--navy2) 0%, var(--navy) 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-  padding: 44px 80px;
+  border-radius: 24px;
   position: relative;
   overflow: hidden;
 }
 
-.effects-glow {
+.impact-glow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -334,8 +333,12 @@ section,
   pointer-events: none;
 }
 
-.effects-eyebrow {
+.impact-header {
   position: relative;
+  margin-bottom: 40px;
+}
+
+.impact-eyebrow {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -345,10 +348,10 @@ section,
   letter-spacing: 3px;
   color: #ff6b81;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
-.effects-eyebrow-dot {
+.impact-eyebrow-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -356,27 +359,41 @@ section,
   box-shadow: 0 0 0 4px rgba(255, 51, 85, 0.22);
 }
 
-.effects-cards {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+.impact-title {
+  font-size: clamp(24px, 3.6vw, 34px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+  margin-bottom: 14px;
+  max-width: 680px;
+  word-break: keep-all;
 }
 
-.effect-card {
+.impact-desc {
+  font-size: 15.5px;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+.impact-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.08fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.impact-card {
   position: relative;
   overflow: hidden;
-  min-height: 188px;
-
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 14px;
-  padding: 28px 24px;
+  border-radius: 16px;
+  padding: 30px 26px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   transition:
     transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
     background 0.28s,
@@ -384,56 +401,133 @@ section,
     box-shadow 0.28s;
 }
 
-.effect-card::before {
+.impact-card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--crimson), rgba(200, 0, 30, 0.15));
+  background: linear-gradient(
+    90deg,
+    var(--brand-cyan),
+    rgba(59, 162, 242, 0.1)
+  );
 }
 
-.effect-card:hover {
+.impact-card:hover {
   transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(200, 0, 30, 0.35);
-  box-shadow:
-    0 16px 32px rgba(0, 0, 0, 0.28),
-    0 0 0 1px rgba(200, 0, 30, 0.08) inset;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
 }
 
-.effect-card-icon {
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
-  margin-bottom: 16px;
+.impact-card-highlight {
+  background: rgba(200, 0, 30, 0.1);
+  border-color: rgba(200, 0, 30, 0.35);
+}
 
-  display: grid;
-  place-items: center;
+.impact-card-highlight::before {
+  background: linear-gradient(90deg, var(--crimson), rgba(200, 0, 30, 0.1));
+}
 
-  border-radius: 50%;
-  background: rgba(200, 0, 30, 0.16);
+.impact-card-highlight:hover {
+  background: rgba(200, 0, 30, 0.14);
+  border-color: rgba(200, 0, 30, 0.5);
+}
+
+.impact-card-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  border-radius: 20px;
+  background: rgba(200, 0, 30, 0.2);
+  border: 1px solid rgba(200, 0, 30, 0.45);
+  color: #ff7a8c;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.impact-card-num {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 10px;
+}
+
+.impact-card-highlight .impact-card-num {
   color: #ff8fa0;
 }
 
-.effect-card-icon svg {
-  width: 28px;
-  height: 28px;
+.impact-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.35;
+  margin-bottom: 8px;
+  word-break: keep-all;
 }
 
-.effect-card strong {
-  font-size: 15.5px;
+.impact-card-tagline {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 14px;
+  word-break: keep-all;
+}
+
+.impact-card-desc {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.58);
+  word-break: keep-all;
+  margin-bottom: 20px;
+}
+
+.impact-card-tags {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.impact-card-tags-label {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.impact-card-tags-list {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.impact-callout {
+  position: relative;
+  margin-top: 32px;
+  padding: 22px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.impact-callout-text {
+  font-size: 16px;
   font-weight: 700;
   color: var(--white);
-  line-height: 1.4;
-  margin-bottom: 6px;
-}
-
-.effect-card span {
-  font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.5;
+  word-break: keep-all;
 }
 
 /* ── COMMON SECTION HEADERS ── */
@@ -1829,12 +1923,8 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .effects-strip {
-    padding: 40px 40px;
-  }
-
-  .effects-cards {
-    grid-template-columns: repeat(2, 1fr);
+  .impact-grid {
+    grid-template-columns: 1fr;
   }
 
   .pipeline-stage-grid {
@@ -1882,14 +1972,6 @@ section {
   }
 
   .zt-feature-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .effects-strip {
-    padding: 32px 20px;
-  }
-
-  .effects-cards {
     grid-template-columns: 1fr;
   }
 
