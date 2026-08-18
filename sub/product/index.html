@@ -319,7 +319,9 @@
               <div class="zt-flow-step">02 · VERIFY</div>
               <h3 class="zt-flow-question">이 자산을 신뢰할 수 있는가?</h3>
               <p class="zt-flow-tags">지속적인 보안 상태 검증</p>
-              <p class="zt-flow-tags-concept">Agent · Agentless · Offline/Manual</p>
+              <p class="zt-flow-tags-concept">
+                Agent · Agentless · Offline/Manual
+              </p>
               <p class="zt-flow-desc">
                 자산의 보안 상태를 지속적으로 확인하고 환경에 맞는 다양한
                 방식으로 취약점을 진단합니다.
@@ -348,8 +350,8 @@
               <p class="zt-flow-tags">위험 기반 대응 우선순위</p>
               <p class="zt-flow-tags-concept">Risk-Based Response</p>
               <p class="zt-flow-desc">
-                취약점 개수가 아니라 위험도와 자산 중요도를 기준으로 가장
-                먼저 대응해야 할 보안 과제를 결정합니다.
+                취약점 개수가 아니라 위험도와 자산 중요도를 기준으로 가장 먼저
+                대응해야 할 보안 과제를 결정합니다.
               </p>
               <div class="zt-flow-priority">
                 <span class="zt-flow-priority-dot" aria-hidden="true"></span>
@@ -377,166 +379,329 @@
             </h2>
             <p class="section-desc">
               CCE · CVE · NSE Vulners 기반으로 다양한 취약점 신호를 통합
-              분석하고, Agent · Agentless · Offline 등 고객 환경에 맞는
-              방식으로 진단을 수행합니다.
+              분석하고, Agent · Agentless · Offline 등 고객 환경에 맞는 방식으로
+              진단을 수행합니다.
             </p>
           </div>
 
-          <div class="detect-layer-grid reveal">
-            <!-- CCE -->
-            <article class="detect-card detect-cce">
-              <div class="detect-card-top">
-                <span class="detect-icon" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path
-                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
-                    ></path>
-                  </svg>
-                </span>
-                <span class="detect-role">CONFIGURATION</span>
-              </div>
+          <div class="detect-panel">
+            <div class="detect-layer-grid reveal">
+              <!-- CCE -->
+              <article class="detect-card detect-cce">
+                <div class="detect-card-top">
+                  <span class="detect-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="detect-role">01 · CONFIGURATION</span>
+                </div>
 
-              <h3 class="detect-title">설정 취약점</h3>
-              <div class="detect-subtitle">CCE</div>
+                <h3 class="detect-title">시스템 설정 취약점</h3>
+                <div class="detect-subtitle">CCE</div>
 
-              <p class="detect-desc">
-                시스템과 인프라의 잘못된 설정을 탐지하여 구성 단계에서 발생하는
-                보안 위험을 식별합니다.
-              </p>
+                <p class="detect-desc">
+                  시스템과 인프라의 잘못된 설정을 탐지하여 구성 단계에서
+                  발생하는 보안 위험을 식별합니다.
+                </p>
 
-              <ul class="detect-capabilities">
-                <li><span>01</span>보안 설정 기준 점검</li>
-                <li><span>02</span>서버·네트워크 구성 진단</li>
-                <li><span>03</span>보안 정책 준수 여부 확인</li>
-              </ul>
-            </article>
+                <ul class="detect-capabilities">
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </span>
+                    보안 설정 기준 점검
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="2" y="3" width="20" height="7" rx="1.5"></rect>
+                        <rect
+                          x="2"
+                          y="14"
+                          width="20"
+                          height="7"
+                          rx="1.5"
+                        ></rect>
+                        <line x1="6" y1="6.5" x2="6.01" y2="6.5"></line>
+                        <line x1="6" y1="17.5" x2="6.01" y2="17.5"></line>
+                      </svg>
+                    </span>
+                    서버·네트워크 구성 진단
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                        ></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                        <line x1="9" y1="11" x2="11" y2="11"></line>
+                      </svg>
+                    </span>
+                    보안 정책 준수 여부 확인
+                  </li>
+                </ul>
+              </article>
 
-            <!-- CVE -->
-            <article class="detect-card detect-cve">
-              <div class="detect-card-top">
-                <span class="detect-icon" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="m8 2 1.88 1.88"></path>
-                    <path d="M14.12 3.88 16 2"></path>
-                    <path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"></path>
-                    <path
-                      d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"
-                    ></path>
-                    <path d="M12 20v-9"></path>
-                    <path d="M6.53 9C4.6 8.8 3 7.1 3 5"></path>
-                    <path d="M6 13H2"></path>
-                    <path d="M3 21c0-2.1 1.7-3.9 3.8-4"></path>
-                    <path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"></path>
-                    <path d="M22 13h-4"></path>
-                    <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"></path>
-                  </svg>
-                </span>
-                <span class="detect-role">SOFTWARE</span>
-              </div>
+              <!-- CVE -->
+              <article class="detect-card detect-cve">
+                <div class="detect-card-top">
+                  <span class="detect-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m8 2 1.88 1.88"></path>
+                      <path d="M14.12 3.88 16 2"></path>
+                      <path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"></path>
+                      <path
+                        d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"
+                      ></path>
+                      <path d="M12 20v-9"></path>
+                      <path d="M6.53 9C4.6 8.8 3 7.1 3 5"></path>
+                      <path d="M6 13H2"></path>
+                      <path d="M3 21c0-2.1 1.7-3.9 3.8-4"></path>
+                      <path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"></path>
+                      <path d="M22 13h-4"></path>
+                      <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"></path>
+                    </svg>
+                  </span>
+                  <span class="detect-role">02 · SOFTWARE</span>
+                </div>
 
-              <h3 class="detect-title">소프트웨어 취약점</h3>
-              <div class="detect-subtitle">CVE</div>
+                <h3 class="detect-title">소프트웨어 취약점</h3>
+                <div class="detect-subtitle">CVE</div>
 
-              <p class="detect-desc">
-                운영체제와 소프트웨어의 알려진 취약점을 식별하고 영향받는 자산과
-                패치 필요 여부를 분석합니다.
-              </p>
+                <p class="detect-desc">
+                  운영체제와 소프트웨어의 알려진 취약점을 식별하고 영향받는
+                  자산과 패치 필요 여부를 분석합니다.
+                </p>
 
-              <ul class="detect-capabilities">
-                <li><span>01</span>CVE 식별</li>
-                <li><span>02</span>취약 버전 탐지</li>
-                <li><span>03</span>패치 대상 분석</li>
-              </ul>
-            </article>
+                <ul class="detect-capabilities">
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                        <line x1="15.3" y1="15.3" x2="21" y2="21"></line>
+                      </svg>
+                    </span>
+                    CVE 식별
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M21 12a9 9 0 1 1-3-6.7"></path>
+                        <polyline points="21 3 21 9 15 9"></polyline>
+                      </svg>
+                    </span>
+                    취약 버전 탐지
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                      </svg>
+                    </span>
+                    패치 대상 분석
+                  </li>
+                </ul>
+              </article>
 
-            <!-- NSE / Vulners -->
-            <article class="detect-card detect-nse">
-              <div class="detect-card-top">
-                <span class="detect-icon" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
-                    <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
-                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-                    <line x1="12" y1="20" x2="12.01" y2="20"></line>
-                  </svg>
-                </span>
-                <span class="detect-role">NETWORK</span>
-              </div>
+              <!-- NSE / Vulners -->
+              <article class="detect-card detect-nse">
+                <div class="detect-card-top">
+                  <span class="detect-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                      <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                      <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                    </svg>
+                  </span>
+                  <span class="detect-role">03 · NETWORK</span>
+                </div>
 
-              <h3 class="detect-title">네트워크 취약점</h3>
-              <div class="detect-subtitle">NSE Vulners</div>
+                <h3 class="detect-title">네트워크 스캔 취약점</h3>
+                <div class="detect-subtitle">NSE Vulners</div>
 
-              <p class="detect-desc">
-                네트워크 서비스와 노출된 포트를 분석하여 외부에서 악용 가능한
-                취약점을 탐지합니다.
-              </p>
+                <p class="detect-desc">
+                  네트워크 서비스와 노출된 포트를 분석하여 외부에서 악용 가능한
+                  취약점을 탐지합니다.
+                </p>
 
-              <ul class="detect-capabilities">
-                <li><span>01</span>서비스 탐지</li>
-                <li><span>02</span>포트·프로토콜 분석</li>
-                <li><span>03</span>네트워크 취약점 검증</li>
-              </ul>
-            </article>
-          </div>
-
-          <!-- Convergence visual: 3 layers → 1 result -->
-          <div class="detect-merge" aria-hidden="true">
-            <svg viewBox="0 0 100 32" preserveAspectRatio="none">
-              <path
-                class="merge-line merge-line-cce"
-                d="M16.67,0 L50,24"
-              ></path>
-              <path class="merge-line merge-line-cve" d="M50,0 L50,24"></path>
-              <path
-                class="merge-line merge-line-nse"
-                d="M83.33,0 L50,24"
-              ></path>
-              <path class="merge-stem" d="M50,24 L50,32"></path>
-            </svg>
-          </div>
-
-          <!-- Fusion result -->
-          <div class="detect-fusion reveal">
-            <div class="detect-fusion-label">
-              UNIFIED VULNERABILITY ANALYSIS
+                <ul class="detect-capabilities">
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                      </svg>
+                    </span>
+                    서비스 탐지
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                      </svg>
+                    </span>
+                    포트·프로토콜 분석
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </span>
+                    네트워크 취약점 검증
+                  </li>
+                </ul>
+              </article>
             </div>
-            <h3 class="detect-fusion-title">통합 취약점 진단 결과</h3>
-            <p class="detect-fusion-desc">
-              자산별 취약점을 통합 분석하여 위험 수준을 판단합니다.
-            </p>
-            <div class="detect-fusion-tags">
-              <span>Configuration</span>
-              <span class="detect-fusion-dot" aria-hidden="true"></span>
-              <span>Software</span>
-              <span class="detect-fusion-dot" aria-hidden="true"></span>
-              <span>Network</span>
+
+            <!-- Convergence visual: 3 layers → 1 result -->
+            <div class="detect-merge" aria-hidden="true">
+              <svg viewBox="0 0 100 56" preserveAspectRatio="none">
+                <path
+                  class="merge-line merge-line-cce"
+                  d="M16.67,0 L50,28"
+                ></path>
+                <path class="merge-line merge-line-cve" d="M50,0 L50,28"></path>
+                <path
+                  class="merge-line merge-line-nse"
+                  d="M83.33,0 L50,28"
+                ></path>
+                <path class="merge-stem" d="M50,28 L50,56"></path>
+              </svg>
+              <span class="detect-merge-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+            </div>
+
+            <!-- Fusion result -->
+            <div class="detect-fusion reveal">
+              <div class="detect-fusion-label">
+                UNIFIED VULNERABILITY ANALYSIS
+              </div>
+              <h3 class="detect-fusion-title">통합 취약점 진단 결과</h3>
+              <p class="detect-fusion-desc">
+                자산별 취약점을 통합 분석하여 위험 수준을 판단합니다.
+              </p>
             </div>
           </div>
 
           <!-- 진단 방식: Agent / Agentless / Offline -->
-          <div class="diag-methods reveal">
+          <div id="diag-methods" class="diag-methods reveal">
             <div class="diag-methods-header">
               <div class="diag-methods-eyebrow">DEPLOYMENT FLEXIBILITY</div>
               <h3 class="diag-methods-title">
@@ -581,8 +746,8 @@
                   <span class="diag-method-tag">MANUAL</span>
                   <h4 class="diag-method-title">Manual Diagnosis</h4>
                   <p class="diag-method-desc">
-                    진단 스크립트를 다운로드하여 대상 시스템에서 직접 실행한
-                    후, 결과 파일을 업로드하여 BingoCVM에서 분석·관리합니다.
+                    진단 스크립트를 다운로드하여 대상 시스템에서 직접 실행한 후,
+                    결과 파일을 업로드하여 BingoCVM에서 분석·관리합니다.
                   </p>
                 </div>
 
@@ -693,8 +858,7 @@
               </div>
               <strong>조치 현황 추적</strong>
               <span
-                >자산별 취약점 조치 여부와 조치율을 지속적으로
-                추적합니다.</span
+                >자산별 취약점 조치 여부와 조치율을 지속적으로 추적합니다.</span
               >
             </div>
           </div>
@@ -728,8 +892,8 @@
               </p>
               <p class="impact-card-desc">
                 Agent, Agentless, Offline/Manual 방식을 지원하여 온프레미스부터
-                망분리 환경까지, 다양한 보안 환경에 맞춰 취약점 진단을 수행할
-                수 있습니다.
+                망분리 환경까지, 다양한 보안 환경에 맞춰 취약점 진단을 수행할 수
+                있습니다.
               </p>
               <div class="impact-card-tags">
                 <span class="impact-card-tags-label">핵심 효과</span>
@@ -766,8 +930,8 @@
                 진단부터 조치·이력·보고까지 연결
               </p>
               <p class="impact-card-desc">
-                진단 결과를 지속적으로 비교하고 조치 이력을 관리하여 자산별
-                보안 상태의 변화를 추적하고, 필요한 보고서를 손쉽게 생성할 수
+                진단 결과를 지속적으로 비교하고 조치 이력을 관리하여 자산별 보안
+                상태의 변화를 추적하고, 필요한 보고서를 손쉽게 생성할 수
                 있습니다.
               </p>
               <div class="impact-card-tags">
@@ -998,7 +1162,9 @@
         >
 
         <a class="toc-link" href="#cce-cve-nse">03 취약점 진단</a>
-        <a class="toc-link" href="#history-tracking">04 진단 이력 및 변화 추적</a>
+        <a class="toc-link" href="#history-tracking"
+          >04 진단 이력 및 변화 추적</a
+        >
         <div class="toc-divider"></div>
         <a class="toc-link" href="#adoption-effects">BingoCVM 도입효과</a>
         <div class="toc-divider"></div>

@@ -8114,3 +8114,573 @@ section {
     transition: none;
   }
 }
+
+/* =========================================================
+   01 CORE VALUE — simple DISCOVER → ANALYZE → DECIDE flow.
+   Replaces the CVSS/EPSS/KEV-heavy "bingo" cards; the acronyms
+   live on the product page, not here.
+   ========================================================= */
+
+#core-value {
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
+}
+
+.cv-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.cv-step {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--blue);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(26, 29, 38, 0.04);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(26, 29, 38, 0.07);
+}
+
+.cv-step-analyze {
+  border-top-color: var(--brand-cyan);
+}
+
+.cv-step-decide {
+  border-top-color: var(--crimson);
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.cv-step-decide .cv-step-title,
+.cv-step-decide .cv-step-tag {
+  color: #fff;
+}
+
+.cv-step-decide .cv-step-desc {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.cv-step-decide .cv-step-icon {
+  color: #ff7a8c;
+  background: rgba(200, 0, 30, 0.18);
+}
+
+.cv-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: rgba(21, 84, 176, 0.08);
+  color: var(--blue);
+}
+
+.cv-step-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cv-step-analyze .cv-step-icon {
+  background: rgba(59, 162, 242, 0.1);
+  color: var(--brand-cyan);
+}
+
+.cv-step-tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.cv-step-analyze .cv-step-tag {
+  color: var(--brand-cyan);
+}
+
+.cv-step-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+
+.cv-step-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.cv-flow-arrow {
+  align-self: center;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  color: var(--muted);
+}
+
+.cv-flow-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================================================
+   02 KEY DIFFERENTIATORS — four capability cards, each linking
+   out to the detailed explanation on the product page.
+   ========================================================= */
+
+#differentiators {
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+}
+
+.kd-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kd-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 26px;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s;
+}
+
+.kd-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(26, 29, 38, 0.08);
+  border-color: rgba(200, 0, 30, 0.25);
+}
+
+.kd-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: rgba(200, 0, 30, 0.08);
+  color: var(--crimson);
+}
+
+.kd-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.kd-card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 8px;
+  word-break: keep-all;
+}
+
+.kd-card-tags {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  word-break: keep-all;
+}
+
+.kd-card-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--crimson);
+}
+
+.kd-card-link span {
+  transition: transform 0.2s ease;
+}
+
+.kd-card:hover .kd-card-link span {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   INTELLIGENCE STRIP — the one place the homepage names the
+   underlying signals; compact, with a link out to the product
+   page for the full explanation.
+   ========================================================= */
+
+.intel-strip {
+  background: var(--navy);
+  border-radius: 24px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.intel-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 560px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 162, 242, 0.14) 0%,
+    rgba(59, 162, 242, 0) 70%
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.intel-header {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.intel-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--brand-cyan);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.intel-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand-cyan);
+  box-shadow: 0 0 0 4px rgba(59, 162, 242, 0.22);
+}
+
+.intel-title {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  word-break: keep-all;
+}
+
+.intel-desc {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 auto;
+  word-break: keep-all;
+}
+
+.intel-flow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.intel-col {
+  min-width: 160px;
+  padding: 22px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  text-align: left;
+}
+
+.intel-col-label {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.intel-col-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intel-col-list li {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.intel-plus,
+.intel-arrow {
+  flex: 0 0 auto;
+  font-size: 22px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.intel-arrow {
+  color: var(--brand-cyan);
+  font-weight: 700;
+}
+
+.intel-result {
+  padding: 22px 28px;
+  background: rgba(200, 0, 30, 0.14);
+  border: 1px solid rgba(200, 0, 30, 0.4);
+  border-radius: 14px;
+  text-align: left;
+}
+
+.intel-result-brand {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.intel-result-label {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #ff8fa0;
+}
+
+.intel-cta {
+  position: relative;
+}
+
+.intel-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand-cyan);
+  text-decoration: none;
+}
+
+.intel-cta-link span {
+  transition: transform 0.2s ease;
+}
+
+.intel-cta-link:hover span {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   03 BUSINESS OUTCOMES — before/after outcome statements,
+   not product specifications.
+   ========================================================= */
+
+#outcomes {
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
+}
+
+.bo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.bo-card {
+  padding: 30px 26px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(26, 29, 38, 0.04);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(26, 29, 38, 0.07);
+}
+
+.bo-card-num {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--crimson);
+  margin-bottom: 14px;
+}
+
+.bo-card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+
+.bo-card-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   PRODUCT / CTA — closing hand-off to the product page.
+   ========================================================= */
+
+.final-cta-section {
+  background: var(--navy);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.fc-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(200, 0, 30, 0.14) 0%,
+    rgba(200, 0, 30, 0) 70%
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.fc-content {
+  position: relative;
+}
+
+.fc-eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--brand-cyan);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.fc-title {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 32px;
+  word-break: keep-all;
+}
+
+.fc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 34px;
+  background: var(--crimson);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(200, 0, 30, 0.25);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.fc-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(200, 0, 30, 0.35);
+}
+
+.fc-btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.fc-btn:hover .fc-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   RESPONSIVE — new homepage sections
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .cv-flow {
+    flex-direction: column;
+  }
+
+  .cv-flow-arrow {
+    transform: rotate(90deg);
+    margin: -4px auto;
+  }
+
+  .kd-grid,
+  .bo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intel-flow {
+    flex-direction: column;
+  }
+
+  .intel-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .kd-grid,
+  .bo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fc-btn {
+    padding: 14px 26px;
+  }
+}

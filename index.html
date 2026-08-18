@@ -85,10 +85,11 @@
               <span>대응 우선순위</span>를 결정합니다.
             </h1>
 
-           
-
-            
-
+            <p class="zt-hero-description">
+              <strong>BingoCVM</strong>은 자산과 취약점을 지속적으로
+              검증하고, 위험과 중요도를 분석하여 최우선 대응 과제를
+              결정합니다.
+            </p>
           </div>
 
           <div class="zt-hero-visual">
@@ -159,378 +160,292 @@
   </div>
 
   <!-- =========================================================
-     BINGO SECTION
+     01 CORE VALUE — replaces the old CVSS/EPSS/KEV-heavy "bingo"
+     section. The homepage states the concept only; the acronyms
+     and detailed mechanics live on the product page.
 ========================================================= -->
-  <section id="bingo">
+  <section id="core-value">
     <div class="section-header reveal">
-      <div class="section-num">KBI</div>
+      <div class="section-num">01</div>
 
-      <div class="section-eyebrow">자사 대표 제품</div>
+      <div class="section-eyebrow">Core Value</div>
 
-      <h2 class="section-title">BingoCVM — 지능형 취약점 위험 분석</h2>
+      <h2 class="section-title">취약점 관리의 기준을 바꿉니다</h2>
 
       <p class="section-desc">
-        <strong>취약점의 심각도부터 실제 악용 가능성까지</strong>
-        CVSS, EPSS, KEV를 종합 분석하여 자산별 위험도를 산정하고 최우선 대응
-        과제를 결정합니다.
+        탐지 중심의 취약점 관리를 위험 기반 대응으로 전환합니다.
+        <strong
+          >발견한 취약점을 나열하는 것이 아니라, 실제 위험을 판단하고
+          대응 우선순위를 결정합니다.</strong
+        >
       </p>
     </div>
 
-    <!-- =======================================================
-       RISK ANALYSIS CARDS — 3 signals → 1 decision
-  ======================================================== -->
-    <div class="bingo-risk-layout">
-      <!-- CVSS -->
-      <article class="risk-analysis-card risk-card-cvss reveal-l">
-        <div class="risk-card-top">
-          <div class="risk-card-number">01</div>
-
-          <div class="risk-card-status">TECHNICAL SEVERITY</div>
+    <div class="cv-flow reveal">
+      <article class="cv-step cv-step-discover">
+        <div class="cv-step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="10.5" cy="10.5" r="6.5"></circle>
+            <line x1="15.3" y1="15.3" x2="21" y2="21"></line>
+          </svg>
         </div>
-
-        <h3 class="risk-card-title">CVSS</h3>
-
-        <div class="risk-card-subtitle">
-          소프트웨어취약점 스코어
-        </div>
-
-        <p class="risk-card-desc">
-          취약점의 기술적 심각도를 평가하여 기본적인 위험 수준을 산정합니다.
+        <div class="cv-step-tag">DISCOVER</div>
+        <h3 class="cv-step-title">자산과 취약점 발견</h3>
+        <p class="cv-step-desc">
+          온프레미스부터 클라우드까지 자산과 취약점을 통합적으로
+          파악합니다.
         </p>
-
-        <div class="risk-meter">
-          <div class="risk-meter-text">
-            <span>Vulnerability Severity</span>
-            <strong>HIGH</strong>
-          </div>
-
-          <div class="risk-score">
-            <span class="risk-score-value">8.2<span class="risk-score-unit">/10</span></span>
-            <span class="risk-score-source">CVSS v3.1</span>
-          </div>
-        </div>
-
-        <div class="risk-card-footer">
-          <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="10.2" cy="10.2" r="6.4"></circle>
-              <line x1="15.2" y1="15.2" x2="21" y2="21"></line>
-            </svg>
-            기술적 심각도 평가
-          </span>
-
-          <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-              <line x1="12" y1="9" x2="12" y2="13"></line>
-              <line x1="12" y1="17" x2="12.01" y2="17"></line>
-            </svg>
-            위험도 산정
-          </span>
-        </div>
       </article>
 
-      <div class="risk-flow-arrow" aria-hidden="true">
+      <div class="cv-flow-arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="4" y1="12" x2="20" y2="12"></line>
           <polyline points="13 5 20 12 13 19"></polyline>
         </svg>
       </div>
 
-      <!-- EPSS -->
-      <article class="risk-analysis-card risk-card-epss reveal-l">
-        <div class="risk-card-top">
-          <div class="risk-card-number">02</div>
-
-          <div class="risk-card-status">EXPLOITABILITY</div>
+      <article class="cv-step cv-step-analyze">
+        <div class="cv-step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"></path>
+          </svg>
         </div>
-
-        <h3 class="risk-card-title">EPSS</h3>
-
-        <div class="risk-card-subtitle">AI예측분석취약점 스코어</div>
-
-        <p class="risk-card-desc">
-          취약점이 실제 공격에 악용될 가능성을 분석하여 위험도를 보정합니다.
+        <div class="cv-step-tag">ANALYZE</div>
+        <h3 class="cv-step-title">위험과 중요도 분석</h3>
+        <p class="cv-step-desc">
+          위협 인텔리전스와 자산 중요도를 결합해 실제 위험을
+          판단합니다.
         </p>
-
-        <div class="risk-meter">
-          <div class="risk-meter-text">
-            <span>Exploit Probability</span>
-            <strong>HIGH</strong>
-          </div>
-
-          <div class="risk-score">
-            <span class="risk-score-value">87<span class="risk-score-unit">%</span></span>
-            <span class="risk-score-source">EPSS</span>
-          </div>
-        </div>
-
-        <div class="risk-card-footer">
-          <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="6" y="6" width="12" height="12" rx="2"></rect>
-              <rect x="9" y="9" width="6" height="6"></rect>
-              <line x1="12" y1="2" x2="12" y2="6"></line>
-              <line x1="12" y1="18" x2="12" y2="22"></line>
-              <line x1="2" y1="12" x2="6" y2="12"></line>
-              <line x1="18" y1="12" x2="22" y2="12"></line>
-            </svg>
-            AI/ML 기반 분석
-          </span>
-
-          <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="9"></circle>
-              <circle cx="12" cy="12" r="5"></circle>
-              <circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"></circle>
-            </svg>
-            악용 가능성 예측
-          </span>
-        </div>
       </article>
 
-      <div class="risk-flow-arrow" aria-hidden="true">
+      <div class="cv-flow-arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="4" y1="12" x2="20" y2="12"></line>
           <polyline points="13 5 20 12 13 19"></polyline>
         </svg>
       </div>
 
-      <!-- KEV -->
-      <article class="risk-analysis-card risk-card-kev reveal-l">
-        <div class="risk-card-top">
-          <div class="risk-card-number">03</div>
-
-          <div class="risk-card-status">ACTIVE THREAT</div>
+      <article class="cv-step cv-step-decide">
+        <div class="cv-step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"></circle>
+          </svg>
         </div>
-
-        <h3 class="risk-card-title">KEV</h3>
-
-        <div class="risk-card-subtitle">실제공격에사용된취약점</div>
-
-        <p class="risk-card-desc">
-          실제 공격에 악용되고 있는 취약점을 식별하여 즉각적인 대응이 필요한
-          자산을 판단합니다.
+        <div class="cv-step-tag">DECIDE</div>
+        <h3 class="cv-step-title">대응 우선순위 결정</h3>
+        <p class="cv-step-desc">
+          무엇을 먼저 해결해야 하는지 명확한 우선순위를 제시합니다.
         </p>
-
-        <div class="risk-meter">
-          <div class="risk-meter-text">
-            <span>Active Exploitation</span>
-            <strong>CRITICAL</strong>
-          </div>
-
-          <div class="risk-score">
-            <span class="risk-score-value">YES</span>
-            <span class="risk-score-source">CISA KEV</span>
-          </div>
-        </div>
-
-        <div class="risk-card-footer">
-          <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="9"></circle>
-              <line x1="12" y1="8" x2="12" y2="13"></line>
-              <line x1="12" y1="16.5" x2="12.01" y2="16.5"></line>
-            </svg>
-            실제 공격 악용 여부
-          </span>
-
-          <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12.5 2 3.5 13.5 11 13.5 10.5 22 20.5 9.5 13 9.5 12.5 2"></polygon>
-            </svg>
-            긴급 대응
-          </span>
-        </div>
       </article>
-
-      <!-- Zero Trust Result -->
-      <div class="risk-decision reveal-r">
-        <div class="risk-decision-line"></div>
-
-        <div class="risk-decision-content">
-          <div class="risk-decision-label">ZERO TRUST RISK DECISION</div>
-
-          <h3>종합 위험도 산정 및 대응 우선순위 결정</h3>
-
-          <p>
-            CVSS·EPSS·KEV를 종합하여 자산별 현재 위험 수준을 판단하고, 가장
-            시급한 대응 과제를 도출합니다.
-          </p>
-
-          <div class="risk-decision-verdict">
-            <span class="verdict-badge">HIGH RISK</span>
-            <span class="verdict-dot" aria-hidden="true"></span>
-            <span class="verdict-action">IMMEDIATE ACTION</span>
-          </div>
-        </div>
-
-        <div class="risk-decision-features">
-          <div class="risk-decision-feature">
-            <span class="risk-decision-feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12a9 9 0 1 1-3-6.7"></path>
-                <polyline points="21 3 21 9 15 9"></polyline>
-              </svg>
-            </span>
-            <span>상시 검증</span>
-          </div>
-
-          <div class="risk-decision-feature">
-            <span class="risk-decision-feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"></circle>
-                <circle cx="12" cy="12" r="5"></circle>
-                <circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"></circle>
-              </svg>
-            </span>
-            <span>위험 기반 대응</span>
-          </div>
-
-          <div class="risk-decision-feature">
-            <span class="risk-decision-feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"></path>
-              </svg>
-            </span>
-            <span>위협 인텔리전스</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- =========================================================
-     BINGOCVM ZERO TRUST ARCHITECTURE
-     
-     IMPORTANT:
-     This is intentionally OUTSIDE #hero and #bingo.
-     It appears directly underneath the BingoCVM section.
+     02 KEY DIFFERENTIATORS — four capabilities, each linking out
+     to the detailed explanation on the product page.
 ========================================================= -->
-  <!-- =========================================================
-     BINGOCVM HERO + ZERO TRUST ARCHITECTURE
-========================================================= -->
+  <section id="differentiators">
+    <div class="section-header reveal">
+      <div class="section-num">02</div>
 
-  <!-- =========================================================
-     ZERO TRUST ARCHITECTURE
-========================================================= -->
+      <div class="section-eyebrow">Key Differentiators</div>
 
-  <section id="architecture" class="simple-arch-section">
-    <!-- Header -->
-    <div class="arch-header">
-      <span class="arch-eyebrow">BINGOCVM SECURITY ARCHITECTURE</span>
-      <h2 class="arch-title">제로트러스트 통합 진단 아키텍처</h2>
-      <p class="arch-subtitle">
-        무엇이 존재하는지 발견하고, 안전한지 검증하고, 무엇이 실제
-        위험인지 평가하여, 무엇부터 대응할지 결정합니다.
+      <h2 class="section-title">BingoCVM을 다르게 만드는 4가지</h2>
+
+      <p class="section-desc">
+        진단부터 대응까지 이어지는 BingoCVM의 핵심 역량입니다. 자세한
+        구성과 기술은 제품 페이지에서 확인할 수 있습니다.
       </p>
     </div>
 
-    <!-- Continuous Intelligence Flow -->
-    <div class="arch-flow-container">
-      <div class="arch-flow-label">
-        <span>UNIFIED SECURITY INTELLIGENCE</span>
+    <div class="kd-grid reveal">
+      <a class="kd-card" href="/sub/product/#cce-cve-nse">
+        <div class="kd-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="6" rx="1.5"></rect>
+            <rect x="3" y="14" width="18" height="6" rx="1.5"></rect>
+            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            <line x1="7" y1="17" x2="7.01" y2="17"></line>
+          </svg>
+        </div>
+        <h3 class="kd-card-title">통합 취약점 진단</h3>
+        <p class="kd-card-tags">시스템 · 소프트웨어 · 네트워크</p>
+        <span class="kd-card-link">자세히 보기 <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="kd-card" href="/sub/product/#advanced-intelligence">
+        <div class="kd-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </div>
+        <h3 class="kd-card-title">지능형 위험 분석</h3>
+        <p class="kd-card-tags">기술적 심각도 · 악용 가능성 · 실제 공격</p>
+        <span class="kd-card-link">자세히 보기 <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="kd-card" href="/sub/product/#diag-methods">
+        <div class="kd-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a9 9 0 1 1-3-6.7"></path>
+            <polyline points="21 3 21 9 15 9"></polyline>
+          </svg>
+        </div>
+        <h3 class="kd-card-title">지속적 보안 검증</h3>
+        <p class="kd-card-tags">Agent · Agentless · Offline</p>
+        <span class="kd-card-link">자세히 보기 <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="kd-card" href="/sub/product/#zero-trust-architecture">
+        <div class="kd-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <circle cx="12" cy="12" r="5"></circle>
+            <circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </div>
+        <h3 class="kd-card-title">위험 기반 대응</h3>
+        <p class="kd-card-tags">자산 중요도 × 위험도 → 우선순위</p>
+        <span class="kd-card-link">자세히 보기 <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     INTELLIGENCE STRIP — the one place the homepage names the
+     underlying signals (CCE/CVE/NSE, CVSS/EPSS/KEV), kept compact
+     and pointed at the product page for detail.
+========================================================= -->
+  <section id="intelligence" class="intel-strip">
+    <div class="intel-glow" aria-hidden="true"></div>
+
+    <div class="intel-header reveal">
+      <div class="intel-eyebrow">
+        <span class="intel-eyebrow-dot" aria-hidden="true"></span>
+        UNIFIED SECURITY INTELLIGENCE
+      </div>
+      <h2 class="intel-title">
+        하나의 판단을 위해 다양한 보안 인텔리전스를 결합합니다
+      </h2>
+      <p class="intel-desc">
+        시스템 설정, 소프트웨어, 네트워크 취약점부터 기술적 심각도와
+        실제 악용 가능성까지 종합하여 위험을 판단합니다.
+      </p>
+    </div>
+
+    <div class="intel-flow reveal">
+      <div class="intel-col">
+        <div class="intel-col-label">취약점 정보</div>
+        <ul class="intel-col-list">
+          <li>CCE</li>
+          <li>CVE</li>
+          <li>NSE Vulners</li>
+        </ul>
       </div>
 
-      <!-- Connecting stepper track -->
-      <div class="arch-stepper" aria-hidden="true">
-        <span class="arch-node node-asset"></span>
-        <span class="arch-node node-diagnosis"></span>
-        <span class="arch-node node-risk"></span>
-        <span class="arch-node node-action"></span>
+      <div class="intel-plus" aria-hidden="true">+</div>
+
+      <div class="intel-col">
+        <div class="intel-col-label">위험 정보</div>
+        <ul class="intel-col-list">
+          <li>CVSS</li>
+          <li>EPSS</li>
+          <li>KEV</li>
+        </ul>
       </div>
 
-      <div class="arch-cards-row">
-        <!-- STEP 1 -->
-        <div class="arch-flow-card card-asset">
-          <div class="card-icon-wrap">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <rect x="3" y="4" width="18" height="6" rx="1.5"></rect>
-              <rect x="3" y="14" width="18" height="6" rx="1.5"></rect>
-              <line x1="7" y1="7" x2="7.01" y2="7"></line>
-              <line x1="7" y1="17" x2="7.01" y2="17"></line>
-            </svg>
-          </div>
-          <div class="arch-step-head">
-            <span class="arch-step-num">01</span>
-            <span class="arch-step-tag">DISCOVER</span>
-          </div>
-          <p class="arch-step-question">무엇이 존재하는가?</p>
-          <h3 class="card-title">자산 및 취약점 발견</h3>
-          <p class="card-desc">
-            온프레미스부터 클라우드까지 자산을 식별하고 설정·소프트웨어·
-            네트워크 취약점을 통합 진단합니다.
-          </p>
-          <div class="arch-step-concept">CCE · CVE · NSE Vulners</div>
-        </div>
+      <div class="intel-arrow" aria-hidden="true">→</div>
 
-        <!-- STEP 2 -->
-        <div class="arch-flow-card card-diagnosis">
-          <div class="card-icon-wrap">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </div>
-          <div class="arch-step-head">
-            <span class="arch-step-num">02</span>
-            <span class="arch-step-tag">VERIFY</span>
-          </div>
-          <p class="arch-step-question">이 자산을 신뢰할 수 있는가?</p>
-          <h3 class="card-title">지속적인 보안 상태 검증</h3>
-          <p class="card-desc">
-            자산의 보안 상태를 지속적으로 확인하고 환경에 맞는 다양한
-            방식으로 취약점을 진단합니다.
-          </p>
-          <div class="arch-step-concept">Agent · Agentless · Offline/Manual</div>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="arch-flow-card card-risk">
-          <div class="card-icon-wrap">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-              <line x1="12" y1="9" x2="12" y2="13"></line>
-              <line x1="12" y1="17" x2="12.01" y2="17"></line>
-            </svg>
-          </div>
-          <div class="arch-step-head">
-            <span class="arch-step-num">03</span>
-            <span class="arch-step-tag">EVALUATE</span>
-          </div>
-          <p class="arch-step-question">무엇이 실제로 위험한가?</p>
-          <h3 class="card-title">위협 및 위험 분석</h3>
-          <p class="card-desc">
-            취약점의 기술적 심각도, 실제 악용 가능성, 공격 여부를 분석하고
-            자산의 중요도와 결합하여 실제 위험을 평가합니다.
-          </p>
-          <div class="arch-step-concept">CVSS · EPSS · KEV</div>
-        </div>
-
-        <!-- STEP 4 -->
-        <div class="arch-flow-card card-action">
-          <div class="card-icon-wrap">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              <path d="m9 12 2 2 4-4"></path>
-            </svg>
-          </div>
-          <div class="arch-step-head">
-            <span class="arch-step-num">04</span>
-            <span class="arch-step-tag">DECIDE</span>
-          </div>
-          <p class="arch-step-question">무엇부터 대응할 것인가?</p>
-          <h3 class="card-title">위험 기반 대응 우선순위</h3>
-          <p class="card-desc">
-            취약점 개수가 아니라 위험도와 자산 중요도를 기준으로 가장 먼저
-            대응해야 할 보안 과제를 결정합니다.
-          </p>
-          <div class="arch-step-concept">Risk-Based Response</div>
-          <div class="arch-result-metric">
-            <span class="metric-dot" aria-hidden="true"></span>
-            <span class="metric-label">CRITICAL</span>
-          </div>
-        </div>
+      <div class="intel-result">
+        <div class="intel-result-brand">BingoCVM</div>
+        <div class="intel-result-label">Risk-Based Decision</div>
       </div>
+    </div>
+
+    <div class="intel-cta reveal">
+      <a class="intel-cta-link" href="/sub/product/#advanced-intelligence">
+        BingoCVM의 지능형 분석 방식 보기 <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     03 BUSINESS OUTCOMES — replaces "도입효과" framing with
+     before/after outcome statements, not product specifications.
+========================================================= -->
+  <section id="outcomes">
+    <div class="section-header reveal">
+      <div class="section-num">03</div>
+
+      <div class="section-eyebrow">Business Outcomes</div>
+
+      <h2 class="section-title">취약점 관리가 이렇게 달라집니다</h2>
+
+      <p class="section-desc">
+        BingoCVM을 도입하면 취약점을 다루는 방식 자체가 달라집니다.
+      </p>
+    </div>
+
+    <div class="bo-grid reveal">
+      <article class="bo-card">
+        <div class="bo-card-num">01</div>
+        <h3 class="bo-card-title">탐지에서 판단으로</h3>
+        <p class="bo-card-desc">
+          단순히 취약점을 나열하는 것이 아니라, 실제 대응이 필요한
+          위험을 식별합니다.
+        </p>
+      </article>
+
+      <article class="bo-card">
+        <div class="bo-card-num">02</div>
+        <h3 class="bo-card-title">취약점에서 자산 중심으로</h3>
+        <p class="bo-card-desc">
+          개별 취약점뿐 아니라 자산의 중요도와 업무 영향을 함께
+          고려합니다.
+        </p>
+      </article>
+
+      <article class="bo-card">
+        <div class="bo-card-num">03</div>
+        <h3 class="bo-card-title">수작업에서 지속적인 검증으로</h3>
+        <p class="bo-card-desc">
+          다양한 진단 방식을 통해 자산의 보안 상태를 지속적으로
+          확인합니다.
+        </p>
+      </article>
+
+      <article class="bo-card">
+        <div class="bo-card-num">04</div>
+        <h3 class="bo-card-title">대응에서 우선순위로</h3>
+        <p class="bo-card-desc">
+          무엇을 먼저 해결해야 하는지 명확하게 판단할 수 있습니다.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     PRODUCT / CTA — closing hand-off to the product page, where
+     the detailed architecture (CCE/CVE/NSE, CVSS/EPSS/KEV, Agent
+     modes, system architecture, supported platforms) lives.
+========================================================= -->
+  <section id="final-cta" class="final-cta-section">
+    <div class="fc-glow" aria-hidden="true"></div>
+
+    <div class="fc-content reveal">
+      <div class="fc-eyebrow">BingoCVM</div>
+      <h2 class="fc-title">
+        탐지에서 대응까지,<br />
+        지능형 취약점 관리의 새로운 기준
+      </h2>
+      <a class="fc-btn" href="/sub/product/">
+        BingoCVM 자세히 보기
+        <span class="fc-btn-arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </section>
 

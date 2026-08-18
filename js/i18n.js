@@ -68,7 +68,7 @@
     ["이행 점검", "Implementation Inspection"],
     ["비교 보고서 다운로드", "Download Comparison Report"],
     ["제품 상세보기 →", "View Product Details ->"],
-    ["설정 취약점", "Configuration Vulnerabilities"],
+
     ["소프트웨어 버그", "Software Bug"],
     ["온프레미스 + 클라우드를", "On-premises + cloud assets"],
     ["하나의 플랫폼", "a single platform"],
