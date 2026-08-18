@@ -245,6 +245,16 @@
   text-transform: uppercase;
 }
 
+/* Question — meaning-first: the plain-language question comes before
+   the concept/technology labels below it */
+.arch-step-question {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 8px;
+  word-break: keep-all;
+}
+
 /* Text Content */
 .card-title {
   font-size: 18px;
@@ -261,12 +271,26 @@
   word-break: keep-all;
 }
 
+/* Concept / acronym line — smaller and secondary to the meaning above it,
+   so a general customer reads the concept first and a security
+   professional can still recognize the underlying technology */
+.arch-step-concept {
+  margin-top: auto;
+  padding-top: 14px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: var(--step-color);
+  word-break: keep-all;
+}
+
 /* =========================================================
    STEP 4 — RESULT / ACTION
    ========================================================= */
 
 .arch-result-metric {
-  margin-top: auto;
+  margin-top: 12px;
   padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;

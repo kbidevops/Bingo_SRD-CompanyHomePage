@@ -312,7 +312,7 @@ section,
 
 /* ── BINGOCVM 도입효과 (BRIDGE SECTION: WHAT DOES THE CUSTOMER GAIN) ── */
 .impact-section {
-  background: linear-gradient(180deg, var(--navy2) 0%, var(--navy) 100%);
+  background: var(--navy);
   border-radius: 24px;
   position: relative;
   overflow: hidden;
@@ -1615,6 +1615,217 @@ section {
   background: var(--brand-cyan);
 }
 
+/* =========================================================
+   DIAGNOSIS METHODS — Agent / Agentless / Offline
+   ========================================================= */
+
+.diag-methods {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--rule);
+}
+
+.diag-methods-header {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.diag-methods-eyebrow {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.diag-methods-title {
+  font-size: clamp(20px, 2.6vw, 26px);
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+
+.diag-methods-desc {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.diag-methods-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.diag-env-card {
+  --env-color: var(--blue);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-shadow: var(--shadow-sm);
+}
+
+.diag-env-offline {
+  --env-color: var(--intel-violet);
+}
+
+.diag-env-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--env-color);
+  margin-bottom: 4px;
+}
+
+.diag-env-label::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--env-color);
+}
+
+.diag-env-sub {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  word-break: keep-all;
+}
+
+.diag-method-item {
+  padding: 16px 0;
+  border-top: 1px solid var(--rule2);
+}
+
+.diag-method-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.diag-method-tag {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--env-color);
+}
+
+.diag-method-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 4px 0 6px;
+}
+
+.diag-method-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+.diag-offline-steps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule2);
+}
+
+.diag-offline-steps span:not(.diag-offline-arrow) {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink2);
+  padding: 5px 10px;
+  background: var(--bg2);
+  border-radius: 20px;
+}
+
+.diag-offline-arrow {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* =========================================================
+   DIAGNOSIS HISTORY & COMPARISON (SECTION 04)
+   ========================================================= */
+
+#history-tracking {
+  background: var(--surface);
+}
+
+.history-timeline {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.history-step {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 22px 20px;
+  border-radius: 14px;
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+
+.history-step-label {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.history-step-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+  word-break: keep-all;
+}
+
+.history-step-action {
+  background: transparent;
+  border-style: dashed;
+}
+
+.history-step-highlight {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.history-step-highlight .history-step-label {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.history-step-highlight .history-step-value {
+  color: var(--white);
+}
+
+.history-arrow {
+  flex: 0 0 auto;
+  align-self: center;
+  color: var(--rule);
+  font-size: 18px;
+  font-weight: 700;
+}
+
 /* ── SECTION 06: ARCHITECTURE ── */
 #architecture {
   background: var(--bg);
@@ -1746,6 +1957,7 @@ section {
 /* ── SECTION 07: PLATFORMS ── */
 #platforms {
   background: var(--navy);
+  border-radius: 24px;
   color: var(--white);
 }
 
@@ -1951,6 +2163,19 @@ section {
   .process-steps::before {
     display: none;
   }
+
+  .diag-methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-timeline {
+    flex-direction: column;
+  }
+
+  .history-arrow {
+    transform: rotate(90deg);
+    margin: -4px auto;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1985,5 +2210,14 @@ section {
 
   .pipeline-output {
     padding: 22px 20px;
+  }
+
+  .diag-methods {
+    margin-top: 40px;
+    padding-top: 32px;
+  }
+
+  .diag-offline-steps {
+    justify-content: flex-start;
   }
 }

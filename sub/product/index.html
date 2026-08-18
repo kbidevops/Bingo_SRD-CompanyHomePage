@@ -100,8 +100,8 @@
               <div class="pipeline-stage-grid">
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">CONFIGURATION</span>
-                  <span class="pipeline-item-term">CCE</span>
-                  <span class="pipeline-item-label">시스템 설정 취약점</span>
+                  <span class="pipeline-item-term">시스템 설정 취약점</span>
+                  <span class="pipeline-item-label">CCE</span>
                   <p class="pipeline-item-desc">
                     운영 시스템 및 인프라의 보호 설정 오류와 컴플아이언스 위반
                     사항을 정밀 분석하고 진단합니다. (국내공공기관 기술적 취약점
@@ -110,8 +110,8 @@
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">SOFTWARE</span>
-                  <span class="pipeline-item-term">CVE</span>
-                  <span class="pipeline-item-label">소프트웨어 취약점</span>
+                  <span class="pipeline-item-term">소프트웨어 취약점</span>
+                  <span class="pipeline-item-label">CVE</span>
                   <p class="pipeline-item-desc">
                     서버, 운영체제, 애플리케이션 및 오픈소스 등 알려진 시스템의
                     다양한 소프트웨어 취약점을 탐지합니다.
@@ -119,8 +119,8 @@
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">NETWORK</span>
-                  <span class="pipeline-item-term">NSE VULNERS</span>
-                  <span class="pipeline-item-label">네트워크 스캔 취약점</span>
+                  <span class="pipeline-item-term">네트워크 스캔 취약점</span>
+                  <span class="pipeline-item-label">NSE Vulners</span>
                   <p class="pipeline-item-desc">
                     고성능 네트워크 스캐닝 엔진을 통해 실시간 대역별 취약 자산을
                     스캔하고 잠재적 위협을 탐지합니다.
@@ -158,10 +158,8 @@
               <div class="pipeline-stage-grid">
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">SEVERITY</span>
-                  <span class="pipeline-item-term">CVSS</span>
-                  <span class="pipeline-item-label"
-                    >소프트웨어취약점 스코어</span
-                  >
+                  <span class="pipeline-item-term">얼마나 심각한가?</span>
+                  <span class="pipeline-item-label">CVSS</span>
                   <p class="pipeline-item-desc">
                     취약점의 기술적 심각도를 정량화한 글로벌 표준 점수 체게를
                     제공하여 객관적인 위험도 파악이 가능합니다. Severity,
@@ -170,10 +168,10 @@
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">EXPLOITABILITY</span>
-                  <span class="pipeline-item-term">EPSS</span>
-                  <span class="pipeline-item-label"
-                    >AI예측분석취약점 스코어</span
+                  <span class="pipeline-item-term"
+                    >얼마나 악용될 가능성이 높은가?</span
                   >
+                  <span class="pipeline-item-label">EPSS</span>
                   <p class="pipeline-item-desc">
                     실제 취약점이 공격에 이용될 확률을 예측하는 AI 기반 분석
                     모델로 데이터 기반의 의사 결정을 지원합니다.
@@ -181,10 +179,10 @@
                 </div>
                 <div class="pipeline-item">
                   <span class="pipeline-item-tag">ACTIVE THREAT</span>
-                  <span class="pipeline-item-term">KEV</span>
-                  <span class="pipeline-item-label"
-                    >실제공격에사용된취약점</span
+                  <span class="pipeline-item-term"
+                    >실제로 공격에 사용되고 있는가?</span
                   >
+                  <span class="pipeline-item-label">KEV</span>
                   <p class="pipeline-item-desc">
                     실제 야생(In-the-Wild)에서 활발하게 악용 중인 위협 및
                     해킹사례 취약점 목록을 연동하여 실제 악용 여부 확인 최우선
@@ -305,38 +303,39 @@
 
           <div class="zt-flow reveal">
             <article class="zt-flow-card zt-flow-card-blue">
-              <div class="zt-flow-step">01 · 발견</div>
+              <div class="zt-flow-step">01 · DISCOVER</div>
               <h3 class="zt-flow-question">무엇이 존재하는가?</h3>
-              <p class="zt-flow-tags">자산 · 취약점 통합 탐지</p>
-              <p class="zt-flow-tags-concept">
-                CCE · CVE · NSE VULNERS 기반
-              </p>
+              <p class="zt-flow-tags">자산·취약점 발견</p>
+              <p class="zt-flow-tags-concept">CCE · CVE · NSE Vulners</p>
               <p class="zt-flow-desc">
-                온프레미스부터 클라우드까지 자산과 취약점을 통합 탐지합니다.
+                온프레미스부터 클라우드까지 자산을 식별하고 설정·소프트웨어·
+                네트워크 취약점을 통합 진단합니다.
               </p>
             </article>
 
             <div class="zt-flow-arrow" aria-hidden="true">→</div>
 
             <article class="zt-flow-card zt-flow-card-cyan">
-              <div class="zt-flow-step">02 · 검증</div>
+              <div class="zt-flow-step">02 · VERIFY</div>
               <h3 class="zt-flow-question">이 자산을 신뢰할 수 있는가?</h3>
-              <p class="zt-flow-tags">자산 신뢰도 지속 검증</p>
-              <p class="zt-flow-tags-concept">CONTINUOUS VERIFICATION</p>
+              <p class="zt-flow-tags">지속적인 보안 상태 검증</p>
+              <p class="zt-flow-tags-concept">Agent · Agentless · Offline/Manual</p>
               <p class="zt-flow-desc">
-                자산의 상태와 보안 수준을 지속적으로 검증합니다.
+                자산의 보안 상태를 지속적으로 확인하고 환경에 맞는 다양한
+                방식으로 취약점을 진단합니다.
               </p>
             </article>
 
             <div class="zt-flow-arrow" aria-hidden="true">→</div>
 
             <article class="zt-flow-card zt-flow-card-green">
-              <div class="zt-flow-step">03 · 평가</div>
-              <h3 class="zt-flow-question">무엇이 위험한가?</h3>
-              <p class="zt-flow-tags">다각적 위험도 평가</p>
-              <p class="zt-flow-tags-concept">CVSS · EPSS · KEV 기반</p>
+              <div class="zt-flow-step">03 · EVALUATE</div>
+              <h3 class="zt-flow-question">무엇이 실제로 위험한가?</h3>
+              <p class="zt-flow-tags">위협 및 위험 분석</p>
+              <p class="zt-flow-tags-concept">CVSS · EPSS · KEV</p>
               <p class="zt-flow-desc">
-                취약점의 심각도와 실제 악용 가능성을 종합 분석합니다.
+                취약점의 기술적 심각도, 실제 악용 가능성, 공격 여부를 분석하고
+                자산의 중요도와 결합하여 실제 위험을 평가합니다.
               </p>
             </article>
 
@@ -344,12 +343,13 @@
 
             <article class="zt-flow-card zt-flow-card-decision">
               <div class="zt-flow-decision-badge">RISK DECISION</div>
-              <div class="zt-flow-step">04 · 판단</div>
+              <div class="zt-flow-step">04 · DECIDE</div>
               <h3 class="zt-flow-question">무엇부터 대응할 것인가?</h3>
-              <p class="zt-flow-tags">위험 기반 대응 결정</p>
-              <p class="zt-flow-tags-concept">ASSET CRITICALITY 기반</p>
+              <p class="zt-flow-tags">위험 기반 대응 우선순위</p>
+              <p class="zt-flow-tags-concept">Risk-Based Response</p>
               <p class="zt-flow-desc">
-                자산 중요도와 위험 수준을 결합해 최우선 대응 과제를 결정합니다.
+                취약점 개수가 아니라 위험도와 자산 중요도를 기준으로 가장
+                먼저 대응해야 할 보안 과제를 결정합니다.
               </p>
               <div class="zt-flow-priority">
                 <span class="zt-flow-priority-dot" aria-hidden="true"></span>
@@ -361,8 +361,8 @@
           <div class="zt-flow-callout reveal">
             <div class="zt-flow-callout-label">ZERO TRUST → ACTION</div>
             <p class="zt-closing-note">
-              발견된 자산을 검증하고 위험을 평가하여, 가장 중요한 대응 과제부터
-              판단합니다.
+              무엇이 존재하는지 발견하고, 안전한지 검증하고, 무엇이 실제
+              위험인지 평가하여, 무엇부터 대응할지 결정합니다.
             </p>
           </div>
         </section>
@@ -371,11 +371,14 @@
         <section id="cce-cve-nse">
           <div class="section-header reveal">
             <div class="section-num">03</div>
-            <div class="section-eyebrow">통합 취약점 진단</div>
-            <h2 class="section-title">CCE · CVE · NSE 기반 통합 취약점 진단</h2>
+            <div class="section-eyebrow">취약점 진단</div>
+            <h2 class="section-title">
+              설정부터 소프트웨어, 네트워크까지 하나의 진단으로
+            </h2>
             <p class="section-desc">
-              시스템 설정부터 소프트웨어와 네트워크까지, 서로 다른 취약점 신호를
-              하나의 진단 엔진에서 통합 분석합니다.
+              CCE · CVE · NSE Vulners 기반으로 다양한 취약점 신호를 통합
+              분석하고, Agent · Agentless · Offline 등 고객 환경에 맞는
+              방식으로 진단을 수행합니다.
             </p>
           </div>
 
@@ -401,8 +404,8 @@
                 <span class="detect-role">CONFIGURATION</span>
               </div>
 
-              <h3 class="detect-title">CCE</h3>
-              <div class="detect-subtitle">보안 설정 취약점</div>
+              <h3 class="detect-title">설정 취약점</h3>
+              <div class="detect-subtitle">CCE</div>
 
               <p class="detect-desc">
                 시스템과 인프라의 잘못된 설정을 탐지하여 구성 단계에서 발생하는
@@ -446,8 +449,8 @@
                 <span class="detect-role">SOFTWARE</span>
               </div>
 
-              <h3 class="detect-title">CVE</h3>
-              <div class="detect-subtitle">소프트웨어 취약점</div>
+              <h3 class="detect-title">소프트웨어 취약점</h3>
+              <div class="detect-subtitle">CVE</div>
 
               <p class="detect-desc">
                 운영체제와 소프트웨어의 알려진 취약점을 식별하고 영향받는 자산과
@@ -482,8 +485,8 @@
                 <span class="detect-role">NETWORK</span>
               </div>
 
-              <h3 class="detect-title">NSE VULNERS</h3>
-              <div class="detect-subtitle">네트워크 취약점</div>
+              <h3 class="detect-title">네트워크 취약점</h3>
+              <div class="detect-subtitle">NSE Vulners</div>
 
               <p class="detect-desc">
                 네트워크 서비스와 노출된 포트를 분석하여 외부에서 악용 가능한
@@ -531,6 +534,170 @@
               <span>Network</span>
             </div>
           </div>
+
+          <!-- 진단 방식: Agent / Agentless / Offline -->
+          <div class="diag-methods reveal">
+            <div class="diag-methods-header">
+              <div class="diag-methods-eyebrow">DEPLOYMENT FLEXIBILITY</div>
+              <h3 class="diag-methods-title">
+                진단 환경에 맞춘 유연한 점검 방식
+              </h3>
+              <p class="diag-methods-desc">
+                Agent 설치가 가능한 환경부터 망분리된 폐쇄망까지, 고객의 IT
+                환경에 맞는 진단 방식을 선택할 수 있습니다.
+              </p>
+            </div>
+
+            <div class="diag-methods-grid">
+              <div class="diag-env-card diag-env-online">
+                <div class="diag-env-label">ONLINE</div>
+                <div class="diag-env-sub">
+                  실시간 · 예약 진단이 가능한 자동 점검 환경
+                </div>
+
+                <div class="diag-method-item">
+                  <span class="diag-method-tag">AGENT</span>
+                  <h4 class="diag-method-title">Agent</h4>
+                  <p class="diag-method-desc">
+                    점검 대상 장비에 Agent를 설치하여 상시·지속적인 진단을
+                    수행합니다.
+                  </p>
+                </div>
+                <div class="diag-method-item">
+                  <span class="diag-method-tag">AGENTLESS</span>
+                  <h4 class="diag-method-title">Agentless</h4>
+                  <p class="diag-method-desc">
+                    점검 대상 장비에 Agent를 설치하지 않고, 원격 방식으로
+                    취약점을 진단합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="diag-env-card diag-env-offline">
+                <div class="diag-env-label">OFFLINE</div>
+                <div class="diag-env-sub">망분리 · 폐쇄망 환경 지원</div>
+
+                <div class="diag-method-item">
+                  <span class="diag-method-tag">MANUAL</span>
+                  <h4 class="diag-method-title">Manual Diagnosis</h4>
+                  <p class="diag-method-desc">
+                    진단 스크립트를 다운로드하여 대상 시스템에서 직접 실행한
+                    후, 결과 파일을 업로드하여 BingoCVM에서 분석·관리합니다.
+                  </p>
+                </div>
+
+                <div class="diag-offline-steps" aria-hidden="true">
+                  <span>스크립트 다운로드</span>
+                  <span class="diag-offline-arrow">→</span>
+                  <span>대상 시스템 실행</span>
+                  <span class="diag-offline-arrow">→</span>
+                  <span>결과 파일 업로드</span>
+                  <span class="diag-offline-arrow">→</span>
+                  <span>분석 · 관리</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DIAGNOSIS HISTORY & COMPARISON -->
+        <section id="history-tracking">
+          <div class="section-header reveal">
+            <div class="section-num">04</div>
+            <div class="section-eyebrow">지속적인 검증과 변화 추적</div>
+            <h2 class="section-title">
+              한 번의 진단으로 끝나지 않는, 지속적인 이력 관리
+            </h2>
+            <p class="section-desc">
+              진단 결과와 조치 이력을 지속적으로 비교·관리하여 자산별 보안
+              상태의 변화를 추적합니다.
+            </p>
+          </div>
+
+          <div class="history-timeline reveal">
+            <div class="history-step">
+              <div class="history-step-label">1차 진단</div>
+              <div class="history-step-value">취약점 128건</div>
+            </div>
+            <div class="history-arrow" aria-hidden="true">→</div>
+            <div class="history-step history-step-action">
+              <div class="history-step-label">조치</div>
+              <div class="history-step-value">보안 조치 수행</div>
+            </div>
+            <div class="history-arrow" aria-hidden="true">→</div>
+            <div class="history-step">
+              <div class="history-step-label">2차 진단</div>
+              <div class="history-step-value">취약점 73건</div>
+            </div>
+            <div class="history-arrow" aria-hidden="true">→</div>
+            <div class="history-step history-step-highlight">
+              <div class="history-step-label">변화 추적</div>
+              <div class="history-step-value">조치율 43%p 개선</div>
+            </div>
+          </div>
+
+          <div class="fact-grid fact-grid-3 reveal">
+            <div class="fact-card">
+              <div class="fact-card-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <polyline points="12 7 12 12 15.5 14"></polyline>
+                </svg>
+              </div>
+              <strong>진단 이력 관리</strong>
+              <span
+                >부서·연도별 검색과 필터링으로 진단 이력을 체계적으로
+                관리합니다.</span
+              >
+            </div>
+            <div class="fact-card">
+              <div class="fact-card-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M3 3v18h18"></path>
+                  <path d="M7 15l4-4 3 3 5-6"></path>
+                </svg>
+              </div>
+              <strong>결과 비교 분석</strong>
+              <span
+                >현재·이전·최초 진단 결과를 비교하여 변화 추이를
+                확인합니다.</span
+              >
+            </div>
+            <div class="fact-card">
+              <div class="fact-card-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <strong>조치 현황 추적</strong>
+              <span
+                >자산별 취약점 조치 여부와 조치율을 지속적으로
+                추적합니다.</span
+              >
+            </div>
+          </div>
         </section>
 
         <!-- BINGOCVM 도입효과 (bridge section: what does the customer gain?) -->
@@ -546,28 +713,28 @@
               취약점 관리의 효율을 높이고, 대응의 우선순위를 명확하게 합니다
             </h2>
             <p class="impact-desc">
-              BingoCVM은 통합 취약점 진단과 위협 인텔리전스, 자산 중요도
-              분석을 통해 보안팀이 무엇을 먼저 대응해야 하는지 명확하게 판단할
-              수 있도록 지원합니다.
+              BingoCVM은 통합 취약점 진단과 위협 인텔리전스, 자산 중요도 분석을
+              통해 보안팀이 무엇을 먼저 대응해야 하는지 명확하게 판단할 수
+              있도록 지원합니다.
             </p>
           </div>
 
           <div class="impact-grid reveal">
             <article class="impact-card">
               <div class="impact-card-num">01</div>
-              <h3 class="impact-card-title">통합 취약점 관리</h3>
+              <h3 class="impact-card-title">진단 운영 효율화</h3>
               <p class="impact-card-tagline">
-                분산된 취약점 정보를 하나의 관리 체계로 통합
+                자동·원격·수동 진단을 하나의 플랫폼에서 관리
               </p>
               <p class="impact-card-desc">
-                CCE · CVE · NSE Vulners 기반의 취약점 진단 결과를 통합하여
-                시스템, 소프트웨어, 네트워크의 보안 상태를 한 곳에서
-                관리합니다.
+                Agent, Agentless, Offline/Manual 방식을 지원하여 온프레미스부터
+                망분리 환경까지, 다양한 보안 환경에 맞춰 취약점 진단을 수행할
+                수 있습니다.
               </p>
               <div class="impact-card-tags">
                 <span class="impact-card-tags-label">핵심 효과</span>
                 <span class="impact-card-tags-list"
-                  >진단 통합 · 관리 효율화 · 가시성 향상</span
+                  >진단 유연성 · 관리 효율화 · 환경 대응</span
                 >
               </div>
             </article>
@@ -580,9 +747,9 @@
                 많은 취약점 중 가장 중요한 위험부터 대응
               </p>
               <p class="impact-card-desc">
-                CVSS · EPSS · KEV와 자산 중요도를 함께 분석하여 단순한
-                취약점 개수가 아닌 실제 위험도와 비즈니스 영향을 기준으로
-                대응 우선순위를 결정합니다.
+                CVSS · EPSS · KEV와 자산 중요도를 함께 분석하여 단순한 취약점
+                개수가 아닌 실제 위험도와 비즈니스 영향을 기준으로 대응
+                우선순위를 결정합니다.
               </p>
               <div class="impact-card-tags">
                 <span class="impact-card-tags-label">핵심 효과</span>
@@ -594,19 +761,19 @@
 
             <article class="impact-card">
               <div class="impact-card-num">03</div>
-              <h3 class="impact-card-title">컴플라이언스 및 보안 평가 대응</h3>
+              <h3 class="impact-card-title">지속적인 보안 상태 관리</h3>
               <p class="impact-card-tagline">
-                보안 기준 준수와 평가 대응을 체계적으로 지원
+                진단부터 조치·이력·보고까지 연결
               </p>
               <p class="impact-card-desc">
-                취약점 진단 및 보안 관리 결과를 기반으로 ISMS-P, CSAP,
-                ISO 27001 등 보안 관리 및 평가 대응에 필요한 체계적인 관리
-                환경을 제공합니다.
+                진단 결과를 지속적으로 비교하고 조치 이력을 관리하여 자산별
+                보안 상태의 변화를 추적하고, 필요한 보고서를 손쉽게 생성할 수
+                있습니다.
               </p>
               <div class="impact-card-tags">
                 <span class="impact-card-tags-label">핵심 효과</span>
                 <span class="impact-card-tags-list"
-                  >규정 준수 · 평가 대응 · 관리 체계화</span
+                  >이력 관리 · 변화 추적 · 지속 검증</span
                 >
               </div>
             </article>
@@ -622,7 +789,7 @@
         <!-- ARCHITECTURE -->
         <section id="architecture">
           <div class="section-header reveal">
-            <div class="section-num">04</div>
+            <div class="section-num">05</div>
             <div class="section-eyebrow">시스템 구성</div>
             <h2 class="section-title">시스템 구성</h2>
             <p class="section-desc" data-i18n-html="product.architecture.desc">
@@ -703,7 +870,7 @@
         <!-- PLATFORMS -->
         <section id="platforms">
           <div class="section-header reveal">
-            <div class="section-num">05</div>
+            <div class="section-num">06</div>
             <div class="section-eyebrow">지원 플랫폼</div>
             <h2 class="section-title">지원 플랫폼</h2>
             <p class="section-desc" data-i18n-html="product.platforms.desc">
@@ -714,7 +881,7 @@
           </div>
 
           <div class="platform-grid reveal">
-            <div class="platform-card pc-blue">
+            <div class="impact-card">
               <div class="platform-icon">
                 <svg
                   viewBox="0 0 24 24"
@@ -731,8 +898,8 @@
                   <line x1="12" y1="17" x2="12" y2="21" />
                 </svg>
               </div>
-              <div class="platform-name">OS &amp; 가상화</div>
-              <ul>
+              <div class="impact-card-title">OS &amp; 가상화</div>
+              <ul class="impact-card-desc">
                 <li><strong>Windows Server:</strong> 2003 R2, 2008 ~ 2022</li>
                 <li><strong>Windows PC:</strong> 7, 8, 10, 11, Mac PC</li>
                 <li>
@@ -748,7 +915,7 @@
                 </li>
               </ul>
             </div>
-            <div class="platform-card pc-cyan">
+            <div class="impact-card">
               <div class="platform-icon">
                 <svg
                   viewBox="0 0 24 24"
@@ -765,8 +932,8 @@
                   <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
                 </svg>
               </div>
-              <div class="platform-name">DBMS &amp; Cloud</div>
-              <ul>
+              <div class="impact-card-title">DBMS &amp; Cloud</div>
+              <ul class="impact-card-desc">
                 <li>
                   <strong>RDBMS:</strong> Oracle, MySQL, MSSQL, MariaDB,
                   PostgreSQL, Tibero, Cubrid
@@ -782,7 +949,7 @@
                 </li>
               </ul>
             </div>
-            <div class="platform-card pc-pink">
+            <div class="impact-card">
               <div class="platform-icon">
                 <svg
                   viewBox="0 0 24 24"
@@ -801,8 +968,8 @@
                   />
                 </svg>
               </div>
-              <div class="platform-name">WEB/WAS &amp; Network</div>
-              <ul>
+              <div class="impact-card-title">WEB/WAS &amp; Network</div>
+              <ul class="impact-card-desc">
                 <li><strong>WEB:</strong> Apache, IIS, Nginx, WebtoB</li>
                 <li>
                   <strong>WAS:</strong> Tomcat, Jeus, WebSphere, WebLogic, JBoss
@@ -830,12 +997,13 @@
           >02 제로트러스트 아키텍처</a
         >
 
-        <a class="toc-link" href="#cce-cve-nse">03 통합 취약점 진단</a>
+        <a class="toc-link" href="#cce-cve-nse">03 취약점 진단</a>
+        <a class="toc-link" href="#history-tracking">04 진단 이력 및 변화 추적</a>
         <div class="toc-divider"></div>
         <a class="toc-link" href="#adoption-effects">BingoCVM 도입효과</a>
         <div class="toc-divider"></div>
-        <a class="toc-link" href="#architecture">04 시스템 구성</a>
-        <a class="toc-link" href="#platforms">05 지원 플랫폼</a>
+        <a class="toc-link" href="#architecture">05 시스템 구성</a>
+        <a class="toc-link" href="#platforms">06 지원 플랫폼</a>
       </aside>
       <!-- .page-content -->
     </div>
