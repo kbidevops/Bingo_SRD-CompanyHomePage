@@ -8247,97 +8247,9 @@ section {
 }
 
 /* =========================================================
-   02 KEY DIFFERENTIATORS — four capability cards, each linking
-   out to the detailed explanation on the product page.
-   ========================================================= */
-
-#differentiators {
-  background: var(--surface);
-  border-top: 1px solid var(--rule);
-}
-
-.kd-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.kd-card {
-  display: flex;
-  flex-direction: column;
-  padding: 30px 26px;
-  background: var(--bg);
-  border: 1px solid var(--rule);
-  border-radius: 16px;
-  text-decoration: none;
-  color: inherit;
-  transition:
-    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.3s;
-}
-
-.kd-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(26, 29, 38, 0.08);
-  border-color: rgba(200, 0, 30, 0.25);
-}
-
-.kd-card-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 18px;
-  border-radius: 12px;
-  background: rgba(200, 0, 30, 0.08);
-  color: var(--crimson);
-}
-
-.kd-card-icon svg {
-  width: 22px;
-  height: 22px;
-}
-
-.kd-card-title {
-  font-size: 17px;
-  font-weight: 800;
-  color: var(--ink);
-  margin-bottom: 8px;
-  word-break: keep-all;
-}
-
-.kd-card-tags {
-  font-size: 12.5px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 20px;
-  word-break: keep-all;
-}
-
-.kd-card-link {
-  margin-top: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--crimson);
-}
-
-.kd-card-link span {
-  transition: transform 0.2s ease;
-}
-
-.kd-card:hover .kd-card-link span {
-  transform: translateX(4px);
-}
-
-/* =========================================================
-   INTELLIGENCE STRIP — the one place the homepage names the
-   underlying signals; compact, with a link out to the product
-   page for the full explanation.
+   UNIFIED SECURITY INTELLIGENCE — the one place the homepage
+   names the underlying signals; each column/result box is a
+   link out to the matching product-page anchor.
    ========================================================= */
 
 .intel-strip {
@@ -8369,6 +8281,15 @@ section {
   position: relative;
   max-width: 680px;
   margin: 0 auto 48px;
+}
+
+.intel-num {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.05);
+  margin-bottom: -20px;
+  user-select: none;
 }
 
 .intel-eyebrow {
@@ -8434,6 +8355,20 @@ section {
   border: 1px solid var(--intel-accent-border);
   border-radius: 18px;
   text-align: left;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s;
+}
+
+.intel-col:hover {
+  transform: translateY(-4px);
+  border-color: var(--intel-accent);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .intel-col--risk {
@@ -8561,6 +8496,18 @@ section {
   border: 1px solid rgba(200, 0, 30, 0.4);
   border-radius: 18px;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s;
+}
+
+.intel-result:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 0, 30, 0.7);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .intel-result-icon {
@@ -8609,6 +8556,30 @@ section {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.55);
   word-break: keep-all;
+}
+
+.intel-col-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--intel-accent, #ff8fa0);
+}
+
+.intel-col > .intel-col-link {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.intel-col-link span {
+  transition: transform 0.2s ease;
+}
+
+.intel-col:hover .intel-col-link span,
+.intel-result:hover .intel-col-link span {
+  transform: translateX(4px);
 }
 
 .intel-cta {
@@ -8802,7 +8773,6 @@ section {
     margin: -4px auto;
   }
 
-  .kd-grid,
   .bo-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -8817,7 +8787,6 @@ section {
 }
 
 @media (max-width: 760px) {
-  .kd-grid,
   .bo-grid {
     grid-template-columns: 1fr;
   }
