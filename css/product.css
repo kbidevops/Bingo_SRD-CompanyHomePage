@@ -310,12 +310,15 @@ section,
   box-shadow: 0 8px 24px rgba(200, 0, 30, 0.35);
 }
 
-/* ── BINGOCVM 도입효과 (BRIDGE SECTION: WHAT DOES THE CUSTOMER GAIN) ── */
+/* ── BINGOCVM 도입효과 (CLOSING SECTION: WHAT DOES THE CUSTOMER GAIN) ── */
 .impact-section {
   background: var(--navy);
   border-radius: 24px;
   position: relative;
   overflow: hidden;
+  /* sits directly after #platforms, another rounded navy card —
+     without this gap the two cards visually fuse into one block */
+  margin-top: 40px;
 }
 
 .impact-glow {
@@ -601,6 +604,30 @@ section {
 .section-desc strong {
   color: var(--ink);
   font-weight: 700;
+}
+
+/* ── TECHNICAL SPECIFICATIONS DIVIDER ── */
+.tech-specs-divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 80px 40px;
+}
+
+.tech-specs-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.tech-specs-divider-label {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* ── SECTION 01: ZERO TRUST OVERVIEW ── */
@@ -1372,8 +1399,9 @@ section {
 }
 
 /* ── SECTION 05: CCE / CVE ── */
-#cce-cve {
-  background: var(--surface);
+#cce-cve-nse {
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
 }
 
 /* =========================================================
@@ -1976,7 +2004,8 @@ section {
    ========================================================= */
 
 #history-tracking {
-  background: var(--surface);
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
 }
 
 .history-timeline {
@@ -2013,9 +2042,30 @@ section {
   word-break: keep-all;
 }
 
+.history-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: rgba(200, 0, 30, 0.1);
+  color: var(--crimson);
+}
+
+.history-step-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
 .history-step-action {
-  background: transparent;
-  border-style: dashed;
+  background: rgba(200, 0, 30, 0.05);
+  border: 1px dashed rgba(200, 0, 30, 0.35);
+}
+
+.history-step-action .history-step-label {
+  color: var(--crimson);
 }
 
 .history-step-highlight {
@@ -2037,6 +2087,27 @@ section {
   color: var(--rule);
   font-size: 18px;
   font-weight: 700;
+}
+
+.history-bridge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 32px;
+}
+
+.history-bridge-line {
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.history-bridge-label {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 /* ── SECTION 06: ARCHITECTURE ── */
@@ -2174,9 +2245,6 @@ section {
   color: var(--white);
 }
 
-#platforms .section-num {
-  color: rgba(255, 255, 255, 0.05);
-}
 #platforms .section-eyebrow {
   color: var(--brand-cyan);
 }
@@ -2403,6 +2471,15 @@ section {
   .section-num {
     font-size: 64px;
     margin-bottom: -18px;
+  }
+
+  .tech-specs-divider {
+    margin: 0 20px 28px;
+    gap: 12px;
+  }
+
+  .impact-section {
+    margin-top: 24px;
   }
 
   .process-steps {
