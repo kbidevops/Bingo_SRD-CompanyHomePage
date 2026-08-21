@@ -235,81 +235,6 @@ section,
   color: var(--crimson);
 }
 
-.hero-intro {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 22px;
-  max-width: 640px;
-}
-
-.hero-intro strong {
-  color: var(--ink);
-  font-weight: 700;
-}
-
-.hero-desc {
-  font-size: 20px;
-  line-height: 1.8;
-  color: var(--ink);
-  margin-bottom: 16px;
-  font-weight: 400;
-}
-
-.hero-desc strong {
-  color: var(--crimson);
-  font-weight: 700;
-}
-
-.hero-quote {
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-radius: 14px;
-  padding: 22px 26px 18px;
-  margin-top: 8px;
-  box-shadow: var(--shadow-sm);
-}
-
-.hero-quote .zt-quote-mark {
-  height: 30px;
-  font-size: 70px;
-}
-
-.hero-quote .zt-overview-quote {
-  font-size: clamp(19px, 1.8vw, 23px);
-  margin: 8px 0;
-}
-
-.hero-quote .zt-overview-sub {
-  margin-bottom: 0;
-}
-
-.hero-cta {
-  margin-top: 28px;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 32px;
-  background: var(--crimson);
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(200, 0, 30, 0.2);
-  transition: var(--transition-fast);
-}
-
-.btn-primary:hover {
-  background: var(--crimson2);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(200, 0, 30, 0.35);
-}
-
 /* ── BINGOCVM 도입효과 (CLOSING SECTION: WHAT DOES THE CUSTOMER GAIN) ── */
 .impact-section {
   background: var(--navy);
@@ -638,94 +563,13 @@ section {
   color: var(--ink);
 }
 
-.zt-overview-stack {
-  display: flex;
-  flex-direction: column;
-}
-
-.zt-overview-banner {
-  max-width: 480px;
-  margin: 0 auto 48px;
-}
-
-.zt-quote-mark {
-  color: var(--crimson);
-  opacity: 0.2;
-  font-family: Georgia, serif;
-  font-size: 90px;
-  line-height: 0.5;
-  height: 40px;
-}
-
-.zt-overview-quote {
-  font-size: clamp(22px, 2.4vw, 28px);
-  font-weight: 800;
-  color: var(--ink);
-  line-height: 1.4;
-  margin: 12px 0;
-  letter-spacing: -0.5px;
-}
-
-.zt-overview-sub {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.zt-product-card {
-  border-radius: 16px;
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  box-shadow: var(--shadow-md);
-  padding: 12px;
-  transition: var(--transition-smooth);
-  overflow: hidden;
-}
-
-.zt-product-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
-}
-
-.zt-product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-}
-
-/* ── FACT GROUPS (redesigned 도입효과 / 지원플랫폼 / 핵심기능) ── */
-.fact-group {
-  margin-bottom: 44px;
-}
-
-.fact-group:last-child {
-  margin-bottom: 0;
-}
-
-.fact-group-title {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--ink);
-  margin-bottom: 18px;
-}
-
 .fact-grid {
   display: grid;
   gap: 16px;
 }
 
-.fact-grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .fact-grid-3 {
   grid-template-columns: repeat(3, 1fr);
-}
-
-.fact-grid-4 {
-  grid-template-columns: repeat(4, 1fr);
 }
 
 .fact-card {
@@ -779,47 +623,6 @@ section {
   font-size: 12.5px;
   color: var(--muted);
   line-height: 1.5;
-}
-
-.fact-card-left {
-  align-items: flex-start;
-  text-align: left;
-}
-
-.fact-card-sublabel {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ink2);
-  margin-bottom: 16px;
-}
-
-.fact-platform-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-}
-
-.fact-platform-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  width: 74px;
-}
-
-.fact-platform-icon svg {
-  width: 24px;
-  height: 24px;
-  color: var(--blue);
-}
-
-.fact-platform-icon span {
-  font-size: 11px;
-  color: var(--ink2);
-  text-align: center;
-  line-height: 1.3;
 }
 
 /* ── SECTION 02: ADVANCED INTELLIGENCE PIPELINE ── */
@@ -1243,161 +1046,6 @@ section {
   margin-top: 28px;
 }
 
-/* ── SECTION 04: PROCESS ── */
-#process {
-  background: var(--bg);
-}
-
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  margin-top: 40px;
-  position: relative;
-}
-
-.process-steps::before {
-  content: "";
-  position: absolute;
-  top: 52px;
-  left: 8%;
-  right: 8%;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--blue),
-    var(--midblue),
-    var(--brand-cyan),
-    #22a86a,
-    var(--pink)
-  );
-  z-index: 0;
-  border-radius: 3px;
-}
-
-.process-step {
-  padding: 24px 16px;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--surface);
-  border-radius: 16px;
-  border: 1px solid var(--rule);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-smooth);
-}
-
-.process-step:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(59, 162, 242, 0.4);
-}
-
-.step-icon-wrap {
-  margin-bottom: 14px;
-}
-
-.step-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background: var(--surface);
-  border: 2px solid var(--bg2);
-  transition: var(--transition-fast);
-}
-
-.step-icon svg {
-  width: 26px;
-  height: 26px;
-}
-
-.process-step:hover .step-icon {
-  border-color: var(--brand-cyan);
-  box-shadow: 0 0 20px rgba(59, 162, 242, 0.2);
-}
-
-.step-num {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10.5px;
-  font-weight: 800;
-  color: var(--white);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.step-num-1 {
-  background: var(--blue);
-}
-.step-num-2 {
-  background: var(--midblue);
-}
-.step-num-3 {
-  background: var(--brand-cyan);
-}
-.step-num-4 {
-  background: #22a86a;
-}
-.step-num-5 {
-  background: var(--pink);
-}
-
-.step-name {
-  font-size: 17px;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 10px;
-}
-
-.process-step .panel-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.process-step .panel-list li {
-  font-size: 13.5px;
-  color: var(--muted);
-  line-height: 1.55;
-  padding-left: 12px;
-  position: relative;
-}
-
-.process-step .panel-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--brand-cyan);
-}
-
-.step-tag {
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 10px;
-  background: rgba(59, 162, 242, 0.1);
-  color: var(--brand-cyan);
-  border: 1px solid rgba(59, 162, 242, 0.2);
-  border-radius: 99px;
-  letter-spacing: 0.5px;
-}
-
 /* ── SECTION 05: CCE / CVE ── */
 #cce-cve-nse {
   background: var(--bg);
@@ -1668,47 +1316,6 @@ section {
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.65);
   word-break: keep-all;
-}
-
-.detect-fusion-stats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.detect-fusion-stat {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 12.5px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.detect-fusion-stat-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: rgba(59, 162, 242, 0.16);
-  color: var(--brand-cyan);
-}
-
-.detect-fusion-stat-icon svg {
-  width: 13px;
-  height: 13px;
-}
-
-.detect-fusion-stat-divider {
-  width: 1px;
-  height: 16px;
-  background: rgba(255, 255, 255, 0.14);
 }
 
 /* =========================================================
@@ -2268,40 +1875,6 @@ section {
   margin-top: 48px;
 }
 
-.platform-card {
-  background: var(--navy2);
-  padding: 36px 28px;
-  border-radius: 16px;
-  position: relative;
-  transition: var(--transition-smooth);
-}
-
-.platform-card:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
-}
-
-.platform-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: 16px 16px 0 0;
-}
-
-.pc-blue::before {
-  background: var(--blue);
-}
-.pc-cyan::before {
-  background: var(--brand-cyan);
-}
-.pc-pink::before {
-  background: var(--pink);
-}
-
 .platform-icon {
   width: 48px;
   height: 48px;
@@ -2313,56 +1886,7 @@ section {
   margin-bottom: 20px;
 }
 
-.platform-name {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 16px;
-}
-
-.platform-card ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.platform-card ul li {
-  font-size: 14.5px;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
-  padding-left: 16px;
-  position: relative;
-}
-
-.platform-card ul li::before {
-  content: "›";
-  position: absolute;
-  left: 0;
-  color: var(--brand-cyan);
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-.pc-blue ul li::before {
-  color: var(--blue);
-}
-.pc-cyan ul li::before {
-  color: var(--brand-cyan);
-}
-.pc-pink ul li::before {
-  color: var(--pink);
-}
-
-.platform-card ul li strong {
-  color: var(--white);
-  font-weight: 600;
-}
-
-/* ── SCROLL REVEAL ANIMATIONS ── */
-.reveal,
-.reveal-left,
-.reveal-right {
+.reveal {
   opacity: 0;
   transition:
     opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
@@ -2371,12 +1895,6 @@ section {
 
 .reveal {
   transform: translateY(30px);
-}
-.reveal-left {
-  transform: translateX(-30px);
-}
-.reveal-right {
-  transform: translateX(30px);
 }
 
 .reveal.visible,
@@ -2415,8 +1933,7 @@ section {
     margin-top: 24px;
   }
 
-  .fact-grid-3,
-  .fact-grid-4 {
+  .fact-grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -2439,14 +1956,6 @@ section {
   .zt-flow-arrow {
     transform: rotate(90deg);
     margin: -4px auto;
-  }
-
-  .process-steps {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .process-steps::before {
-    display: none;
   }
 
   .diag-methods-grid {
@@ -2482,16 +1991,8 @@ section {
     margin-top: 24px;
   }
 
-  .process-steps {
-    grid-template-columns: 1fr;
-  }
-
   .arch-process-steps {
     flex-direction: column;
-  }
-
-  .zt-feature-grid {
-    grid-template-columns: 1fr;
   }
 
   .pipeline-stage {

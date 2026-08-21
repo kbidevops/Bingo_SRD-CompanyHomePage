@@ -194,30 +194,6 @@ body::before {
 .page-title span {
   color: var(--crimson);
 }
-
-.page-title-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid rgba(200, 0, 30, 0.2);
-  background: rgba(200, 0, 30, 0.04);
-  padding: 5px 12px;
-  border-radius: 2px;
-  margin-bottom: 24px;
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 14px;
-  color: var(--crimson2);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-.page-title-badge::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: var(--crimson);
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
 @keyframes pulse {
   0%,
   100% {
@@ -609,23 +585,6 @@ body::before {
   color: var(--crimson);
 }
 
-/* ── EMPTY STATE ── */
-.news-empty {
-  padding: 48px 24px;
-  text-align: center;
-  color: var(--muted);
-  background: var(--surface);
-  border: 1px dashed var(--border);
-  border-radius: 8px;
-}
-.news-empty-icon {
-  font-size: 36px;
-  margin-bottom: 12px;
-}
-.news-empty p {
-  font-size: 15px;
-}
-
 /* ── SIDEBAR ── */
 .sidebar {
   display: flex;
@@ -710,50 +669,6 @@ body::before {
   letter-spacing: 1px;
 }
 
-/* G2B widget */
-.sb-g2b {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.sb-g2b-label {
-  font-size: 15px;
-  color: var(--muted);
-}
-.sb-g2b-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px;
-  background: var(--ink);
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-.sb-g2b-link:hover {
-  background: var(--crimson);
-}
-.sb-g2b-url {
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.7);
-}
-.sb-g2b-arr {
-  font-size: 15px;
-  color: var(--crimson);
-  transition: color 0.2s;
-}
-.sb-g2b-link:hover .sb-g2b-arr {
-  color: var(--white);
-}
-.sb-g2b-search {
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 14px;
-  color: var(--muted);
-  letter-spacing: 0.5px;
-}
-
 /* Tags widget */
 .sb-tags {
   display: flex;
@@ -827,11 +742,6 @@ body::before {
   color: var(--ink);
   margin-bottom: 2px;
 }
-.sb-blog-url {
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 14px;
-  color: var(--muted);
-}
 .sb-blog-arr {
   font-size: 15px;
   color: var(--muted);
@@ -839,40 +749,6 @@ body::before {
 }
 .sb-blog-link:hover .sb-blog-arr {
   color: var(--crimson);
-}
-
-/* CTA widget */
-.sb-cta {
-  padding: 20px 16px;
-  background: var(--ink);
-}
-.sb-cta-title {
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 6px;
-}
-.sb-cta-sub {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-.sb-cta-btn {
-  display: block;
-  text-align: center;
-  padding: 10px 16px;
-  background: var(--crimson);
-  color: var(--white);
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 3px;
-  letter-spacing: 0.5px;
-  transition: background 0.2s;
-}
-.sb-cta-btn:hover {
-  background: var(--crimson2);
 }
 
 /* ── REVEAL ── */
@@ -886,59 +762,6 @@ body::before {
 .reveal.visible {
   opacity: 1;
   transform: none;
-}
-
-.logo-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(36px, 3.2vw, 44px);
-  height: clamp(36px, 3.2vw, 44px);
-  max-height: 44px;
-  max-width: 44px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    #fff 0%,
-    #fbfbfb 35%,
-    #fff 100%
-  );
-  box-shadow: 0 8px 18px rgba(26, 29, 38, 0.06);
-  position: relative;
-  flex-shrink: 0;
-  margin-right: 10px;
-  overflow: visible;
-}
-.logo-badge > img {
-  width: 52%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-.logo-badge::before,
-.logo-badge::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-}
-.logo-badge::before {
-  width: calc(100% + 16px);
-  height: calc(100% + 16px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgba(145, 110, 210, 0.05);
-}
-.logo-badge::after {
-  width: calc(100% + 36px);
-  height: calc(100% + 36px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgba(145, 110, 210, 0.03);
-  filter: blur(0.2px);
 }
 
 /* ── RESPONSIVE ── */
