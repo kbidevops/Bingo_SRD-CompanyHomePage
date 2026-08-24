@@ -732,7 +732,7 @@ section {
 }
 
 .pipeline-item-label {
-  font-size: 12.5px;
+  font-size: 13.5px;
   color: var(--muted);
   line-height: 1.5;
   word-break: keep-all;
@@ -742,9 +742,9 @@ section {
   margin-top: 8px;
   padding-top: 10px;
   border-top: 1px solid var(--rule);
-  font-size: 11.5px;
+  font-size: 14.5px;
   color: var(--muted);
-  line-height: 1.55;
+  line-height: 1.65;
   word-break: keep-all;
 }
 
@@ -905,7 +905,7 @@ section {
 }
 
 .zt-flow-tags {
-  font-size: 12px;
+  font-size: 14.5px;
   font-weight: 600;
   color: var(--muted);
   margin-bottom: 4px;
@@ -923,9 +923,9 @@ section {
 }
 
 .zt-flow-desc {
-  font-size: 12.5px;
+  font-size: 14.5px;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .zt-flow-arrow {
@@ -1416,9 +1416,10 @@ section {
 }
 
 .diag-env-sub {
-  font-size: 12.5px;
+  font-size: 14.5px;
   color: var(--muted);
   margin-bottom: 20px;
+  line-height: 1.5;
   word-break: keep-all;
 }
 
@@ -1478,7 +1479,7 @@ section {
 }
 
 .diag-method-desc {
-  font-size: 13px;
+  font-size: 14.5px;
   color: var(--muted);
   line-height: 1.65;
   word-break: keep-all;
@@ -1553,7 +1554,7 @@ section {
 }
 
 .diag-env-callout span {
-  font-size: 12.5px;
+  font-size: 14.5px;
   font-weight: 600;
   color: var(--ink2);
   line-height: 1.6;
@@ -1616,13 +1617,26 @@ section {
 }
 
 .history-timeline {
+  position: relative;
   display: flex;
   align-items: stretch;
-  gap: 10px;
+  gap: 16px;
   margin-bottom: 48px;
+  padding-top: 32px;
+}
+
+.history-timeline-track {
+  position: absolute;
+  top: 12px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: var(--rule);
+  z-index: 0;
 }
 
 .history-step {
+  position: relative;
   flex: 1 1 0;
   min-width: 0;
   padding: 22px 20px;
@@ -1630,6 +1644,30 @@ section {
   background: var(--bg2);
   border: 1px solid var(--rule);
   text-align: center;
+  z-index: 1;
+}
+
+.history-step-num {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 3px solid var(--bg);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 800;
+  z-index: 2;
+}
+
+.history-step-highlight .history-step-num {
+  background: var(--navy);
 }
 
 .history-step-label {
@@ -1639,14 +1677,28 @@ section {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .history-step-value {
-  font-size: 16px;
-  font-weight: 800;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
   color: var(--ink);
   word-break: keep-all;
+}
+
+.history-step-metric {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.history-step-unit {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 .history-step-icon {
@@ -1657,8 +1709,8 @@ section {
   height: 28px;
   margin: 0 auto 10px;
   border-radius: 50%;
-  background: rgba(200, 0, 30, 0.1);
-  color: var(--crimson);
+  background: rgba(21, 84, 176, 0.08);
+  color: var(--blue);
 }
 
 .history-step-icon svg {
@@ -1667,12 +1719,17 @@ section {
 }
 
 .history-step-action {
-  background: rgba(200, 0, 30, 0.05);
-  border: 1px dashed rgba(200, 0, 30, 0.35);
+  background: rgba(21, 84, 176, 0.05);
+  border: 1px dashed rgba(21, 84, 176, 0.35);
 }
 
 .history-step-action .history-step-label {
-  color: var(--crimson);
+  color: var(--blue);
+}
+
+.history-step-action .history-step-value {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .history-step-highlight {
@@ -1688,12 +1745,8 @@ section {
   color: var(--white);
 }
 
-.history-arrow {
-  flex: 0 0 auto;
-  align-self: center;
-  color: var(--rule);
-  font-size: 18px;
-  font-weight: 700;
+.history-step-highlight .history-step-unit {
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .history-bridge {
@@ -1964,11 +2017,11 @@ section {
 
   .history-timeline {
     flex-direction: column;
+    gap: 28px;
   }
 
-  .history-arrow {
-    transform: rotate(90deg);
-    margin: -4px auto;
+  .history-timeline-track {
+    display: none;
   }
 }
 

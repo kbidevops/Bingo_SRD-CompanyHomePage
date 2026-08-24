@@ -9,11 +9,11 @@
   box-shadow: 0 8px 24px rgba(26, 29, 38, 0.06);
 }
 .toc-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--ink2);
   margin-bottom: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   font-family: "IBM Plex Sans KR", sans-serif;
 }
