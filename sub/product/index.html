@@ -14,15 +14,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
-    <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/header.css">
-    <link rel="stylesheet" href="../../css/scrollTop.css">
-    <link rel="stylesheet" href="../../css/product.css">
-    <link rel="stylesheet" href="../../css/page-toc.css">
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="../../css/scrollTop.css" />
+    <link rel="stylesheet" href="../../css/product.css" />
+    <link rel="stylesheet" href="../../css/page-toc.css" />
 
     <script src="/js/i18n.js" defer></script>
     <script src="../../js/nav-active.js" defer></script>
-    
   </head>
   <body class="about">
     <!-- SCROLL TO TOP -->
@@ -31,504 +30,1148 @@
     <div class="cursor-dot" id="cursorDot"></div>
     <div class="cursor-ring" id="cursorRing"></div>
     <!-- NAV -->
-    <div id = "header"></div>
+    <div id="header"></div>
 
     <!-- HERO -->
     <section class="hero" id="hero">
       <div class="hero-bg-grid"></div>
       <div class="hero-bg-glow"></div>
       <div class="hero-content">
-                <!-- LEFT CONTENT -->
-        <div>
-          <div class="hero-eyebrow">취약점진단 자동화 플랫폼</div>
-          <div class="hero-title"><img src="../../images/bingoCVM-logo-bklong2.png" alt="BingoCVM"></div>
-          
+        <div class="hero-eyebrow">RISK-BASED VULNERABILITY MANAGEMENT</div>
+        <div class="hero-title">
+          <img src="../../images/bingoCVM-logo-bklong2.png" alt="BingoCVM" />
+        </div>
 
-          <p class="hero-desc" data-i18n-html="product.hero.desc">
-            <strong>
-              정보통신기반시설 및 클라우드 시스템 취약점진단 자동화
-            </strong>
-            를 제공합니다.<br />
-
-          </p>
-
-
-
-         
+        <h2 class="hero-subtitle">
+          단순 나열을 넘어,<br />
+          위협과 자산 중요도 기반의
+          <span class="hero-subtitle-accent">자동화된 대응 우선순위</span>를
+          제시합니다
+        </h2>
       </div>
     </section>
 
-    <div
-      class="page-layout"
-      style="
-        display: grid;
-        grid-template-columns: 1fr 240px;
-        gap: 30px;
-        align-items: start;
-        margin: 30px 80px;
-      "
-    >
+    <div class="page-layout">
       <div class="page-content" style="grid-column: 1">
-        <!-- INTRO / EFFECTS -->
-        <section id="intro">
+        <!-- ADVANCED INTELLIGENCE / SLIDE 8 -->
+        <section
+          id="advanced-intelligence"
+          class="zt-slide-section zt-intelligence-section"
+        >
           <div class="section-header reveal">
             <div class="section-num">01</div>
-            <div class="section-eyebrow" data-i18n="product.intro.eyebrow">
-              도입 효과
-            </div>
-            <h2 class="section-title" data-i18n="product.intro.title">
-              도입효과 및 핵심 기능
+            <div class="section-eyebrow">지능형 취약점 분석</div>
+            <h2 class="section-title">
+              탐지부터 위험 분석, 대응 우선순위까지 하나의 지능형 흐름으로
+              연결합니다
             </h2>
             <p class="section-desc">
-              BingoCVM은 <strong>제로트러스트 취약점 진단 엔진</strong>과 유연한 관리
-              기능으로 최상의 보안 관리 효율성을 제공합니다.
+              <strong>BingoCVM</strong>은 취약점을 탐지하는 데 그치지 않고,
+              <strong>위협 인텔리전스</strong>와 <strong>자산 중요도</strong>를
+              결합하여 위험을 판단하고 최적의 대응 우선순위를 도출합니다.
             </p>
           </div>
-          <div class="intro-grid">
-            <div class="intro-effects reveal-left">
-              <div class="effect-item">
-                <div class="effect-num">01</div>
-                <div class="effect-body">
-                  <div class="effect-title" data-i18n="product.intro.effect1.title">
-                    국내 컴플라이언스 규정 준수
-                  </div>
-                  <div class="effect-desc" data-i18n="product.intro.effect1.desc">
-                    KISA 취약점점검 가이드 기준에 따른 체계적인 점검으로 법적
-                    요건을 충족합니다.
-                  </div>
+
+          <div class="intel-pipeline reveal">
+            <!-- Stage 01 — DETECT -->
+            <article class="pipeline-stage stage-detect">
+              <div class="pipeline-stage-head">
+                <span class="pipeline-stage-num">01</span>
+                <div>
+                  <h3>통합 취약점 탐지</h3>
+                  <p>Integrated Vulnerability Detection</p>
                 </div>
               </div>
-              <div class="effect-item">
-                <div class="effect-num">02</div>
-                <div class="effect-body">
-                  <div class="effect-title" data-i18n="product.intro.effect2.title">
-                    ISMS-P, CSAP 인증 획득 및 준수 관리
-                  </div>
-                  <div class="effect-desc" data-i18n="product.intro.effect2.desc">
-                    정보보호관리체계 인증과 클라우드 보안 인증 준수를 위한
-                    체계적 지원을 제공합니다.
-                  </div>
+
+              <div class="pipeline-stage-grid">
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">CONFIGURATION</span>
+                  <span class="pipeline-item-term">시스템 설정 취약점</span>
+                  <span class="pipeline-item-label">CCE</span>
+                  <p class="pipeline-item-desc">
+                    운영 시스템 및 인프라의 보호 설정 오류와 컴플아이언스 위반
+                    사항을 정밀 분석하고 진단합니다. (국내공공기관 기술적 취약점
+                    점검 항목)
+                  </p>
+                </div>
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">SOFTWARE</span>
+                  <span class="pipeline-item-term">소프트웨어 취약점</span>
+                  <span class="pipeline-item-label">CVE</span>
+                  <p class="pipeline-item-desc">
+                    서버, 운영체제, 애플리케이션 및 오픈소스 등 알려진 시스템의
+                    다양한 소프트웨어 취약점을 탐지합니다.
+                  </p>
+                </div>
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">NETWORK SCAN</span>
+                  <span class="pipeline-item-term">네트워크 스캔 취약점</span>
+                  <span class="pipeline-item-label">NSE Vulners</span>
+                  <p class="pipeline-item-desc">
+                    고성능 네트워크 스캐닝 엔진을 통해 실시간 대역별 취약 자산을
+                    스캔하고 잠재적 위협을 탐지합니다.
+                  </p>
                 </div>
               </div>
-              <div class="effect-item">
-                <div class="effect-num">03</div>
-                <div class="effect-body">
-                  <div class="effect-title" data-i18n="product.intro.effect3.title">
-                    공공기관 사이버보안 실태평가 대응
-                  </div>
-                  <div class="effect-desc" data-i18n="product.intro.effect3.desc">
-                    정부·공공기관의 사이버보안 실태평가 요구사항에 맞춤
-                    대응합니다.
-                  </div>
-                </div>
-              </div>
-              <div class="effect-item">
-                <div class="effect-num">04</div>
-                <div class="effect-body">
-                  <div class="effect-title" data-i18n="product.intro.effect4.title">
-                    전사적 보안 수준 향상 신뢰성 확보
-                  </div>
-                  <div class="effect-desc" data-i18n="product.intro.effect4.desc">
-                    조직 전체 시스템의 보안 취약점을 체계적으로 관리하여
-                    신뢰성을 높입니다.
-                  </div>
-                </div>
-              </div>
+            </article>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <polyline points="5 13 12 20 19 13"></polyline>
+              </svg>
             </div>
 
-            <div class="intro-features reveal-right">
-              <div class="feature-card">
-                <div class="feature-card-title" data-i18n="product.intro.card1.title">
-                  시스템 취약점진단 관리의 쉬운 자동화
+            <!-- Stage 02 — ANALYZE (the "brain") -->
+            <article class="pipeline-stage stage-analyze">
+              <div class="pipeline-stage-head">
+                <span class="pipeline-stage-num">02</span>
+                <div>
+                  <h3>
+                    위협 기반 위험 분석 <span class="zt-ai-badge">Ai</span>
+                  </h3>
+                  <p>Threat-Based Risk Analysis</p>
                 </div>
-                <ul>
-                  <li data-i18n="product.intro.card1.li1">
-                    BingoCVM은 시스템 취약점진단을 자동화(스케줄
-                    관리)하여 담당자의 업무시간을 단축시켜줍니다.
-                  </li>
-                  <li data-i18n="product.intro.card1.li2">
-                    조치 관리를 통해서 누가 언제 조치를 어떻게 했고 조치 관련
-                    증빙 자료를 업로드해서 관리할 수 있습니다.
-                  </li>
-                  <li data-i18n="product.intro.card1.li3">
-                    초기 진단과 조치 이후 진단 내역을 비교하는 비교 보고서
-                    다운로드가 가능합니다.
-                  </li>
-                  
-                </ul>
               </div>
-              <div class="feature-card">
-                <div class="feature-card-title" data-i18n="product.intro.card2.title">
-                  온프레미스 및 클라우드 시스템 취약점 진단
+
+              <div class="pipeline-stage-grid">
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">SEVERITY</span>
+                  <span class="pipeline-item-term">얼마나 심각한가?</span>
+                  <span class="pipeline-item-label">CVSS</span>
+                  <p class="pipeline-item-desc">
+                    취약점의 기술적 심각도를 정량화한 글로벌 표준 점수 체게를
+                    제공하여 객관적인 위험도 파악이 가능합니다. Severity,
+                    Exploit, Impact Score
+                  </p>
                 </div>
-                <ul>
-                  <li data-i18n="product.intro.card2.li1">
-                    온프레미스에서 클라우드 시스템까지 모두 하나의 플랫폼
-                    BingoCVM에서 취약점진단이 가능합니다.
-                  </li>
-                  <li data-i18n="product.intro.card2.li2">
-                    진단 대상: Unix/Linux 서버, Windows 서버, PC, 웹, DBMS,
-                    Network, 가상화, 클라우드 플랫폼의 취약점 항목을 자동 스케줄
-                    진단할 수 있습니다.
-                  </li>
-                </ul>
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">EXPLOITABILITY</span>
+                  <span class="pipeline-item-term"
+                    >얼마나 악용될 가능성이 높은가?</span
+                  >
+                  <span class="pipeline-item-label">EPSS</span>
+                  <p class="pipeline-item-desc">
+                    실제 취약점이 공격에 이용될 확률을 예측하는 AI 기반 분석
+                    모델로 데이터 기반의 의사 결정을 지원합니다.
+                  </p>
+                </div>
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">ACTIVE THREAT</span>
+                  <span class="pipeline-item-term"
+                    >실제로 공격에 사용되고 있는가?</span
+                  >
+                  <span class="pipeline-item-label">KEV</span>
+                  <p class="pipeline-item-desc">
+                    실제 야생(In-the-Wild)에서 활발하게 악용 중인 위협 및
+                    해킹사례 취약점 목록을 연동하여 실제 악용 여부 확인 최우선
+                    대응 지표를 제공합니다.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <polyline points="5 13 12 20 19 13"></polyline>
+              </svg>
+            </div>
+
+            <!-- Stage 03 — PRIORITIZE -->
+            <article class="pipeline-stage stage-prioritize">
+              <div class="pipeline-stage-head">
+                <span class="pipeline-stage-num">03</span>
+                <div>
+                  <h3>자산 중요도 기반 대응 전략</h3>
+                  <p>Asset-Criticality-Based Response</p>
+                </div>
+              </div>
+
+              <div class="pipeline-stage-grid">
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">CRITICALITY</span>
+                  <span class="pipeline-item-term">자산 중요도</span>
+                  <span class="pipeline-item-label">상 · 중 · 하</span>
+                  <p class="pipeline-item-desc">
+                    모든 자산을 동일한 수준으로 복구하는 것이 아니라, 자산의
+                    중요도(Criticality)를 평가하여 제한된 인력과 자원을 가장
+                    중요한 자산에 먼저 투입하는 복구 전략입니다.
+                  </p>
+                </div>
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">BUSINESS IMPACT</span>
+                  <span class="pipeline-item-term">RTO · RPO</span>
+                  <span class="pipeline-item-label">업무 영향도</span>
+                  <p class="pipeline-item-desc">
+                    재해복구(DR)와 업무연속성계획(BCP)의 핵심 지표를 자산별로
+                    관리합니다.
+                  </p>
+                </div>
+                <div class="pipeline-item">
+                  <span class="pipeline-item-tag">RECOVERY</span>
+                  <span class="pipeline-item-term">복구 우선순위</span>
+                  <span class="pipeline-item-label">Recovery Priority</span>
+                  <p class="pipeline-item-desc">
+                    위험도와 중요도를 결합해 가장 시급한 복구 대상을 결정합니다.
+                  </p>
+                </div>
+              </div>
+
+              <p class="pipeline-stage-desc">
+                자산의 중요도와 업무 영향도를 반영하여 가장 중요한 자산부터
+                대응·복구 우선순위를 결정합니다.
+              </p>
+            </article>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <polyline points="5 13 12 20 19 13"></polyline>
+              </svg>
+            </div>
+
+            <!-- Final output -->
+            <div class="pipeline-output">
+              <div class="pipeline-output-label">RISK-BASED RESPONSE</div>
+              <p class="pipeline-output-question">
+                "무엇을 먼저 보호해야 하는가?"를 결정합니다.
+              </p>
+              <div class="pipeline-output-chain">
+                <span>CRITICAL ASSET</span>
+                <span class="chain-arrow" aria-hidden="true">→</span>
+                <span>HIGH RISK</span>
+                <span class="chain-arrow" aria-hidden="true">→</span>
+                <span class="chain-final">IMMEDIATE RESPONSE</span>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- PROCESS -->
-        <section id="process">
+        <!-- ZERO TRUST ARCHITECTURE / SLIDE 9 -->
+        <section
+          id="zero-trust-architecture"
+          class="zt-slide-section zt-architecture-section"
+        >
           <div class="section-header reveal">
             <div class="section-num">02</div>
-            <div class="section-eyebrow" data-i18n="product.process.eyebrow">
-              취약점 진단 프로세스
-            </div>
-            <h2 class="section-title" data-i18n="product.process.title">
-              5단계 체계적 취약점 진단 프로세스
+            <div class="section-eyebrow">제로트러스트 아키텍처</div>
+            <h2 class="section-title">
+              발견하고, 검증하고, 평가하고, 판단합니다
             </h2>
-            <p class="section-desc" data-i18n="product.process.desc">
-              BingoCVM의 취약점 진단 프로세스는
-              <strong>체계적이고 단계적인 접근</strong>으로 빠짐없는
-              취약점관리를 실현합니다.<br />
-              취약점 진단 주요단계는 자산등록, 취약점진단, 취약점분석,
-              취약점조치, 이행점검으로 이루어집니다.
+            <p class="section-desc">
+              BingoCVM은 Zero Trust 원칙을 하나의 진단 엔진으로 연결하여, 산재된
+              보안 데이터를 실행 가능한 대응 우선순위로 전환합니다.
             </p>
           </div>
 
-          <div class="process-steps reveal">
-            <div class="process-step">
-              <div class="step-icon-wrap">
-                <div class="step-icon">
-                  <span class="step-num step-num-1">01</span>
-                  <svg
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    stroke="#1657b5"
-                    stroke-width="2"
-                  >
-                    <rect x="6" y="4" width="20" height="24" rx="2" />
-                    <path d="M11 12h10M11 17h7" />
-                    <circle
-                      cx="22"
-                      cy="22"
-                      r="5"
-                      fill="white"
-                      stroke="#1657b5"
-                    />
-                    <path
-                      d="M20 22l1.5 1.5L24 20"
-                      stroke="#1657b5"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="step-name" data-i18n="product.process.step1.name">
-                자산등록
-              </div>
-              <ul class="panel-list">
-                <li data-i18n="product.process.step1.li1">
-                  모든 IT 자산을 Agent 또는 Non‑Agent 방식으로 식별하여 등록
-                </li>
-              </ul>
-            </div>
+          <div class="zt-flow reveal">
+            <article class="zt-flow-card zt-flow-card-blue">
+              <div class="zt-flow-step">01 · DISCOVER</div>
+              <h3 class="zt-flow-question">무엇이 존재하는가?</h3>
+              <p class="zt-flow-tags">보안 취약점 통합 탐지</p>
+              <p class="zt-flow-tags-concept">CCE · CVE · NSE Vulners</p>
+              <p class="zt-flow-desc">
+                온프레미스부터 클라우드까지 IT 자산의 설정·소프트웨어· 네트워크
+                스캔 취약점을 통합 진단합니다.
+              </p>
+            </article>
 
-            <div class="process-step">
-              <div class="step-icon-wrap">
-                <div class="step-icon">
-                  <span class="step-num step-num-2">02</span>
-                  <svg
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    stroke="#2176d4"
-                    stroke-width="2"
-                  >
-                    <rect x="4" y="6" width="24" height="18" rx="2" />
-                    <path d="M4 22h24M12 26h8" />
-                    <path
-                      d="M10 14l4 4 8-8"
-                      stroke="#2176d4"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="step-name" data-i18n="product.process.step2.name">
-                취약점 진단
-              </div>
-              <ul class="panel-list">
-                <li data-i18n="product.process.step2.li1">
-                  CCE 진단 스크립트를 자동으로 배포·실행하고 결과 파일을 수집
-                </li>
-                <li data-i18n="product.process.step2.li2">
-                  CVE 기반 자산 자동 매핑으로 스캔 결과를 통합 수집 (2026년 적용)
-                </li>
-              </ul>
-              <div style="text-align: center; margin-top: 10px">
-                <span class="step-tag" data-i18n="product.process.step2.badge"
-                  >자동화</span
-                >
-              </div>
-            </div>
+            <div class="zt-flow-arrow" aria-hidden="true">→</div>
 
-            <div class="process-step">
-              <div class="step-icon-wrap">
-                <div class="step-icon">
-                  <span class="step-num step-num-3">03</span>
-                  <svg
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    stroke="#38a0f0"
-                    stroke-width="2"
-                  >
-                    <circle cx="16" cy="16" r="11" />
-                    <path d="M16 10v6l4 2" />
-                  </svg>
-                </div>
-              </div>
-              <div class="step-name" data-i18n="product.process.step3.name">
-                취약점 분석
-              </div>
-              <ul class="panel-list">
-                <li data-i18n="product.process.step3.li1">
-                  수집된 CCE 시스템취약점진단 결과를 분석하여 항목을 취약 / 양호 / 예외로 분류
-                </li>
-                <li data-i18n="product.process.step3.li2">
-                  CVE 소프트웨어 취약점 기반 AI 분석을 통해 취약점에 대한 정밀 분석 수행 (2026년 적용)
-                </li>
-              </ul>
-              <div style="text-align: center; margin-top: 10px">
-                <span class="step-tag" data-i18n="product.process.step3.badge"
-                  >AI 분석</span
-                >
-              </div>
-            </div>
+            <article class="zt-flow-card zt-flow-card-cyan">
+              <div class="zt-flow-step">02 · VERIFY</div>
+              <h3 class="zt-flow-question">이 자산은 안전한가?</h3>
+              <p class="zt-flow-tags">지속적인 보안 상태 검증</p>
+              <p class="zt-flow-tags-concept">
+                Agent · Agentless · Offline/Manual
+              </p>
+              <p class="zt-flow-desc">
+                IT 자산의 보안 상태를 지속적으로 확인하고 환경에 맞는 다양한
+                방식으로 취약점을 진단합니다.
+              </p>
+            </article>
 
-            <div class="process-step">
-              <div class="step-icon-wrap">
-                <div class="step-icon">
-                  <span class="step-num step-num-4">04</span>
-                  <svg
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    stroke="#22a86a"
-                    stroke-width="2"
-                  >
-                    <circle cx="16" cy="12" r="5" />
-                    <path d="M8 26c0-4 3.6-7 8-7s8 3 8 7" />
-                    <path
-                      d="M20 14l2 2 4-4"
-                      stroke="#22a86a"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="step-name" data-i18n="product.process.step4.name">
-                취약점 조치
-              </div>
-              <ul class="panel-list">
-                <li data-i18n="product.process.step4.li1">
-                  발견된 취약점에 대해 수동 또는 자동으로 조치 수행
-                </li>
-                <!-- <li data-i18n="product.process.step4.li2">
-                  AI 엔진을 활용한 조치 가이드를 제공 (2026년 적용)
-                </li> -->
-                <li data-i18n="product.process.step4.li3">
-                  조치 이력과 증적 자료를 체계적으로 저장
-                </li>
-              </ul>
-              <!-- <div style="text-align: center; margin-top: 10px">
-                <span class="step-tag" data-i18n="product.process.step4.badge"
-                  >AI 조치</span
-                >
-              </div> -->
-            </div>
+            <div class="zt-flow-arrow" aria-hidden="true">→</div>
 
-            <div class="process-step">
-              <div class="step-icon-wrap">
-                <div class="step-icon">
-                  <span class="step-num step-num-5">05</span>
-                  <svg
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    stroke="#e0106a"
-                    stroke-width="2"
-                  >
-                    <rect x="5" y="4" width="22" height="24" rx="2" />
-                    <path d="M10 12h12M10 17h12M10 22h8" />
-                  </svg>
-                </div>
+            <article class="zt-flow-card zt-flow-card-green">
+              <div class="zt-flow-step">03 · EVALUATE</div>
+              <h3 class="zt-flow-question">무엇이 실제로 위험한가?</h3>
+              <p class="zt-flow-tags">위협 및 위험도 분석</p>
+              <p class="zt-flow-tags-concept">CVSS · EPSS · KEV</p>
+              <p class="zt-flow-desc">
+                보안 취약점의 기술적 심각도, 실제 악용 가능성, 공격 여부를
+                분석하고 자산의 중요도와 결합하여 실제 위험을 평가합니다.
+              </p>
+            </article>
+
+            <div class="zt-flow-arrow" aria-hidden="true">→</div>
+
+            <article class="zt-flow-card zt-flow-card-decision">
+              <div class="zt-flow-decision-badge">RISK DECISION</div>
+              <div class="zt-flow-step">04 · DECIDE</div>
+              <h3 class="zt-flow-question">무엇부터 대응할 것인가?</h3>
+              <p class="zt-flow-tags">위험 기반 대응 우선순위 결정</p>
+              <p class="zt-flow-tags-concept">Risk-Based Response</p>
+              <p class="zt-flow-desc">
+                취약점 개수가 아니라 위험도와 자산 중요도를 기준으로 가장 먼저
+                대응해야 할 보안 과제를 결정합니다.
+              </p>
+              <div class="zt-flow-priority">
+                <span class="zt-flow-priority-dot" aria-hidden="true"></span>
+                PRIORITY → CRITICAL
               </div>
-              <div class="step-name" data-i18n="product.process.step5.name">
-                이행 점검
-              </div>
-              <ul class="panel-list">
-                <li data-i18n="product.process.step5.li1">
-                  조치 완료 후 재진단을 수행하여 이행 여부를 검증
-                </li>
-                <li data-i18n="product.process.step5.li2">
-                  최종 진단 보고서 및 비교 보고서 제공 (다운로드 가능)
-                </li>
-              </ul>
-            </div>
+            </article>
           </div>
 
+          <div class="zt-flow-callout reveal">
+            <div class="zt-flow-callout-label">ZERO TRUST → ACTION</div>
+            <p class="zt-closing-note">
+              발견부터 검증, 평가, 대응 결정까지 — 보안 프로세스를 단 하나의
+              지능형 엔진으로 완결합니다.
+            </p>
+          </div>
         </section>
 
-        <!-- CCE / CVE -->
-        <section id="cce-cve">
+        <!-- CCE / CVE / NSE Vulners — three complementary detection layers -->
+        <section id="cce-cve-nse">
           <div class="section-header reveal">
             <div class="section-num">03</div>
-            <div class="section-eyebrow" data-i18n="product.cceCve.eyebrow">
-              취약점 유형 소개
-            </div>
+            <div class="section-eyebrow">취약점 진단</div>
             <h2 class="section-title">
-              CCE 시스템취약점과 CVE 소프트웨어취약점
+              설정부터 소프트웨어, 네트워크 스캔까지 단 하나의 플랫폼에서
             </h2>
-            <p class="section-desc" data-i18n-html="product.cceCve.desc">
-              BingoCVM은 <strong>CCE(시스템 취약점)</strong>와
-              <strong>CVE(소프트웨어 취약점)</strong> 두 가지 유형을 통합 진단합니다. <br />
-              설정 오류부터 알려진 버그까지, 하나의 플랫폼에서 모두 관리합니다.
+            <p class="section-desc">
+              CCE·CVE·NSE Vulners 등 다양한 취약점 신호를 통합 분석하고,
+              Agent부터 인터뷰 점검까지 환경별 최적의 진단 방식을 제공합니다.
             </p>
           </div>
 
-          <div class="cce-cve-grid reveal">
-            <div class="cce-panel">
-              <span class="panel-badge badge-blue" data-i18n="product.cceCve.left.badge"
-                >Common Configuration Enumeration</span
-              >
-              <div class="panel-title" data-i18n="product.cceCve.left.title">
-                CCE 시스템취약 개요
-              </div>
-              <div class="panel-title-rule panel-title-rule--blue"></div>
-              <div class="panel-body" data-i18n="product.cceCve.left.overview">
-                시스템과 소프트웨어의 보안 설정 오류(Configuration
-                Weakness)를 표준 식별번호로 관리하는 체계입니다.
-              </div>
+          <div class="detect-panel">
+            <div class="detect-layer-grid reveal">
+              <!-- CCE -->
+              <article class="detect-card detect-cce">
+                <div class="detect-card-top">
+                  <span class="detect-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="detect-role">01 · CONFIGURATION</span>
+                </div>
 
-              <div class="panel-sub" data-i18n="product.cceCve.left.kisaTitle">
-                KISA의 취약점 표준 체계
-              </div>
-              <div
-                class="panel-body"
-                style="margin-bottom: 0"
-                data-i18n="product.cceCve.left.kisaDesc"
-              >
-                대한민국에서는 한국인터넷진흥원(KISA)이 주요 정보보호 취약점
-                기준을 관리·보급합니다. 다음과 같은 국내 표준 취약점 점검 기준을
-                제공합니다.
-              </div>
+                <h3 class="detect-title">시스템 설정 취약점</h3>
+                <div class="detect-subtitle">CCE</div>
 
-              <div
-                class="panel-sub"
-                style="margin-top: 20px"
-                data-i18n="product.cceCve.left.std1"
-              >
-                ① 주요정보통신기반시설 기술적 취약점 분석·평가 기준
-              </div>
-              <ul class="panel-list">
-                <li data-i18n="product.cceCve.left.std1.li1">
-                  전자정부, 공공기관 대상
-                </li>
-                <li data-i18n="product.cceCve.left.std1.li2">
-                  서버/네트워크/DB/보안장비 점검 항목 제공
-                </li>
-                <li data-i18n="product.cceCve.left.std1.li3">
-                  항목 구조는 CCE 개념과 유사 (설정 기반 점검)
-                </li>
-              </ul>
+                <p class="detect-desc">
+                  시스템 및 인프라의 설정 오류를 탐지하여 구성 단계의 보안
+                  위험을 식별합니다.
+                </p>
 
-              <div class="panel-sub" data-i18n="product.cceCve.left.std2">
-                ② 국가 정보보안 기본지침 / 전자정부 보안 가이드
-              </div>
-              <ul class="panel-list">
-                <li data-i18n="product.cceCve.left.std2.li1">계정관리</li>
-                <li data-i18n="product.cceCve.left.std2.li2">접근통제</li>
-                <li data-i18n="product.cceCve.left.std2.li3">로그관리</li>
-                <li data-i18n="product.cceCve.left.std2.li4">암호정책</li>
-              </ul>
+                <ul class="detect-capabilities">
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </span>
+                    보안 설정 기준 점검
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="2" y="3" width="20" height="7" rx="1.5"></rect>
+                        <rect
+                          x="2"
+                          y="14"
+                          width="20"
+                          height="7"
+                          rx="1.5"
+                        ></rect>
+                        <line x1="6" y1="6.5" x2="6.01" y2="6.5"></line>
+                        <line x1="6" y1="17.5" x2="6.01" y2="17.5"></line>
+                      </svg>
+                    </span>
+                    서버·네트워크 구성 진단
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                        ></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                        <line x1="9" y1="11" x2="11" y2="11"></line>
+                      </svg>
+                    </span>
+                    보안 정책 준수 여부 검증
+                  </li>
+                </ul>
+              </article>
+
+              <!-- CVE -->
+              <article class="detect-card detect-cve">
+                <div class="detect-card-top">
+                  <span class="detect-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m8 2 1.88 1.88"></path>
+                      <path d="M14.12 3.88 16 2"></path>
+                      <path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"></path>
+                      <path
+                        d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"
+                      ></path>
+                      <path d="M12 20v-9"></path>
+                      <path d="M6.53 9C4.6 8.8 3 7.1 3 5"></path>
+                      <path d="M6 13H2"></path>
+                      <path d="M3 21c0-2.1 1.7-3.9 3.8-4"></path>
+                      <path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"></path>
+                      <path d="M22 13h-4"></path>
+                      <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"></path>
+                    </svg>
+                  </span>
+                  <span class="detect-role">02 · SOFTWARE</span>
+                </div>
+
+                <h3 class="detect-title">소프트웨어 취약점</h3>
+                <div class="detect-subtitle">CVE</div>
+
+                <p class="detect-desc">
+                  OS 및 소프트웨어의 알려진 취약점을 탐지하고, 영향받는 자산과
+                  패치 필요성을 분석합니다.
+                </p>
+
+                <ul class="detect-capabilities">
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                        <line x1="15.3" y1="15.3" x2="21" y2="21"></line>
+                      </svg>
+                    </span>
+                    CVE 식별
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M21 12a9 9 0 1 1-3-6.7"></path>
+                        <polyline points="21 3 21 9 15 9"></polyline>
+                      </svg>
+                    </span>
+                    취약 버전 탐지
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                      </svg>
+                    </span>
+                    패치 우선순위 분석
+                  </li>
+                </ul>
+              </article>
+
+              <!-- NSE / Vulners -->
+              <article class="detect-card detect-nse">
+                <div class="detect-card-top">
+                  <span class="detect-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                      <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                      <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                    </svg>
+                  </span>
+                  <span class="detect-role">03 · NETWORK SCAN</span>
+                </div>
+
+                <h3 class="detect-title">네트워크 스캔 취약점</h3>
+                <div class="detect-subtitle">NSE Vulners</div>
+
+                <p class="detect-desc">
+                  외부 노출 포트와 네트워크 서비스를 분석하여 악용 가능한 접점을
+                  탐지합니다.
+                </p>
+
+                <ul class="detect-capabilities">
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                      </svg>
+                    </span>
+                    서비스 탐지
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                      </svg>
+                    </span>
+                    포트·서비스 탐지
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </span>
+                    네트워크 프로토콜 분석
+                  </li>
+                  <li>
+                    <span class="cap-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </span>
+                    외부 노출 취약점 검증
+                  </li>
+                </ul>
+              </article>
             </div>
 
-            <div class="cve-panel">
-              <span class="panel-badge badge-pink" data-i18n="product.cceCve.right.badge"
-                >Common Vulnerabilities and Exposures</span
-              >
-              <div class="panel-title" data-i18n="product.cceCve.right.title">
-                CVE 소프트웨어취약 개요 
+            <!-- Convergence visual: 3 layers → 1 result -->
+            <div class="detect-merge" aria-hidden="true">
+              <svg viewBox="0 0 100 56" preserveAspectRatio="none">
+                <path
+                  class="merge-line merge-line-cce"
+                  d="M16.67,0 L50,28"
+                ></path>
+                <path class="merge-line merge-line-cve" d="M50,0 L50,28"></path>
+                <path
+                  class="merge-line merge-line-nse"
+                  d="M83.33,0 L50,28"
+                ></path>
+                <path class="merge-stem" d="M50,28 L50,56"></path>
+              </svg>
+              <span class="detect-merge-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+            </div>
+
+            <!-- Fusion result -->
+            <div class="detect-fusion reveal">
+              <div class="detect-fusion-label">
+                UNIFIED VULNERABILITY ANALYSIS
               </div>
-              <div class="panel-title-rule panel-title-rule--pink"></div>
-              <div class="panel-body" data-i18n="product.cceCve.right.overview">
-                소프트웨어나 하드웨어 제품에 존재하는 보안 취약점(버그)에
-                부여되는 고유 식별번호입니다.
+              <h3 class="detect-fusion-title">통합 취약점 진단 결과</h3>
+              <p class="detect-fusion-desc">
+                다양한 진단 결과를 종합 분석하여 자산별 실질 위험 수준을 한눈에
+                제시합니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- 진단 방식: Agent / Agentless / Offline / Interview -->
+          <div id="diag-methods" class="diag-methods reveal">
+            <div class="diag-methods-header">
+              <div class="diag-methods-eyebrow">
+                DEPLOYMENT FLEXIBILITY
+                <span
+                  class="diag-methods-eyebrow-dot"
+                  aria-hidden="true"
+                ></span>
+              </div>
+              <h3 class="diag-methods-title">
+                어떤 IT 환경에서도 막힘없는 맞춤형 보안 진단
+              </h3>
+              <p class="diag-methods-desc">
+                네트워크 제약부터 폐쇄망까지, BingoCVM이 최적의 진단 방식을
+                제공합니다.
+              </p>
+            </div>
+
+            <div class="diag-methods-grid">
+              <div class="diag-env-card diag-env-online">
+                <div class="diag-env-label">ONLINE</div>
+                <div class="diag-env-sub">
+                  실시간 · 스케줄 진단이 가능한 자동 점검 환경
+                </div>
+
+                <div class="diag-method-item">
+                  <span class="diag-method-tag">AGENT</span>
+                  <div class="diag-method-body">
+                    <div class="diag-method-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+                        <path d="M2 20h20"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="diag-method-title">Agent</h4>
+                      <p class="diag-method-desc">
+                        점검 대상 장비에 Agent를 설치하여 상시·지속적인 진단을
+                        수행합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="diag-method-item">
+                  <span class="diag-method-tag">AGENTLESS</span>
+                  <div class="diag-method-body">
+                    <div class="diag-method-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M17.5 19H9a5 5 0 1 1 1.5-9.9A6 6 0 0 1 22 12.5a4.5 4.5 0 0 1-4.5 6.5z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="diag-method-title">Agentless</h4>
+                      <p class="diag-method-desc">
+                        점검 대상 장비에 Agent를 설치하지 않고, 원격 방식으로
+                        취약점을 진단합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diag-env-callout">
+                  <svg
+                    class="diag-env-callout-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <span
+                    >설치 부담 없이 실시간으로 취약점을 자동 탐지합니다.</span
+                  >
+                </div>
               </div>
 
-              <div class="cve-cols">
-                <div>
-                  <div class="panel-sub" data-i18n="product.cceCve.right.keyDetails">
-                    CVE 취약점의 주요 내용
+              <div class="diag-env-card diag-env-offline">
+                <div class="diag-env-label">OFFLINE</div>
+                <div class="diag-env-sub">망분리 · 폐쇄망 환경 지원</div>
+
+                <div class="diag-method-item">
+                  <span class="diag-method-tag">MANUAL</span>
+                  <div class="diag-method-body">
+                    <div class="diag-method-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                        ></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="diag-method-title">수동 진단</h4>
+                      <p class="diag-method-desc">
+                        진단 스크립트를 다운로드하여 대상 시스템에서 직접 실행한
+                        후, 결과 파일을 업로드하여 BingoCVM에서 분석·관리합니다.
+                      </p>
+                    </div>
                   </div>
-                  <ul class="panel-list">
-                    <li data-i18n-html="product.cceCve.right.key.li1">
-                      CVE 의미: 소프트웨어 결함
-                    </li>
-                    <li data-i18n-html="product.cceCve.right.key.li2">
-                      CVE 대상: 소프트웨어 제품 코드 취약점
-                    </li>
-                    <li data-i18n-html="product.cceCve.right.key.li3">
-                      CVE 약점: 해커가 직접 공격 가능
-                    </li>
-                    <li data-i18n-html="product.cceCve.right.key.li4">
-                      CVE 해결: 소프트웨어 취약점 점검 및 패치
-                    </li>
-                  </ul>
                 </div>
-                <div>
-                  <div class="panel-sub" data-i18n="product.cceCve.right.characteristics">
-                    CVE의 특징
+
+                <div class="diag-offline-steps" aria-hidden="true">
+                  <div class="diag-offline-step">
+                    <div class="diag-offline-step-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                        ></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                      </svg>
+                    </div>
+                    <span class="diag-offline-step-label"
+                      >스크립트<br />다운로드</span
+                    >
                   </div>
-                  <ul class="panel-list">
-                    <li data-i18n="product.cceCve.right.char.li1">
-                      실제 공격 가능한 코드 취약점
-                    </li>
-                    <li data-i18n-html="product.cceCve.right.char.li2">
-                      형식: CVE-연도-번호<br />예: CVE-2024-12345
-                    </li>
-                    <li data-i18n="product.cceCve.right.char.li3">
-                      CVSS 점수와 연계 (위험도 평가)
-                    </li>
-                  </ul>
+                  <span class="diag-offline-arrow">→</span>
+                  <div class="diag-offline-step">
+                    <div class="diag-offline-step-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                      </svg>
+                    </div>
+                    <span class="diag-offline-step-label">대상 <br />실행</span>
+                  </div>
+                  <span class="diag-offline-arrow">→</span>
+                  <div class="diag-offline-step">
+                    <div class="diag-offline-step-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                        ></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                      </svg>
+                    </div>
+                    <span class="diag-offline-step-label"
+                      >결과<br />업로드</span
+                    >
+                  </div>
+                  <span class="diag-offline-arrow">→</span>
+                  <div class="diag-offline-step">
+                    <div class="diag-offline-step-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                      </svg>
+                    </div>
+                    <span class="diag-offline-step-label">통합 분석</span>
+                  </div>
+                </div>
+
+                <div class="diag-env-callout">
+                  <svg
+                    class="diag-env-callout-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <span
+                    >오프라인 환경에서도 안전하게 진단을 수행하고, 결과를
+                    체계적으로 관리할 수 있습니다.</span
+                  >
                 </div>
               </div>
 
-              <div class="cve-example">
-                <div class="ex-title" data-i18n="product.cceCve.right.examples">
-                  CVE 예시
+              <div class="diag-env-card diag-env-interview">
+                <div class="diag-env-label">INTERVIEW</div>
+                <div class="diag-env-sub">
+                  온라인 · 오프라인 진단이 모두 불가능한 경우
                 </div>
-                <div class="ex-item" data-i18n-html="product.cceCve.right.example1">
-                  <code>CVE-2021-44228</code><br />
-                  Apache Log4j의 Log4Shell 원격 코드 실행 취약점
+
+                <div class="diag-method-item diag-method-item-solo">
+                  <div class="diag-method-body">
+                    <div class="diag-method-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                        ></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="diag-method-title">인터뷰 점검</h4>
+                      <p class="diag-method-desc">
+                        인터뷰 점검은 시스템에서 지원하지 않는 대상장비의
+                        점검결과를 사용자가 직접 등록하는 점검 방식입니다.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="ex-item" data-i18n-html="product.cceCve.right.example2">
-                  <code>CVE-2017-0144</code><br />
-                  Microsoft Windows SMB 취약점 (WannaCry 악용)
+
+                <div class="diag-env-callout">
+                  <svg
+                    class="diag-env-callout-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <span
+                    >현장 접근이 어려운 환경에서도 효과적으로 취약점 정보를
+                    관리할 수 있습니다.</span
+                  >
                 </div>
+              </div>
+            </div>
+
+            <div class="diag-methods-footer">
+              <div class="diag-methods-footer-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="diag-methods-footer-text">
+                <strong>다양한 진단 방식, 동일한 결과 가치</strong>
+                <span
+                  >환경에 맞는 진단 방식을 선택하고 통합 보안 리포트를
+                  확인해보세요.</span
+                >
               </div>
             </div>
           </div>
         </section>
+
+        <!-- DIAGNOSIS HISTORY & COMPARISON -->
+        <section id="history-tracking">
+          <div class="section-header reveal">
+            <div class="section-num">04</div>
+            <div class="section-eyebrow">지속적인 검증과 변화 추적</div>
+            <h2 class="section-title">
+              한 번의 진단으로 끝나지 않는, 지속적인 이력 관리
+            </h2>
+            <p class="section-desc">
+              진단 결과와 조치 이력을 지속적으로 비교·관리하여 자산별 보안
+              상태의 변화를 추적합니다.
+            </p>
+          </div>
+
+          <div class="history-timeline reveal">
+            <div class="history-timeline-track" aria-hidden="true"></div>
+
+            <div class="history-step">
+              <span class="history-step-num" aria-hidden="true">1</span>
+              <div class="history-step-label">1차 진단</div>
+              <div class="history-step-value">
+                <span class="history-step-metric">128</span>
+                <span class="history-step-unit">건</span>
+              </div>
+            </div>
+            <div class="history-step history-step-action">
+              <span class="history-step-num" aria-hidden="true">2</span>
+              <div class="history-step-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="history-step-label">조치</div>
+              <div class="history-step-value">보안 조치 수행</div>
+            </div>
+            <div class="history-step">
+              <span class="history-step-num" aria-hidden="true">3</span>
+              <div class="history-step-label">2차 진단</div>
+              <div class="history-step-value">
+                <span class="history-step-metric">73</span>
+                <span class="history-step-unit">건</span>
+              </div>
+            </div>
+            <div class="history-step history-step-highlight">
+              <span class="history-step-num" aria-hidden="true">4</span>
+              <div class="history-step-label">변화 추적</div>
+              <div class="history-step-value">
+                <span class="history-step-metric">43%</span>
+                <span class="history-step-unit">취약점 감소</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="history-bridge reveal">
+            <span class="history-bridge-line" aria-hidden="true"></span>
+            <span class="history-bridge-label"
+              >자동화된 트래킹으로 보안 관리를 일원화하세요</span
+            >
+            <span class="history-bridge-line" aria-hidden="true"></span>
+          </div>
+
+          <div class="fact-grid fact-grid-3 reveal">
+            <div class="fact-card">
+              <div class="fact-card-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <polyline points="12 7 12 12 15.5 14"></polyline>
+                </svg>
+              </div>
+              <strong>진단 이력 관리</strong>
+              <span
+                >부서·연도별 검색과 필터링으로 진단 이력을 체계적으로
+                관리합니다.</span
+              >
+            </div>
+            <div class="fact-card">
+              <div class="fact-card-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M3 3v18h18"></path>
+                  <path d="M7 15l4-4 3 3 5-6"></path>
+                </svg>
+              </div>
+              <strong>결과 비교 분석</strong>
+              <span
+                >현재·이전·최초 진단 결과를 비교하여 변화 추이를
+                확인합니다.</span
+              >
+            </div>
+            <div class="fact-card">
+              <div class="fact-card-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <strong>조치 현황 추적</strong>
+              <span
+                >자산별 취약점 조치 여부와 조치율을 지속적으로 추적합니다.</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             TECHNICAL SPECIFICATIONS — architecture + platforms are
+             reference/spec content, not part of the 01-04 feature
+             narrative, so they're grouped separately and unnumbered.
+        ========================================================= -->
+        <div class="tech-specs-divider reveal">
+          <span class="tech-specs-divider-line" aria-hidden="true"></span>
+          <span class="tech-specs-divider-label">Technical Specifications</span>
+          <span class="tech-specs-divider-line" aria-hidden="true"></span>
+        </div>
 
         <!-- ARCHITECTURE -->
         <section id="architecture">
           <div class="section-header reveal">
-            <div class="section-num">04</div>
             <div class="section-eyebrow">시스템 구성</div>
             <h2 class="section-title">시스템 구성</h2>
             <p class="section-desc" data-i18n-html="product.architecture.desc">
               BingoCVM의 시스템은
               <strong>Manager Server(App + Core)</strong>와
-              <strong>Device/Agent(Client License)</strong>로 구성됩니다. 온프레미스/클라우드 모두 자동진단 방식을 Agent + Non-Agent(기본) 모두 지원합니다.
+              <strong>Device/Agent(Client License)</strong>로 구성됩니다.
+              온프레미스/클라우드 모두 자동진단 방식을 Agent + Non-Agent(기본)
+              모두 지원합니다.
             </p>
           </div>
 
@@ -550,7 +1193,6 @@
                     <div class="arch-step-name">설치</div>
                     <div class="arch-step-sub">Manager 구축</div>
                   </div>
-                  
                 </div>
                 <div class="arch-step">
                   <div class="arch-step-num both-color">2</div>
@@ -558,7 +1200,6 @@
                     <div class="arch-step-name">자산등록</div>
                     <div class="arch-step-sub">대상 호스트 등록</div>
                   </div>
-                  
                 </div>
                 <div class="arch-step">
                   <div class="arch-step-num both-color">3</div>
@@ -566,7 +1207,6 @@
                     <div class="arch-step-name">진단 실행</div>
                     <div class="arch-step-sub">취약점 진단 명령</div>
                   </div>
-                  
                 </div>
                 <div class="arch-step">
                   <div class="arch-step-num on-prem-color">4.1</div>
@@ -574,7 +1214,6 @@
                     <div class="arch-step-name">수집(내부)</div>
                     <div class="arch-step-sub">On-Prem 데이터</div>
                   </div>
-                  
                 </div>
                 <div class="arch-step">
                   <div class="arch-step-num cloud-color">4.2</div>
@@ -582,7 +1221,6 @@
                     <div class="arch-step-name">수집(외부)</div>
                     <div class="arch-step-sub">Cloud 데이터</div>
                   </div>
-                  
                 </div>
                 <div class="arch-step">
                   <div class="arch-step-num both-color">5</div>
@@ -590,7 +1228,6 @@
                     <div class="arch-step-name">분석</div>
                     <div class="arch-step-sub">취약점 분석</div>
                   </div>
-                  
                 </div>
                 <div class="arch-step">
                   <div class="arch-step-num on-prem-color">6</div>
@@ -607,20 +1244,35 @@
         <!-- PLATFORMS -->
         <section id="platforms">
           <div class="section-header reveal">
-            <div class="section-num">05</div>
             <div class="section-eyebrow">지원 플랫폼</div>
             <h2 class="section-title">지원 플랫폼</h2>
             <p class="section-desc" data-i18n-html="product.platforms.desc">
               BingoCVM은 KISA 취약점점검 가이드 기준으로 고객사의 다양한 시스템
-              환경에 맞춰 최적화된 진단 서비스를 제공합니다. 온프레미스부터 클라우드까지 폭넓은 지원 범위를 자랑합니다.
+              환경에 맞춰 최적화된 진단 서비스를 제공합니다. 온프레미스부터
+              클라우드까지 폭넓은 지원 범위를 자랑합니다.
             </p>
           </div>
 
           <div class="platform-grid reveal">
-            <div class="platform-card pc-blue">
-              <div class="platform-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-              <div class="platform-name">OS &amp; 가상화</div>
-              <ul>
+            <div class="impact-card">
+              <div class="platform-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="26"
+                  height="26"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.7)"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <div class="impact-card-title">OS &amp; 가상화</div>
+              <ul class="impact-card-desc">
                 <li><strong>Windows Server:</strong> 2003 R2, 2008 ~ 2022</li>
                 <li><strong>Windows PC:</strong> 7, 8, 10, 11, Mac PC</li>
                 <li>
@@ -636,10 +1288,25 @@
                 </li>
               </ul>
             </div>
-            <div class="platform-card pc-cyan">
-              <div class="platform-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-              <div class="platform-name">DBMS &amp; Cloud</div>
-              <ul>
+            <div class="impact-card">
+              <div class="platform-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="26"
+                  height="26"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.7)"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                </svg>
+              </div>
+              <div class="impact-card-title">DBMS &amp; Cloud</div>
+              <ul class="impact-card-desc">
                 <li>
                   <strong>RDBMS:</strong> Oracle, MySQL, MSSQL, MariaDB,
                   PostgreSQL, Tibero, Cubrid
@@ -655,10 +1322,27 @@
                 </li>
               </ul>
             </div>
-            <div class="platform-card pc-pink">
-              <div class="platform-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-              <div class="platform-name">WEB/WAS &amp; Network</div>
-              <ul>
+            <div class="impact-card">
+              <div class="platform-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="26"
+                  height="26"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.7)"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+              </div>
+              <div class="impact-card-title">WEB/WAS &amp; Network</div>
+              <ul class="impact-card-desc">
                 <li><strong>WEB:</strong> Apache, IIS, Nginx, WebtoB</li>
                 <li>
                   <strong>WAS:</strong> Tomcat, Jeus, WebSphere, WebLogic, JBoss
@@ -676,90 +1360,111 @@
           </div>
         </section>
 
-        <!-- FEATURES -->
-        <section id="features">
-          <div class="section-header reveal">
-            <div class="section-num">06</div>
-            <div class="section-eyebrow" data-i18n="product.features.eyebrow">
-              주요 기능 및 특장점
+        <!-- BINGOCVM 도입효과 (closing section: what does the customer gain?) -->
+        <section id="adoption-effects" class="impact-section">
+          <div class="impact-glow" aria-hidden="true"></div>
+
+          <div class="impact-header reveal">
+            <div class="impact-eyebrow">
+              <span class="impact-eyebrow-dot" aria-hidden="true"></span>
+              BingoCVM 도입효과
             </div>
-            <h2 class="section-title" data-i18n="product.features.title">
-              기능 및 특장점
+            <h2 class="impact-title">
+              탐지를 넘어 조치까지, 보안 대응의 우선순위를 명확하게
             </h2>
-            <p class="section-desc" data-i18n="product.features.desc">
-              BingoCVM은 정보통신기반시설 및 클라우드 시스템 취약점진단 자동화를
-              제공합니다.<br />
-              시스템 취약점 진단/평가/분류/조치/이력/보고서까지 편리한 서비스를
-              제공합니다.
+            <p class="impact-desc">
+              통합 취약점 진단, 위협 인텔리전스, 자산 중요도 분석을 결합하여
+              보안팀이 가장 먼저 조치해야 할 위협을 즉시 판단하도록 지원합니다.
             </p>
           </div>
 
-          <div class="features-grid reveal">
-            <div class="features-product-col">
-              <div class="product-tagline">
-                <img src="../../images/BingoCVM-Key%20Features%20and%20Advantages.png" alt="BingoCVM Key Features and Advantages" loading="lazy" />
-                <div class="product-caption">
-                  BingoCVM은 제로트러스트 취약점 진단 엔진과 유연한 관리 기능으로 최상의 보안 관리 효율성을 제공합니다.
-                </div>
+          <div class="impact-grid reveal">
+            <article class="impact-card">
+              <div class="impact-card-num">01</div>
+              <h3 class="impact-card-title">진단 운영 효율화</h3>
+              <p class="impact-card-tagline">
+                자동·원격·수동 진단을 하나의 플랫폼으로
+              </p>
+              <p class="impact-card-desc">
+                Agent, Agentless, Offline, 인터뷰 점검 방식을 모두 지원하여
+                온프레미스부터 망분리 환경까지 기업의 다양한 보안 환경에 맞춰
+                취약점을 진단합니다.
+              </p>
+              <div class="impact-card-tags">
+                <span class="impact-card-tags-label">핵심 효과</span>
+                <span class="impact-card-tags-list"
+                  >진단 유연성 · 관리 효율화 · 다양한 환경 대응</span
+                >
               </div>
-            </div>
+            </article>
 
-            <div class="feature-col">
-              <div class="feature-col-title">
-                <span class="col-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
-                <span data-i18n="product.features.left.title">기능</span>
+            <article class="impact-card impact-card-highlight">
+              <div class="impact-card-badge">CORE VALUE</div>
+              <div class="impact-card-num">02</div>
+              <h3 class="impact-card-title">위험 기반 대응 우선순위</h3>
+              <p class="impact-card-tagline">
+                수많은 취약점 중 가장 치명적인 위협부터 선별
+              </p>
+              <p class="impact-card-desc">
+                단순 취약점 개수가 아닌 CVSS, EPSS, KEV 데이터와 자산 중요도를
+                종합 분석하여, 실제 비즈니스에 영향을 주는 위협의 조치 순서를
+                결정합니다.
+              </p>
+              <div class="impact-card-tags">
+                <span class="impact-card-tags-label">핵심 효과</span>
+                <span class="impact-card-tags-list"
+                  >위협 우선순위 정의 · 조치 효율화 · 실질적 리스크 감소</span
+                >
               </div>
-              <div class="feature-col-items">
-                <div class="feature-col-item" data-i18n="product.features.left.li1">
-                  자동/수동/스케줄 진단을 지원하며, 진단 결과 및 로그 분석,
-                  조치/중점 이력까지 원스톱 관리가 가능합니다.
-                </div>
-                <div class="feature-col-item" data-i18n="product.features.left.li2">
-                  자산별·그룹별 보고서 생성 및 진단 가이드/스크립트의 유연한
-                  커스터마이징 기능을 제공합니다.
-                </div>
-              </div>
-            </div>
+            </article>
 
-            <div class="feature-col">
-              <div class="feature-col-title">
-                <span class="col-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-                <span data-i18n="product.features.right.title">특장점</span>
+            <article class="impact-card">
+              <div class="impact-card-num">03</div>
+              <h3 class="impact-card-title">지속적인 보안 상태 관리</h3>
+              <p class="impact-card-tagline">
+                진단부터 조치, 이력 관리, 보고서 생성까지 한 번에
+              </p>
+              <p class="impact-card-desc">
+                진단 결과를 지속적으로 비교 분석하고 조치 이력을 추적하여,
+                자산별 보안 상태 변화를 파악하고 맞춤형 보고서를 손쉽게
+                생성합니다.
+              </p>
+              <div class="impact-card-tags">
+                <span class="impact-card-tags-label">핵심 효과</span>
+                <span class="impact-card-tags-list"
+                  >이력 관리 · 상태 변화 추적 · 지속적 보안 검증</span
+                >
               </div>
-              <div class="feature-col-items">
-                <div class="feature-col-item" >
-                  제로트러스트 취약점 진단 엔진을 적용하여 자산 등록부터 진단, 수집, 분석까지
-                  전 과정을 자동화합니다.
-                </div>
-                <div class="feature-col-item" data-i18n="product.features.right.li2">
-                  국내 최초로 Agent 및 Non-Agent 혼합 스케줄 진단을 지원하여
-                  다양한 환경에 최적화된 진단이 가능합니다.
-                </div>
-                <div class="feature-col-item" data-i18n="product.features.right.li3">
-                  On-Premise + Cloud 자산을 하나의 플랫폼에서 취약점 진단합니다.
-                </div>
-                <div class="feature-col-item" data-i18n="product.features.right.li4">
-                  CCE + CVE 취약점을 하나의 플랫폼에서 진단합니다.
-                </div>
-                <div class="feature-col-item" data-i18n="product.features.right.li5">
-                  Network Scanner 기능을 통해 IP, Port, Service 정보를 효율적으로 스캔합니다. 또한 Blacklist·Whitelist 정책 기반 탐지를 지원하여, 불필요하거나 비인가된 IP·Port를 주기적으로 점검하고 관리할 수 있습니다.
-                </div>
-              </div>
-            </div>
+            </article>
+          </div>
+
+          <div class="impact-callout reveal">
+            <p class="impact-callout-text">
+              "더 많이 탐지하는 것보다, 더 중요한 위협을 해결하는 것이
+              먼저입니다.
+            </p>
           </div>
         </section>
-
-
       </div>
       <aside class="page-toc">
         <div class="toc-title">이 문서의 내용</div>
-        <a class="toc-link" href="#intro">01 도입효과</a>
-        <a class="toc-link" href="#process">02 진단 프로세스</a>
-        <a class="toc-link" href="#cce-cve">03 취약점 유형</a>
-        <a class="toc-link" href="#architecture">04 시스템 구성</a>
-        <a class="toc-link" href="#platforms">05 지원 플랫폼</a>
-        <a class="toc-link" href="#features">06 기능·특장점</a>
-        
+
+        <a class="toc-link" href="#advanced-intelligence"
+          >01 지능형 취약점 분석</a
+        >
+        <a class="toc-link" href="#zero-trust-architecture"
+          >02 제로트러스트 아키텍처</a
+        >
+
+        <a class="toc-link" href="#cce-cve-nse">03 취약점 진단</a>
+        <a class="toc-link" href="#history-tracking"
+          >04 진단 이력 및 변화 추적</a
+        >
+        <div class="toc-divider"></div>
+        <a class="toc-link" href="#architecture">시스템 구성</a>
+        <a class="toc-link" href="#platforms">지원 플랫폼</a>
+        <div class="toc-divider"></div>
+        <a class="toc-link" href="#adoption-effects">BingoCVM 도입효과</a>
       </aside>
       <!-- .page-content -->
     </div>
@@ -779,9 +1484,11 @@
           const f = document.getElementById("footer");
           if (f) f.innerHTML = footerHtml;
           document.dispatchEvent(new CustomEvent("includesLoaded"));
-          const s = document.createElement('script');
-          s.src = '../../js/nav-toggle.js';
-          s.onload = () => { if (window.initNavToggle) window.initNavToggle(); };
+          const s = document.createElement("script");
+          s.src = "../../js/nav-toggle.js";
+          s.onload = () => {
+            if (window.initNavToggle) window.initNavToggle();
+          };
           document.body.appendChild(s);
         })
         .catch(() => {
@@ -807,7 +1514,8 @@
       (function () {
         // Mark top-level nav links as active based on current pathname
         const navLinks = document.querySelectorAll(".nav-menu a:not(.nav-buy)");
-        const current = window.location.pathname.split("/").pop() || "index.html";
+        const current =
+          window.location.pathname.split("/").pop() || "index.html";
         navLinks.forEach((a) => {
           const href = a.getAttribute("href");
           if (!href || href.startsWith("#")) return;
@@ -818,63 +1526,93 @@
         // TOC links: activate when header bottom meets section top using sentinels
         (function () {
           const tocLinks = document.querySelectorAll(".page-toc .toc-link");
-          const tocIds = new Set(Array.from(tocLinks).map(a => a.getAttribute("href").replace(/^#/, "")));
-          const sections = Array.from(document.querySelectorAll("section[id]")).filter(s => tocIds.has(s.id));
+          const tocIds = new Set(
+            Array.from(tocLinks).map((a) =>
+              a.getAttribute("href").replace(/^#/, ""),
+            ),
+          );
+          const sections = Array.from(
+            document.querySelectorAll("section[id]"),
+          ).filter((s) => tocIds.has(s.id));
           const header = document.getElementById("mainNav");
 
           function setActive(id) {
-            tocLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
+            tocLinks.forEach((a) =>
+              a.classList.toggle("active", a.getAttribute("href") === "#" + id),
+            );
           }
 
           let observer = null;
 
           function createObserver() {
-            const headerHeight = header ? Math.round(header.getBoundingClientRect().height) : 60;
+            const headerHeight = header
+              ? Math.round(header.getBoundingClientRect().height)
+              : 60;
             if (observer) observer.disconnect();
             const TOC_DEBUG = false; // debug off in production
 
             observer = new IntersectionObserver(
               (entries) => {
                 entries.forEach((entry) => {
-                  if (TOC_DEBUG) console.debug("TOC IO:", entry.target, "isIntersecting:", entry.isIntersecting, "dataset:", entry.target.dataset);
+                  if (TOC_DEBUG)
+                    console.debug(
+                      "TOC IO:",
+                      entry.target,
+                      "isIntersecting:",
+                      entry.isIntersecting,
+                      "dataset:",
+                      entry.target.dataset,
+                    );
                   if (entry.isIntersecting) {
                     const id = entry.target.dataset.tocFor || entry.target.id;
                     if (id) setActive(id);
                   }
                 });
               },
-              { root: null, rootMargin: `-${headerHeight}px 0px 0px 0px`, threshold: 0 },
+              {
+                root: null,
+                rootMargin: `-${headerHeight}px 0px 0px 0px`,
+                threshold: 0,
+              },
             );
 
             // create/observe a tiny sentinel element before each section
-              // ensure anchored scrolling leaves room for the sticky header
-              sections.forEach((s) => {
-                s.style.scrollMarginTop = headerHeight + "px";
-                let sentinel = s.previousElementSibling;
-                if (!sentinel || !sentinel.classList || !sentinel.classList.contains("toc-sentinel")) {
-                  sentinel = document.createElement("div");
-                  sentinel.className = "toc-sentinel";
-                  sentinel.style.cssText = "display:block;height:1px;visibility:hidden;margin:0;padding:0;";
-                  s.parentNode.insertBefore(sentinel, s);
-                }
-                sentinel.dataset.tocFor = s.id;
-                observer.observe(sentinel);
-                // also observe the section itself as a fallback (helps when DOM layout
-                // or transforms cause the sentinel to miss intersections)
-                try {
-                  s.dataset.tocFor = s.id;
-                  observer.observe(s);
-                } catch (e) {
-                  if (TOC_DEBUG) console.warn('Failed to observe section', s, e);
-                }
-              });
-
-              // expose header height as a CSS variable for any styles that might need it
-              try {
-                document.documentElement.style.setProperty("--header-height", headerHeight + "px");
-              } catch (e) {
-                // ignore if setting style fails in old browsers
+            // ensure anchored scrolling leaves room for the sticky header
+            sections.forEach((s) => {
+              s.style.scrollMarginTop = headerHeight + "px";
+              let sentinel = s.previousElementSibling;
+              if (
+                !sentinel ||
+                !sentinel.classList ||
+                !sentinel.classList.contains("toc-sentinel")
+              ) {
+                sentinel = document.createElement("div");
+                sentinel.className = "toc-sentinel";
+                sentinel.style.cssText =
+                  "display:block;height:1px;visibility:hidden;margin:0;padding:0;";
+                s.parentNode.insertBefore(sentinel, s);
               }
+              sentinel.dataset.tocFor = s.id;
+              observer.observe(sentinel);
+              // also observe the section itself as a fallback (helps when DOM layout
+              // or transforms cause the sentinel to miss intersections)
+              try {
+                s.dataset.tocFor = s.id;
+                observer.observe(s);
+              } catch (e) {
+                if (TOC_DEBUG) console.warn("Failed to observe section", s, e);
+              }
+            });
+
+            // expose header height as a CSS variable for any styles that might need it
+            try {
+              document.documentElement.style.setProperty(
+                "--header-height",
+                headerHeight + "px",
+              );
+            } catch (e) {
+              // ignore if setting style fails in old browsers
+            }
           }
 
           function debounce(fn, wait = 120) {
@@ -891,13 +1629,17 @@
             const idFromHash = window.location.hash.replace(/^#/, "");
             setTimeout(() => setActive(idFromHash), 80);
           }
-          window.addEventListener("resize", debounce(createObserver), { passive: true });
+          window.addEventListener("resize", debounce(createObserver), {
+            passive: true,
+          });
           // Fallback: rAF-throttled scroll check using document-space offsets
           // (more robust when transforms or layout quirks affect getBoundingClientRect intersections)
           let ticking = false;
           function updateActiveByScroll() {
             ticking = false;
-            const headerHeight = header ? Math.round(header.getBoundingClientRect().height) : 60;
+            const headerHeight = header
+              ? Math.round(header.getBoundingClientRect().height)
+              : 60;
             const scrollY = window.scrollY || window.pageYOffset || 0;
             let candidate = null;
             for (const s of sections) {
@@ -932,7 +1674,7 @@
         }
       });
     </script>
-    <script src="../js/cursor.js"></script>
+    <script src="../../js/cursor.js"></script>
     <script>
       /* Scroll to top + nav scroll toggle for product page */
       (function () {

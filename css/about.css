@@ -178,83 +178,6 @@ body::before {
   flex-shrink: 0;
 }
 
-.hero-title {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(80px, 9.5vw, 140px);
-  line-height: 0.92;
-  letter-spacing: 4px;
-  color: var(--ink);
-  margin-bottom: 12px;
-}
-.hero-title span {
-  color: var(--crimson);
-}
-
-/* KBi circular badge (matches provided attachment) */
-.hero-title {
-  display: block;
-}
-.hero-title .kb-badge {
-  width: 140px;
-  height: 140px;
-  background: var(--white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(26, 29, 38, 0.06);
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 40px;
-  color: #6b6b6b;
-  position: relative;
-  margin: 6px 0 12px 0;
-}
-.hero-title .kb-badge .kb-i {
-  color: var(--crimson);
-  margin-left: 6px;
-  font-size: 38px;
-}
-.hero-title .kb-badge::after {
-  content: "";
-  position: absolute;
-  right: -12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 16px solid var(--crimson);
-}
-
-.hero-title-sub {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border: 1px solid rgba(200, 0, 30, 0.2);
-  background: rgba(200, 0, 30, 0.04);
-  padding: 6px 10px;
-  border-radius: 999px;
-  margin-bottom: 18px;
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 15px;
-  color: var(--crimson2);
-  letter-spacing: 1px;
-  text-transform: none;
-  font-weight: 700;
-  box-shadow: 0 4px 10px rgba(26, 29, 38, 0.03);
-  border: none;
-  width: max-content;
-}
-.hero-title-sub::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: var(--crimson);
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-
 @keyframes pulse {
   0%,
   100% {
@@ -274,255 +197,6 @@ body::before {
 .hero-desc strong {
   color: var(--crimson);
   font-weight: 700;
-}
-.hero-desc2 {
-  font-size: 17px;
-  line-height: 1.95;
-  color: var(--muted);
-  margin-bottom: 40px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 13px 28px;
-  background: var(--crimson);
-  color: var(--white);
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  border-radius: 3px;
-  transition: all 0.22s;
-}
-.btn-primary:hover {
-  background: var(--crimson2);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(200, 0, 30, 0.25);
-}
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border: 1px solid var(--rule);
-  background: transparent;
-  color: var(--ink2);
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 3px;
-  transition: all 0.22s;
-}
-.btn-secondary:hover {
-  border-color: var(--crimson);
-  color: var(--crimson);
-}
-
-/* Hero right stat panel */
-.hero-right {
-  position: relative;
-  z-index: 1;
-  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
-  padding-left: 40px;
-}
-
-.stat-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-.stat-cell {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 20px 16px;
-  text-align: center;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-  position: relative;
-  overflow: hidden;
-}
-.stat-cell::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-}
-.sc-r::before {
-  background: var(--crimson);
-}
-.sc-b::before {
-  background: var(--ink);
-}
-.sc-c::before {
-  background: var(--muted);
-}
-.sc-p::before {
-  background: var(--ink2);
-}
-.stat-cell:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(26, 29, 38, 0.08);
-}
-.stat-num {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 40px;
-  color: var(--navy);
-  line-height: 1;
-}
-.stat-num em {
-  color: var(--crimson);
-  font-style: normal;
-}
-.stat-lbl {
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 14px;
-  color: var(--muted);
-  margin-top: 5px;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-}
-
-.cert-panel {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 14px 16px;
-  margin-bottom: 12px;
-}
-.cert-label {
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 14px;
-  color: var(--muted);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.cert-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.cert-pill {
-  display: inline-block;
-  padding: 4px 9px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink2);
-  background: var(--bg2);
-  border: 1px solid var(--rule);
-  border-radius: 20px;
-  transition:
-    border-color 0.2s,
-    color 0.2s;
-}
-.cert-pill:hover {
-  border-color: var(--crimson);
-  color: var(--crimson);
-}
-
-.g2b-panel {
-  background: var(--ink);
-  border-radius: 4px;
-  padding: 14px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-.g2b-text {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.6;
-}
-.g2b-link {
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--crimson);
-  text-decoration: none;
-  white-space: nowrap;
-  padding: 6px 12px;
-  border: 1px solid rgba(200, 0, 30, 0.3);
-  border-radius: 3px;
-  transition: background 0.2s;
-}
-.g2b-link:hover {
-  background: rgba(200, 0, 30, 0.1);
-}
-
-/* ── ABOUT STRIP ── */
-.about-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  background: linear-gradient(180deg, var(--navy2) 0%, var(--navy) 100%);
-  color: var(--white);
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-}
-.about-cell {
-  padding: 28px 32px;
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
-  position: relative;
-  overflow: hidden;
-  transition: background 0.2s;
-}
-.about-cell:first-child {
-  border-left: none;
-}
-.about-cell:hover {
-  background: rgba(200, 0, 30, 0.06);
-}
-.about-cell::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--crimson);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s;
-}
-.about-cell:hover::after {
-  transform: scaleX(1);
-}
-.about-num {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 48px;
-  color: var(--white);
-  letter-spacing: 1px;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.about-num em {
-  color: var(--crimson);
-  font-style: normal;
-  margin-left: 4px;
-}
-.about-lbl {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.45);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  font-family: "IBM Plex Sans KR", sans-serif;
-}
-.about-desc {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.65;
 }
 
 /* ── SECTIONS ── */
@@ -950,10 +624,6 @@ section {
 }
 .badge-gray {
   background: linear-gradient(135deg, var(--muted), #6b7080);
-  color: var(--white);
-}
-.badge-sky {
-  background: linear-gradient(135deg, var(--accent-blue), #3d8fd4);
   color: var(--white);
 }
 .badge-navy {
@@ -1404,23 +1074,9 @@ section {
   opacity: 1;
   transform: none;
 }
-.reveal-l {
-  opacity: 0;
-  transform: translateX(-24px);
-  transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
-}
 .reveal-l.visible {
   opacity: 1;
   transform: none;
-}
-.reveal-r {
-  opacity: 0;
-  transform: translateX(24px);
-  transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
 }
 .reveal-r.visible {
   opacity: 1;
@@ -1434,10 +1090,6 @@ section {
   }
   .hero::after {
     display: none;
-  }
-  .hero-right {
-    padding-left: 0;
-    margin-top: 36px;
   }
   .timeline-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1465,9 +1117,6 @@ section {
   }
   section {
     padding: 70px 40px;
-  }
-  .about-strip {
-    grid-template-columns: 1fr 1fr;
   }
   .clients-stats {
     grid-template-columns: repeat(2, 1fr);

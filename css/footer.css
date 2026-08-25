@@ -78,13 +78,6 @@ footer::after {
   margin: 20px 0;
 }
 
-.f-tagline {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.38);
-  line-height: 1.75;
-  max-width: 220px;
-}
-
 /* ── Col label ── */
 .f-col-lbl {
   font-family: "IBM Plex Sans KR", sans-serif;
@@ -124,31 +117,6 @@ footer::after {
 .f-links a:hover {
   color: var(--white);
   padding-left: 4px;
-}
-
-/* ── Col 3: Certifications ── */
-.f-cert-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.f-cert-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.f-cert-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--crimson);
-  flex-shrink: 0;
-  opacity: 0.7;
-}
-.f-cert-item span {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.48);
-  line-height: 1.5;
 }
 
 /* ── Col 4: Contact ── */
@@ -218,19 +186,6 @@ footer::after {
   letter-spacing: 0.3px;
   position: relative;
   z-index: 1;
-}
-.f-bottom-links {
-  display: flex;
-  gap: 20px;
-}
-.f-bottom-links a {
-  color: rgba(255, 255, 255, 0.2);
-  text-decoration: none;
-  font-size: 13px;
-  transition: color 0.18s;
-}
-.f-bottom-links a:hover {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 1100px) {

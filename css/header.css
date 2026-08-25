@@ -42,75 +42,6 @@
   object-fit: contain;
   display: block;
 }
-/* circular badge for nav logo (matches hero badge style) */
-.logo-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(36px, 3.2vw, 44px);
-  height: clamp(36px, 3.2vw, 44px);
-  max-height: 44px;
-  max-width: 44px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    #fff 0%,
-    #fbfbfb 35%,
-    #fff 100%
-  );
-  box-shadow: 0 8px 18px rgba(26, 29, 38, 0.06);
-  position: relative;
-  flex-shrink: 0;
-  margin-right: 10px;
-  overflow: visible;
-}
-.logo-badge > img {
-  width: 52%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-.logo-badge::before,
-.logo-badge::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-}
-.logo-badge::before {
-  width: calc(100% + 16px);
-  height: calc(100% + 16px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgba(145, 110, 210, 0.05);
-}
-.logo-badge::after {
-  width: calc(100% + 36px);
-  height: calc(100% + 36px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgba(145, 110, 210, 0.03);
-  filter: blur(0.2px);
-}
-.nav-logo {
-  font-family: "Bebas Neue", var(--font-ui);
-  font-size: 26px;
-  letter-spacing: 3px;
-  color: var(--ink);
-  line-height: 1;
-}
-.nav-logo em {
-  font-style: normal;
-  color: var(--crimson);
-}
-.nav-vr {
-  width: 1px;
-  height: 18px;
-  background: var(--rule);
-}
 .nav-product {
   display: flex;
   align-items: center;
@@ -127,28 +58,6 @@
   width: 28px;
   height: 28px;
   object-fit: contain;
-}
-.nav-cube {
-  width: 16px;
-  height: 16px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
-}
-.nav-cube span {
-  background: var(--crimson);
-  border-radius: 1px;
-  opacity: 0.7;
-}
-.nav-pname {
-  font-family: var(--font-ui), "IBM Plex Sans KR", sans-serif;
-  font-size: 14px;
-  color: var(--muted);
-  letter-spacing: 1.5px;
-}
-.nav-pname span {
-  color: var(--crimson);
-  font-weight: 500;
 }
 
 .nav-menu {
