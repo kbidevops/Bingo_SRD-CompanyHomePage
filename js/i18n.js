@@ -605,6 +605,7 @@
       "nav.home": "홈",
       "nav.product": "제품 소개",
       "nav.solution": "솔루션·서비스",
+      "nav.pricing": "가격 정책",
       "nav.about": "회사 소개",
       "nav.news": "뉴스",
       "nav.contact": "영업문의",
@@ -698,7 +699,7 @@
         "K-RMF, K-STIG, K-SCAP, CMMC 구현 시험·평가 도구",
 
       "about.services.card2.li5": "AI, 양자, 블록체인 신기술 개발",
-      "about.services.card3.title": "03 | 솔루션",
+
       "about.services.card3.li1":
         "<strong>BingoCVM:</strong> 통합 취약점 진단 → 위험 기반 대응",
       "about.services.card3.li2":
@@ -1031,6 +1032,7 @@
       "nav.home": "Home",
       "nav.product": "Products",
       "nav.solution": "Solutions & Services",
+      "nav.pricing": "Pricing",
       "nav.about": "About",
       "nav.news": "News",
       "nav.contact": "Contact Sales",
@@ -1159,7 +1161,7 @@
 
       "about.services.card2.li5":
         "Emerging technology development in AI, Quantum, and Blockchain",
-      "about.services.card3.title": "03 | Solutions",
+
       "about.services.card3.li1":
         "<strong>BingoCVM:</strong> Integrated vulnerability scanning → risk-based response",
       "about.services.card3.li2":

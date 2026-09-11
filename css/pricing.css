@@ -1,0 +1,480 @@
+/* =========================================================
+   BingoCVM - Product Price Policy Page Stylesheet
+   ========================================================= */
+
+/* ── RESET & BASE ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f4f2ee;
+  --bg2: #eceae5;
+  --bg3: #e2dfd8;
+  --ink: #1a1d26;
+  --ink2: #3a3d4a;
+  --muted: #4a5568;
+  --rule: rgba(26, 29, 38, 0.1);
+  --rule2: rgba(26, 29, 38, 0.06);
+  --crimson: #c8001e;
+  --crimson2: #a0001a;
+  --surface: #ffffff;
+  --navy: #1a1d26;
+  --navy2: #3a3d4a;
+  --blue: #1554b0;
+  --brand-cyan: #3ba2f2;
+  --intel-violet: #7c5cd6;
+  --zt-green: #16a34a;
+  --white: #ffffff;
+
+  --shadow-sm: 0 4px 12px rgba(26, 29, 38, 0.04);
+  --shadow-md: 0 10px 28px rgba(26, 29, 38, 0.07);
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Pretendard",
+    "Noto Sans KR",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--navy);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ── CUSTOM CURSOR ── */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--crimson);
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200, 0, 30, 0.35);
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* =========================================================
+   PRICING PAGE
+   ========================================================= */
+
+.pricing-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  padding: 140px 80px 100px;
+}
+
+.pricing-hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 60%,
+    transparent 100%
+  );
+}
+
+.pricing-hero-bg-glow {
+  position: absolute;
+  right: -10%;
+  top: -10%;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(
+    circle,
+    rgba(200, 0, 30, 0.16) 0%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.pricing-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* -- 인트로 -- */
+.pricing-intro {
+  margin-bottom: 56px;
+}
+
+.pricing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.pricing-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--crimson);
+}
+
+.pricing-heading {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+}
+
+.pricing-subtitle {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.85;
+  max-width: 720px;
+  word-break: keep-all;
+}
+
+/* -- 가격 산정 모델 -- */
+.pricing-model {
+  padding: 44px 0;
+  margin-bottom: 56px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pricing-model-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.pricing-model-card {
+  min-width: 220px;
+  padding: 28px 32px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: center;
+  transition: var(--transition-fast);
+}
+
+.pricing-model-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.pricing-model-card-base {
+  background: rgba(200, 0, 30, 0.1);
+  border-color: rgba(200, 0, 30, 0.35);
+}
+
+.pricing-model-card-base:hover {
+  background: rgba(200, 0, 30, 0.14);
+  border-color: rgba(200, 0, 30, 0.5);
+}
+
+.pricing-model-card-tag {
+  display: inline-flex;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: var(--crimson);
+  color: var(--white);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.pricing-model-card-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.pricing-model-card-basis {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-cyan);
+}
+
+.pricing-model-license {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pricing-model-license-divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* -- 가격 혜택 -- */
+.pricing-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 14px;
+  max-width: 640px;
+}
+
+.pricing-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.pricing-benefits-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--crimson);
+}
+
+.pricing-benefits li > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pricing-benefits li strong {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.pricing-benefits li span {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  word-break: keep-all;
+}
+
+.pricing-compliance-note {
+  margin-bottom: 56px;
+  padding-left: 34px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+  word-break: keep-all;
+}
+
+/* -- 하단: 조달청 + 상담 -- */
+.pricing-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pricing-marketplace h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.pricing-marketplace p {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.pricing-marketplace a {
+  color: var(--brand-cyan);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(59, 162, 242, 0.4);
+}
+
+.pricing-marketplace a:hover {
+  border-bottom-color: var(--brand-cyan);
+}
+
+.pricing-contact-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 36px 32px;
+}
+
+.pricing-contact-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.pricing-contact-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  word-break: keep-all;
+}
+
+.pricing-contact-checklist-label {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--brand-cyan);
+  margin-bottom: 12px;
+}
+
+.pricing-contact-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.pricing-contact-checklist li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pricing-contact-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--zt-green);
+  font-weight: 800;
+}
+
+.pricing-contact-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 28px;
+  border-radius: 10px;
+  background: var(--crimson);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.pricing-contact-cta:hover {
+  background: var(--crimson2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-contact-meta {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pricing-contact-guarantee {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brand-cyan);
+}
+
+/* ── RESPONSIVE STYLES ── */
+@media (max-width: 1100px) {
+  .pricing-hero {
+    padding: 120px 40px 60px;
+  }
+
+  .pricing-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-hero {
+    padding: 110px 20px 48px;
+  }
+
+  .pricing-heading {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+
+  .pricing-model-cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pricing-model-card {
+    min-width: 0;
+  }
+
+  .pricing-contact-card {
+    padding: 28px 22px;
+  }
+}

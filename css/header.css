@@ -274,7 +274,7 @@
 }
 
 /* Mobile: inline accordion, no floating panel */
-@media (max-width: 980px) {
+@media (max-width: 1440px) {
   .nav-buy-wrap {
     width: 100%;
   }
@@ -389,7 +389,7 @@ body.nav-open .hamburger-bot {
 }
 
 /* Mobile: collapse menu */
-@media (max-width: 980px) {
+@media (max-width: 1440px) {
   .nav {
     padding: 0 16px;
     height: 60px;
