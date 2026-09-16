@@ -141,6 +141,9 @@ body {
   z-index: 1;
   max-width: 1360px;
   margin: 0 auto;
+}
+
+.pricing-hero-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 600px);
   align-items: center;
@@ -212,11 +215,18 @@ body {
   margin: 0 auto;
 }
 
+.pricing-license-header {
+  margin-bottom: 28px;
+}
+
+.pricing-license-header .pricing-eyebrow {
+  margin-bottom: 12px;
+}
+
 .pricing-license-title {
   font-size: clamp(22px, 2.6vw, 28px);
   font-weight: 800;
   color: var(--ink);
-  margin-bottom: 28px;
   letter-spacing: -0.3px;
 }
 
@@ -294,13 +304,26 @@ body {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--navy);
-  color: var(--white);
 }
 
 .license-icon svg {
   width: 18px;
   height: 18px;
+}
+
+.license-icon-blue {
+  background: rgba(21, 84, 176, 0.12);
+  color: var(--blue);
+}
+
+.license-icon-violet {
+  background: rgba(124, 92, 214, 0.14);
+  color: var(--intel-violet);
+}
+
+.license-icon-green {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--zt-green);
 }
 
 .license-item-text {
@@ -319,6 +342,75 @@ body {
   font-size: 12.5px;
   font-weight: 500;
   color: var(--muted);
+}
+
+/* -- 라이선스 기준 배지 -- */
+.license-basis {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 8px;
+  border-radius: 14px;
+}
+
+.license-basis-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+}
+
+.license-basis-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.license-basis-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.license-basis-text strong {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.license-basis-text span {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.license-basis-blue {
+  background: rgba(21, 84, 176, 0.07);
+}
+
+.license-basis-blue .license-basis-icon {
+  background: rgba(21, 84, 176, 0.14);
+  color: var(--blue);
+}
+
+.license-basis-violet {
+  background: rgba(124, 92, 214, 0.08);
+}
+
+.license-basis-violet .license-basis-icon {
+  background: rgba(124, 92, 214, 0.16);
+  color: var(--intel-violet);
+}
+
+.license-basis-green {
+  background: rgba(22, 163, 74, 0.07);
+}
+
+.license-basis-green .license-basis-icon {
+  background: rgba(22, 163, 74, 0.14);
+  color: var(--zt-green);
 }
 
 .license-feature-list {
@@ -365,12 +457,53 @@ body {
   box-shadow: var(--shadow-md);
 }
 
+.quote-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 6px 12px 6px 6px;
+  border-radius: 20px;
+  background: rgba(21, 84, 176, 0.08);
+  color: var(--blue);
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.quote-card-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.quote-card-badge-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
 .pricing-quote-title {
   font-size: 19px;
   font-weight: 800;
   color: var(--ink);
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   line-height: 1.4;
+  word-break: keep-all;
+}
+
+.pricing-quote-desc {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
   word-break: keep-all;
 }
 
@@ -402,64 +535,6 @@ body {
   font-weight: 800;
 }
 
-.pricing-quote-field {
-  margin-bottom: 16px;
-}
-
-.pricing-quote-field label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ink2);
-}
-
-.pricing-quote-input {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  background: var(--bg);
-  overflow: hidden;
-  transition: var(--transition-fast);
-}
-
-.pricing-quote-input:focus-within {
-  border-color: var(--crimson);
-  background: var(--surface);
-  box-shadow: 0 0 0 3px rgba(200, 0, 30, 0.1);
-}
-
-.pricing-quote-input input {
-  flex: 1;
-  min-width: 0;
-  border: none;
-  background: transparent;
-  padding: 12px 14px;
-  font-size: 14.5px;
-  font-weight: 600;
-  color: var(--ink);
-  font-family: inherit;
-}
-
-.pricing-quote-input input:focus {
-  outline: none;
-}
-
-.pricing-quote-input input::-webkit-outer-spin-button,
-.pricing-quote-input input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.pricing-quote-input span {
-  flex-shrink: 0;
-  padding: 0 14px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--muted);
-}
-
 .pricing-quote-cta {
   display: flex;
   align-items: center;
@@ -485,22 +560,6 @@ body {
   box-shadow: var(--shadow-md);
 }
 
-.pricing-quote-meta {
-  margin-top: 16px;
-  text-align: center;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.pricing-quote-guarantee {
-  margin-top: 6px;
-  text-align: center;
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--crimson);
-}
-
 /* =========================================================
    MARKETPLACE
    ========================================================= */
@@ -510,13 +569,37 @@ body {
 }
 
 .pricing-marketplace-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 36px 40px;
+  padding: 32px 40px;
   background: var(--surface);
   border: 1px solid var(--rule);
   border-radius: 20px;
   box-shadow: var(--shadow-sm);
+}
+
+.marketplace-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: rgba(21, 84, 176, 0.08);
+  color: var(--blue);
+}
+
+.marketplace-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.pricing-marketplace-text {
+  min-width: 0;
 }
 
 .pricing-marketplace-inner h2 {
@@ -551,7 +634,7 @@ body {
     padding: 120px 40px 60px;
   }
 
-  .pricing-hero-inner {
+  .pricing-hero-body {
     grid-template-columns: minmax(0, 1fr);
     gap: 40px;
     text-align: center;
@@ -568,6 +651,14 @@ body {
 
   .pricing-license {
     padding: 32px 40px 72px;
+  }
+
+  .pricing-license-header {
+    text-align: center;
+  }
+
+  .pricing-license-header .pricing-eyebrow {
+    justify-content: center;
   }
 
   .pricing-license-grid {
@@ -617,6 +708,8 @@ body {
   }
 
   .pricing-marketplace-inner {
+    flex-direction: column;
+    text-align: center;
     padding: 28px 24px;
   }
 }
