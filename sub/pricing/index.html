@@ -32,7 +32,7 @@
     <div id="header"></div>
 
     <!-- PRICING -->
-    <section class="pricing-hero">
+    <section class="pricing-hero" id="hero">
       <div class="pricing-hero-bg-grid" aria-hidden="true"></div>
       <div class="pricing-hero-bg-glow" aria-hidden="true"></div>
       <div class="pricing-hero-inner">
@@ -40,159 +40,256 @@
         <div class="pricing-intro">
           <div class="pricing-eyebrow">PRODUCT · PRICE POLICY</div>
           <h1 class="pricing-heading">
-            진단 규모와 운영 환경에 맞춰<br />합리적인 라이선스를
-            선택하세요.
+            필요한 진단만 선택하고,<br />자산 규모에 맞춰 합리적으로 도입하세요.
           </h1>
           <p class="pricing-subtitle">
-            BingoCVM은 Manager Server 기반의 통합 진단 솔루션입니다.
-            CCE는 Device/Agent(IP/OS) 수량을 기준으로, CVE·NSE Vulners는
-            Manager Server를 기준으로 라이선스가 적용됩니다.
+            BingoCVM은 자산 기반 CCE와 서버 기반 CVE/NET Vulners로 구성되어 비용
+            부담을 줄여줍니다.
           </p>
         </div>
 
-        <!-- PRICING MODEL -->
-        <div class="pricing-model">
-          <div class="pricing-model-cards">
-            <div class="pricing-model-card pricing-model-card-base">
-              <span class="pricing-model-card-tag">필수</span>
-              <div class="pricing-model-card-name">기본 시스템</div>
-              <div class="pricing-model-card-basis">Manager Server 구축</div>
-            </div>
-            <div class="pricing-model-card">
-              <div class="pricing-model-card-name">CCE</div>
-              <div class="pricing-model-card-basis">IP / OS 수량 기준</div>
-            </div>
-            <div class="pricing-model-card">
-              <div class="pricing-model-card-name">CVE · NSE Vulners</div>
-              <div class="pricing-model-card-basis">
-                Manager Server 기준
-              </div>
-            </div>
-          </div>
-          <div class="pricing-model-license">
-            <span>영구 라이선스</span>
-            <span class="pricing-model-license-divider" aria-hidden="true"
-              >|</span
-            >
-            <span>연간 라이선스</span>
-          </div>
+        <!-- HERO DECORATION -->
+        <div class="pricing-hero-image">
+          <img
+            src="../../images/ProductPricingPolicyHeroDecoration.png"
+            alt="BingoCVM은 시스템설정취약점(CCE), 소프트웨어취약점(CVE), 네트워크스캔취약점(NET Vulners) 진단으로 구성됩니다"
+            loading="eager"
+          />
         </div>
+      </div>
+    </section>
 
-        <!-- BENEFITS -->
-        <ul class="pricing-benefits">
-          <li>
-            <svg
-              class="pricing-benefits-icon"
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <div>
-              <strong>Web · WAS · DB CCE 진단</strong>
-              <span>자산 등록 후 기본 진단 기능으로 활용</span>
-            </div>
-          </li>
-          <li>
-            <svg
-              class="pricing-benefits-icon"
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <div>
-              <strong>CCE · CVE · NSE Vulners</strong>
-              <span>진단 목적과 운영 환경에 맞춰 선택</span>
-            </div>
-          </li>
-          <li>
-            <svg
-              class="pricing-benefits-icon"
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <div>
-              <strong>전문 보안 서비스</strong>
-              <span>취약점 진단 및 모의해킹은 별도 서비스로 제공</span>
-            </div>
-          </li>
-        </ul>
+    <!-- LICENSE -->
+    <section class="pricing-license" id="license">
+      <div class="pricing-license-inner">
+        <h2 class="pricing-license-title">라이선스 기준을 확인해보세요.</h2>
 
-        <p class="pricing-compliance-note">
-          CCE·CVE 기반 진단은 ISMS-P · K-RMF · CSAP 등 컴플라이언스 대응에
-          활용됩니다.
-        </p>
+        <div class="pricing-license-grid">
+          <!-- LICENSE TABLE -->
+          <div class="license-table-wrap">
+            <table class="license-table">
+              <thead>
+                <tr>
+                  <th>진단 항목</th>
+                  <th>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                    과금 기준
+                  </th>
+                  <th>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"
+                      ></path>
+                      <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                    </svg>
+                    특징
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="license-item">
+                      <span class="license-icon" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                          ></path>
+                          <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                      </span>
+                      <div class="license-item-text">
+                        <strong>CCE</strong>
+                        <span>(시스템 설정 진단)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Device / Agent 수</strong></td>
+                  <td>
+                    OS·IP 자산 규모에 맞춰 가변 적용되는 자산 단위 라이선스
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="license-item">
+                      <span class="license-icon" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="13" r="6"></circle>
+                          <path d="M12 7V4"></path>
+                          <path d="M9 4h6"></path>
+                          <path d="M5 10 3 8"></path>
+                          <path d="m19 10 2-2"></path>
+                          <path d="M5 16l-2 2"></path>
+                          <path d="m19 16 2 2"></path>
+                          <path d="M8 13h8"></path>
+                        </svg>
+                      </span>
+                      <div class="license-item-text">
+                        <strong>CVE</strong>
+                        <span>(소프트웨어 취약점)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Manager Server 수</strong></td>
+                  <td>
+                    서버 1대 라이선스로 등록된 자산의 소프트웨어 취약점 진단
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="license-item">
+                      <span class="license-icon" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="18" cy="5" r="3"></circle>
+                          <circle cx="6" cy="12" r="3"></circle>
+                          <circle cx="18" cy="19" r="3"></circle>
+                          <line
+                            x1="8.59"
+                            y1="13.51"
+                            x2="15.42"
+                            y2="17.49"
+                          ></line>
+                          <line
+                            x1="15.41"
+                            y1="6.51"
+                            x2="8.59"
+                            y2="10.49"
+                          ></line>
+                        </svg>
+                      </span>
+                      <div class="license-item-text">
+                        <strong>NET Vulners</strong>
+                        <span>(네트워크 스캔)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Manager Server 수</strong></td>
+                  <td>서버 1대 라이선스로 네트워크 스캐닝 지원</td>
+                </tr>
+              </tbody>
+            </table>
 
-        <!-- BOTTOM: MARKETPLACE + CONTACT -->
-        <div class="pricing-bottom-grid">
-          <div class="pricing-marketplace">
-            <h2>조달청을 통한 구매를 원하시나요?</h2>
-            <p>
-              BingoCVM은 조달청 디지털서비스몰에 등록된 제품입니다. 기존
-              계약을 통해
-              <a
-                href="https://digitalmall.g2b.go.kr/link/GDSF001_01/?ctrtItemMngNo=002461084_1010000003"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Manager Server</a
-              >
-              와
-              <a
-                href="https://digitalmall.g2b.go.kr/link/GDSF001_01/?ctrtItemMngNo=002461084_1010000004"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Device / Agent</a
-              >
-              를 편리하게 도입하세요.
+            <p class="pricing-compliance-note">
+              CCE·CVE 기반 진단은 ISMS-P · K-RMF · CSAP 등 컴플라이언스 대응에
+              활용됩니다. 영구 라이선스와 연간 라이선스 중 선택할 수 있습니다.
             </p>
           </div>
 
-          <div class="pricing-contact-card">
-            <h2 class="pricing-contact-title">BingoCVM 가격 상담</h2>
-            <p class="pricing-contact-desc">
-              운영 환경과 진단 규모를 알려주시면 적합한 라이선스 구성을
-              안내해 드립니다.
-            </p>
+          <!-- QUOTE CARD -->
+          <div class="pricing-quote-card">
+            <h3 class="pricing-quote-title">내 환경에 맞는 예상 견적 받기</h3>
 
-            <div class="pricing-contact-checklist-label">
-              상담 시 확인 항목
-            </div>
-            <ul class="pricing-contact-checklist">
-              <li>Device / Agent 규모</li>
-              <li>CCE / CVE / NSE 사용 범위</li>
-              <li>Manager Server 구성</li>
-              <li>영구 / 연간 라이선스</li>
+            <ul class="pricing-quote-checklist">
+              <li>하이브리드 인프라 지원</li>
+              <li>정밀 상세 리포트 및 조치 가이드 제공</li>
             </ul>
 
-            <a class="pricing-contact-cta" href="/sub/contact/"
+            <div class="pricing-quote-field">
+              <label for="quoteAssets">자산 수량(Assets/Nodes)</label>
+              <div class="pricing-quote-input">
+                <input
+                  type="number"
+                  id="quoteAssets"
+                  name="quoteAssets"
+                  min="0"
+                  inputmode="numeric"
+                  placeholder="0"
+                />
+                <span>nodes</span>
+              </div>
+            </div>
+
+            <div class="pricing-quote-field">
+              <label for="quoteServers">Manager Server 수</label>
+              <div class="pricing-quote-input">
+                <input
+                  type="number"
+                  id="quoteServers"
+                  name="quoteServers"
+                  min="0"
+                  inputmode="numeric"
+                  placeholder="0"
+                />
+                <span>units</span>
+              </div>
+            </div>
+
+            <a class="pricing-quote-cta" href="/sub/contact/"
               >맞춤 견적 상담하기 →</a
             >
-            <p class="pricing-contact-meta">
+            <p class="pricing-quote-meta">
               전화 · 이메일 상담 · 평일 09:00–18:00
             </p>
-            <p class="pricing-contact-guarantee">
-              ⚡ 영업일 기준 24시간 이내 답변을 보장합니다
+            <p class="pricing-quote-guarantee">
+              영업일 기준 24시간 이내 답변을 보장합니다
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- MARKETPLACE -->
+    <section class="pricing-marketplace" id="marketplace">
+      <div class="pricing-marketplace-inner">
+        <h2>조달청을 통한 구매를 원하시나요?</h2>
+        <p>
+          BingoCVM은 조달청 디지털서비스몰에 등록된 제품입니다. 기존 계약을 통해
+          <a
+            href="https://digitalmall.g2b.go.kr/link/GDSF001_01/?ctrtItemMngNo=002461084_1010000003"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Manager Server</a
+          >
+          와
+          <a
+            href="https://digitalmall.g2b.go.kr/link/GDSF001_01/?ctrtItemMngNo=002461084_1010000004"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Device / Agent</a
+          >
+          를 편리하게 도입하세요.
+        </p>
       </div>
     </section>
 
